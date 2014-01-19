@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="Module"  xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
+	<alias>
+		<typeAlias alias="Module"  type="dx177.Model.Bus.Module,dx177.Model" />
+		<typeAlias alias="Module.Key" type="dx177.Model.Bus.Module+Key,dx177.Model" />
+	</alias>
+	<resultMaps>
+	  <resultMap id="SelectResult" class="Module">
+		<result property="Seqno" column="Seqno" />
+		<result property="Pguid" column="PGUID" />
+		<result property="Modulecode" column="ModuleCode" />
+		<result property="Showidx" column="ShowIdx" />
+	</resultMap>
+	</resultMaps>	
+
+	<statements>
+		<select id="Module_Select"  parameterClass="int" resultMap="SelectResult">
+			select *
+			from Module
+			<dynamic prepend="where"><!-- 主键 -->
+				<isParameterPresent prepend="AND">Seqno=$value$</isParameterPresent>
+			</dynamic>
+			</select>
+		
+		
+		<insert id="Module_Insert"  parameterClass="Module" resultClass="int">			
+		  <!-- 按照规范序列应该为[TABLE]_S -->
+			<selectKey property="Seqno" type="post" resultClass="int">				
+				SELECT @@IDENTITY AS ID
+            </selectKey>
+			insert into Module
+				(PGUID,ModuleCode,ShowIdx)
+			values
+				(#Pguid#,#Modulecode#,#Showidx#)			
+		</insert>
+		<update id="Module_Update" parameterClass="Module" resultClass="int">
+			update Module set
+				PGUID=#Pguid#
+				,ModuleCode=#Modulecode#
+				,ShowIdx=#Showidx#			
+			where 
+			Seqno=#Seqno#			
+		</update>		
+		<delete id="Module_Delete"  parameterClass="int">
+			
+			delete from Module 
+			where 
+			Seqno=$value$			
+		</delete>		
+		
+		
+		
+	</statements>
+</sqlMap>

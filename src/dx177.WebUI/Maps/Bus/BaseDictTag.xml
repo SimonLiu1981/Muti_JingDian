@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="BaseDictTag"  xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
+	<alias>
+		<typeAlias alias="BaseDictTag"  type="dx177.Model.Bus.BaseDictTag,dx177.Model" />
+		<typeAlias alias="BaseDictTag.Key" type="dx177.Model.Bus.BaseDictTag+Key,dx177.Model" />
+	</alias>
+	<resultMaps>
+	  <resultMap id="SelectResult" class="BaseDictTag">
+		<result property="BaseDictTagId" column="Base_Dict_Tag_Id" />
+		<result property="EnumTypeName" column="Enum_Type_Name" />
+		<result property="EnumValue" column="Enum_Value" />
+		<result property="TagName" column="Tag_Name" />
+		<result property="EnumName" column="Enum_Name" />
+		<result property="Lcid" column="LCID" />
+	</resultMap>
+	</resultMaps>	
+
+	<statements>
+		<select id="BaseDictTag_Select"  parameterClass="int" resultMap="SelectResult">
+			select *
+			from Base_Dict_Tag
+			<dynamic prepend="where"><!-- 主键 -->
+				<isParameterPresent prepend="AND">Base_Dict_Tag_Id=$value$</isParameterPresent>
+			</dynamic>
+			</select>
+		
+		
+		<insert id="BaseDictTag_Insert"  parameterClass="BaseDictTag" resultClass="int">			
+		  <!-- 按照规范序列应该为[TABLE]_S -->
+			<selectKey property="BaseDictTagId" type="post" resultClass="int">				
+				SELECT @@IDENTITY AS ID
+            </selectKey>
+			insert into Base_Dict_Tag
+				(Enum_Type_Name,Enum_Value,Tag_Name,Enum_Name,LCID)
+			values
+				(#EnumTypeName#,#EnumValue#,#TagName#,#EnumName#,#Lcid#)			
+		</insert>
+		<update id="BaseDictTag_Update" parameterClass="BaseDictTag" resultClass="int">
+			update Base_Dict_Tag set
+				Enum_Type_Name=#EnumTypeName#
+				,Enum_Value=#EnumValue#
+				,Tag_Name=#TagName#
+				,Enum_Name=#EnumName#
+				,LCID=#Lcid#			
+			where 
+			Base_Dict_Tag_Id=#BaseDictTagId#			
+		</update>		
+		<delete id="BaseDictTag_Delete"  parameterClass="int">
+			
+			delete from Base_Dict_Tag 
+			where 
+			Base_Dict_Tag_Id=$value$			
+		</delete>		
+		
+		
+		
+	</statements>
+</sqlMap>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="Digg"  xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
+	<alias>
+		<typeAlias alias="Digg"  type="dx177.Model.Bus.Digg,dx177.Model" />
+		<typeAlias alias="Digg.Key" type="dx177.Model.Bus.Digg+Key,dx177.Model" />
+	</alias>
+	<resultMaps>
+	  <resultMap id="SelectResult" class="Digg">
+		<result property="Seqno" column="Seqno" />
+		<result property="Pguid" column="PGUID" />
+		<result property="Ip" column="IP" />
+		<result property="Diggtype" column="DiggType" />
+		<result property="CreateDate" column="CREATE_DATE" />
+	</resultMap>
+	</resultMaps>	
+
+	<statements>
+		<select id="Digg_Select"  parameterClass="int" resultMap="SelectResult">
+			select *
+			from Digg
+			<dynamic prepend="where"><!-- 主键 -->
+				<isParameterPresent prepend="AND">Seqno=$value$</isParameterPresent>
+			</dynamic>
+			</select>
+		
+		
+		<insert id="Digg_Insert"  parameterClass="Digg" resultClass="int">			
+		  <!-- 按照规范序列应该为[TABLE]_S -->
+			<selectKey property="Seqno" type="post" resultClass="int">				
+				SELECT @@IDENTITY AS ID
+            </selectKey>
+			insert into Digg
+				(PGUID,IP,DiggType,CREATE_DATE)
+			values
+				(#Pguid#,#Ip#,#Diggtype#,#CreateDate#)			
+		</insert>
+		<update id="Digg_Update" parameterClass="Digg" resultClass="int">
+			update Digg set
+				PGUID=#Pguid#
+				,IP=#Ip#
+				,DiggType=#Diggtype#
+				,CREATE_DATE=#CreateDate#			
+			where 
+			Seqno=#Seqno#			
+		</update>		
+		<delete id="Digg_Delete"  parameterClass="int">
+			
+			delete from Digg 
+			where 
+			Seqno=$value$			
+		</delete>		
+		
+		
+		
+	</statements>
+</sqlMap>

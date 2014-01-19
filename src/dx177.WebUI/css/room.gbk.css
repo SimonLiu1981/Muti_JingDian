@@ -1,0 +1,47 @@
+@charset "gbk";
+/* fang xing biao ge */
+.zn_room { line-height:150%; }
+.zn_room_title { height:24px; padding:4px 0 0px 5px; border:none; border-bottom:1px solid #e5e5e5; overflow:hidden; background:#f6f6f6; color:#666; line-height:1.9; }
+.zn_room_row { height:24px; padding:4px 0 0px 5px; border-bottom:1px solid #e5e5e5; overflow:hidden; line-height:1.9; }
+.zn_row { float:right;}
+.zn_row1 { float:left; width:60px; text-align:center; font-size:12px; font-weight:normal; }
+.zn_row2 { float:left; width:70px; text-align:center; font-size:12px; font-weight:normal; }
+.zn_row3 { float:left; width:60px; text-align:center; font-size:12px; font-weight:normal; }
+.zn_row4 { float:left; width:54px; text-align:center; font-size:12px; font-weight:normal; }
+.zn_row4 strong { color:#f30; font-size:15px; margin-right:3px; line-height:1.3; cursor:pointer; }
+.zn_row5 { float:left; width:50px; text-align:center; font-size:12px; font-weight:normal; }
+.zn_row6 { float:left; width:52px; text-align:center; font-size:12px; font-weight:normal; }
+.zn_row7 { float:left; width:52px; text-align:center; font-size:12px; font-weight:normal; }
+.zn_row8 { float:left; width:110px; text-align:left; font-size:12px; font-weight:normal; }
+/* fang xing xiang qing */
+.zn_room_info {padding:4px 5px; border:1px solid #eee; border-top:none; background:#FFC; overflow:auto; zoom:1;display:none;}
+.zn_room_info ul { list-style: decimal inside; }
+.zn_room_info ul li { width:33%; float:left; color:#933; border:none; margin:0; padding:0;}
+.zn_room_name { padding:0 10px 0 0;}
+.zn_room_name:hover { padding:0 10px 0 0; background:url(../img/ico4.gif) right -28px no-repeat;}
+/* jia ge qi pao */
+.zn_room_price { background: url(../img/ico4.gif) 50% -220px no-repeat; padding-top:6px; position:absolute; top:16px; left:-137px; z-index:100;}
+.zn_room_price dl { height:auto; padding:0; border:2px solid #f98510; text-align:center; background:#fff; overflow:auto; zoom:1;}
+.zn_room_price dl dt { float:left; width:50px; height:28px; line-height:28px; font-weight:bold; background:#ffebd7; color:#444;}
+.zn_room_price dl dd { float:left; width:50px; border-top:1px solid #ccc; padding:4px 0;}
+.zn_room_price dl dd em { color:#f60; display:block; font-style:normal;}
+/* fang xing shuo ming qi pao */
+.zn_room_tips { width:400px; background: url(../img/ico4.gif) 50% -220px no-repeat; padding-top:6px; position:absolute; top:480px; left:400px;}
+.zn_rt_con { border:2px solid #f98510; padding:6px 10px; background:#fff; color:#666;}
+.zn_rt_con_jj { padding:3px 0 3px 60px; background:url(../img/ico_cx.gif) 0px 3px no-repeat;}
+.zn_rt_con_jj span { color:#f00;}
+.zn_rt_con_jj1 span { color:#f00;}
+.zn_rt_con_cx { padding:3px 0 3px 60px; background:url(../img/ico_cx.gif) 0 -198px no-repeat;}
+.zn_rt_con_db { padding:3px 0 3px 60px; background:url(../img/ico_cx.gif) 0 -398px no-repeat;}
+.zn_rt_con_fj { border-top:1px solid #ccc; padding-top:5px;}
+.zn_ico_cx { padding:1px 16px 0 0; background:url(../img/ico4.gif) right -500px no-repeat;}
+.zn_ico_cx1 { padding:1px 16px 0 0;}
+/* geng duo fang xing */
+.zn_room_more { padding-top:5px; text-align:right;}
+.zn_r_more { padding:0 10px 0 0; background:url(../img/ico4.gif) right 3px no-repeat; }
+.zn_r_more:hover { padding:0 10px 0 0; background:url(../img/ico4.gif) right -27px no-repeat; }
+.zn_r_more1 { padding:0 10px 0 0; background:url(../img/ico4.gif) right -57px no-repeat; }
+.zn_r_more1:hover { padding:0 10px 0 0; background:url(../img/ico4.gif) right -87px no-repeat; }
+/* button */
+.zn_btn_yd { width:50px; height:21px; border:none; background:url(../img/ico4.gif) 0 -140px no-repeat; color:#fff; cursor:pointer; font-weight:bold; line-height:1.5; }
+.zn_btn_mf { width:50px; height:21px; border:none; background:url(../img/ico4.gif) 0 -170px no-repeat; color:#fff; font-weight:bold; line-height:1.5; }

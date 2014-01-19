@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by TeaM DJiNN (TeaM DJiNN) -->
+<xs:schema xmlns:qs="http://questions" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://questions" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="ImportQuestions">
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="AddQuestion">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Title" type="xs:string"/>
+							<xs:element name="CreateDate" type="xs:date" minOccurs="0"/>
+							<xs:element name="Contents" type="xs:string"/>
+							<xs:element name="JingQuCode" type="xs:string"/>
+							<xs:element name="Qtype" type="xs:string"/>
+							<xs:element name="Replys">
+								<xs:complexType>
+									<xs:sequence minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="Reply">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="ReplyDate" type="xs:date" minOccurs="0"/>
+													<xs:element name="ReplyContents" type="xs:string"/>
+													<xs:element name="IsRight" type="xs:boolean" minOccurs="0"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

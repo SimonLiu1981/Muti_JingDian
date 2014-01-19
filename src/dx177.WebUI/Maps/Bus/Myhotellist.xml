@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="Myhotellist"  xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
+	<alias>
+		<typeAlias alias="Myhotellist"  type="dx177.Model.Bus.Myhotellist,dx177.Model" />
+		<typeAlias alias="Myhotellist.Key" type="dx177.Model.Bus.Myhotellist+Key,dx177.Model" />
+	</alias>
+	<resultMaps>
+	  <resultMap id="SelectResult" class="Myhotellist">
+		<result property="Seqno" column="Seqno" />
+		<result property="Guid" column="GUID" />
+		<result property="Pguid" column="PGUID" />
+		<result property="Creator" column="CREATOR" />
+		<result property="CreateDate" column="CREATE_DATE" />
+		<result property="Showindex" column="showindex" />
+	</resultMap>
+	</resultMaps>	
+
+	<statements>
+		<select id="Myhotellist_Select"  parameterClass="int" resultMap="SelectResult">
+			select *
+			from MyHotelList
+			<dynamic prepend="where"><!-- 主键 -->
+				<isParameterPresent prepend="AND">Seqno=$value$</isParameterPresent>
+			</dynamic>
+			</select>
+		
+		
+		<insert id="Myhotellist_Insert"  parameterClass="Myhotellist" resultClass="int">			
+		  <!-- 按照规范序列应该为[TABLE]_S -->
+			<selectKey property="Seqno" type="post" resultClass="int">				
+				SELECT @@IDENTITY AS ID
+            </selectKey>
+			insert into MyHotelList
+				(GUID,PGUID,CREATOR,CREATE_DATE,showindex)
+			values
+				(#Guid#,#Pguid#,#Creator#,#CreateDate#,#Showindex#)			
+		</insert>
+		<update id="Myhotellist_Update" parameterClass="Myhotellist" resultClass="int">
+			update MyHotelList set
+				GUID=#Guid#
+				,PGUID=#Pguid#
+				,CREATOR=#Creator#
+				,CREATE_DATE=#CreateDate#
+				,showindex=#Showindex#			
+			where 
+			Seqno=#Seqno#			
+		</update>		
+		<delete id="Myhotellist_Delete"  parameterClass="int">
+			
+			delete from MyHotelList 
+			where 
+			Seqno=$value$			
+		</delete>		
+		
+		
+		
+	</statements>
+</sqlMap>

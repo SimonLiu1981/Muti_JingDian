@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qs:ImportQuestions xmlns:qs="http://questions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<qs:AddQuestion>
+		<qs:Title>大梅沙一日游攻略</qs:Title>		
+		<qs:Contents>
+      <![CDATA[谁有大梅沙一日游攻略呀？发我一份呀。从外地过深圳来出差，对深圳人生地不熟。个个都说大梅沙必须要去一下。不过真没去过大海。给个一日游攻略给我把。]]>      
+    </qs:Contents>    
+		<qs:JingQuCode>dameisha</qs:JingQuCode>
+		<qs:Qtype>交通</qs:Qtype>
+		<qs:Replys>
+			<qs:Reply>				
+				<qs:ReplyContents><![CDATA[ 不需要什么攻略的，直接去大梅沙。游完泳，然后看看海景，吃完饭就可以回去了。用不着什么攻略。简单的很！]]></qs:ReplyContents>
+        <qs:IsRight>0</qs:IsRight>        
+			</qs:Reply>
+
+      <qs:Reply>
+        <qs:ReplyContents><![CDATA[建议你下午四点多到。看看海景，然后游泳。上岸后，可以去附近餐馆吃饭。]]></qs:ReplyContents>
+        <qs:IsRight>0</qs:IsRight>
+      </qs:Reply>
+
+      <qs:Reply>
+        <qs:ReplyContents><![CDATA[离大梅沙附近的景点有东部华侨城，还有小梅沙。海洋公园。如果你单单去大梅沙玩，没什么攻略的。游泳，看风景是最题目。如果你还想去东部华侨城，一天时间是不够的。]]></qs:ReplyContents>
+        <qs:IsRight>1</qs:IsRight>
+      </qs:Reply>
+      
+		</qs:Replys>		
+	</qs:AddQuestion>
+
+
+
+ 
+  
+  
+  
+</qs:ImportQuestions>

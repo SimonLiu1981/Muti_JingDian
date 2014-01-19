@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="Sumarycomment"  xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
+	<alias>
+		<typeAlias alias="Sumarycomment"  type="dx177.Model.Bus.Sumarycomment,dx177.Model" />
+		<typeAlias alias="Sumarycomment.Key" type="dx177.Model.Bus.Sumarycomment+Key,dx177.Model" />
+	</alias>
+	<resultMaps>
+	  <resultMap id="SelectResult" class="Sumarycomment">
+		<result property="Seqno" column="Seqno" />
+		<result property="Pguid" column="PGUID" />
+		<result property="Score1" column="Score1" />
+		<result property="Score2" column="Score2" />
+		<result property="Score3" column="Score3" />
+		<result property="Score4" column="Score4" />
+		<result property="Score5" column="Score5" />
+		<result property="Scount1" column="SCount1" />
+		<result property="Scount2" column="SCount2" />
+		<result property="Scount3" column="SCount3" />
+		<result property="Scount4" column="SCount4" />
+		<result property="Scount5" column="SCount5" />
+		<result property="Avgscore" column="AvgScore" />
+		<result property="Sumarycontent" column="SumaryContent" />
+		<result property="Lastcontent" column="LastContent" />
+		<result property="Replycontent" column="ReplyContent" />
+		<result property="Isreply" column="IsReply" />
+		<result property="Creator" column="CREATOR" />
+		<result property="CreateDate" column="CREATE_DATE" />
+	</resultMap>
+	</resultMaps>	
+
+	<statements>
+		<select id="Sumarycomment_Select"  parameterClass="int" resultMap="SelectResult">
+			select *
+			from SumaryComment
+			<dynamic prepend="where"><!-- 主键 -->
+				<isParameterPresent prepend="AND">Seqno=$value$</isParameterPresent>
+			</dynamic>
+			</select>
+		
+		
+		<insert id="Sumarycomment_Insert"  parameterClass="Sumarycomment" resultClass="int">			
+		  <!-- 按照规范序列应该为[TABLE]_S -->
+			<selectKey property="Seqno" type="post" resultClass="int">				
+				SELECT @@IDENTITY AS ID
+            </selectKey>
+			insert into SumaryComment
+				(PGUID,Score1,Score2,Score3,Score4,Score5,SCount1,SCount2,SCount3,SCount4,SCount5,AvgScore,SumaryContent,LastContent,ReplyContent,IsReply,CREATOR,CREATE_DATE)
+			values
+				(#Pguid#,#Score1#,#Score2#,#Score3#,#Score4#,#Score5#,#Scount1#,#Scount2#,#Scount3#,#Scount4#,#Scount5#,#Avgscore#,#Sumarycontent#,#Lastcontent#,#Replycontent#,#Isreply#,#Creator#,#CreateDate#)			
+		</insert>
+		<update id="Sumarycomment_Update" parameterClass="Sumarycomment" resultClass="int">
+			update SumaryComment set
+				PGUID=#Pguid#
+				,Score1=#Score1#
+				,Score2=#Score2#
+				,Score3=#Score3#
+				,Score4=#Score4#
+				,Score5=#Score5#
+				,SCount1=#Scount1#
+				,SCount2=#Scount2#
+				,SCount3=#Scount3#
+				,SCount4=#Scount4#
+				,SCount5=#Scount5#
+				,AvgScore=#Avgscore#
+				,SumaryContent=#Sumarycontent#
+				,LastContent=#Lastcontent#
+				,ReplyContent=#Replycontent#
+				,IsReply=#Isreply#
+				,CREATOR=#Creator#
+				,CREATE_DATE=#CreateDate#			
+			where 
+			Seqno=#Seqno#			
+		</update>		
+		<delete id="Sumarycomment_Delete"  parameterClass="int">
+			
+			delete from SumaryComment 
+			where 
+			Seqno=$value$			
+		</delete>		
+		
+		
+		
+	</statements>
+</sqlMap>

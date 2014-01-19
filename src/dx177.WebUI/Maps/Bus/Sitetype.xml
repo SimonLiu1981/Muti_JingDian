@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="Sitetype"  xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
+	<alias>
+		<typeAlias alias="Sitetype"  type="dx177.Model.Bus.Sitetype,dx177.Model" />
+		<typeAlias alias="Sitetype.Key" type="dx177.Model.Bus.Sitetype+Key,dx177.Model" />
+	</alias>
+	<resultMaps>
+	  <resultMap id="SelectResult" class="Sitetype">
+		<result property="Seqno" column="Seqno" />
+		<result property="Guid" column="GUID" />
+		<result property="Pguid" column="PGUID" />
+		<result property="Title" column="Title" />
+		<result property="Code" column="Code" />
+		<result property="Shortcontent" column="ShortContent" />
+		<result property="Logo" column="Logo" />
+		<result property="Content" column="Content" />
+		<result property="Creator" column="CREATOR" />
+		<result property="CreateDate" column="CREATE_DATE" />
+		<result property="LasteUpdateDate" column="Laste_update_date" />
+		<result property="LasteUpdateBy" column="Laste_update_By" />
+	</resultMap>
+	</resultMaps>	
+
+	<statements>
+		<select id="Sitetype_Select"  parameterClass="int" resultMap="SelectResult">
+			select *
+			from SiteType
+			<dynamic prepend="where"><!-- 主键 -->
+				<isParameterPresent prepend="AND">Seqno=$value$</isParameterPresent>
+			</dynamic>
+			</select>
+		
+		
+		<insert id="Sitetype_Insert"  parameterClass="Sitetype" resultClass="int">			
+		  <!-- 按照规范序列应该为[TABLE]_S -->
+			<selectKey property="Seqno" type="post" resultClass="int">				
+				SELECT @@IDENTITY AS ID
+            </selectKey>
+			insert into SiteType
+				(GUID,PGUID,Title,Code,ShortContent,Logo,Content,CREATOR,CREATE_DATE,Laste_update_date,Laste_update_By)
+			values
+				(#Guid#,#Pguid#,#Title#,#Code#,#Shortcontent#,#Logo#,#Content#,#Creator#,#CreateDate#,#LasteUpdateDate#,#LasteUpdateBy#)			
+		</insert>
+		<update id="Sitetype_Update" parameterClass="Sitetype" resultClass="int">
+			update SiteType set
+				GUID=#Guid#
+				,PGUID=#Pguid#
+				,Title=#Title#
+				,Code=#Code#
+				,ShortContent=#Shortcontent#
+				,Logo=#Logo#
+				,Content=#Content#
+				,CREATOR=#Creator#
+				,CREATE_DATE=#CreateDate#
+				,Laste_update_date=#LasteUpdateDate#
+				,Laste_update_By=#LasteUpdateBy#			
+			where 
+			Seqno=#Seqno#			
+		</update>		
+		<delete id="Sitetype_Delete"  parameterClass="int">
+			
+			delete from SiteType 
+			where 
+			Seqno=$value$			
+		</delete>		
+		
+		
+		
+	</statements>
+</sqlMap>

@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="Hotel"  xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
+	<alias>
+		<typeAlias alias="Hotel"  type="dx177.Model.Bus.Hotel,dx177.Model" />
+		<typeAlias alias="Hotel.Key" type="dx177.Model.Bus.Hotel+Key,dx177.Model" />
+	</alias>
+	<resultMaps>
+	  <resultMap id="SelectResult" class="Hotel">
+		<result property="Seqno" column="Seqno" />
+		<result property="Guid" column="GUID" />
+		<result property="Name" column="Name" />
+		<result property="City" column="City" />
+		<result property="County" column="county" />
+		<result property="Area" column="Area" />
+		<result property="Address" column="Address" />
+		<result property="Phone" column="Phone" />
+		<result property="Line" column="Line" />
+		<result property="Biz" column="biz" />
+		<result property="Cost" column="Cost" />
+		<result property="Website" column="Website" />
+		<result property="Logo" column="Logo" />
+		<result property="Descr" column="Descr" />
+		<result property="Hoteltype" column="HotelType" />
+		<result property="Installationsstr" column="installationsStr" />
+		<result property="Installationsval" column="installationsVal" />
+		<result property="Creator" column="CREATOR" />
+		<result property="CreateDate" column="CREATE_DATE" />
+		<result property="LasteUpdateDate" column="Laste_update_date" />
+		<result property="LasteUpdateBy" column="Laste_update_By" />
+		<result property="Qq" column="QQ" />
+		<result property="Aliww" column="aliww" />
+		<result property="Tag" column="Tag" />
+		<result property="Map" column="Map" />
+		<result property="Showpr" column="ShowPr" />
+		<result property="Mobile" column="Mobile" />
+		<result property="Status" column="Status" />
+		<result property="Maxprice" column="MaxPrice" />
+		<result property="Minprice" column="MinPrice" />
+		<result property="Viewtimes" column="ViewTimes" />
+		<result property="Email" column="email" />
+		<result property="Issendorderemail" column="IsSendOrderEmail" />
+	</resultMap>
+	</resultMaps>	
+
+	<statements>
+		<select id="Hotel_Select"  parameterClass="int" resultMap="SelectResult">
+			select *
+			from Hotel
+			<dynamic prepend="where"><!-- 主键 -->
+				<isParameterPresent prepend="AND">Seqno=$value$</isParameterPresent>
+			</dynamic>
+			</select>
+		
+		
+		<insert id="Hotel_Insert"  parameterClass="Hotel" resultClass="int">			
+		  <!-- 按照规范序列应该为[TABLE]_S -->
+			<selectKey property="Seqno" type="post" resultClass="int">				
+				SELECT @@IDENTITY AS ID
+            </selectKey>
+			insert into Hotel
+				(GUID,Name,City,county,Area,Address,Phone,Line,biz,Cost,Website,Logo,Descr,HotelType,installationsStr,installationsVal,CREATOR,CREATE_DATE,Laste_update_date,Laste_update_By,QQ,aliww,Tag,Map,ShowPr,Mobile,Status,MaxPrice,MinPrice,ViewTimes,email,IsSendOrderEmail)
+			values
+				(#Guid#,#Name#,#City#,#County#,#Area#,#Address#,#Phone#,#Line#,#Biz#,#Cost#,#Website#,#Logo#,#Descr#,#Hoteltype#,#Installationsstr#,#Installationsval#,#Creator#,#CreateDate#,#LasteUpdateDate#,#LasteUpdateBy#,#Qq#,#Aliww#,#Tag#,#Map#,#Showpr#,#Mobile#,#Status#,#Maxprice#,#Minprice#,#Viewtimes#,#Email#,#Issendorderemail#)			
+		</insert>
+		<update id="Hotel_Update" parameterClass="Hotel" resultClass="int">
+			update Hotel set
+				GUID=#Guid#
+				,Name=#Name#
+				,City=#City#
+				,county=#County#
+				,Area=#Area#
+				,Address=#Address#
+				,Phone=#Phone#
+				,Line=#Line#
+				,biz=#Biz#
+				,Cost=#Cost#
+				,Website=#Website#
+				,Logo=#Logo#
+				,Descr=#Descr#
+				,HotelType=#Hoteltype#
+				,installationsStr=#Installationsstr#
+				,installationsVal=#Installationsval#
+				,CREATOR=#Creator#
+				,CREATE_DATE=#CreateDate#
+				,Laste_update_date=#LasteUpdateDate#
+				,Laste_update_By=#LasteUpdateBy#
+				,QQ=#Qq#
+				,aliww=#Aliww#
+				,Tag=#Tag#
+				,Map=#Map#
+				,ShowPr=#Showpr#
+				,Mobile=#Mobile#
+				,Status=#Status#
+				,MaxPrice=#Maxprice#
+				,MinPrice=#Minprice#
+				,ViewTimes=#Viewtimes#
+				,email=#Email#
+				,IsSendOrderEmail=#Issendorderemail#			
+			where 
+			Seqno=#Seqno#			
+		</update>		
+		<delete id="Hotel_Delete"  parameterClass="int">
+			
+			delete from Hotel 
+			where 
+			Seqno=$value$			
+		</delete>		
+		
+		
+		
+	</statements>
+</sqlMap>

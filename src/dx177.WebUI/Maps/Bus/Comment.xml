@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="Comment"  xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
+	<alias>
+		<typeAlias alias="Comment"  type="dx177.Model.Bus.Comment,dx177.Model" />
+		<typeAlias alias="Comment.Key" type="dx177.Model.Bus.Comment+Key,dx177.Model" />
+	</alias>
+	<resultMaps>
+	  <resultMap id="SelectResult" class="Comment">
+		<result property="Seqno" column="Seqno" />
+		<result property="Guid" column="GUID" />
+		<result property="Pguid" column="PGUID" />
+		<result property="Score1" column="Score1" />
+		<result property="Score2" column="Score2" />
+		<result property="Score3" column="Score3" />
+		<result property="Score4" column="Score4" />
+		<result property="Score5" column="Score5" />
+		<result property="Content" column="Content" />
+		<result property="Isnew" column="IsNew" />
+		<result property="Isshow" column="IsShow" />
+		<result property="Replycontent" column="ReplyContent" />
+		<result property="Creator" column="CREATOR" />
+		<result property="CreateDate" column="CREATE_DATE" />
+		<result property="Avgscore" column="AvgScore" />
+		<result property="Good" column="Good" />
+		<result property="Bad" column="Bad" />
+		<result property="Viewtimes" column="ViewTimes" />
+	</resultMap>
+	</resultMaps>	
+
+	<statements>
+		<select id="Comment_Select"  parameterClass="int" resultMap="SelectResult">
+			select *
+			from Comment
+			<dynamic prepend="where"><!-- 主键 -->
+				<isParameterPresent prepend="AND">Seqno=$value$</isParameterPresent>
+			</dynamic>
+			</select>
+		
+		
+		<insert id="Comment_Insert"  parameterClass="Comment" resultClass="int">			
+		  <!-- 按照规范序列应该为[TABLE]_S -->
+			<selectKey property="Seqno" type="post" resultClass="int">				
+				SELECT @@IDENTITY AS ID
+            </selectKey>
+			insert into Comment
+				(GUID,PGUID,Score1,Score2,Score3,Score4,Score5,Content,IsNew,IsShow,ReplyContent,CREATOR,CREATE_DATE,AvgScore,Good,Bad,ViewTimes)
+			values
+				(#Guid#,#Pguid#,#Score1#,#Score2#,#Score3#,#Score4#,#Score5#,#Content#,#Isnew#,#Isshow#,#Replycontent#,#Creator#,#CreateDate#,#Avgscore#,#Good#,#Bad#,#Viewtimes#)			
+		</insert>
+		<update id="Comment_Update" parameterClass="Comment" resultClass="int">
+			update Comment set
+				GUID=#Guid#
+				,PGUID=#Pguid#
+				,Score1=#Score1#
+				,Score2=#Score2#
+				,Score3=#Score3#
+				,Score4=#Score4#
+				,Score5=#Score5#
+				,Content=#Content#
+				,IsNew=#Isnew#
+				,IsShow=#Isshow#
+				,ReplyContent=#Replycontent#
+				,CREATOR=#Creator#
+				,CREATE_DATE=#CreateDate#
+				,AvgScore=#Avgscore#
+				,Good=#Good#
+				,Bad=#Bad#
+				,ViewTimes=#Viewtimes#			
+			where 
+			Seqno=#Seqno#			
+		</update>		
+		<delete id="Comment_Delete"  parameterClass="int">
+			
+			delete from Comment 
+			where 
+			Seqno=$value$			
+		</delete>		
+		
+		
+		
+	</statements>
+</sqlMap>

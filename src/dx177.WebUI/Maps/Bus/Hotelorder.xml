@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="Hotelorder"  xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
+	<alias>
+		<typeAlias alias="Hotelorder"  type="dx177.Model.Bus.Hotelorder,dx177.Model" />
+		<typeAlias alias="Hotelorder.Key" type="dx177.Model.Bus.Hotelorder+Key,dx177.Model" />
+	</alias>
+	<resultMaps>
+	  <resultMap id="SelectResult" class="Hotelorder">
+		<result property="Seqno" column="Seqno" />
+		<result property="Guid" column="GUID" />
+		<result property="Orderno" column="OrderNo" />
+		<result property="Personname" column="PersonName" />
+		<result property="Personphone" column="PersonPhone" />
+		<result property="Orderusername" column="OrderUserName" />
+		<result property="Orderuserphone" column="OrderUserPhone" />
+		<result property="Email" column="Email" />
+		<result property="Pcount" column="PCount" />
+		<result property="Begindate" column="BeginDate" />
+		<result property="Enddate" column="EndDate" />
+		<result property="Reachdate" column="ReachDate" />
+		<result property="Hotelseqno" column="HotelSeqno" />
+		<result property="Hotelname" column="HotelName" />
+		<result property="Roomtitle" column="RoomTitle" />
+		<result property="Roomseqno" column="RoomSeqno" />
+		<result property="Roomcount" column="RoomCount" />
+		<result property="Price" column="Price" />
+		<result property="Referrall" column="referrall" />
+		<result property="Totalmoney" column="TotalMoney" />
+		<result property="Creator" column="Creator" />
+		<result property="CreateDate" column="CREATE_DATE" />
+		<result property="Ip" column="Ip" />
+		<result property="Content" column="Content" />
+		<result property="Status" column="Status" />
+	</resultMap>
+	</resultMaps>	
+
+	<statements>
+		<select id="Hotelorder_Select"  parameterClass="int" resultMap="SelectResult">
+			select *
+			from HotelOrder
+			<dynamic prepend="where"><!-- 主键 -->
+				<isParameterPresent prepend="AND">Seqno=$value$</isParameterPresent>
+			</dynamic>
+			</select>
+		
+		
+		<insert id="Hotelorder_Insert"  parameterClass="Hotelorder" resultClass="int">			
+		  <!-- 按照规范序列应该为[TABLE]_S -->
+			<selectKey property="Seqno" type="post" resultClass="int">				
+				SELECT @@IDENTITY AS ID
+            </selectKey>
+			insert into HotelOrder
+				(GUID,OrderNo,PersonName,PersonPhone,OrderUserName,OrderUserPhone,Email,PCount,BeginDate,EndDate,ReachDate,HotelSeqno,HotelName,RoomTitle,RoomSeqno,RoomCount,Price,referrall,TotalMoney,Creator,CREATE_DATE,Ip,Content,Status)
+			values
+				(#Guid#,#Orderno#,#Personname#,#Personphone#,#Orderusername#,#Orderuserphone#,#Email#,#Pcount#,#Begindate#,#Enddate#,#Reachdate#,#Hotelseqno#,#Hotelname#,#Roomtitle#,#Roomseqno#,#Roomcount#,#Price#,#Referrall#,#Totalmoney#,#Creator#,#CreateDate#,#Ip#,#Content#,#Status#)			
+		</insert>
+		<update id="Hotelorder_Update" parameterClass="Hotelorder" resultClass="int">
+			update HotelOrder set
+				GUID=#Guid#
+				,OrderNo=#Orderno#
+				,PersonName=#Personname#
+				,PersonPhone=#Personphone#
+				,OrderUserName=#Orderusername#
+				,OrderUserPhone=#Orderuserphone#
+				,Email=#Email#
+				,PCount=#Pcount#
+				,BeginDate=#Begindate#
+				,EndDate=#Enddate#
+				,ReachDate=#Reachdate#
+				,HotelSeqno=#Hotelseqno#
+				,HotelName=#Hotelname#
+				,RoomTitle=#Roomtitle#
+				,RoomSeqno=#Roomseqno#
+				,RoomCount=#Roomcount#
+				,Price=#Price#
+				,referrall=#Referrall#
+				,TotalMoney=#Totalmoney#
+				,Creator=#Creator#
+				,CREATE_DATE=#CreateDate#
+				,Ip=#Ip#
+				,Content=#Content#
+				,Status=#Status#			
+			where 
+			Seqno=#Seqno#			
+		</update>		
+		<delete id="Hotelorder_Delete"  parameterClass="int">
+			
+			delete from HotelOrder 
+			where 
+			Seqno=$value$			
+		</delete>		
+		
+		
+		
+	</statements>
+</sqlMap>

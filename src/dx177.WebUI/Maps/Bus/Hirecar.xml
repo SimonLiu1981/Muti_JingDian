@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="Hirecar"  xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
+	<alias>
+		<typeAlias alias="Hirecar"  type="dx177.Model.Bus.Hirecar,dx177.Model" />
+		<typeAlias alias="Hirecar.Key" type="dx177.Model.Bus.Hirecar+Key,dx177.Model" />
+	</alias>
+	<resultMaps>
+	  <resultMap id="SelectResult" class="Hirecar">
+		<result property="Seqno" column="Seqno" />
+		<result property="Guid" column="GUID" />
+		<result property="Linkman" column="LinkMan" />
+		<result property="Title" column="Title" />
+		<result property="Mobile" column="Mobile" />
+		<result property="Telnumber" column="TelNumber" />
+		<result property="City" column="City" />
+		<result property="County" column="county" />
+		<result property="Qq" column="QQ" />
+		<result property="Aliww" column="Aliww" />
+		<result property="Cartype" column="CarType" />
+		<result property="Personcount" column="PersonCount" />
+		<result property="Range" column="Range" />
+		<result property="Price" column="Price" />
+		<result property="Content" column="Content" />
+		<result property="Status" column="Status" />
+		<result property="Shortcontent" column="ShortContent" />
+		<result property="Logo" column="Logo" />
+		<result property="Creator" column="CREATOR" />
+		<result property="CreateDate" column="CREATE_DATE" />
+		<result property="LasteUpdateDate" column="Laste_update_date" />
+		<result property="LasteUpdateBy" column="Laste_update_By" />
+		<result property="Tag" column="Tag" />
+		<result property="Viewtimes" column="ViewTimes" />
+		<result property="Showpr" column="ShowPr" />
+	</resultMap>
+	</resultMaps>	
+
+	<statements>
+		<select id="Hirecar_Select"  parameterClass="int" resultMap="SelectResult">
+			select *
+			from HireCar
+			<dynamic prepend="where"><!-- 主键 -->
+				<isParameterPresent prepend="AND">Seqno=$value$</isParameterPresent>
+			</dynamic>
+			</select>
+		
+		
+		<insert id="Hirecar_Insert"  parameterClass="Hirecar" resultClass="int">			
+		  <!-- 按照规范序列应该为[TABLE]_S -->
+			<selectKey property="Seqno" type="post" resultClass="int">				
+				SELECT @@IDENTITY AS ID
+            </selectKey>
+			insert into HireCar
+				(GUID,LinkMan,Title,Mobile,TelNumber,City,county,QQ,Aliww,CarType,PersonCount,Range,Price,Content,Status,ShortContent,Logo,CREATOR,CREATE_DATE,Laste_update_date,Laste_update_By,Tag,ViewTimes,ShowPr)
+			values
+				(#Guid#,#Linkman#,#Title#,#Mobile#,#Telnumber#,#City#,#County#,#Qq#,#Aliww#,#Cartype#,#Personcount#,#Range#,#Price#,#Content#,#Status#,#Shortcontent#,#Logo#,#Creator#,#CreateDate#,#LasteUpdateDate#,#LasteUpdateBy#,#Tag#,#Viewtimes#,#Showpr#)			
+		</insert>
+		<update id="Hirecar_Update" parameterClass="Hirecar" resultClass="int">
+			update HireCar set
+				GUID=#Guid#
+				,LinkMan=#Linkman#
+				,Title=#Title#
+				,Mobile=#Mobile#
+				,TelNumber=#Telnumber#
+				,City=#City#
+				,county=#County#
+				,QQ=#Qq#
+				,Aliww=#Aliww#
+				,CarType=#Cartype#
+				,PersonCount=#Personcount#
+				,Range=#Range#
+				,Price=#Price#
+				,Content=#Content#
+				,Status=#Status#
+				,ShortContent=#Shortcontent#
+				,Logo=#Logo#
+				,CREATOR=#Creator#
+				,CREATE_DATE=#CreateDate#
+				,Laste_update_date=#LasteUpdateDate#
+				,Laste_update_By=#LasteUpdateBy#
+				,Tag=#Tag#
+				,ViewTimes=#Viewtimes#
+				,ShowPr=#Showpr#			
+			where 
+			Seqno=#Seqno#			
+		</update>		
+		<delete id="Hirecar_Delete"  parameterClass="int">
+			
+			delete from HireCar 
+			where 
+			Seqno=$value$			
+		</delete>		
+		
+		
+		
+	</statements>
+</sqlMap>

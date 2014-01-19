@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by TeaM DJiNN (TeaM DJiNN) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="HotelRoomInfos">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="RoomInfo" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="zid" type="xs:string"/>
+							<xs:element name="eid" type="xs:string"/>
+							<xs:element name="tm1" type="xs:date"/>
+							<xs:element name="tm2" type="xs:date"/>
+							<xs:element name="status" type="xs:string"/>
+							<xs:element name="rooms" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="rid" type="xs:string"/>
+										<xs:element name="title" type="xs:string"/>
+										<xs:element name="adsl" type="xs:string"/>
+										<xs:element name="bed" type="xs:string"/>
+										<xs:element name="notes" type="xs:string"/>
+										<xs:element name="plans" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="planid" type="xs:int"/>
+													<xs:element name="planname" type="xs:string"/>
+													<xs:element name="totalprice" type="xs:double"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="Restaurant"  xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
+	<alias>
+		<typeAlias alias="Restaurant"  type="dx177.Model.Bus.Restaurant,dx177.Model" />
+		<typeAlias alias="Restaurant.Key" type="dx177.Model.Bus.Restaurant+Key,dx177.Model" />
+	</alias>
+	<resultMaps>
+	  <resultMap id="SelectResult" class="Restaurant">
+		<result property="Seqno" column="Seqno" />
+		<result property="Guid" column="Guid" />
+		<result property="Title" column="Title" />
+		<result property="Address" column="Address" />
+		<result property="Restauranttype" column="RestaurantType" />
+		<result property="Area" column="Area" />
+		<result property="City" column="City" />
+		<result property="County" column="county" />
+		<result property="Line" column="Line" />
+		<result property="Linkman" column="LinkMan" />
+		<result property="Cost" column="Cost" />
+		<result property="Shortcontent" column="shortContent" />
+		<result property="Telnumber" column="TelNumber" />
+		<result property="Content" column="Content" />
+		<result property="Map" column="Map" />
+		<result property="Logo" column="Logo" />
+		<result property="Status" column="Status" />
+		<result property="Qq" column="QQ" />
+		<result property="Aliww" column="aliww" />
+		<result property="Creator" column="CREATOR" />
+		<result property="CreateDate" column="CREATE_DATE" />
+		<result property="LasteUpdateDate" column="Laste_update_date" />
+		<result property="LasteUpdateBy" column="Laste_update_By" />
+		<result property="Tag" column="Tag" />
+		<result property="Favorable" column="Favorable" />
+		<result property="Viewtimes" column="ViewTimes" />
+		<result property="Showpr" column="ShowPr" />
+	</resultMap>
+	</resultMaps>	
+
+	<statements>
+		<select id="Restaurant_Select"  parameterClass="int" resultMap="SelectResult">
+			select *
+			from Restaurant
+			<dynamic prepend="where"><!-- 主键 -->
+				<isParameterPresent prepend="AND">Seqno=$value$</isParameterPresent>
+			</dynamic>
+			</select>
+		
+		
+		<insert id="Restaurant_Insert"  parameterClass="Restaurant" resultClass="int">			
+		  <!-- 按照规范序列应该为[TABLE]_S -->
+			<selectKey property="Seqno" type="post" resultClass="int">				
+				SELECT @@IDENTITY AS ID
+            </selectKey>
+			insert into Restaurant
+				(Guid,Title,Address,RestaurantType,Area,City,county,Line,LinkMan,Cost,shortContent,TelNumber,Content,Map,Logo,Status,QQ,aliww,CREATOR,CREATE_DATE,Laste_update_date,Laste_update_By,Tag,Favorable,ViewTimes,ShowPr)
+			values
+				(#Guid#,#Title#,#Address#,#Restauranttype#,#Area#,#City#,#County#,#Line#,#Linkman#,#Cost#,#Shortcontent#,#Telnumber#,#Content#,#Map#,#Logo#,#Status#,#Qq#,#Aliww#,#Creator#,#CreateDate#,#LasteUpdateDate#,#LasteUpdateBy#,#Tag#,#Favorable#,#Viewtimes#,#Showpr#)			
+		</insert>
+		<update id="Restaurant_Update" parameterClass="Restaurant" resultClass="int">
+			update Restaurant set
+				Guid=#Guid#
+				,Title=#Title#
+				,Address=#Address#
+				,RestaurantType=#Restauranttype#
+				,Area=#Area#
+				,City=#City#
+				,county=#County#
+				,Line=#Line#
+				,LinkMan=#Linkman#
+				,Cost=#Cost#
+				,shortContent=#Shortcontent#
+				,TelNumber=#Telnumber#
+				,Content=#Content#
+				,Map=#Map#
+				,Logo=#Logo#
+				,Status=#Status#
+				,QQ=#Qq#
+				,aliww=#Aliww#
+				,CREATOR=#Creator#
+				,CREATE_DATE=#CreateDate#
+				,Laste_update_date=#LasteUpdateDate#
+				,Laste_update_By=#LasteUpdateBy#
+				,Tag=#Tag#
+				,Favorable=#Favorable#
+				,ViewTimes=#Viewtimes#
+				,ShowPr=#Showpr#			
+			where 
+			Seqno=#Seqno#			
+		</update>		
+		<delete id="Restaurant_Delete"  parameterClass="int">
+			
+			delete from Restaurant 
+			where 
+			Seqno=$value$			
+		</delete>		
+		
+		
+		
+	</statements>
+</sqlMap>

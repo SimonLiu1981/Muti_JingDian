@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+	<sqlMap namespace="Picturelist"  xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<statements>
+		<select id="Picturelist_GetPicsByGuid"  resultMap="SelectResult"  parameterClass="Hashtable">
+
+			select * from Picturelist f
+			where 1=1
+			<isNotNull prepend="and" property="guid">
+				<![CDATA[
+					pguid = '$guid$'
+				]]>
+			</isNotNull>
+			order by showidx desc
+		</select>
+
+		<select id="Picturelist_Search"  resultMap="SelectResult"  parameterClass="Hashtable">
+
+			select * from Picturelist f
+			where 1=1
+			<isNotNull prepend="and" property="Title">
+				<![CDATA[
+					title like '%$Title$%'
+				]]>
+			</isNotNull>
+			<isNotNull prepend="and" property="Used">
+				<![CDATA[
+					create_date > '1900-1-1'
+				]]>
+			</isNotNull>
+
+			<isNotNull prepend="and" property="NoUsed">
+				<![CDATA[
+					create_date = '1900-1-1'
+				]]>
+			</isNotNull>
+			
+			order by seqno desc
+		</select>
+		
+		
+	</statements>
+</sqlMap>
+	

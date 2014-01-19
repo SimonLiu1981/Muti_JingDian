@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="Cookbook"  xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
+	<alias>
+		<typeAlias alias="Cookbook"  type="dx177.Model.Bus.Cookbook,dx177.Model" />
+		<typeAlias alias="Cookbook.Key" type="dx177.Model.Bus.Cookbook+Key,dx177.Model" />
+	</alias>
+	<resultMaps>
+	  <resultMap id="SelectResult" class="Cookbook">
+		<result property="Seqno" column="Seqno" />
+		<result property="Guid" column="GUID" />
+		<result property="Pguid" column="PGUID" />
+		<result property="Name" column="Name" />
+		<result property="Price" column="Price" />
+		<result property="Logo" column="Logo" />
+		<result property="Showidx" column="ShowIdx" />
+		<result property="Content" column="Content" />
+		<result property="Shortcontent" column="ShortContent" />
+		<result property="Creator" column="CREATOR" />
+		<result property="CreateDate" column="CREATE_DATE" />
+		<result property="LasteUpdateDate" column="Laste_update_date" />
+		<result property="LasteUpdateBy" column="Laste_update_By" />
+	</resultMap>
+	</resultMaps>	
+
+	<statements>
+		<select id="Cookbook_Select"  parameterClass="int" resultMap="SelectResult">
+			select *
+			from Cookbook
+			<dynamic prepend="where"><!-- 主键 -->
+				<isParameterPresent prepend="AND">Seqno=$value$</isParameterPresent>
+			</dynamic>
+			</select>
+		
+		
+		<insert id="Cookbook_Insert"  parameterClass="Cookbook" resultClass="int">			
+		  <!-- 按照规范序列应该为[TABLE]_S -->
+			<selectKey property="Seqno" type="post" resultClass="int">				
+				SELECT @@IDENTITY AS ID
+            </selectKey>
+			insert into Cookbook
+				(GUID,PGUID,Name,Price,Logo,ShowIdx,Content,ShortContent,CREATOR,CREATE_DATE,Laste_update_date,Laste_update_By)
+			values
+				(#Guid#,#Pguid#,#Name#,#Price#,#Logo#,#Showidx#,#Content#,#Shortcontent#,#Creator#,#CreateDate#,#LasteUpdateDate#,#LasteUpdateBy#)			
+		</insert>
+		<update id="Cookbook_Update" parameterClass="Cookbook" resultClass="int">
+			update Cookbook set
+				GUID=#Guid#
+				,PGUID=#Pguid#
+				,Name=#Name#
+				,Price=#Price#
+				,Logo=#Logo#
+				,ShowIdx=#Showidx#
+				,Content=#Content#
+				,ShortContent=#Shortcontent#
+				,CREATOR=#Creator#
+				,CREATE_DATE=#CreateDate#
+				,Laste_update_date=#LasteUpdateDate#
+				,Laste_update_By=#LasteUpdateBy#			
+			where 
+			Seqno=#Seqno#			
+		</update>		
+		<delete id="Cookbook_Delete"  parameterClass="int">
+			
+			delete from Cookbook 
+			where 
+			Seqno=$value$			
+		</delete>		
+		
+		
+		
+	</statements>
+</sqlMap>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="Room"  xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
+	<alias>
+		<typeAlias alias="Room"  type="dx177.Model.Bus.Room,dx177.Model" />
+		<typeAlias alias="Room.Key" type="dx177.Model.Bus.Room+Key,dx177.Model" />
+	</alias>
+	<resultMaps>
+	  <resultMap id="SelectResult" class="Room">
+		<result property="Seqno" column="Seqno" />
+		<result property="Guid" column="GUID" />
+		<result property="Pguid" column="PGUID" />
+		<result property="Roomtitle" column="RoomTitle" />
+		<result property="Shortdescr" column="ShortDescr" />
+		<result property="Descr" column="Descr" />
+		<result property="Marketprice" column="MarketPrice" />
+		<result property="Price1" column="Price1" />
+		<result property="Price2" column="Price2" />
+		<result property="Installations" column="installations" />
+		<result property="Logo" column="Logo" />
+		<result property="LasteUpdateBy" column="Laste_update_By" />
+		<result property="Creator" column="CREATOR" />
+		<result property="CreateDate" column="CREATE_DATE" />
+		<result property="LasteUpdateDate" column="Laste_update_date" />
+		<result property="Square" column="Square" />
+		<result property="Breakfast" column="Breakfast" />
+		<result property="Broadband" column="Broadband" />
+		<result property="Present" column="Present" />
+		<result property="Showpr" column="ShowPr" />
+	</resultMap>
+	</resultMaps>	
+
+	<statements>
+		<select id="Room_Select"  parameterClass="int" resultMap="SelectResult">
+			select *
+			from Room
+			<dynamic prepend="where"><!-- 主键 -->
+				<isParameterPresent prepend="AND">Seqno=$value$</isParameterPresent>
+			</dynamic>
+			</select>
+		
+		
+		<insert id="Room_Insert"  parameterClass="Room" resultClass="int">			
+		  <!-- 按照规范序列应该为[TABLE]_S -->
+			<selectKey property="Seqno" type="post" resultClass="int">				
+				SELECT @@IDENTITY AS ID
+            </selectKey>
+			insert into Room
+				(GUID,PGUID,RoomTitle,ShortDescr,Descr,MarketPrice,Price1,Price2,installations,Logo,Laste_update_By,CREATOR,CREATE_DATE,Laste_update_date,Square,Breakfast,Broadband,Present,ShowPr)
+			values
+				(#Guid#,#Pguid#,#Roomtitle#,#Shortdescr#,#Descr#,#Marketprice#,#Price1#,#Price2#,#Installations#,#Logo#,#LasteUpdateBy#,#Creator#,#CreateDate#,#LasteUpdateDate#,#Square#,#Breakfast#,#Broadband#,#Present#,#Showpr#)			
+		</insert>
+		<update id="Room_Update" parameterClass="Room" resultClass="int">
+			update Room set
+				GUID=#Guid#
+				,PGUID=#Pguid#
+				,RoomTitle=#Roomtitle#
+				,ShortDescr=#Shortdescr#
+				,Descr=#Descr#
+				,MarketPrice=#Marketprice#
+				,Price1=#Price1#
+				,Price2=#Price2#
+				,installations=#Installations#
+				,Logo=#Logo#
+				,Laste_update_By=#LasteUpdateBy#
+				,CREATOR=#Creator#
+				,CREATE_DATE=#CreateDate#
+				,Laste_update_date=#LasteUpdateDate#
+				,Square=#Square#
+				,Breakfast=#Breakfast#
+				,Broadband=#Broadband#
+				,Present=#Present#
+				,ShowPr=#Showpr#			
+			where 
+			Seqno=#Seqno#			
+		</update>		
+		<delete id="Room_Delete"  parameterClass="int">
+			
+			delete from Room 
+			where 
+			Seqno=$value$			
+		</delete>		
+		
+		
+		
+	</statements>
+</sqlMap>

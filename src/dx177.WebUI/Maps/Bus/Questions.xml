@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="Questions"  xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
+	<alias>
+		<typeAlias alias="Questions"  type="dx177.Model.Bus.Questions,dx177.Model" />
+		<typeAlias alias="Questions.Key" type="dx177.Model.Bus.Questions+Key,dx177.Model" />
+	</alias>
+	<resultMaps>
+	  <resultMap id="SelectResult" class="Questions">
+		<result property="Seqno" column="Seqno" />
+		<result property="Guid" column="GUID" />
+		<result property="Title" column="Title" />
+		<result property="Qtype" column="QType" />
+		<result property="Content" column="Content" />
+		<result property="Status" column="Status" />
+		<result property="Creator" column="CREATOR" />
+		<result property="CreateDate" column="CREATE_DATE" />
+		<result property="Showidx" column="ShowIdx" />
+		<result property="Viewtimes" column="ViewTimes" />
+	</resultMap>
+	</resultMaps>	
+
+	<statements>
+		<select id="Questions_Select"  parameterClass="int" resultMap="SelectResult">
+			select *
+			from Questions
+			<dynamic prepend="where"><!-- 主键 -->
+				<isParameterPresent prepend="AND">Seqno=$value$</isParameterPresent>
+			</dynamic>
+			</select>
+		
+		
+		<insert id="Questions_Insert"  parameterClass="Questions" resultClass="int">			
+		  <!-- 按照规范序列应该为[TABLE]_S -->
+			<selectKey property="Seqno" type="post" resultClass="int">				
+				SELECT @@IDENTITY AS ID
+            </selectKey>
+			insert into Questions
+				(GUID,Title,QType,Content,Status,CREATOR,CREATE_DATE,ShowIdx,ViewTimes)
+			values
+				(#Guid#,#Title#,#Qtype#,#Content#,#Status#,#Creator#,#CreateDate#,#Showidx#,#Viewtimes#)			
+		</insert>
+		<update id="Questions_Update" parameterClass="Questions" resultClass="int">
+			update Questions set
+				GUID=#Guid#
+				,Title=#Title#
+				,QType=#Qtype#
+				,Content=#Content#
+				,Status=#Status#
+				,CREATOR=#Creator#
+				,CREATE_DATE=#CreateDate#
+				,ShowIdx=#Showidx#
+				,ViewTimes=#Viewtimes#			
+			where 
+			Seqno=#Seqno#			
+		</update>		
+		<delete id="Questions_Delete"  parameterClass="int">
+			
+			delete from Questions 
+			where 
+			Seqno=$value$			
+		</delete>		
+		
+		
+		
+	</statements>
+</sqlMap>

@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="Shop"  xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
+	<alias>
+		<typeAlias alias="Shop"  type="dx177.Model.Bus.Shop,dx177.Model" />
+		<typeAlias alias="Shop.Key" type="dx177.Model.Bus.Shop+Key,dx177.Model" />
+	</alias>
+	<resultMaps>
+	  <resultMap id="SelectResult" class="Shop">
+		<result property="Seqno" column="Seqno" />
+		<result property="Guid" column="GUID" />
+		<result property="Title" column="Title" />
+		<result property="City" column="City" />
+		<result property="County" column="county" />
+		<result property="Area" column="Area" />
+		<result property="Address" column="Address" />
+		<result property="Phone" column="Phone" />
+		<result property="Line" column="Line" />
+		<result property="Biztype" column="BizType" />
+		<result property="Bizcharacter" column="BizCharacter" />
+		<result property="Capcount" column="CapCount" />
+		<result property="Cost" column="Cost" />
+		<result property="Environment" column="Environment" />
+		<result property="Parkcount" column="ParkCount" />
+		<result property="Rundate" column="RunDate" />
+		<result property="Website" column="Website" />
+		<result property="Map" column="map" />
+		<result property="Logo" column="Logo" />
+		<result property="Content" column="Content" />
+		<result property="Shortcontent" column="ShortContent" />
+		<result property="Creator" column="CREATOR" />
+		<result property="CreateDate" column="CREATE_DATE" />
+		<result property="LasteUpdateDate" column="Laste_update_date" />
+		<result property="LasteUpdateBy" column="Laste_update_By" />
+		<result property="Qq" column="QQ" />
+		<result property="Aliww" column="aliww" />
+		<result property="Tag" column="Tag" />
+		<result property="Mobile" column="Mobile" />
+		<result property="Status" column="Status" />
+		<result property="Viewtimes" column="ViewTimes" />
+		<result property="Showpr" column="ShowPr" />
+	</resultMap>
+	</resultMaps>	
+
+	<statements>
+		<select id="Shop_Select"  parameterClass="int" resultMap="SelectResult">
+			select *
+			from Shop
+			<dynamic prepend="where"><!-- 主键 -->
+				<isParameterPresent prepend="AND">Seqno=$value$</isParameterPresent>
+			</dynamic>
+			</select>
+		
+		
+		<insert id="Shop_Insert"  parameterClass="Shop" resultClass="int">			
+		  <!-- 按照规范序列应该为[TABLE]_S -->
+			<selectKey property="Seqno" type="post" resultClass="int">				
+				SELECT @@IDENTITY AS ID
+            </selectKey>
+			insert into Shop
+				(GUID,Title,City,county,Area,Address,Phone,Line,BizType,BizCharacter,CapCount,Cost,Environment,ParkCount,RunDate,Website,map,Logo,Content,ShortContent,CREATOR,CREATE_DATE,Laste_update_date,Laste_update_By,QQ,aliww,Tag,Mobile,Status,ViewTimes,ShowPr)
+			values
+				(#Guid#,#Title#,#City#,#County#,#Area#,#Address#,#Phone#,#Line#,#Biztype#,#Bizcharacter#,#Capcount#,#Cost#,#Environment#,#Parkcount#,#Rundate#,#Website#,#Map#,#Logo#,#Content#,#Shortcontent#,#Creator#,#CreateDate#,#LasteUpdateDate#,#LasteUpdateBy#,#Qq#,#Aliww#,#Tag#,#Mobile#,#Status#,#Viewtimes#,#Showpr#)			
+		</insert>
+		<update id="Shop_Update" parameterClass="Shop" resultClass="int">
+			update Shop set
+				GUID=#Guid#
+				,Title=#Title#
+				,City=#City#
+				,county=#County#
+				,Area=#Area#
+				,Address=#Address#
+				,Phone=#Phone#
+				,Line=#Line#
+				,BizType=#Biztype#
+				,BizCharacter=#Bizcharacter#
+				,CapCount=#Capcount#
+				,Cost=#Cost#
+				,Environment=#Environment#
+				,ParkCount=#Parkcount#
+				,RunDate=#Rundate#
+				,Website=#Website#
+				,map=#Map#
+				,Logo=#Logo#
+				,Content=#Content#
+				,ShortContent=#Shortcontent#
+				,CREATOR=#Creator#
+				,CREATE_DATE=#CreateDate#
+				,Laste_update_date=#LasteUpdateDate#
+				,Laste_update_By=#LasteUpdateBy#
+				,QQ=#Qq#
+				,aliww=#Aliww#
+				,Tag=#Tag#
+				,Mobile=#Mobile#
+				,Status=#Status#
+				,ViewTimes=#Viewtimes#
+				,ShowPr=#Showpr#			
+			where 
+			Seqno=#Seqno#			
+		</update>		
+		<delete id="Shop_Delete"  parameterClass="int">
+			
+			delete from Shop 
+			where 
+			Seqno=$value$			
+		</delete>		
+		
+		
+		
+	</statements>
+</sqlMap>

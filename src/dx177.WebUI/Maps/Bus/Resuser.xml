@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="Resuser"  xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
+	<alias>
+		<typeAlias alias="Resuser"  type="dx177.Model.Bus.Resuser,dx177.Model" />
+		<typeAlias alias="Resuser.Key" type="dx177.Model.Bus.Resuser+Key,dx177.Model" />
+	</alias>
+	<resultMaps>
+	  <resultMap id="SelectResult" class="Resuser">
+		<result property="Seqno" column="Seqno" />
+		<result property="Guid" column="GUID" />
+		<result property="Username" column="UserName" />
+		<result property="Name" column="Name" />
+		<result property="Pwd" column="Pwd" />
+		<result property="Status" column="Status" />
+		<result property="Sex" column="Sex" />
+		<result property="Brithday" column="brithday" />
+		<result property="Email" column="Email" />
+		<result property="Mobile" column="Mobile" />
+		<result property="Msn" column="Msn" />
+		<result property="Qq" column="QQ" />
+		<result property="CreateDate" column="CREATE_DATE" />
+		<result property="LasteUpdateDate" column="Laste_update_date" />
+		<result property="Usertype" column="UserType" />
+		<result property="Issubdomain" column="IsSubdomain" />
+		<result property="Domainname" column="domainName" />
+		<result property="Phone" column="Phone" />
+		<result property="Shortcontent" column="ShortContent" />
+	</resultMap>
+	</resultMaps>	
+
+	<statements>
+		<select id="Resuser_Select"  parameterClass="int" resultMap="SelectResult">
+			select *
+			from ResUser
+			<dynamic prepend="where"><!-- 主键 -->
+				<isParameterPresent prepend="AND">Seqno=$value$</isParameterPresent>
+			</dynamic>
+			</select>
+		
+		
+		<insert id="Resuser_Insert"  parameterClass="Resuser" resultClass="int">			
+		  <!-- 按照规范序列应该为[TABLE]_S -->
+			<selectKey property="Seqno" type="post" resultClass="int">				
+				SELECT @@IDENTITY AS ID
+            </selectKey>
+			insert into ResUser
+				(GUID,UserName,Name,Pwd,Status,Sex,brithday,Email,Mobile,Msn,QQ,CREATE_DATE,Laste_update_date,UserType,IsSubdomain,domainName,Phone,ShortContent)
+			values
+				(#Guid#,#Username#,#Name#,#Pwd#,#Status#,#Sex#,#Brithday#,#Email#,#Mobile#,#Msn#,#Qq#,#CreateDate#,#LasteUpdateDate#,#Usertype#,#Issubdomain#,#Domainname#,#Phone#,#Shortcontent#)			
+		</insert>
+		<update id="Resuser_Update" parameterClass="Resuser" resultClass="int">
+			update ResUser set
+				GUID=#Guid#
+				,UserName=#Username#
+				,Name=#Name#
+				,Pwd=#Pwd#
+				,Status=#Status#
+				,Sex=#Sex#
+				,brithday=#Brithday#
+				,Email=#Email#
+				,Mobile=#Mobile#
+				,Msn=#Msn#
+				,QQ=#Qq#
+				,CREATE_DATE=#CreateDate#
+				,Laste_update_date=#LasteUpdateDate#
+				,UserType=#Usertype#
+				,IsSubdomain=#Issubdomain#
+				,domainName=#Domainname#
+				,Phone=#Phone#
+				,ShortContent=#Shortcontent#			
+			where 
+			Seqno=#Seqno#			
+		</update>		
+		<delete id="Resuser_Delete"  parameterClass="int">
+			
+			delete from ResUser 
+			where 
+			Seqno=$value$			
+		</delete>		
+		
+		
+		
+	</statements>
+</sqlMap>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<sqlMap namespace="Common_Use_File"  xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>    	
+	<insert id="Base_Execute_Insert"  parameterClass="string">
+      $value$
+    </insert>
+
+    <update id="Base_Execute_Update"  parameterClass="string">
+      $value$
+    </update>
+
+    <delete id="Base_Execute_Delete"  parameterClass="string">
+      $value$
+    </delete>	
+    <select id="Base_Execute_Execute"  parameterClass="string">
+      $value$
+    </select>
+  </statements>
+</sqlMap>

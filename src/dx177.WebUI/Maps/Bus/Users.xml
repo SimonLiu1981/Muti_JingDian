@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="Users"  xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
+	<alias>
+		<typeAlias alias="Users"  type="dx177.Model.Bus.Users,dx177.Model" />
+		<typeAlias alias="Users.Key" type="dx177.Model.Bus.Users+Key,dx177.Model" />
+	</alias>
+	<resultMaps>
+	  <resultMap id="SelectResult" class="Users">
+		<result property="Seqno" column="Seqno" />
+		<result property="Guid" column="GUID" />
+		<result property="Username" column="UserName" />
+		<result property="Pwd" column="Pwd" />
+		<result property="Status" column="Status" />
+		<result property="Email" column="Email" />
+		<result property="Mobile" column="Mobile" />
+		<result property="Creator" column="CREATOR" />
+		<result property="CreateDate" column="CREATE_DATE" />
+		<result property="LasteUpdateDate" column="Laste_update_date" />
+		<result property="LasteUpdateBy" column="Laste_update_By" />
+		<result property="Usertype" column="UserType" />
+	</resultMap>
+	</resultMaps>	
+
+	<statements>
+		<select id="Users_Select"  parameterClass="int" resultMap="SelectResult">
+			select *
+			from Users
+			<dynamic prepend="where"><!-- 主键 -->
+				<isParameterPresent prepend="AND">Seqno=$value$</isParameterPresent>
+			</dynamic>
+			</select>
+		
+		
+		<insert id="Users_Insert"  parameterClass="Users" resultClass="int">			
+		  <!-- 按照规范序列应该为[TABLE]_S -->
+			<selectKey property="Seqno" type="post" resultClass="int">				
+				SELECT @@IDENTITY AS ID
+            </selectKey>
+			insert into Users
+				(GUID,UserName,Pwd,Status,Email,Mobile,CREATOR,CREATE_DATE,Laste_update_date,Laste_update_By,UserType)
+			values
+				(#Guid#,#Username#,#Pwd#,#Status#,#Email#,#Mobile#,#Creator#,#CreateDate#,#LasteUpdateDate#,#LasteUpdateBy#,#Usertype#)			
+		</insert>
+		<update id="Users_Update" parameterClass="Users" resultClass="int">
+			update Users set
+				GUID=#Guid#
+				,UserName=#Username#
+				,Pwd=#Pwd#
+				,Status=#Status#
+				,Email=#Email#
+				,Mobile=#Mobile#
+				,CREATOR=#Creator#
+				,CREATE_DATE=#CreateDate#
+				,Laste_update_date=#LasteUpdateDate#
+				,Laste_update_By=#LasteUpdateBy#
+				,UserType=#Usertype#			
+			where 
+			Seqno=#Seqno#			
+		</update>		
+		<delete id="Users_Delete"  parameterClass="int">
+			
+			delete from Users 
+			where 
+			Seqno=$value$			
+		</delete>		
+		
+		
+		
+	</statements>
+</sqlMap>

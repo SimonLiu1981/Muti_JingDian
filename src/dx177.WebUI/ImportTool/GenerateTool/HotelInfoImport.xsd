@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by TeaM DJiNN (TeaM DJiNN) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="hotelinfo">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Address">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="v" type="xs:string"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Service" type="xs:string"/>
+				<xs:element name="Content" type="xs:string"/>
+				<xs:element name="Picture">
+					<xs:complexType>
+						<xs:attribute name="hpicmin" type="xs:string"/>
+						<xs:attribute name="hpictxt" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="jianshu" type="xs:string"/>
+			</xs:sequence>
+			<xs:attribute name="HotelName" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

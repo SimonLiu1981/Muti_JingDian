@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="News"  xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
+	<alias>
+		<typeAlias alias="News"  type="dx177.Model.Bus.News,dx177.Model" />
+		<typeAlias alias="News.Key" type="dx177.Model.Bus.News+Key,dx177.Model" />
+	</alias>
+	<resultMaps>
+	  <resultMap id="SelectResult" class="News">
+		<result property="Seqno" column="Seqno" />
+		<result property="Guid" column="GUID" />
+		<result property="Tguid" column="TGUID" />
+		<result property="Title" column="Title" />
+		<result property="Shortcontent" column="ShortContent" />
+		<result property="Code" column="Code" />
+		<result property="Content" column="Content" />
+		<result property="Viewtimes" column="ViewTimes" />
+		<result property="LasteUpdateDate" column="Laste_update_date" />
+		<result property="LasteUpdateBy" column="Laste_update_By" />
+		<result property="Isfirst" column="IsFirst" />
+		<result property="Ishot" column="IsHot" />
+		<result property="Iscomment" column="IsComment" />
+		<result property="Logo" column="Logo" />
+		<result property="Creator" column="CREATOR" />
+		<result property="CreateDate" column="CREATE_DATE" />
+		<result property="Good" column="Good" />
+		<result property="Bad" column="Bad" />
+		<result property="Showpr" column="ShowPr" />
+	</resultMap>
+	</resultMaps>	
+
+	<statements>
+		<select id="News_Select"  parameterClass="int" resultMap="SelectResult">
+			select *
+			from News
+			<dynamic prepend="where"><!-- 主键 -->
+				<isParameterPresent prepend="AND">Seqno=$value$</isParameterPresent>
+			</dynamic>
+			</select>
+		
+		
+		<insert id="News_Insert"  parameterClass="News" resultClass="int">			
+		  <!-- 按照规范序列应该为[TABLE]_S -->
+			<selectKey property="Seqno" type="post" resultClass="int">				
+				SELECT @@IDENTITY AS ID
+            </selectKey>
+			insert into News
+				(GUID,TGUID,Title,ShortContent,Code,Content,ViewTimes,Laste_update_date,Laste_update_By,IsFirst,IsHot,IsComment,Logo,CREATOR,CREATE_DATE,Good,Bad,ShowPr)
+			values
+				(#Guid#,#Tguid#,#Title#,#Shortcontent#,#Code#,#Content#,#Viewtimes#,#LasteUpdateDate#,#LasteUpdateBy#,#Isfirst#,#Ishot#,#Iscomment#,#Logo#,#Creator#,#CreateDate#,#Good#,#Bad#,#Showpr#)			
+		</insert>
+		<update id="News_Update" parameterClass="News" resultClass="int">
+			update News set
+				GUID=#Guid#
+				,TGUID=#Tguid#
+				,Title=#Title#
+				,ShortContent=#Shortcontent#
+				,Code=#Code#
+				,Content=#Content#
+				,ViewTimes=#Viewtimes#
+				,Laste_update_date=#LasteUpdateDate#
+				,Laste_update_By=#LasteUpdateBy#
+				,IsFirst=#Isfirst#
+				,IsHot=#Ishot#
+				,IsComment=#Iscomment#
+				,Logo=#Logo#
+				,CREATOR=#Creator#
+				,CREATE_DATE=#CreateDate#
+				,Good=#Good#
+				,Bad=#Bad#
+				,ShowPr=#Showpr#			
+			where 
+			Seqno=#Seqno#			
+		</update>		
+		<delete id="News_Delete"  parameterClass="int">
+			
+			delete from News 
+			where 
+			Seqno=$value$			
+		</delete>		
+		
+		
+		
+	</statements>
+</sqlMap>

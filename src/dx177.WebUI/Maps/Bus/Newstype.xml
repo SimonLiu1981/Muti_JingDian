@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?> 
+<sqlMap namespace="Newstype"  xmlns="http://ibatis.apache.org/mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
+	<alias>
+		<typeAlias alias="Newstype"  type="dx177.Model.Bus.Newstype,dx177.Model" />
+		<typeAlias alias="Newstype.Key" type="dx177.Model.Bus.Newstype+Key,dx177.Model" />
+	</alias>
+	<resultMaps>
+	  <resultMap id="SelectResult" class="Newstype">
+		<result property="Seqno" column="Seqno" />
+		<result property="Guid" column="GUID" />
+		<result property="Pguid" column="PGUID" />
+		<result property="Title" column="Title" />
+		<result property="Code" column="Code" />
+		<result property="Shortcontent" column="ShortContent" />
+		<result property="Content" column="Content" />
+		<result property="Creator" column="CREATOR" />
+		<result property="CreateDate" column="CREATE_DATE" />
+		<result property="LasteUpdateDate" column="Laste_update_date" />
+		<result property="LasteUpdateBy" column="Laste_update_By" />
+	</resultMap>
+	</resultMaps>	
+
+	<statements>
+		<select id="Newstype_Select"  parameterClass="int" resultMap="SelectResult">
+			select *
+			from NewsType
+			<dynamic prepend="where"><!-- 主键 -->
+				<isParameterPresent prepend="AND">Seqno=$value$</isParameterPresent>
+			</dynamic>
+			</select>
+		
+		
+		<insert id="Newstype_Insert"  parameterClass="Newstype" resultClass="int">			
+		  <!-- 按照规范序列应该为[TABLE]_S -->
+			<selectKey property="Seqno" type="post" resultClass="int">				
+				SELECT @@IDENTITY AS ID
+            </selectKey>
+			insert into NewsType
+				(GUID,PGUID,Title,Code,ShortContent,Content,CREATOR,CREATE_DATE,Laste_update_date,Laste_update_By)
+			values
+				(#Guid#,#Pguid#,#Title#,#Code#,#Shortcontent#,#Content#,#Creator#,#CreateDate#,#LasteUpdateDate#,#LasteUpdateBy#)			
+		</insert>
+		<update id="Newstype_Update" parameterClass="Newstype" resultClass="int">
+			update NewsType set
+				GUID=#Guid#
+				,PGUID=#Pguid#
+				,Title=#Title#
+				,Code=#Code#
+				,ShortContent=#Shortcontent#
+				,Content=#Content#
+				,CREATOR=#Creator#
+				,CREATE_DATE=#CreateDate#
+				,Laste_update_date=#LasteUpdateDate#
+				,Laste_update_By=#LasteUpdateBy#			
+			where 
+			Seqno=#Seqno#			
+		</update>		
+		<delete id="Newstype_Delete"  parameterClass="int">
+			
+			delete from NewsType 
+			where 
+			Seqno=$value$			
+		</delete>		
+		
+		
+		
+	</statements>
+</sqlMap>
