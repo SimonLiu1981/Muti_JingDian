@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="dingcaiget.aspx.cs" Inherits="SupportOpposeV_0_0.plugins.dingcai.dingcaiget" %>

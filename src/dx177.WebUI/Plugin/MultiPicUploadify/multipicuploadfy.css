@@ -1,0 +1,158 @@
+ .multuploadsortclass
+{
+    width: 640px;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+.multuploadsortclass li
+{
+    float: left;
+    padding: 3px 0 3px 0;
+    width: 600px;
+    height: 130px;
+}
+.multuploadsortclass div.wapper
+{
+    height: 130px;
+    line-height: 130px;
+    border: solid 1px black;
+    background-color: #e0e0e0;
+}
+.multuploadsortclass div.wapper div.img
+{
+    float: left;
+    height: 130px;
+    width: 120px;
+    margin-top: 5px;
+}
+.multuploadsortclass div.wapper div.img a.preview, .multuploadsortclass div.wapper div.img a.preview:hover
+{
+    text-decoration:none;
+    cursor:default;
+}
+.multuploadsortclass div.wapper div.img a.preview img
+{
+    height: 115px;
+    width: 115px;
+}
+.multuploadsortclass div.wapper div.img .setting
+{
+    width: 90px;
+    height: 20px;
+}
+.multuploadsortclass div.wapper div.content
+{
+    width: 430px;
+    height: 100px;
+    margin-top: 5px;
+    float: right;
+}
+.multuploadsortclass div.wapper div.deletesortitem
+{
+    width: 13px;
+    height: 16px;
+    float: right;
+    margin: 5px 5px 0 0;
+    background-image: url(images/cancel.png);
+}
+.multuploadsortclass div.wapper div.content .title
+{
+    height: 25px;
+}
+.multuploadsortclass div.wapper div.content .title .success
+{
+    height: 20px;
+    line-height:20px;
+    display:none;
+    color:Red;
+}
+.multuploadsortclass div.wapper div.content .title .caption
+{
+    float: left;
+    line-height: 20px;
+    width: 50px;
+    font-weight:bold;
+    border: 0px solid red;
+    font-size: 12px;
+}
+.multuploadsortclass div.wapper div.content .title input
+{
+    float: left;
+    width: 240px;
+    line-height: 12px;
+    font-size: 12px;
+}
+.multuploadsortclass div.wapper div.content .descption
+{
+    height: 80px;
+}
+.multuploadsortclass div.wapper div.content .descption .caption
+{
+    float: left;
+    width: 50px;
+    font-weight:bold;
+    line-height: 20px;
+}
+.multuploadsortclass div.wapper div.content .descption textarea
+{
+    cursor: text !important;
+    font-size: 12px;
+    height: 70px;
+    width: 340px;
+}
+.placeHolder div
+{
+    background-color: white !important;
+    height: 130px;
+    border: dashed 1px gray !important;
+}
+.multuploadsortclass div
+{
+    overflow: hidden;
+    text-align: left;
+    padding-left: 0.25em;
+}
+
+
+
+.uploadifyQueueItem {
+	font: 11px Verdana, Geneva, sans-serif;
+	border: 2px solid #E5E5E5;
+	background-color: #F5F5F5;
+	margin-top: 5px;
+	padding: 10px;
+	width: 350px;
+}
+.uploadifyError {
+	border: 2px solid #FBCBBC !important;
+	background-color: #FDE5DD !important;
+}
+.uploadifyQueueItem .cancel {
+	float: right;
+}
+.uploadifyProgress {
+	background-color: #FFFFFF;
+	border-top: 1px solid #808080;
+	border-left: 1px solid #808080;
+	border-right: 1px solid #C5C5C5;
+	border-bottom: 1px solid #C5C5C5;
+	margin-top: 10px;
+	width: 100%;
+}
+.uploadifyProgressBar {
+	background-color: #0099FF;
+	width: 1px;
+	height: 3px;
+}
+
+
+
+.limitorBox {
+	border: 1px solid #ccc;	
+	color:#de0000;	
+	border-top: none;
+	background-color: #ffc;	
+	padding: 3px 6px;
+	font-size: 10px;
+}

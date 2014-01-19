@@ -1,0 +1,2 @@
+﻿<%=Request.QueryString["jsoncallback"]%>(<%=JsonString%>)<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MultiupFilesAjaxHandler.aspx.cs" Inherits="MultiFilesUpload.Plugins.MultiFilesUpload.MultiupFilesAjaxHandler" %>
+ 

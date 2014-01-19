@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ajaxHandler.aspx.cs" Inherits="ViewTimes_0_1.Plugins.ViewTimes_0_1.ajaxHandler" %> 
