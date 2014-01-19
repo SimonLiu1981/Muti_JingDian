@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<NavMenu>
+	<TopMenu  Text="个人注册用户菜单" ID="1"  >
+		<Menus Text="酒店管理" ID="5" >
+			<MenuItem  CID="5" Text="预定信息"  ID="menu_ordermyhotel"   NavigateUrl="/member-ordersmyhotel.aspx"  />
+			<MenuItem  CID="5" Text="酒店信息"  ID="menu_hotel"   NavigateUrl="/member-hotel.aspx"  />
+			<MenuItem  CID="5" Text="房间列表"  ID="menu_roomlist"   NavigateUrl="/member-roomlist.aspx" />
+			
+			
+		</Menus>
+		<Menus Text="租车管理" ID="34" >
+			<MenuItem  CID="1" Text="我的租车列表"  ID="menu_hirecarlist"   NavigateUrl="/member-hirecarlist.aspx"  />
+			<MenuItem  CID="1" Text="我要发布"  ID="menu_hirecar"   NavigateUrl="/member-hirecar.aspx"  />
+
+		</Menus>
+		 
+		<Menus Text="餐饮管理" ID="3" >
+			<MenuItem  CID="1" Text="我的餐饮列表"  ID="menu_Restaurantlist"   NavigateUrl="/member-Restaurantlist.aspx"  />
+			<MenuItem  CID="1" Text="我要发布"  ID="menu_Restaurant"   NavigateUrl="/member-Restaurant.aspx"  />
+		</Menus>
+		<Menus Text="用户中心" ID="2" >
+			<MenuItem  CID="1" Text="订单信息"  ID="menu_11"   NavigateUrl="/member-orders.aspx"  />
+			<MenuItem  CID="1" Text="我的问题"  ID="menu_13"   NavigateUrl="/member-myquestons.aspx"  />
+			<MenuItem  CID="1" Text="个人信息"  ID="menu_12"   NavigateUrl="/member-setting.aspx"  />
+		</Menus>
+		<Menus Text="注销用户" ID="1" >
+			<MenuItem  CID="1" Text="注销用户"  ID="menu_1a"   NavigateUrl="/login/logout/"  />
+		</Menus>
+	</TopMenu>
+	<TopMenu  Text="租车注册用户菜单" ID="2"  >
+		<Menus Text="酒店管理" ID="5" >
+			<MenuItem  CID="1" Text="预定信息"  ID="menu_ordermyhotel"   NavigateUrl="/member-ordersmyhotel.aspx"  />
+			<MenuItem  CID="1" Text="酒店信息"  ID="menu_hotel"   NavigateUrl="/member-hotel.aspx"  />
+			<MenuItem  CID="1" Text="房间列表"  ID="menu_roomlist"   NavigateUrl="/member-roomlist.aspx" />
+			
+		</Menus>
+		<Menus Text="租车管理" ID="34" >
+			<MenuItem  CID="1" Text="我的租车列表"  ID="menu_hirecarlist"   NavigateUrl="/member-hirecarlist.aspx"  />
+			<MenuItem  CID="1" Text="我要发布"  ID="menu_hirecar"   NavigateUrl="/member-hirecar.aspx"  />
+
+			
+		</Menus>
+
+		<Menus Text="餐饮管理" ID="3" >
+			<MenuItem  CID="1" Text="我的餐饮列表"  ID="menu_Restaurantlist"   NavigateUrl="/member-Restaurantlist.aspx"  />
+			<MenuItem  CID="1" Text="我要发布"  ID="menu_Restaurant"   NavigateUrl="/member-Restaurant.aspx"  />
+			
+		</Menus>
+		<Menus Text="用户中心" ID="2" >
+			<MenuItem  CID="1" Text="订单信息"  ID="menu_11"   NavigateUrl="/member-orders.aspx"  />
+			<MenuItem  CID="1" Text="我的问题"  ID="menu_13"   NavigateUrl="/member-myquestons.aspx"  />
+			<MenuItem  CID="1" Text="个人信息"  ID="menu_12"   NavigateUrl="/member-setting.aspx"  />
+		</Menus>
+		<Menus Text="注销用户" ID="1" >
+			<MenuItem  CID="1" Text="注销用户"  ID="menu_1a"   NavigateUrl="/login/logout/"  />
+		</Menus>
+	</TopMenu>
+
+	<TopMenu  Text="餐饮注册用户菜单" ID="3"  >
+		<Menus Text="酒店管理" ID="5" >
+			<MenuItem  CID="1" Text="预定信息"  ID="menu_ordermyhotel"   NavigateUrl="/member-ordersmyhotel.aspx"  />
+			<MenuItem  CID="1" Text="酒店信息"  ID="menu_hotel"   NavigateUrl="/member-hotel.aspx"  />
+			<MenuItem  CID="2" Text="房间列表"  ID="menu_roomlist"   NavigateUrl="/member-roomlist.aspx" />
+		</Menus>
+		<Menus Text="租车管理" ID="34" >
+			<MenuItem  CID="1" Text="我的租车列表"  ID="menu_hirecarlist"   NavigateUrl="/member-hirecarlist.aspx"  />
+			<MenuItem  CID="1" Text="我要发布"  ID="menu_hirecar"   NavigateUrl="/member-hirecar.aspx"  />
+
+		</Menus>
+
+		<Menus Text="餐饮管理" ID="3" >
+			<MenuItem  CID="1" Text="我的餐饮列表"  ID="menu_Restaurantlist"   NavigateUrl="/member-Restaurantlist.aspx"  />
+			<MenuItem  CID="1" Text="我要发布"  ID="menu_Restaurant"   NavigateUrl="/member-Restaurant.aspx"  />
+		</Menus>
+		<Menus Text="用户中心" ID="2" >
+			<MenuItem  CID="1" Text="订单信息"  ID="menu_11"   NavigateUrl="/member-orders.aspx"  />
+			<MenuItem  CID="1" Text="我的问题"  ID="menu_13"   NavigateUrl="/member-myquestons.aspx"  />
+			<MenuItem  CID="1" Text="个人信息"  ID="menu_12"   NavigateUrl="/member-setting.aspx"  />
+		</Menus>
+		<Menus Text="注销用户" ID="1" >
+			<MenuItem  CID="1" Text="注销用户"  ID="menu_1a"   NavigateUrl="/login/logout/"  />
+		</Menus>
+	</TopMenu>
+  
+	<TopMenu  Text="酒店注册用户菜单" ID="4"    >
+		<Menus Text="酒店管理" ID="5" >
+			<MenuItem  CID="1" Text="预定信息"  ID="menu_ordermyhotel"   NavigateUrl="/member-ordersmyhotel.aspx"  />
+			<MenuItem  CID="1" Text="酒店信息"  ID="menu_hotel"   NavigateUrl="/member-hotel.aspx"  />
+			<MenuItem  CID="2" Text="房间列表"  ID="menu_roomlist"   NavigateUrl="/member-roomlist.aspx" />
+		</Menus>
+		<Menus Text="租车管理" ID="34" >
+			<MenuItem  CID="1" Text="我的租车列表"  ID="menu_hirecarlist"   NavigateUrl="/member-hirecarlist.aspx"  />
+			<MenuItem  CID="1" Text="我要发布"  ID="menu_hirecar"   NavigateUrl="/member-hirecar.aspx"  />
+
+		</Menus>
+
+		<Menus Text="餐饮管理" ID="3" >
+			<MenuItem  CID="1" Text="我的餐饮列表"  ID="menu_Restaurantlist"   NavigateUrl="/member-Restaurantlist.aspx"  />
+			<MenuItem  CID="1" Text="我要发布"  ID="menu_Restaurant"   NavigateUrl="/member-Restaurant.aspx"  />
+		</Menus>
+		<Menus Text="用户中心" ID="2" >
+			<MenuItem  CID="1" Text="订单信息"  ID="menu_11"   NavigateUrl="/member-orders.aspx"  />
+			<MenuItem  CID="1" Text="我的问题"  ID="menu_13"   NavigateUrl="/member-myquestons.aspx"  />
+			<MenuItem  CID="1" Text="个人信息"  ID="menu_12"   NavigateUrl="/member-setting.aspx"  />
+		</Menus>
+		<Menus Text="注销用户" ID="1" >
+			<MenuItem  CID="1" Text="注销用户"  ID="menu_1a"   NavigateUrl="/login/logout/"  />
+		</Menus>
+	</TopMenu>
+
+
+
+  <TopMenu  Text="手机订单" ID="5" >
+    <Menus Text="我的订单" ID="0" >
+      <MenuItem  CID="1" Text="今天预定信息"  ID="menu_wap_ordermyhotel"   NavigateUrl="/MyOrderList_9_1.aspx"  />
+      <MenuItem  CID="1" Text="所有预定信息"  ID="menu_wap_ordermyhotel_history"   NavigateUrl="/MyOrderList_9_0.aspx"  />
+      <MenuItem  CID="1" Text="自定义酒店"  ID="MyHoteList"   NavigateUrl="/web/admin/Wap/myhotellistpage.aspx"  />
+      
+      
+      
+    </Menus>
+    
+    <Menus Text="注销用户" ID="1" >
+      <MenuItem  CID="1" Text="注销用户"  ID="menu_1a"   NavigateUrl="/login/logout/"  />
+    </Menus>
+  </TopMenu>
+  <TopMenu  Text="酒店注册用户菜单" ID="6"    >
+    <Menus Text="酒店管理" ID="5" >      
+      <MenuItem  CID="1" Text="酒店信息"  ID="menu_hotel"   NavigateUrl="/member-hotellist.aspx"  />      
+    </Menus>
+    <Menus Text="租车管理" ID="34" >
+      <MenuItem  CID="1" Text="我的租车列表"  ID="menu_hirecarlist"   NavigateUrl="/member-hirecarlist.aspx"  />
+      <MenuItem  CID="1" Text="我要发布"  ID="menu_hirecar"   NavigateUrl="/member-hirecar.aspx"  />
+
+    </Menus>
+
+    <Menus Text="餐饮管理" ID="3" >
+      <MenuItem  CID="1" Text="我的餐饮列表"  ID="menu_Restaurantlist"   NavigateUrl="/member-Restaurantlist.aspx"  />
+      <MenuItem  CID="1" Text="我要发布"  ID="menu_Restaurant"   NavigateUrl="/member-Restaurant.aspx"  />
+    </Menus>
+    <Menus Text="用户中心" ID="2" >
+      <MenuItem  CID="1" Text="订单信息"  ID="menu_11"   NavigateUrl="/member-orders.aspx"  />
+      <MenuItem  CID="1" Text="我的问题"  ID="menu_13"   NavigateUrl="/member-myquestons.aspx"  />
+      <MenuItem  CID="1" Text="个人信息"  ID="menu_12"   NavigateUrl="/member-setting.aspx"  />
+    </Menus>
+    <Menus Text="注销用户" ID="1" >
+      <MenuItem  CID="1" Text="注销用户"  ID="menu_1a"   NavigateUrl="/login/logout/"  />
+    </Menus>
+  </TopMenu>
+  
+</NavMenu>

@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>用户登录 真时尚购物网</title>
+    <link rel="icon" href="http://www.zhenfashion.com.cn/favicon.ico" type="image/x-icon" />
+    <link rel="bookmark" href="http://www.zhenfashion.com.cn/favicon.ico" type="image/x-icon" />
+   
+</head>
+<body>
+    <link rel="stylesheet" href="/web/admin/css/style1.css" type="text/css" />
+    <script type="text/javascript" src="/web/admin/js/head.js"></script>
+    <script type="text/javascript" src="/js/jquery-1.3.2.min.js"></script>
+    <div id="MainWrap_Car" style="background: #fff;">
+        <div class="PassportWrap">
+            <div class="RegisterWrap">
+                <h4>
+                    已注册用户，请登录</h4>
+                <div class="intro">
+                    如果您已经是本站会员，请登录</div>
+                <div class="form">
+                    <input name="forward" type="hidden" value="" /><table width="100%" border="0" cellspacing="0"
+                        cellpadding="0">
+                        <tr>
+                            <th>
+                                <i>*</i>用户名：
+                            </th>
+                            <td>
+                                <input autocomplete="off" name="login" class="inputstyle _x_ipt" required="true"
+                                    id="in_login" tabindex="1" value="sgci@163.com" /><a style="margin-left: 6px;" href="#">立即注册</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <i>*</i>密码：
+                            </th>
+                            <td>
+                                <input autocomplete="off" name="passwd" class="inputstyle _x_ipt" type="password"
+                                    required="true" id="in_passwd" tabindex="2" vtype="password" /><a style="margin-left: 6px;"
+                                        href="#">忘记密码？</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <i>*</i>验证码：
+                            </th>
+                            <td id='verifyCodebox'>
+                                <input autocomplete="off" size="8" class="inputstyle _x_ipt" type="digits" required="true"
+                                    name="loginverifycode" id="iptlogin" tabindex="3" vtype="digits" /><span class='verifyCode'
+                                        style='display: none;'><img src="img/" border="1" id="LoginimgVerifyCode" /><a href="javascript:changeimg()">&nbsp;看不清楚?换个图片</a></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                            </th>
+                            <td>
+                                <input class="actbtn btn-login" type="submit" value="登录" tabindex="4" /><input type="hidden"
+                                    name="forward" value="" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <input type='hidden' name='ref_url' value='#' />
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+</body>
+</html>

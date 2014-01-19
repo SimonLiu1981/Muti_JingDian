@@ -1,0 +1,104 @@
+﻿ 
+/*header*/
+.site_main{ margin:0px auto; width:950px;}
+.site_nav{ float:left; width:100%; height:24px;line-height:24px; background-color:#F3F3F3; border-bottom:1px solid #DCDCDC;border-top:1px solid #DCDCDC;}
+	.mobile_becod{ float:left;padding-left:5px; color:#000;}
+	.quick-site{ float:right; width:500px; text-align:right;}
+    .quick-site a{ color:#666666}
+	.quick-site a:hover{ color:#F60}
+
+
+.header{ margin:0px auto; width:950px; height:76px;}
+	.logo{ float:left; background:url(../img/logo.gif) no-repeat 6px 23px; width:100px; height:76px;}
+	.indexword{float:left; width:195px; height:76px; background:url(../img/adv_word.gif) no-repeat 10px 23px;}
+	.server_tel{float:right; padding-top:20px; color:#666666}
+	.tel_numm{color:#FFA800; font-size:18px; font-weight:bolder; line-height:40px;}
+			
+		
+
+.main{ margin:0px auto; width:950px; background-color:#fef7d5}
+.submit_div{ margin:0px auto; width:950px;}
+
+.info_top{float:left; width:950px; margin-top:5px; height:188px;background: url(../img/order_top_left.gif) no-repeat left top;background-color:#fef7d5}
+.info_jd{float:left; width:906px; margin-top:10px; margin-left:10px!important;margin-left:5px; height:23px;}
+.info_top_right{float:right; width:100px; height:100px;background: url(../img/order_top_right.gif) no-repeat  right top; }
+.info{float:left;width:926px;background-color:#fff; border-left:12px solid  #fef7d5;border-right:12px solid  #fef7d5; padding-bottom:20px;}
+.info_top_msg{float:right;width:388px; height:164px;vertical-align:top; border-bottom:12px solid #FFF;border-left:12px solid #FFF;background: url(../img/order_top_right_right.gif) no-repeat right top;background-color:#d9f6ff;}
+.info_top_msg_bg{float:left;width:388px; height:164px;background: url(../img/order_top_right_left.gif) no-repeat;}
+.info_foot{width:950px;background-color:#FEF7D5; height:10px;}
+.step1{float:left;background: url(../img/order_1.gif); width:211px; height:24px; line-height:24px;color:#000; font-size:14px; font-weight:900;text-align:center;}
+.step1_red{float:left;background:url(../img/order_1_red.gif); width:211px; height:24px; color:#fff; font-size:14px; font-weight:900;line-height:24px; text-align:center;}
+.step2{float:left;background:#e4e4e4; width:650px; height:23px;line-height:23px;color:#000; font-size:14px; font-weight:900; padding-left:30px; }
+.step2_red{float:left;background:#ff6500; width:650px; height:23px;line-height:23px;color:#fff; font-size:14px; font-weight:900;padding-left:30px;}
+.red_gray{float:left;background: url(../img/order_red_gray.gif); width:15px;height:23px;}
+.gray_red{float:left;background: url(../img/order_gray_red.gif); width:15px;height:23px;}
+.info_form{float:left; width:926px;}
+.info_form select{ margin-left:5px;}
+.info_form dl dt{ float:left; display:block;}
+.gtitle{ color:#404040;  height:26px; line-height:26px; margin-top:10px;}
+.dw100{ width:166px; text-align:right; padding-right:3px;}
+.dw700{ width:700px; vertical-align:top;}
+.f000{ color:#000;}
+.info_top_title{ font-size:14px; font-weight:bold; }
+.f7f7f7f{color:#7f7f7f;}
+.red{color:#ff0000;vertical-align: middle;}
+
+#ul_top_mes{ float:left; font-size:14px; margin-top:68px; margin-left:30px!important;margin-left:15px; color:#404040; line-height:27px;}
+.f02556e{ color:#02556e}
+.f3366cc{ color:#3366cc}
+.fff5500{color:#ff5500}
+input.text,textarea.text{color:#404040;font-size:12px;background:white url(../img/input-bg.png) 0 0 no-repeat;margin:0 0 0 5px;padding:3px 2px 0 3px;border:1px solid #a7a6aa;}
+input.text{height:16px;}
+.select{ margin-left:5px; height:20px; width:70px;}
+
+
+.info2{ float:left;width:926px;background-color:#FFF; border:12px #fef7d5 solid;}
+.info2_top_title{float:left;height:40px; width:115px; line-height:40px;margin-left:25px;}
+.info2_top_title2{float:left;height:40px; width:100px;text-align:center;line-height:40px;}
+.info2_top_title3{float:left;height:40px; width:380px; text-align:right;line-height:40px; margin-right:100px;}
+.info2_hotel{float:left;height:40px; width:880px; text-align:left;line-height:40px; margin-left:20px; border-top:1px solid #fef7d5}
+
+.room_info{float:left;background-color:#fff6e5;height:65px; color:#7f7f7f; line-height:65px; width:885px;margin-left:20px!important; margin-left:10px; border-bottom:1px solid #f7e0a4;border-top:1px solid #f7e0a4;}
+.room_info_img { float:left;border:0; padding:6px 8px ; width:52px; height:52px; background-color:#FFF; margin-left:3px;}	
+.h20{ float:left;height:20px; width:900px;}
+.room_detail{ float:left;width:280px; height:65px; line-height:30px; overflow:hidden; padding-right:20px;}
+ 
+.info_order_date{float:left;width:100px; height:65px;line-height:30px; text-align:left; vertical-align:middle; }
+.info_order_date_red{float:left;width:100px; height:61px;line-height:30px; text-align:left; vertical-align:middle; border:2px solid #F00; }
+.unit_price{float:left;width:100px; height:65px;line-height:65px; text-align:center; vertical-align:middle; margin-left:20px;}
+.unit_total{float:left;width:90px; height:35px;line-height:65px; text-align:center; vertical-align:middle; padding-top:22px; margin-left:20px!important;margin-left:10px;}
+.total_price{float:left;width:80px; height:65px;line-height:65px; text-align:center; vertical-align:middle; font-weight:bold;}
+
+.info3{ float:left;width:926px;background-color:#FFF; border-left:12px #fef7d5 solid;border-right:12px #fef7d5 solid; border-bottom:12px #fef7d5 solid; height:34px; line-height:34px;background-color:#f1f8ff; font-size:16px; font-weight: bold;}
+
+.f12{ font-size:12px; font-weight:normal;}
+.submit_button{ float:left;background: url(../img/order_go.gif) no-repeat; width:138px; height:29px; display:block; margin-top:26px; border:0; cursor:pointer;}
+.copyright{ float:left; width:950px; background:url(../img/guide_bg.gif) #FFF no-repeat 50% -999999px; margin-top:8px; padding-top:16px;text-align:center; color:#c2c2c2; line-height:12px; border-top:10px solid #fef7d5;}
+.copyright a{color:#3366cc}
+.copyright p{width:950px;}
+
+.roomprice{float:left; margin-left:70px!important; margin-left:35px; border-left:#ffc446 1px solid; border-top:#ffc446 1px solid; max-width:770px;_max-width:770px;margin-bottom:20px;}
+	.roomprice ul{float:left; width:110px;}
+	.roomprice li{float:left;padding:0px 6px; width:97px;display:block; border-bottom:#ffc446 1px solid; border-right:#ffc446 1px solid; line-height:30px; height:30px; text-align:center; color:#222222;}
+	.roomprice li.li_th{ background:#FFF3C3; color:#222222; font-weight:bold;}
+	.alarm{ float:left; background:#FFF; color: #F00; font-size:14px; width:800px;height:40px; line-height:40px;margin-left:70px!important; margin-left:35px;  }
+	.alarm2{ float:left; background:#FFF; color: #F00; font-size:14px; width:160px;height:40px; line-height:40px;margin-left:393px!important; margin-left:197px;   }
+
+.info_confirm{float:left;width:726px!important;width:670px; font-size:14px; line-height:30px; padding:30px 100px 0 100px;color:#404040;}
+.confirm_title{float:left; width:600px; background:url(../img/order_yes.gif) left no-repeat;height:80px;FONT-FAMILY:黑体; font-size:20px; line-height:80px; padding-left:60px;}
+.confirm_number,.confirm_msg,.confirm_button{float:left;padding-left:60px;width:100%;}
+.confirm_number{color:#7f7f7f;}
+.confirm_msg{float:left;text-indent:2em; margin:20px 0;}
+.confirm_info{ float:left;background:url(../img/ts.gif) left no-repeat; margin-left:60px!important;margin-left:30px; padding-left:20px; width:650px; font-size:12px;}
+.confirm_button{ float:left;text-align:center; margin-top:30px; font-size:14px; font-weight:bold;}
+.confirm_button a{float:left;margin-right:80px;}
+.confirm_button a:hover{color:#fff;}
+.confirm_button_a{float:left;background-color:#fb8635;color:#fff; height:32px;line-height:32px; padding:0 8px;}
+.confirm_button_b{float:left;background-color:#6fc0ff;color:#fff; height:32px;line-height:32px; padding:0 8px;}
+.confirm_button_c{float:left;background-color:#6fc0ff;color:#fff; height:32px;line-height:32px; padding:0 8px;}
+.reg_info{float:left; width:650px;padding-left:60px;margin-top:30px; color:#3366cc}	
+
+.dpjj_right{ float:left;width:600px; color:#424242}
+.dpjj_right li{ float:left;height:22px; line-height:22px; width:400px; margin-left:15px; color:#7f7f7f}
+.dpjj_right input{ vertical-align:middle; padding:0; margin:0;}
+

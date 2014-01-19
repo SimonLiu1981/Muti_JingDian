@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>丹霞山酒店预定-查询酒店列表</title>
+    <link href="css/global.css" rel="stylesheet" type="text/css" />
+    <link href="css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="css/tab.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.tools.min.js"></script>
+
+</head>
+<body>
+    <div class="header_top">
+        <ul class="header_nav">
+            <li id='login_info'>用户名
+                <input style="width: 75px" id="username" type="text" name="username">
+                密码
+                <input style="width: 75px" id="password" value="" type="password" name="password">
+                <input id="loginbutton" class="button" value="登录" type="submit" name="button">
+                <input id="registernbutton" class="button" onclick="window.open('http://www.becod.com/register');"
+                    value="注册新账号" type="button" name="button">
+            </li>
+            <li class="fright"><a href="http://www.becod.com/voucher.html">优惠券</a> | <a href="http://www.becod.com/promotions.html">
+                客房促销</a> | <a class='orange' href="http://www.becod.com/register/tavern">酒店注册</a>
+                | <a class='black' onclick="javascript:window.external.AddFavorite('http://www.becod.com','百酷旅游网')"
+                    href="javascript:void(0)" target="_self">加入收藏</a> | <a class='black' onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.becod.com');"
+                        href="javascript:void(0)" target="_self">设为首页</a></li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <!--头部 开始-->
+        <div class="header">
+            <p id="logo">
+            </p>
+            <p id="header_adv">
+                <a href="http://www.becod.com/chongzhi.html" target="_blank">
+                    <img src="img/web_czhf.gif" width="647" height="65"></a></p>
+            <div class="clear">
+            </div>
+            <div id="nav">
+                <ul id="nav_left">
+                    <li class="noborder nav_selected"><a href="/" target="_self">首页</a></li>
+                    <li><a href="http://guzhen.becod.com/" target="_self"><span>古镇客栈</span></a></li>
+                    <li><a href="http://njle.becod.com/" target="_self"><span>农家乐</span></a></li>
+                    <li><a href="http://comment.becod.com/" target="_self"><span>住宿点评</span></a></li>
+                    <li><a href="http://wenda.becod.com/" target="_self"><span>住宿问答</span></a></li>
+                    <li><a href="http://news.becod.com" target="_self"><span>旅游资讯</span></a></li>
+                    <li><a href="http://posts.becod.com" target="_self"><span>旅游攻略</span></a></li>
+                    <li><a href="http://dest.becod.com/" target="_self"><span>旅游景点</span></a></li>
+                    <li><a href="http://home.becod.com"><span>百酷家园</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!--头部 结束-->
+        <div class="main">
+            <!--主体 开始-->
+            <div class="blank05">
+            </div>
+            <div class="main_left">
+                <ul class="css-tabs03">
+                    <li><a class="current" href="#">查询条件</a></li>
+                </ul>
+                <div class="css-panes03">
+                    <div class="out">
+                        <div class="search_main">
+                            <p>
+                                <b>价格范围：</b><a class="here" href="#" target="_self">全部</a><a href="#" target="_self">100元以下</a><a
+                                    href="#" target="_self">100元-200元</a><a href="#" target="_self">200-300元</a><a href="#"
+                                        target="_self">300元以上</a></p>
+                            <p class="heightlight">
+                                <b>酒店类型：</b><a class="here" href="#" target="_self">全部</a><a href="#" target="_self">经济型酒店</a><a
+                                    href="#" target="_self">星级酒店</a><a href="#" target="_self">商务型酒店</a><a href="#" target="_self">农家乐</a><a
+                                        href="#" target="_self">短租公寓</a><a href="#" target="_self">青年旅舍</a><a href="#" target="_self">家庭旅馆</a><a
+                                            href="#" target="_self">客栈</a><a href="#" target="_self">旅馆</a><a href="#" target="_self">宾馆</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="blank05">
+                </div>
+                <div class="cate_list">
+                    <ul>
+                        <li>
+                            <dl class="cateitem_left1">
+                                <div style="text-align: center; line-height: 25px; width: 129px; float: left; color: #ff6100;
+                                    font-weight: bold; margin-right: 5px; margin-top: 5px;">
+                                    <a href="cate_detail.html">
+                                        <img src="http://www.becod.com/upfile/day_100908/100908113130165c73e621cc1ea_s_s.jpg"
+                                            width="129" height="97"></a></div>
+                                <p>
+                                    <a class="title" href="cate_detail.html">长兴怡和庭农家乐</a></p>
+                                <p class="intro">
+                                    农家乐集旅游、食宿、娱乐、农事活动于一体，农家主人热情纯朴，脸上亲切的笑容让您忘记了所有的拘束，忘记所有的忧愁，全身心投入到大自然的怀抱，休闲度假就到茗泉农家乐，这里就是心灵避风的港湾。
+                                    ...<br>
+                                    <a style="color: #00519c" href="/njl_23915.html">&gt;&gt;查看农家乐 电话 地址 详细信息</a></p>
+                            </dl>
+                            <dl class="cateitem_right1">
+                                <a href="cate_comments.html">我要点评</a>
+                                <div class="pjCount">
+                                    评价(<span class="orange">12</span>)
+                                </div>
+                            </dl>
+                        </li>
+                        <li class="bg_color_1">
+                            <dl class="cateitem_left1">
+                                <div style="text-align: center; line-height: 25px; width: 129px; float: left; color: #ff6100;
+                                    font-weight: bold; margin-right: 5px; margin-top: 5px;">
+                                    <a href="/njl_23915.html">
+                                        <img src="http://www.becod.com/upfile/day_100908/100908113130165c73e621cc1ea_s_s.jpg"
+                                            width="129" height="97"></a></div>
+                                <p>
+                                    <a class="title" href="/njl_23915.html">长兴怡和庭农家乐</a></p>
+                                <p class="intro">
+                                    农家乐集旅游、食宿、娱乐、农事活动于一体，农家主人热情纯朴，脸上亲切的笑容让您忘记了所有的拘束，忘记所有的忧愁，全身心投入到大自然的怀抱，休闲度假就到茗泉农家乐，这里就是心灵避风的港湾。农家乐集旅游、食宿、娱乐、农事活动于一体，农家主人热情纯朴，脸上亲切的笑容让您忘记了所有的拘束，忘记所有的忧愁，全身心投入到大自然的怀抱，休闲度假就到茗泉农家乐，这里就是心灵避风
+                                    ...<br>
+                                    <a style="color: #00519c" href="/njl_23915.html">&gt;&gt;查看农家乐 电话 地址 详细信息</a></p>
+                            </dl>
+                            <dl class="cateitem_right1">
+                                <a href="cate_comments.html">我要点评</a>
+                                <div class="pjCount">
+                                    评价(<span class="orange">12</span>)
+                                </div>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl class="cateitem_left1">
+                                <div style="text-align: center; line-height: 25px; width: 129px; float: left; color: #ff6100;
+                                    font-weight: bold; margin-right: 5px; margin-top: 5px;">
+                                    <a href="/njl_23915.html">
+                                        <img src="http://www.becod.com/upfile/day_100908/100908113130165c73e621cc1ea_s_s.jpg"
+                                            width="129" height="97"></a></div>
+                                <p>
+                                    <a class="title" href="/njl_23915.html">长兴怡和庭农家乐</a></p>
+                                <p class="intro">
+                                    农家乐集旅游、食宿、娱乐、农事活动于一体，农家主人热情纯朴，脸上亲切的笑容让您忘记了所有的拘束，忘记所有的忧愁，全身心投入到大自然的怀抱，休闲度假就到茗泉农家乐，这里就是心灵避风的港湾。
+                                    ...<br>
+                                    <a style="color: #00519c" href="/njl_23915.html">&gt;&gt;查看农家乐 电话 地址 详细信息</a></p>
+                            </dl>
+                            <dl class="cateitem_right1">
+                                <a href="cate_comments.html">我要点评</a>
+                                <div class="pjCount">
+                                    评价(<span class="orange">12</span>)
+                                </div>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>                 
+               <DIV id=pagerwrapper>     
+        <DIV class=my_PageList><A title=首页 href="NewsGSXW_1.html">首页</A><A title=上一页 href="NewsGSXW_1.html">上一页</A><SPAN>1</SPAN><A title=第|2|页 href="NewsGSXW_2.html">2</A><A title=下一页 href="NewsGSXW_2.html">下一页</A><A title=尾页 href="NewsGSXW_2.html">尾页</A></DIV>
+         
+        
+      </DIV>
+            </div>
+            <div class="main_right">
+                <div class="table02">
+                    <div class="table02_title">
+                        <p>
+                            优秀土建</p>
+                    </div>
+                    <div class="table02_body">
+                    </div>
+                </div>
+                <div class="blank05">
+                </div>
+                <div class="table03">
+                    <div class="table03_title">
+                        <p>
+                            旅游攻略</p>
+                        <div class="more">
+                            <a href="#">更多>></a></div>
+                    </div>
+                    <div class="table03_body">
+                    </div>
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+            <!--主体 结束-->
+        </div>
+        <!--尾开始-->
+        <div class="footer">
+            <div class="copyright">
+                <p>
+                    <a href="http://www.becod.com/about/about.html" rel="nofollow">关于我们</a>|<a href="http://www.becod.com/about/cooperation.html"
+                        rel="nofollow"><span class="text_f60">店家服务</span></a>|<a href="http://www.becod.com/site_city.html">住宿索引</a>|<a
+                            href="http://www.becod.com/about/zhaopin.html" rel="nofollow">诚聘英才</a>|<a href="http://www.becod.com/link.html">友情链接</a>|<a
+                                href="http://www.becod.com/about/falv.html" rel="nofollow">法律声明</a>|<a href="http://www.becod.com/sitemap.html">网站地图</a>|<a
+                                    href="http://www.becod.com/about/lianxi.html" rel="nofollow">联系百酷</a></p>
+                <p class="gray_text">
+                    <span>Copyright© 2005-2010, <a href="http://www.becod.com/" rel="nofollow">百酷酒店预订网becod.com</a>
+                        . All rights reserved. ICP证：<a href="http://www.miibeian.gov.cn/" rel="nofollow">浙B2-20090179</a>
+                        | <a href="http://www.becod.com/company.html" rel="nofollow">营业执照</a><a href="http://122.224.75.236/wzba/login.do?method=hdurl&amp;doamin=http://www.becod.com&amp;id=330185000023162&amp;SHID=1223.0AFF_NAME=com.rouger.gs.main.UserInfoAff&amp;AFF_ACTION=qyhzdetail&amp;PAGE_URL=ShowDetail"
+                            rel="nofollow" target="_blank"><img style="margin-bottom: 2px" border="0" align="absMiddle"
+                                src="http://www.becod.com/images/ico_com.gif" height="23"></a></p>
+            </div>
+            <div id="friendlink">
+                <a class="gray" href="javascript:void(0);" target="_self">友情链接:</a><a href="http://www.laidingba.com/">酒店预订</a><a
+                    href="http://www.4006777711.com/">酒店之星</a><a href="http://www.uuyoyo.com/">悠游网</a><a
+                        href="http://www.keyunzhan.com/">汽车时刻表</a><a href="http://www.ganji.com/piao/">火车票查询</a><a
+                            href="http://www.auyou.cn">遨游搜</a><a href="http://www.edajia.com">大家旅游网</a><a href="http://www.kuailv.com">快旅网</a><a
+                                href="http://www.17u.net/">同程网</a><a href="http://www.51booking.cn">商务订房网</a><a href="http://www.uhenan.com/">河南旅游网</a><a
+                                    href="http://tour.sdchina.com/">山东旅游网</a><a href="http://www.88gogo.com">掌门人网</a><a
+                                        href="http://www.nettvl.com/">旅游互联网</a><a href="http://www.utourworld.com/">众信旅游网</a><a
+                                            href="http://www.hostelcn.com/">中国经济型酒店网</a><a href="http://www.uc999.com/">游戏999</a><a
+                                                href="http://www.huoche.net/">列车时刻表</a><a href="http://www.byecity.com">佰程旅行网</a><a
+                                                    href="http://www.niulv.com/">牛驴旅游网</a><a href="http://www.bbcmart.com">比比西同业平台</a><a
+                                                        href="http://www.yiqiyou.com">一起游旅行网</a><a href="http://www.lvmama.com/">驴妈妈旅游网</a><a
+                                                            href="http://www.easytour.cn/">易游天下旅行网</a><a href="http://www.topzj.com/">团购网站大全</a><a
+                                                                class="gray" href="javascript:void(0);" target="_self">链接与合作QQ：25096330</a></div>
+        </div>
+    </div>
+    <!--尾结束-->
+</body>
+</html>

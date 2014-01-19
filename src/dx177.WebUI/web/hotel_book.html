@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>丹霞山酒店预定-酒店预订</title>
+    <link href="css/global.css" rel="stylesheet" type="text/css" />
+    <link href="css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="css/order.css" rel="stylesheet" type="text/css" />
+    <link href="css/tab.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.tools.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("ul.css-tabs03").tabs("div.css-panes03 > div", { "event": "mouseover", initialIndex: 0 });
+        });
+    </script>
+
+</head>
+<body>
+    <div class="header_top">
+        <ul class="header_nav">
+            <li id='login_info'>用户名
+                <input style="width: 75px" id="username" type="text" name="username">
+                密码
+                <input style="width: 75px" id="password" value="" type="password" name="password">
+                <input id="loginbutton" class="button" value="登录" type="submit" name="button">
+                <input id="registernbutton" class="button" onclick="window.open('http://www.becod.com/register');"
+                    value="注册新账号" type="button" name="button">
+            </li>
+            <li class="fright"><a href="http://www.becod.com/voucher.html">优惠券</a> | <a href="http://www.becod.com/promotions.html">
+                客房促销</a> | <a class='orange' href="http://www.becod.com/register/tavern">酒店注册</a>
+                | <a class='black' onclick="javascript:window.external.AddFavorite('http://www.becod.com','百酷旅游网')"
+                    href="javascript:void(0)" target="_self">加入收藏</a> | <a class='black' onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.becod.com');"
+                        href="javascript:void(0)" target="_self">设为首页</a></li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        
+        <!--头部 开始-->
+        <div class="header">
+            <p id="logo">
+            </p>
+            <p id="header_adv">
+                <a href="http://www.becod.com/chongzhi.html" target="_blank">
+                    <img src="img/web_czhf.gif" width="647" height="65"></a></p>
+            <div class="clear">
+            </div>
+            <div id="nav">
+                <ul id="nav_left">
+                    <li class="noborder nav_selected"><a href="/" target="_self">首页</a></li>
+                    <li><a href="http://guzhen.becod.com/" target="_self"><span>古镇客栈</span></a></li>
+                    <li><a href="http://njle.becod.com/" target="_self"><span>农家乐</span></a></li>
+                    <li><a href="http://comment.becod.com/" target="_self"><span>住宿点评</span></a></li>
+                    <li><a href="http://wenda.becod.com/" target="_self"><span>住宿问答</span></a></li>
+                    <li><a href="http://news.becod.com" target="_self"><span>旅游资讯</span></a></li>
+                    <li><a href="http://posts.becod.com" target="_self"><span>旅游攻略</span></a></li>
+                    <li><a href="http://dest.becod.com/" target="_self"><span>旅游景点</span></a></li>
+                    <li><a href="http://home.becod.com"><span>百酷家园</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!--头部 结束-->                
+        <div class="main">            
+            <div class="info_top" style="height: 100px; overflow: hidden;">
+                <div style="float: left; width: 950px;">
+                    <div class="info_top_right">
+                    </div>
+                    <ul id="ul_top_mes" style="width: 420px; height: 115px; overflow: hidden;">
+                        <input type="hidden" id="total_money_hidden" name="total_money_hidden" value="" />
+                        <input type="hidden" id="total_order_price_hidden" name="total_order_price_hidden" value="" />
+                        <input type="hidden" id="order_total_credits_hidden" name="order_total_credits_hidden" value="" />
+                        <input type="hidden" name="hotel_id" id="hotel_id" value="2658" />
+                        <input name="room_id" id="room_id" type="hidden" value="75839" />
+                        <input name="allow" type="hidden" id="allow" value="1" />
+                        <input type="hidden" name="submit_hash" id="submit_hash" value="43t4eqTa" />
+                        <input type="hidden" name="trueconfirm" id="trueconfirm" value="true" />
+                        <li class="f7f7f7f"> 房款到店后支付，旺季或店家要求提前支付除外</li>
+                        <li style="font-family: 黑体; color: #FF8000; font-size: 18px; margin-top: 30px;">&nbsp;</li>
+                        <li class="f7f7f7f" style="font-size: 12px;">您的位置：<a href="http://www.becod.com" class="f7f7f7f" target="_blank">首页</a> > <a href="http://www.becod.com/hotel_2658.html"
+                                                            class="f7f7f7f" target="_blank">爱家（北京）连锁短租公寓</a> > gogo新世代公寓56908预订</li></ul>
+                </div>
+            </div>
+            <div class="info">
+                <div class="info_jd">
+                    <span class="step1_red">1. 填写订单信息</span><span class="red_gray"></span><span class="step2">2.
+                        等待客服核实确认</span></div>
+                <ul>
+                    <li><span class="info2_top_title">客房名称</span><span class="info2_top_title3">选择入住日期</span><span
+                        class="info2_top_title2">首日单价(元)</span><span class="info2_top_title2">间数</span><span
+                            class="info2_top_title2">总计(元)</span></li>
+                    <!-- <li><span class="info2_hotel f7f7f7f"><a href="http://www.becod.com/hotel_2658.html" target="_blank" class="f3366cc">爱家（北京）连锁短租公寓</a>　　短租公寓</span></li>-->
+                    <li class="room_info">
+                        <div class="room_info_img">
+                            <a href="http://www.becod.com/room_75839.html" target="_blank">
+                                <img src="img/1102071123dbe566ddc70b01b6a_s_s.jpg" width="52" height="52" /></a></div>
+                        <div class="room_detail">
+                            &nbsp;&nbsp;<a href="http://www.becod.com/room_75839.html" class="f3366cc" target="_blank">gogo新世代公寓56908</a><br />
+                            &nbsp;&nbsp;<a href="http://www.becod.com/hotel_2658.html" target="_blank">爱家（北京）连锁</a></div>
+                        <span class="info_order_date" style="border-right: 0px;">&nbsp;入住时间：<input type="text"
+                            class="text" name="start_date" id="start_date" value="" onchange="ajaxFormSubmit();"
+                            onfocus="WdatePicker({onpicked:function(){end_date.focus();},doubleCalendar:true,minDate:'%y-%M-%d',maxDate:'%y-%M-{%d+30}'})"
+                            readonly="readonly" size="10" /></span><span class="info_order_date" style="border-left: 0px;">&nbsp;离店时间：<input
+                                type="text" class="text" size="10" name="end_date" id="end_date" readonly="readonly"
+                                value="" onchange="ajaxFormSubmit();" onfocus="WdatePicker({doubleCalendar:true,minDate:'#F{$dp.$D(\'start_date\',{d:1})}'})" /></span><span
+                                    class="unit_price" id="unit_price"></span><span class="unit_total"><select name="order_room_count"
+                                        id="order_room_count" onchange="changeRooms(this.value)">
+                                        <option value="1" selected="selected">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select></span><span class="total_price fff5500" id="total_money2"></span></li>
+                    <li class="h20">&nbsp;</li>
+                </ul>
+                <div style="float: left; width: 910px; padding-bottom: 10px;">
+                    <div class="roomprice" id="roomprice" style="display: none;">
+                    </div>
+                    <div class="alarm" id="alarm">
+                        <b>入住时间内有满房，请重新选择入住时间！</b></div>
+                    <div class="alarm" id="alarm3">
+                        <b>请不要预订1个月以后的客房，如需预定请拨打0571-61063706！</b></div>
+                    <!--<div class="alarm2" id="alarm2" style="width:140px; background-color:#F00; color:#fff; font-weight: bold; height:30px; line-height:30px;">　请选择入住日期！</div>
+<script language="javascript" >$("#alarm2").show();$(".info_order_date").attr("class","info_order_date_red");</script>-->
+                </div>
+            </div>
+            <div class="info2">
+                <div class="info_form">
+                    <dl class="gtitle">
+                        <dt class="dw100 info_top_title">入住人信息</dt><dt class="dw700" style="color: #A8A8A8">
+                            入住人指实际到店入住者</dt></dl>
+                    <dl class="gtitle">
+                        <dt class="dw100">入住人姓名：</dt><dt class="dw700"><span class="red">*</span><input type="text"
+                            class="text" name="order_person_name[]" value="13798589602" onblur="if($('#order_username').val()=='')$('#order_username').val($(this).val())"
+                            id="order_person_name" /></dt></dl>
+                    <dl class="gtitle">
+                        <dt class="dw100">手机：</dt><dt class="dw700"><span class="red">*</span><input type="text"
+                            class="text" name="order_person_phone[]" value="13798589602" onblur="if($('#order_phone').val()=='')$('#order_phone').val($(this).val())"
+                            id="order_person_phone" /><span class="f7f7f7f"></span></dt></dl>
+                    <dl class="gtitle">
+                        <dt class="dw100 info_top_title">联系人信息</dt><dt class="dw700" style="color: #A8A8A8">
+                            联系人指预订及确认订单者</dt></dl>
+                    <dl class="gtitle">
+                        <dt class="dw100">联系人姓名：</dt><dt class="dw700"><span class="red">*</span><input type="text"
+                            class="text" name="order_username" id="order_username" value="13798589602" /></dt></dl>
+                    <dl class="gtitle">
+                        <dt class="dw100">手机：</dt><dt class="dw700"><span class="red">*</span><input type="text"
+                            class="text" name="order_phone" id="order_phone" value="13798589602" /><span class="f7f7f7f"></span></dt></dl>
+                    <dl class="gtitle">
+                        <dt class="dw100 info_top_title">其他信息</dt><dt class="dw700" style="color: #A8A8A8">
+                            最晚到店时间指您预计最晚到达酒店的时间</dt></dl>
+                    <dl class="gtitle">
+                        <dt class="dw100">最晚到店时间：</dt><dt class="dw700"><span class="red">*</span><select
+                            name="order_intime" id="InTime">
+                            <option value=""></option>
+                            <option value="1:00">1:00</option>
+                            <option value="2:00">2:00</option>
+                            <option value="3:00">3:00</option>
+                            <option value="4:00">4:00</option>
+                            <option value="5:00">5:00</option>
+                            <option value="6:00">6:00</option>
+                            <option value="7:00">7:00</option>
+                            <option value="8:00">8:00</option>
+                            <option value="9:00">9:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="12:00">12:00</option>
+                            <option value="13:00">13:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="18:00">18:00</option>
+                            <option value="19:00">19:00</option>
+                            <option value="20:00">20:00</option>
+                            <option value="21:00">21:00</option>
+                            <option value="22:00">22:00</option>
+                            <option value="23:00">23:00</option>
+                            <option value="24:00">24:00</option>
+                        </select>
+                        </dt>
+                    </dl>
+                    <dl class="gtitle" style="height: 80px;">
+                        <dt class="dw100">其他要求：</dt><dt class="dw700"><textarea name="order_others" cols="50"
+                            rows="3" class="text"></textarea></dt></dl>
+                </div>
+            </div>
+            <div class="info3">
+                总房款：<span class="fff5500"><b id="total_money"></b>元<span style="font-size: 12px;
+                    font-weight: normal;"> ［总天数：<b id="total_days"></b>天，总间数：<b id="total_rooms">1</b>间］</span></span><span
+                        class="f7f7f7f f12"> ( 房款到店后支付，旺季或店家要求提前支付除外 )</span>
+            </div>
+        </div>
+        <div class="submit_div">
+            <input type="button" name="submit_button" value="" onclick="check_mobile_tel();"
+                class="submit_button" /><span style="float: left; width: 500px; height: 26px; line-height: 26px;
+                    margin-top: 26px;" class="f7f7f7f">
+                    <!--<input name="yudingok" id="yudingok" type="checkbox" value="" checked="checked" style="vertical-align:middle; padding:0; margin:0" />-->
+                    查看<a href="http://www.becod.com/about/notes.html" target="_blank" style="color: #3366CC;
+                        text-decoration: underline;">预订帮助</a></span><!--<span class="f7f7f7f" style="line-height:40px; width:926px; float:left; background: url(img/msg_msg.png) no-repeat left; margin-left:20px;">　　为了您的成功预订并保留客房，我们将在您填写订单信息后由专业客服帮您细心处理订单，请等待！</span>--><span
+                            class="h20">&nbsp;</span></div>
+        <!--尾开始-->
+        <div class="footer">
+            <div class="copyright">
+                <p>
+                    <a href="http://www.becod.com/about/about.html" rel="nofollow">关于我们</a>|<a href="http://www.becod.com/about/cooperation.html"
+                        rel="nofollow"><span class="text_f60">店家服务</span></a>|<a href="http://www.becod.com/site_city.html">住宿索引</a>|<a
+                            href="http://www.becod.com/about/zhaopin.html" rel="nofollow">诚聘英才</a>|<a href="http://www.becod.com/link.html">友情链接</a>|<a
+                                href="http://www.becod.com/about/falv.html" rel="nofollow">法律声明</a>|<a href="http://www.becod.com/sitemap.html">网站地图</a>|<a
+                                    href="http://www.becod.com/about/lianxi.html" rel="nofollow">联系百酷</a></p>
+                <p class="gray_text">
+                    <span>Copyright© 2005-2010, <a href="http://www.becod.com/" rel="nofollow">百酷酒店预订网becod.com</a>
+                        . All rights reserved. ICP证：<a href="http://www.miibeian.gov.cn/" rel="nofollow">浙B2-20090179</a>
+                        | <a href="http://www.becod.com/company.html" rel="nofollow">营业执照</a><a href="http://122.224.75.236/wzba/login.do?method=hdurl&amp;doamin=http://www.becod.com&amp;id=330185000023162&amp;SHID=1223.0AFF_NAME=com.rouger.gs.main.UserInfoAff&amp;AFF_ACTION=qyhzdetail&amp;PAGE_URL=ShowDetail"
+                            rel="nofollow" target="_blank"><img style="margin-bottom: 2px" border="0" align="absMiddle"
+                                src="http://www.becod.com/images/ico_com.gif" height="23"></a></p>
+            </div>
+            <div id="friendlink">
+                <a class="gray" href="javascript:void(0);" target="_self">友情链接:</a><a href="http://www.laidingba.com/">酒店预订</a><a
+                    href="http://www.4006777711.com/">酒店之星</a><a href="http://www.uuyoyo.com/">悠游网</a><a
+                        href="http://www.keyunzhan.com/">汽车时刻表</a><a href="http://www.ganji.com/piao/">火车票查询</a><a
+                            href="http://www.auyou.cn">遨游搜</a><a href="http://www.edajia.com">大家旅游网</a><a href="http://www.kuailv.com">快旅网</a><a
+                                href="http://www.17u.net/">同程网</a><a href="http://www.51booking.cn">商务订房网</a><a href="http://www.uhenan.com/">河南旅游网</a><a
+                                    href="http://tour.sdchina.com/">山东旅游网</a><a href="http://www.88gogo.com">掌门人网</a><a
+                                        href="http://www.nettvl.com/">旅游互联网</a><a href="http://www.utourworld.com/">众信旅游网</a><a
+                                            href="http://www.hostelcn.com/">中国经济型酒店网</a><a href="http://www.uc999.com/">游戏999</a><a
+                                                href="http://www.huoche.net/">列车时刻表</a><a href="http://www.byecity.com">佰程旅行网</a><a
+                                                    href="http://www.niulv.com/">牛驴旅游网</a><a href="http://www.bbcmart.com">比比西同业平台</a><a
+                                                        href="http://www.yiqiyou.com">一起游旅行网</a><a href="http://www.lvmama.com/">驴妈妈旅游网</a><a
+                                                            href="http://www.easytour.cn/">易游天下旅行网</a><a href="http://www.topzj.com/">团购网站大全</a><a
+                                                                class="gray" href="javascript:void(0);" target="_self">链接与合作QQ：25096330</a></div>
+        </div>
+    </div>
+    <!--尾结束-->
+</body>
+</html>

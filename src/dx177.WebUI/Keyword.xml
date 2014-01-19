@@ -1,0 +1,27 @@
+<?xml version="1.0"  ?>
+<KeywordItems>
+	
+  
+  
+  <Keyword name="问答"  code="question"  keyword="" descrion="#?Title_TypeName?#旅游问答|解答_旅游交通|住宿|景点|购物|自驾|餐饮--旅游解答专家" title="#?Title_TypeName?#旅游问答|解答列表_游酷网" />
+
+  <Keyword name="新闻"  code="news"  keyword="" descrion="#?Title_TypeName?#列表--旅游攻略专家" title="#?Title_TypeName?#_游酷网" />
+
+
+  <Keyword name="酒店"  code="hotel"  keyword="" descrion="#?Title_TypeName?#：订酒店请到游酷网，游酷网已和全国上万家酒店宾馆合作，给您提供安全可靠实惠的酒店信息。" title="#?Title_TypeName?#列表：订酒店_宾馆_旅店_住宿请上游酷网" />
+  
+  
+  
+	<Keyword name="景点列表"  code="jingqu"  keyword="" descrion="#?Title_TypeName?#景点_景区列表" title="#?Title_TypeName?#景点_景区列表" />
+
+  
+	<Keyword name="景点"  code="site"  keyword="#?siteName?#风景|风光|景色_游酷网" descrion="#?siteName?#风景|风光|景色_游酷网" title="#?siteName?#风景|风光|景色_游酷网" />
+
+
+
+  <Keyword name="评论"  code="comment"  keyword="#?qTitle?#游酷网点评" descrion="#?Title?#游酷网点评" title="#?Title?#游酷网点评" />
+
+
+
+
+</KeywordItems>

@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>用户注册 真时尚购物网</title>
+   
+</head>
+<body>
+  
+    <div id="MainWrap_Car" style="background: #fff;">
+        ﻿<div class="PassportWrap">
+            <div class="RegisterWrap">
+                <h4>
+                    用户注册</h4>
+                <div class="intro">
+                    欢迎来到我们网站，如果您是新用户，请填写下面的表单进行注册</div>
+                <div class="form">
+                    <input name="forward" type="hidden" value=""><table width="100%" border="0" cellspacing="0"
+                        cellpadding="0">
+                        <tr>
+                            <th>
+                                <i>*</i>用户名：
+                            </th>
+                            <td>
+                                <input autocomplete="off" class="inputstyle _x_ipt" name="uname" required="true"
+                                    id="reg_user" maxlength="50" onchange="nameCheck(this.value)" /><span id="reg_user_info"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <i>*</i>密码：
+                            </th>
+                            <td>
+                                <input autocomplete="off" class="inputstyle _x_ipt" name="passwd" type="password"
+                                    required="true" id="reg_passwd" vtype="password" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <i>*</i>确认密码：
+                            </th>
+                            <td>
+                                <input autocomplete="off" class="inputstyle _x_ipt" name="passwd_r" type="password"
+                                    required="true" id="reg_passwd_r" vtype="password" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <i>*</i>电子邮箱：
+                            </th>
+                            <td>
+                                <input autocomplete="off" class="inputstyle _x_ipt" name="email" type="email" required="true"
+                                    id="reg_email" maxlength="200" vtype="email" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <i>*</i>验证码：
+                            </th>
+                            <td id='verifyCodebox'>
+                                <input autocomplete="off" size="8" class="inputstyle _x_ipt" type="digits" required="true"
+                                    name="signupverifycode" id="iptsingup" vtype="digits" /><span class='verifyCode'
+                                        style='display: none;'><img src="img/" border="1" id="SingupimgVerifyCode" /><a href="javascript:changeimg()">&nbsp;看不清楚?换个图片</a></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                            </th>
+                            <td>
+                                <label for="license" class="nof" style="width: auto; text-align: left; font-weight: normal;">
+                                    <input type="checkbox" id="license" name="license" value="agree" checked="checked" />我已阅读并同意
+                                    <a href="http://www.zhenfashion.com.cn/?page-license.html" id="terms_error" class="lnk"
+                                        target='_blank'><span class="FormText" id="terms_error_sym">会员注册协议</span></a>
+                                    和 <a href="http://www.zhenfashion.com.cn/?page-privacy.html" id="privacy_error" class="lnk"
+                                        target='_blank'><span class="FormText" id="privacy_error_sym">隐私保护政策</span></a>。</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                            </th>
+                            <td>
+                                <input class="actbtn btn-register" type="submit" value="注册新用户" /><input type="hidden"
+                                    name="forward" value="">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+</body>
+</html>

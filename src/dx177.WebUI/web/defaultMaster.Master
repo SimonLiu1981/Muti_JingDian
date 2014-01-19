@@ -1,0 +1,149 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="defaultMaster.master.cs"
+    Inherits="dx177.WebUI.web.defaultMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="author" content="177dx" />
+
+    <script type="text/javascript" src="/web/js/jquery-1.3.2.min.js"></script>
+
+    <script type="text/javascript" src="/web/js/jquery.tools.min.js"></script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="/web/css/global.css" rel="stylesheet" type="text/css" />
+    <link href="/web/css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="/web/css/tab.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="header_top">
+        <ul class="header_nav">
+            <li id='login_info'>用户名:
+                <input style="width: 75px" id="username" type="text" name="username">
+                密码
+                <input style="width: 75px" id="password" value="" type="password" name="password">
+                <input id="loginbutton" class="button" value="登录" onclick='return Login();' type="button"
+                    name="button">
+                <input id="registernbutton" class="button" onclick="location.href='/register/default.aspx';"
+                    value="注册新账号" type="button" name="button">
+            </li>
+            <li class="fright">  &nbsp;&nbsp;咨询热线： &nbsp;&nbsp; QQ:   <a class='black'
+                onclick="javascript:window.external.AddFavorite('http://www.177dx.com','一起去丹霞')"
+                href="javascript:void(0)" target="_self">加入收藏</a> | <a class='black' onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.177dx.com');"
+                    href="javascript:void(0)" target="_self">设为首页</a></li>
+        </ul>
+
+        <script type="text/javascript">
+            function Login() {
+                if ($('#username').val() == '' && $('#password').val() == '') {
+                    location.href = '/login/default.aspx';
+                    return false;
+                }
+                else if ($('#username').val() == '' || $('#password').val() == '') {
+                    alert("用户或者密码不能为空!");
+                    if ($('#username').val() == '') {
+                        $('#username').focus();
+                    }
+                    else {
+                        $('#password').focus();
+                    }
+                    return false;
+                }
+                $.getJSON("/web/Admin/AjaxHandler.aspx?MethodName=Login&jsoncallback=?",
+		        {
+		            username: encodeURIComponent($('#username').val()),
+		            password: encodeURIComponent($('#password').val())
+		        },
+		        function(json) {
+		            if (json.Result.Result == 1) {
+		                GetUserInfo();
+
+		                if (json.Result.NavigationUrl) {
+		                    location.href = json.Result.NavigationUrl;
+		                }
+		            }
+		            else {
+		                alert(json.Result.Message);
+		            }
+		        });
+            }
+
+            function GetUserInfo() {
+                $.getJSON("/web/Admin/AjaxHandler.aspx?MethodName=GetResUerInfo&jsoncallback=?",
+		        function(json) {
+		            if (!json.SesstionTimeOut) {
+		                var name = json.Result.User.Username;
+
+		                var html = '欢迎您：' + name + ' <a href="' + json.Result.NavigationUrl + '" target="_parent"><span class="green">会员中心</span></a>|<a href="/web/admin/logout.aspx" target="_parent">退出</a>';
+
+		                $('#login_info').html(html);
+		            }
+		        });
+            }
+            $(document).ready(function() { GetUserInfo(); });  
+            
+        </script>
+
+    </div>
+    <div class="wrapper">
+        <!--头部 开始-->
+        <div class="header">
+            <p id="logo">
+            </p>
+            <p id="header_adv">
+                <a href="#" target="_blank">
+                    <img src="/web/img/web_czhf.gif" width="647" height="65"></a></p>
+            <div class="clear">
+            </div>
+            <div id="nav">
+                <ul id="nav_left">
+                    <li class="noborder nav_selected" id='index'><a href="/" target="_self">首页</a></li>
+                    <li><a href="/hotel/default.aspx" id='hotel' target="_self"><span>酒店预定</span></a></li>
+                    <li><a href="/restaurant/default.aspx" id='restaurant' target="_self"><span>饭店预定</span></a></li>
+                    <li><a href="/news/default.aspx"  id='news' target="_self"><span>新闻中心</span></a></li>
+                    <li><a href="/sites/default.aspx" id='sites' target="_self"><span>丹霞风景</span></a></li>
+                    <li><a href="/hirecar/default.aspx" id='hirecar' target="_self"><span>租车信息</span></a></li>
+                    <li><a href="/questions/default.aspx" id='questions' target="_self"><span>疑问解答</span></a></li>
+
+                    <script type="text/javascript">
+                        $(document).ready(function() {
+                            // 在这里写你的代码...
+                            $('#nav_left li').removeClass('noborder');
+                            $('#nav_left li').removeClass('nav_selected');
+                            $('#<%=NavId %>').addClass('noborder').addClass('nav_selected');
+                        });
+                    </script>
+
+                </ul>
+            </div>
+        </div>
+        <!--头部 结束-->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <!--尾开始-->
+        <div class="footer fleft" style="margin-top: 5px">
+            <div class="copyright">
+                <p>
+                    <a href="/Issue_about.aspx" rel="nofollow">关于我们</a>|<a href="/Issue_pay.aspx" rel="nofollow"><span class="text_f60">支付方式</span></a>|<a
+                        href="/Issue_order.aspx">订房须知</a>|<a href="#" rel="nofollow">诚聘英才</a>|<a href="#">友情链接</a>|<a href="/Issue_law.aspx"
+                            rel="nofollow">法律声明</a>|<a href="#">网站地图</a>|<a href="/Issue_contact.aspx" rel="nofollow">联系我们</a></p>
+                <p class="gray_text">
+                    <span>Copyright© 2009-2010, <a href="http://www.177dx.com/" rel="nofollow">丹霞订房网177dx.com</a>
+                        . All rights reserved. ICP证：<a href="http://www.miibeian.gov.cn/" rel="nofollow">苏ICP备11014390号</a>
+                    
+                        
+                         <script language="javascript" type="text/javascript" src="http://js.users.51.la/4764325.js"></script>
+
+                </p>
+            </div>
+            <div id="friendlink">
+                <a class="gray" href="javascript:void(0);" target="_self">友情链接:</a>
+                <%=strFriend%>                
+            </div>
+        </div>
+    </div>
+    <!--尾结束-->
+</body>
+</html>

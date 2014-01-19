@@ -1,0 +1,69 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin: 0px;
+	padding: 0px;
+ 
+}
+a 
+{
+ text-decoration:none;    
+}
+body {
+	background-color: #ffffff; 
+	background-repeat: repeat-x;
+}
+html {
+	font-size:12px;
+	line-height: 1.8em;
+	font-family:Tahoma, SimSun, Arial, "宋体", "Arial Narrow"; 
+}
+
+
+.fleft {
+	float:left;
+}
+.fright {
+    float:right;
+}
+.crearFix {
+     clear:both;
+	 position:fixed;
+}
+
+ui, li {
+	list-style-image: none;
+	list-style-type: none;
+}
+.clear {
+	clear: both;
+}
+img {
+	border-bottom:medium none;
+	border-top:medium none;
+	border-left:medium none;
+	border-right:medium none;
+}
+.orange
+{
+   	color:orange;
+}
+.orange
+{
+   	color:orange;
+}
+
+.black
+{
+	 color:black;
+}
+.blank05
+{
+	height:5px;	
+	line-height:5px;
+}
+.green
+{
+    color:#268509;
+}

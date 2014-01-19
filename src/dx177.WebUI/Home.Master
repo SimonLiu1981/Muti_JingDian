@@ -1,0 +1,64 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="dx177.WebUI.Home" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat=server >
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+     
+    <link href="/css/layout.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/js/jquery-1.3.2.min.js"></script>
+ 
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="top">
+        <div id="top_con">
+            <span><a style="cursor: pointer;" href="/login/default.aspx">[登录]</a> |<a style="cursor: pointer;"
+                href="/register/default.aspx"> [注册]</a> <a href="#" target="_blank">
+                    [丹霞论坛]</a> | <a href="#">丹霞山官网</a> | <a href="/iss_support.html" target="_blank">技术支持</a>
+            </span><b>旅游酒店预订|旅游住宿|自助行旅游请择游酷旅游网！</b><em> <a href="http://wpa.qq.com/msgrd?V=1&amp;Uin=1939539&amp;Site=QQ咨询&amp;Menu=yes"
+                target="_blank">
+                <img style="vertical-align: middle" border="0" alt="QQ" src=" http://wpa.qq.com/pa?p=1:1939539:4">在线客户</a>
+            </em>
+        </div>
+    </div>
+    <div id="container">
+        <div id="header">
+            <div id="logo">
+                <a href="/index.html">
+                    <img alt="丹霞山旅游网" src="/img/logo.gif" /></a></div>
+            <div id="header_ad">
+                <div class="">
+                    <a href="#">
+                        <img width="658" height="60" src="/img/top_ad.gif" border="0" /></a></div>
+            </div>
+        </div>
+        <div class="clearfloat">
+           
+        </div>
+        <div id="nav">
+            <%=Navigation %>
+        </div>         
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <div class="clearfloat">
+        </div>
+        <div id="footer">
+            <p>
+                版权：游酷旅游网 Copyright 2009-2010 Corporation, All Rights Reserved
+                <br>
+                本网站与和全国上万家酒店、宾馆、旅店、餐厅及相关的旅游服务单位合作.
+                <br>
+                欢迎旅游团队与本网站合作！<a href="/iss_support.html" target="_blank"><strong>技术支持</strong></a>
+            </p>
+
+             
+
+        </div>
+    </div>
+    
+    
+ 
+</body>
+</html>

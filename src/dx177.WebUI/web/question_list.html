@@ -1,0 +1,452 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>丹霞山酒店预定-查询酒店列表</title>
+<link href="css/global.css" rel="stylesheet" type="text/css" />
+<link href="css/layout.css" rel="stylesheet" type="text/css" />
+<link href="css/tab.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.tools.min.js"></script>
+</head>
+<body>
+<div class="header_top">
+  <ul class="header_nav">
+    <li id='login_info'>用户名
+      <input style="width: 75px" id="username" type="text" name="username">
+      密码
+      <input style="width: 75px" id="password" value="" type="password" name="password">
+      <input id="loginbutton" class="button" value="登录" type="submit" name="button">
+      <input id="registernbutton" class="button" onclick="window.open('http://www.becod.com/register');"
+                    value="注册新账号" type="button" name="button">
+    </li>
+    <li class="fright"><a href="http://www.becod.com/voucher.html">优惠券</a> | <a href="http://www.becod.com/promotions.html"> 客房促销</a> | <a class='orange' href="http://www.becod.com/register/tavern">酒店注册</a> | <a class='black' onclick="javascript:window.external.AddFavorite('http://www.becod.com','百酷旅游网')"
+                    href="javascript:void(0)" target="_self">加入收藏</a> | <a class='black' onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.becod.com');"
+                        href="javascript:void(0)" target="_self">设为首页</a></li>
+  </ul>
+</div>
+<div class="wrapper">
+  <!--头部 开始-->
+  <div class="header">
+    <p id="logo"></p>
+    <p id="header_adv"><a href="http://www.becod.com/chongzhi.html" target="_blank"><img src="img/web_czhf.gif" width="647" height="65"></a></p>
+    <div class="clear"></div>
+    <div id="nav">
+      <ul id="nav_left">
+        <li class="noborder nav_selected"><a href="/" target="_self">首页</a></li>
+        <li><a href="http://guzhen.becod.com/" target="_self"><span>古镇客栈</span></a></li>
+        <li><a href="http://njle.becod.com/" target="_self"><span>农家乐</span></a></li>
+        <li><a href="http://comment.becod.com/" target="_self"><span>住宿点评</span></a></li>
+        <li><a href="http://wenda.becod.com/" target="_self"><span>住宿问答</span></a></li>
+        <li><a href="http://news.becod.com" target="_self"><span>旅游资讯</span></a></li>
+        <li><a href="http://posts.becod.com" target="_self"><span>旅游攻略</span></a></li>
+        <li><a href="http://dest.becod.com/" target="_self"><span>旅游景点</span></a></li>
+        <li><a href="http://home.becod.com"><span>百酷家园</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <!--头部 结束-->
+  <div class="main">
+    <!--主体 开始-->
+    <div class="blank05"></div>
+    <div class="main_left">
+      <ul class="css-tabs03">
+        <li><a class="current" href="#">查询条件</a></li>
+      </ul>
+      <div class="css-panes03">
+        <div class="out">
+          <div class="search_main">
+            <p><b>价格范围：</b><a class="here" href="#" target="_self">全部</a><a href="#" target="_self">100元以下</a><a
+                                    href="#" target="_self">100元-200元</a><a href="#" target="_self">200-300元</a><a href="#"
+                                        target="_self">300元以上</a></p>
+            <p class="heightlight"><b>酒店类型：</b><a class="here" href="#" target="_self">全部</a><a href="#" target="_self">经济型酒店</a><a
+                                    href="#" target="_self">星级酒店</a><a href="#" target="_self">商务型酒店</a><a href="#" target="_self">农家乐</a><a
+                                        href="#" target="_self">短租公寓</a><a href="#" target="_self">青年旅舍</a><a href="#" target="_self">家庭旅馆</a><a
+                                            href="#" target="_self">客栈</a><a href="#" target="_self">旅馆</a><a href="#" target="_self">宾馆</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="blank05"></div>
+      <div style="margin-top: 10px" class="question">
+        <h1><span class="fright02 link02">
+          <input id="tax1" onclick="showpage(77,20,'b',1)" value="b" type="radio" name="tax">
+          <label for="tax1"><font color="#ff6000">只看已解决问题</font></label>
+          </span><span class="fright02 link04">
+          <input id="tax2" onclick="showpage(77,20,'a',1)" value="a" type="radio" name="tax">
+          <label for="tax2"><font color="#05802e">只看有回答问题</font></label>
+          </span><span class="fright02 link05">
+          <input id="tax3" onclick="showpage(77,20,'c',1)" value="c" type="radio" name="tax">
+          <label for="tax3"><font color="#9c9b9a">只看待解决问题</font></label>
+          </span></h1>
+        <ul id="tablepage">
+          <table border="0" cellspacing="0" cellpadding="0" width="698">
+            <tbody>
+              <tr>
+                <td style="border-bottom: #ccc 1px solid; text-align: left; color: #9c9b9a" height="26"
+                                        valign=bottom background="img/banner01.gif"><table border="0" cellspacing="0" cellpadding="0" width="698" height="26">
+                    <tbody>
+                      <tr>
+                        <td style="padding-left: 20px" width="94"> 类型 </td>
+                        <td style="border-left: #d7e2f8 1px solid; padding-left: 20px" width="252"> 问题 </td>
+                        <td style="border-left: #d7e2f8 1px solid; padding-left: 20px" width="65"> 提问者 </td>
+                        <td style="border-left: #d7e2f8 1px solid; padding-left: 10px" width="74"> 提问日期 </td>
+                        <td style="border-left: #d7e2f8 1px solid" width="40" align="middle"> 回答数 </td>
+                        <td style="border-left: #d7e2f8 1px solid" width="58" align="middle"> 状态 </td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+              <tr>
+                <td bgcolor="#ffffff" height="4"></td>
+              </tr>
+              <tr>
+                <td style="text-align: left; line-height: 28px" valign="top"><table border="0" cellspacing="0" cellpadding="0" width698700">
+                    <tbody>
+                      <tr>
+                        <td height="0" width="16"></td>
+                        <td width="110"></td>
+                        <td width="294"></td>
+                        <td width="78"></td>
+                        <td width="85"></td>
+                        <td width="41"></td>
+                        <td width="50"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州门票" href="/question/d_q_more_77_11.html">潮州门票</a>] </td>
+                        <td><a title="开平碉楼怎么样的呢？开平碉楼值得游玩的吗？ > 开平碉楼现在的门票多少钱的呢？" href="/question/d_q_detail_2116704.html"
+                                                        target="_blank">开平碉楼怎么样的呢？开平碉楼值得游玩的吗？</a></td>
+                        <td><a title="15262qrnydm" href="/question/myquestion_3766806.html" target="_blank">15262qrnydm</a></td>
+                        <td> 2011-01-25 </td>
+                        <td> 1 </td>
+                        <td><img alt="已解决" src="img/y_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州酒店预订" href="http://yd.17u.com/list-77------------1---.html" target="_blank">潮州酒店</a>] </td>
+                        <td><a title="请问，东山湖温泉酒店，能不能提前预订元旦那天的房间，谢谢……" href="/question/h_q_detail_2107430.html"
+                                                        target="_blank">请问，东山湖温泉酒店，能不能提前预订元旦那...</a></td>
+                        <td><a title="lyj338" href="/question/myquestion_4375168.html" target="_blank">lyj338</a></td>
+                        <td> 2010-12-07 </td>
+                        <td> 1 </td>
+                        <td><img alt="已有1个答案" src="img/h_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州酒店预订" href="http://yd.17u.com/list-77------------1---.html" target="_blank">潮州酒店</a>] </td>
+                        <td><a title="我们两个人一个人身份证没带能入住吗？？" href="/question/h_q_detail_2106997.html" target="_blank"> 我们两个人一个人身份证没带能入住吗？？</a></td>
+                        <td><a title="845652002_e4c300" href="/question/myquestion_4451349.html" target="_blank"> 845652002_e4c300</a></td>
+                        <td> 2010-12-04 </td>
+                        <td> 1 </td>
+                        <td><img alt="已有1个答案" src="img/h_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州酒店预订" href="http://yd.17u.com/list-77------------1---.html" target="_blank">潮州酒店</a>] </td>
+                        <td><a title="什么是门市价？/什么是同程价？？" href="/question/h_q_detail_2106990.html" target="_blank"> 什么是门市价？/什么是同程价？？</a></td>
+                        <td><a title="845652002_e4c300" href="/question/myquestion_4451349.html" target="_blank"> 845652002_e4c300</a></td>
+                        <td> 2010-12-04 </td>
+                        <td> 1 </td>
+                        <td><img alt="已有1个答案" src="img/h_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州酒店预订" href="http://yd.17u.com/list-77------------1---.html" target="_blank">潮州酒店</a>] </td>
+                        <td><a title="请问订了潮州东山湖酒店，购买温泉门票有没有优惠呢……" href="/question/h_q_detail_2106021.html" target="_blank"> 请问订了潮州东山湖酒店，购买温泉门票有没有...</a></td>
+                        <td><a title="lyj338" href="/question/myquestion_4375168.html" target="_blank">lyj338</a></td>
+                        <td> 2010-11-28 </td>
+                        <td> 1 </td>
+                        <td><img alt="已解决" src="img/y_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州酒店预订" href="http://yd.17u.com/list-77------------1---.html" target="_blank">潮州酒店</a>] </td>
+                        <td><a title="请问有停车位吗？量足够吗？" href="/question/h_q_detail_2105241.html" target="_blank">请问有停车位吗？量足够吗？</a></td>
+                        <td><a title="番医笨笨" href="/question/myquestion_4043583.html" target="_blank">番医笨笨</a></td>
+                        <td> 2010-11-22 </td>
+                        <td> 1 </td>
+                        <td><img alt="已有1个答案" src="img/h_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州酒店预订" href="http://yd.17u.com/list-77------------1---.html" target="_blank">潮州酒店</a>] </td>
+                        <td><a title="我在如家订了三个房间，可以为我留一个车位吗？" href="/question/h_q_detail_2099044.html" target="_blank"> 我在如家订了三个房间，可以为我留一个车位吗？</a></td>
+                        <td><a title="番医笨笨" href="/question/myquestion_4043583.html" target="_blank">番医笨笨</a></td>
+                        <td> 2010-10-13 </td>
+                        <td> 1 </td>
+                        <td><img alt="已有1个答案" src="img/h_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州火车" href="/question/d_q_more_77_112.html">潮州火车</a>] </td>
+                        <td><a title="潮州火车站附近住宿情况？宾馆推荐？" href="/question/d_q_detail_2080551.html" target="_blank"> 潮州火车站附近住宿情况？宾馆推荐？</a></td>
+                        <td><a title="无邪杰少" href="/question/myquestion_2245508.html" target="_blank">无邪杰少</a></td>
+                        <td> 2010-07-20 </td>
+                        <td> 1 </td>
+                        <td><img alt="已解决" src="img/y_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州门票" href="/question/d_q_more_77_11.html">潮州门票</a>] </td>
+                        <td><a title="暑假旅游去哪儿玩 > 我人在广州，暑假准备去感受一下江南古镇的味道，有没有可以推荐的古镇啊。" href="/question/d_q_detail_2075968.html"
+                                                        target="_blank">暑假旅游去哪儿玩 &gt; 我人在广州，暑假准备...</a></td>
+                        <td><a title="xingxing_5907d5c" href="/question/myquestion_2657733.html" target="_blank"> xingxing_5907d5c</a></td>
+                        <td> 2010-06-25 </td>
+                        <td> 1 </td>
+                        <td><img alt="已解决" src="img/y_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州路况天气" href="/question/d_q_more_77_192.html">潮州路况天气</a>] </td>
+                        <td><a title="潮州到海丰的自驾路线，最好都走高速。" href="/question/d_q_detail_2073765.html" target="_blank"> 潮州到海丰的自驾路线，最好都走高速。</a></td>
+                        <td><a title="到处耍耍" href="/question/myquestion_2517728.html" target="_blank">到处耍耍</a></td>
+                        <td> 2010-06-08 </td>
+                        <td> 1 </td>
+                        <td><img alt="已有1个答案" src="img/h_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州交通" href="/question/d_q_more_77_4.html">潮州交通</a>] </td>
+                        <td><a title="怎么去？ > 广西到潮州旅游怎么去？" href="/question/d_q_detail_2037376.html" target="_blank"> 怎么去？ &gt; 广西到潮州旅游怎么去？</a></td>
+                        <td><a title="huaijiaoqwe_5501" href="/question/myquestion_1859177.html" target="_blank"> huaijiaoqwe_5501</a></td>
+                        <td> 2009-11-11 </td>
+                        <td> 1 </td>
+                        <td><img alt="已有1个答案" src="img/h_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州其他" href="/question/d_q_more_77_0.html">潮州其他</a>] </td>
+                        <td><a title="“湖中倒影水纵横”指的是哪一个地方？ > 是广东某个地方的地名，知道的朋友回一下！" href="/question/d_q_detail_2036591.html"
+                                                        target="_blank">“湖中倒影水纵横”指的是哪一个地方？</a></td>
+                        <td><a title="飞翔的感觉" href="/question/myquestion_1564801.html" target="_blank">飞翔的感觉</a></td>
+                        <td> 2009-11-01 </td>
+                        <td> 1 </td>
+                        <td><img alt="已有1个答案" src="img/h_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州景区" href="/question/d_q_more_77_1.html">潮州景区</a>] </td>
+                        <td><a title="交通 > 从汕头西堤如何往潮州云峰山庄和韩文公祠" href="/question/s_q_detail_2034863.html" target="_blank"> 交通 &gt; 从汕头西堤如何往潮州云峰山庄和韩...</a></td>
+                        <td><a title="lyzi-mail_10774" href="/question/myquestion_1771288.html" target="_blank"> lyzi-mail_10774</a></td>
+                        <td> 2009-10-02 </td>
+                        <td> 0 </td>
+                        <td><img alt="待解决" src="img/n_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州酒店预订" href="http://yd.17u.com/list-77------------1---.html" target="_blank">潮州酒店</a>] </td>
+                        <td><a title="可以开钟点房吗?下午3点前入住.晚10点退房" href="/question/h_q_detail_2028869.html" target="_blank"> 可以开钟点房吗?下午3点前入住.晚10点退房</a></td>
+                        <td><a title="13829xqasyc" href="/question/myquestion_1500122.html" target="_blank">13829xqasyc</a></td>
+                        <td> 2009-08-23 </td>
+                        <td> 1 </td>
+                        <td><img alt="已解决" src="img/y_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州酒店预订" href="http://yd.17u.com/list-77------------1---.html" target="_blank">潮州酒店</a>] </td>
+                        <td><a title="可以开钟点房吗?下午3点前入住.晚10点退房" href="/question/h_q_detail_2028868.html" target="_blank"> 可以开钟点房吗?下午3点前入住.晚10点退房</a></td>
+                        <td><a title="13829xqasyc" href="/question/myquestion_1500122.html" target="_blank">13829xqasyc</a></td>
+                        <td> 2009-08-23 </td>
+                        <td> 1 </td>
+                        <td><img alt="已解决" src="img/y_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州酒店预订" href="http://yd.17u.com/list-77------------1---.html" target="_blank">潮州酒店</a>] </td>
+                        <td><a title="可以开钟点房吗?下午3点前入住.晚10点退房" href="/question/h_q_detail_2028867.html" target="_blank"> 可以开钟点房吗?下午3点前入住.晚10点退房</a></td>
+                        <td><a title="13829xqasyc" href="/question/myquestion_1500122.html" target="_blank">13829xqasyc</a></td>
+                        <td> 2009-08-23 </td>
+                        <td> 1 </td>
+                        <td><img alt="已解决" src="img/y_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州旅游准备" href="/question/d_q_more_77_9.html">潮州旅游准备</a>] </td>
+                        <td><a title="潮州一日自助游都有哪些地方可以游啊？具体线路怎么确定？" href="/question/d_q_detail_2026330.html" target="_blank"> 潮州一日自助游都有哪些地方可以游啊？具体线...</a></td>
+                        <td><a title="gyijt_33572" href="/question/myquestion_901773.html" target="_blank">gyijt_33572</a></td>
+                        <td> 2009-07-28 </td>
+                        <td> 1 </td>
+                        <td><img alt="已有1个答案" src="img/h_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州酒店预订" href="http://yd.17u.com/list-77------------1---.html" target="_blank">潮州酒店</a>] </td>
+                        <td><a title="哪种客房有浴缸和淋浴间,而且是大床的.&#13;&#10;下星期要入住了" href="/question/h_q_detail_2024321.html"
+                                                        target="_blank">哪种客房有浴缸和淋浴间,而且是大床的. ...</a></td>
+                        <td><a title="13829xqasyc" href="/question/myquestion_1500122.html" target="_blank">13829xqasyc</a></td>
+                        <td> 2009-07-05 </td>
+                        <td> 1 </td>
+                        <td><img alt="已解决" src="img/y_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州景区" href="/question/d_q_more_77_9.html">潮州景区</a>] </td>
+                        <td><a title="&nbsp;&nbsp;現在哪裡門票一張多少錢噢&nbsp;?&nbsp;&nbsp;那裡現在還有沒有潛水艇&nbsp;&nbsp;玩一個地方&nbsp;每人多少錢一張票額?"
+                                                        href="/question/s_q_detail_2022535.html" target="_blank">&nbsp;&nbsp;現在哪裡門票一張多...</a></td>
+                        <td><a title="aquweidi_56627" href="/question/myquestion_1517036.html" target="_blank">aquweidi_56627</a></td>
+                        <td> 2009-06-09 </td>
+                        <td> 0 </td>
+                        <td><img alt="待解决" src="img/n_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州酒店预订" href="http://yd.17u.com/list-77------------1---.html" target="_blank">潮州酒店</a>] </td>
+                        <td><a title="请问潮州宾馆的西餐厅叫什么，预定电话是多少？" href="/question/h_q_detail_2019254.html" target="_blank"> 请问潮州宾馆的西餐厅叫什么，预定电话是多少？</a></td>
+                        <td><a title="min2974_63588" href="/question/myquestion_1454783.html" target="_blank">min2974_63588</a></td>
+                        <td> 2009-04-24 </td>
+                        <td> 1 </td>
+                        <td><img alt="已解决" src="img/y_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州酒店预订" href="http://yd.17u.com/list-77------------1---.html" target="_blank">潮州酒店</a>] </td>
+                        <td><a title="房价不含早餐的话那酒店有餐厅吗？" href="/question/h_q_detail_1243186.html" target="_blank"> 房价不含早餐的话那酒店有餐厅吗？</a></td>
+                        <td><a title="13805rjrmvw" href="/question/myquestion_1290267.html" target="_blank">13805rjrmvw</a></td>
+                        <td> 2008-12-02 </td>
+                        <td> 1 </td>
+                        <td><img alt="已解决" src="img/y_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州住宿" href="/question/d_q_more_77_2.html">潮州住宿</a>] </td>
+                        <td><a title="潮州开元路步行街附近酒店有哪些？如何预定？" href="/question/d_q_detail_284716.html" target="_blank"> 潮州开元路步行街附近酒店有哪些？如何预定？</a></td>
+                        <td><a title="tongcheng1_63975" href="/question/myquestion_1205529.html" target="_blank"> tongcheng1_63975</a></td>
+                        <td> 2006-09-05 </td>
+                        <td> 1 </td>
+                        <td><img alt="已解决" src="img/y_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州住宿" href="/question/d_q_more_77_2.html">潮州住宿</a>] </td>
+                        <td><a title="潮州开元路步行街附近酒店有哪些？怎么预订？" href="/question/d_q_detail_284715.html" target="_blank"> 潮州开元路步行街附近酒店有哪些？怎么预订？</a></td>
+                        <td><a title="tongcheng1_63975" href="/question/myquestion_1205529.html" target="_blank"> tongcheng1_63975</a></td>
+                        <td> 2006-06-06 </td>
+                        <td> 1 </td>
+                        <td><img alt="已解决" src="img/y_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州住宿" href="/question/d_q_more_77_2.html">潮州住宿</a>] </td>
+                        <td><a title="潮州开元路步行街附近宾馆有哪些？如何预定？" href="/question/d_q_detail_284714.html" target="_blank"> 潮州开元路步行街附近宾馆有哪些？如何预定？</a></td>
+                        <td><a title="tongcheng1_63975" href="/question/myquestion_1205529.html" target="_blank"> tongcheng1_63975</a></td>
+                        <td> 2006-07-20 </td>
+                        <td> 1 </td>
+                        <td><img alt="已解决" src="img/y_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州住宿" href="/question/d_q_more_77_2.html">潮州住宿</a>] </td>
+                        <td><a title="潮州开元路步行街附近宾馆有哪些？怎么预订？" href="/question/d_q_detail_284713.html" target="_blank"> 潮州开元路步行街附近宾馆有哪些？怎么预订？</a></td>
+                        <td><a title="tongcheng1_63975" href="/question/myquestion_1205529.html" target="_blank"> tongcheng1_63975</a></td>
+                        <td> 2006-08-12 </td>
+                        <td> 1 </td>
+                        <td><img alt="已解决" src="img/y_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州住宿" href="/question/d_q_more_77_2.html">潮州住宿</a>] </td>
+                        <td><a title="潮州西湖附近宾馆有哪些？怎么预定？" href="/question/d_q_detail_278165.html" target="_blank"> 潮州西湖附近宾馆有哪些？怎么预定？</a></td>
+                        <td><a title="tongcheng1_63975" href="/question/myquestion_1205529.html" target="_blank"> tongcheng1_63975</a></td>
+                        <td> 2006-06-10 </td>
+                        <td> 1 </td>
+                        <td><img alt="已解决" src="img/y_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州住宿" href="/question/d_q_more_77_2.html">潮州住宿</a>] </td>
+                        <td><a title="潮州西湖附近宾馆有哪些？怎么预订？" href="/question/d_q_detail_278164.html" target="_blank"> 潮州西湖附近宾馆有哪些？怎么预订？</a></td>
+                        <td><a title="tongcheng1_63975" href="/question/myquestion_1205529.html" target="_blank"> tongcheng1_63975</a></td>
+                        <td> 2006-08-23 </td>
+                        <td> 1 </td>
+                        <td><img alt="已解决" src="img/y_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州住宿" href="/question/d_q_more_77_2.html">潮州住宿</a>] </td>
+                        <td><a title="潮州开元寺泰佛殿附近宾馆有哪些？怎么预定？" href="/question/d_q_detail_278163.html" target="_blank"> 潮州开元寺泰佛殿附近宾馆有哪些？怎么预定？</a></td>
+                        <td><a title="tongcheng1_63975" href="/question/myquestion_1205529.html" target="_blank"> tongcheng1_63975</a></td>
+                        <td> 2006-08-12 </td>
+                        <td> 1 </td>
+                        <td><img alt="已解决" src="img/y_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州住宿" href="/question/d_q_more_77_2.html">潮州住宿</a>] </td>
+                        <td><a title="潮州开元寺泰佛殿附近宾馆有哪些？怎么预订？" href="/question/d_q_detail_278159.html" target="_blank"> 潮州开元寺泰佛殿附近宾馆有哪些？怎么预订？</a></td>
+                        <td><a title="tongcheng1_63975" href="/question/myquestion_1205529.html" target="_blank"> tongcheng1_63975</a></td>
+                        <td> 2006-06-16 </td>
+                        <td> 1 </td>
+                        <td><img alt="已解决" src="img/y_untie.gif"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td> [<a title="潮州住宿" href="/question/d_q_more_77_2.html">潮州住宿</a>] </td>
+                        <td><a title="潮州韩文公祠附近宾馆有哪些？怎么预定？" href="/question/d_q_detail_278158.html" target="_blank"> 潮州韩文公祠附近宾馆有哪些？怎么预定？</a></td>
+                        <td><a title="tongcheng1_63975" href="/question/myquestion_1205529.html" target="_blank"> tongcheng1_63975</a></td>
+                        <td> 2006-05-21 </td>
+                        <td> 1 </td>
+                        <td><img alt="已解决" src="img/y_untie.gif"></td>
+                      </tr>
+                    </tbody>
+                  </table></td>
+              </tr>
+            </tbody>
+          </table>
+          <DIV id=pagerwrapper>
+     
+        <DIV class=my_PageList><A title=首页 href="NewsGSXW_1.html">首页</A><A title=上一页 href="NewsGSXW_1.html">上一页</A><SPAN>1</SPAN><A title=第|2|页 href="NewsGSXW_2.html">2</A><A title=下一页 href="NewsGSXW_2.html">下一页</A><A title=尾页 href="NewsGSXW_2.html">尾页</A></DIV>
+         
+        
+	      </DIV>          
+        </ul>
+      </div>
+    </div>
+    <div class="main_right">
+      <div class="table02">
+        <div class="table02_title">
+          <p> 优秀土建</p>
+        </div>
+        <div class="table02_body"></div>
+      </div>
+      <div class="blank05"></div>
+      <div class="table03">
+        <div class="table03_title">
+          <p> 旅游攻略</p>
+          <div class="more"><a href="#">更多>></a></div>
+        </div>
+        <div class="table03_body"></div>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <!--主体 结束-->
+  </div>
+  <!--尾开始-->
+  <div class="footer">
+    <div class="copyright">
+      <p><a href="http://www.becod.com/about/about.html" rel="nofollow">关于我们</a>|<a href="http://www.becod.com/about/cooperation.html"
+                        rel="nofollow"><span class="text_f60">店家服务</span></a>|<a href="http://www.becod.com/site_city.html">住宿索引</a>|<a
+                            href="http://www.becod.com/about/zhaopin.html" rel="nofollow">诚聘英才</a>|<a href="http://www.becod.com/link.html">友情链接</a>|<a
+                                href="http://www.becod.com/about/falv.html" rel="nofollow">法律声明</a>|<a href="http://www.becod.com/sitemap.html">网站地图</a>|<a
+                                    href="http://www.becod.com/about/lianxi.html" rel="nofollow">联系百酷</a></p>
+      <p class="gray_text"><span>Copyright© 2005-2010, <a href="http://www.becod.com/" rel="nofollow">百酷酒店预订网becod.com</a> . All rights reserved. ICP证：<a href="http://www.miibeian.gov.cn/" rel="nofollow">浙B2-20090179</a> | <a href="http://www.becod.com/company.html" rel="nofollow">营业执照</a><a href="http://122.224.75.236/wzba/login.do?method=hdurl&amp;doamin=http://www.becod.com&amp;id=330185000023162&amp;SHID=1223.0AFF_NAME=com.rouger.gs.main.UserInfoAff&amp;AFF_ACTION=qyhzdetail&amp;PAGE_URL=ShowDetail"
+                            rel="nofollow" target="_blank"><img style="margin-bottom: 2px" border="0" align="absMiddle"
+                                src="http://www.becod.com/images/ico_com.gif" height="23"></a></p>
+    </div>
+    <div id="friendlink"><a class="gray" href="javascript:void(0);" target="_self">友情链接:</a><a href="http://www.laidingba.com/">酒店预订</a><a
+                    href="http://www.4006777711.com/">酒店之星</a><a href="http://www.uuyoyo.com/">悠游网</a><a
+                        href="http://www.keyunzhan.com/">汽车时刻表</a><a href="http://www.ganji.com/piao/">火车票查询</a><a
+                            href="http://www.auyou.cn">遨游搜</a><a href="http://www.edajia.com">大家旅游网</a><a href="http://www.kuailv.com">快旅网</a><a
+                                href="http://www.17u.net/">同程网</a><a href="http://www.51booking.cn">商务订房网</a><a href="http://www.uhenan.com/">河南旅游网</a><a
+                                    href="http://tour.sdchina.com/">山东旅游网</a><a href="http://www.88gogo.com">掌门人网</a><a
+                                        href="http://www.nettvl.com/">旅游互联网</a><a href="http://www.utourworld.com/">众信旅游网</a><a
+                                            href="http://www.hostelcn.com/">中国经济型酒店网</a><a href="http://www.uc999.com/">游戏999</a><a
+                                                href="http://www.huoche.net/">列车时刻表</a><a href="http://www.byecity.com">佰程旅行网</a><a
+                                                    href="http://www.niulv.com/">牛驴旅游网</a><a href="http://www.bbcmart.com">比比西同业平台</a><a
+                                                        href="http://www.yiqiyou.com">一起游旅行网</a><a href="http://www.lvmama.com/">驴妈妈旅游网</a><a
+                                                            href="http://www.easytour.cn/">易游天下旅行网</a><a href="http://www.topzj.com/">团购网站大全</a><a
+                                                                class="gray" href="javascript:void(0);" target="_self">链接与合作QQ：25096330</a></div>
+  </div>
+</div>
+<!--尾结束-->
+</body>
+</html>

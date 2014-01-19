@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>丹霞山酒店预定|饭店预定</title>
+    <link href="css/global.css" rel="stylesheet" type="text/css" />
+    <link href="css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="css/tab.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="js/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+    <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+    <script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <script type="text/javascript">
+$(document).ready(function() {
+        $("a[rel=lightbox_group]").fancybox({
+            'transitionIn': 'none',
+            'transitionOut': 'none',
+            'titlePosition': 'over',
+            'titleFormat': function(title, currentArray, currentIndex, currentOpts) {
+                return '<span id="fancybox-title-over">图像： ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+            }
+        });      });
+    </script>
+
+</head>
+<body>
+    <div class="header_top">
+        <ul class="header_nav">
+            <li id='login_info'>用户名
+                <input style="width: 75px" id="username" type="text" name="username">
+                密码
+                <input style="width: 75px" id="password" value="" type="password" name="password">
+                <input id="loginbutton" class="button" value="登录" type="submit" name="button">
+                <input id="registernbutton" class="button" onclick="window.open('http://www.becod.com/register');"
+                    value="注册新账号" type="button" name="button">
+            </li>
+            <li class="fright"><a href="http://www.becod.com/voucher.html">优惠券</a> | <a href="http://www.becod.com/promotions.html">
+                客房促销</a> | <a class='orange' href="http://www.becod.com/register/tavern">酒店注册</a>
+                | <a class='black' onclick="javascript:window.external.AddFavorite('http://www.becod.com','百酷旅游网')"
+                    href="javascript:void(0)" target="_self">加入收藏</a> | <a class='black' onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.becod.com');"
+                        href="javascript:void(0)" target="_self">设为首页</a></li>
+        </ul>
+    </div>
+    <div class="wrapper">
+        <!--头部 开始-->
+        <div class="header">
+            <p id="logo">
+            </p>
+            <p id="header_adv">
+                <a href="http://www.becod.com/chongzhi.html" target="_blank">
+                    <img src="img/web_czhf.gif" width="647" height="65"></a></p>
+            <div class="clear">
+            </div>
+            <div id="nav">
+                <ul id="nav_left">
+                    <li class="noborder nav_selected"><a href="/" target="_self">首页</a></li>
+                    <li><a href="http://guzhen.becod.com/" target="_self"><span>古镇客栈</span></a></li>
+                    <li><a href="http://njle.becod.com/" target="_self"><span>农家乐</span></a></li>
+                    <li><a href="http://comment.becod.com/" target="_self"><span>住宿点评</span></a></li>
+                    <li><a href="http://wenda.becod.com/" target="_self"><span>住宿问答</span></a></li>
+                    <li><a href="http://news.becod.com" target="_self"><span>旅游资讯</span></a></li>
+                    <li><a href="http://posts.becod.com" target="_self"><span>旅游攻略</span></a></li>
+                    <li><a href="http://dest.becod.com/" target="_self"><span>旅游景点</span></a></li>
+                    <li><a href="http://home.becod.com"><span>百酷家园</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!--头部 结束-->
+        <div class="main">
+            <!--主体 开始-->
+            <div class="main_left">
+                <div class="blank05">
+                </div>
+                <div class="cate_info link01">
+                    <!--图片-->
+                    <div id="divMap" class="show_pic">
+                        <div class="top">
+                            <img id="imgBig" src="http://Upload.17u.cn/hotel/large/2009/7/6/3ff7ca0f89e9406986b072a8ff509a51.jpg"
+                                width="286" height="212"></div>
+                        <div class="bottom">
+                            <a class="zuo" title="向左" onclick="return Left();" href="javascript:void(0)"></a>
+                            <div class="now">
+                                <div id="divShow" class="null">
+                                    <ul>
+                                        <li><a onmouseover="HuanTu('http://Upload.17u.cn/hotel/large/2009/7/6/61d98d0c36d04be6a8c04d6e7076c2b3.jpg');"
+                                            href="javascript:void(0)">
+                                            <img src="http://Upload.17u.cn/hotel/small/2009/7/6/61d98d0c36d04be6a8c04d6e7076c2b3.jpg"></a>
+                                        </li>
+                                        <li><a onmouseover="HuanTu('http://Upload.17u.cn/hotel/large/2009/7/6/50a1ffaf4433499cac307a720ae7bc6c.jpg');"
+                                            href="javascript:void(0)">
+                                            <img src="http://Upload.17u.cn/hotel/small/2009/7/6/50a1ffaf4433499cac307a720ae7bc6c.jpg"></a>
+                                        </li>
+                                        <li><a onmouseover="HuanTu('http://Upload.17u.cn/hotel/large/2009/7/6/05e28931851644ddb6ca550576f66771.jpg');"
+                                            href="javascript:void(0)">
+                                            <img src="http://Upload.17u.cn/hotel/small/2009/7/6/05e28931851644ddb6ca550576f66771.jpg"></a>
+                                        </li>
+                                        <li><a onmouseover="HuanTu('http://Upload.17u.cn/hotel/large/2009/7/6/3ff7ca0f89e9406986b072a8ff509a51.jpg');"
+                                            href="javascript:void(0)">
+                                            <img src="http://Upload.17u.cn/hotel/small/2009/7/6/3ff7ca0f89e9406986b072a8ff509a51.jpg"></a>
+                                        </li>
+                                        <li><a onmouseover="HuanTu('http://Upload.17u.cn/hotel/large/2010/10/24/eba1abe8517d4ac1b8885d4b1e5ea793.jpg');"
+                                            href="javascript:void(0)">
+                                            <img src="http://Upload.17u.cn/hotel/small/2010/10/24/eba1abe8517d4ac1b8885d4b1e5ea793.jpg"></a>
+                                        </li>
+                                        <li><a onmouseover="HuanTu('http://Upload.17u.cn/hotel/large/2010/12/16/7fdad69fcf7b46c68c4c679b0d190938.jpg');"
+                                            href="javascript:void(0)">
+                                            <img src="http://Upload.17u.cn/hotel/small/2010/12/16/7fdad69fcf7b46c68c4c679b0d190938.jpg"></a>
+                                        </li>
+                                        <li><a onmouseover="HuanTu('http://Upload.17u.cn/hotel/large/2010/12/16/ce27f662e27040ab94e37b223bce8d97.jpg');"
+                                            href="javascript:void(0)">
+                                            <img src="http://Upload.17u.cn/hotel/small/2010/12/16/ce27f662e27040ab94e37b223bce8d97.jpg"></a>
+                                        </li>
+                                        <li><a onmouseover="HuanTu('http://Upload.17u.cn/hotel/large/2010/12/29/7833383d283144cbb0586142161e83ce.jpg');"
+                                            href="javascript:void(0)">
+                                            <img src="http://Upload.17u.cn/hotel/small/2010/12/29/7833383d283144cbb0586142161e83ce.jpg"></a></li></ul>
+                                </div>
+                            </div>
+                            <a class="you" title="向右" onclick="return Right();" href="javascript:void(0)"></a>
+                        </div>
+                    </div>
+                    <div class="cate_title">
+                        渝信川菜（华盛店）
+                    </div>
+                    <div class='info'>
+                        <dl>
+                            <dt></dt>
+                            <dd>
+                                地址：丹霞上景区
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt></dt>
+                            <dd>
+                                简述： 农家特色
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt></dt>
+                            <dd>
+                                电话：0571-8545210，12878988541
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt></dt>
+                            <dd>
+                                <div class="pingf1_title">
+                                    酒店综合评分：</div>
+                                <ul id="ulPingji" class="pingf1">
+                                    <li><span>口味：</span><span class="c-value-no c-value-3d8" title="3.8/5.0"></span>3.8</li>
+                                    <li><span>环境：</span><span class="c-value-no c-value-4d2" title="4.2/5.0"></span>4.2</li>
+                                    <li><span>服务：</span><span class="c-value-no c-value-4d1" title="4.1/5.0"></span>4.1</li>
+                                    <li><span>卫生：</span><span class="c-value-no c-value-3d7" title="3.7/5.0"></span>3.7</li></ul>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt></dt>
+                            <dd>
+                                人均消费:<span class="rjxf">￥83</span>元</dd>
+                        </dl>
+                    </div>
+                    <!--酒店房型-->
+                </div>
+                <div class="hotel_info link01" jquery1300263300681="11">
+                    <ul class="tit">                       
+                        <li class="on">特色菜普</li>                       
+                    </ul>
+                    <div style="height: 0px; clear: both; overflow: hidden">
+                    </div>
+                    <div class="zyleft1_body" jquery1300263300681="10">                                               
+                        <ul class="imgul" jquery1300263300681="9">
+                            <li jquery1300263300681="8"><a title="上海格林豪泰酒店（南站店）外观" href="http://Upload.17u.cn/hotel/large/2009/7/6/61d98d0c36d04be6a8c04d6e7076c2b3.jpg"
+                                rel="lightbox_group" jquery1300263300681="7">
+                                <img src="http://Upload.17u.cn/hotel/large/2009/7/6/61d98d0c36d04be6a8c04d6e7076c2b3.jpg">
+                            </a><a title="外观" href="http://Upload.17u.cn/hotel/large/2009/7/6/61d98d0c36d04be6a8c04d6e7076c2b3.jpg">
+                                外观 </a></li>
+                            <li jquery1300263300681="19"><a title="上海格林豪泰酒店（南站店）大堂" href="http://Upload.17u.cn/hotel/large/2009/7/6/50a1ffaf4433499cac307a720ae7bc6c.jpg"
+                                rel="lightbox_group" jquery1300263300681="18">
+                                <img src="http://Upload.17u.cn/hotel/large/2009/7/6/50a1ffaf4433499cac307a720ae7bc6c.jpg">
+                            </a><a title="大堂" href="http://Upload.17u.cn/hotel/large/2009/7/6/50a1ffaf4433499cac307a720ae7bc6c.jpg">
+                                大堂 </a></li>
+                            <li jquery1300263300681="21"><a title="上海格林豪泰酒店（南站店）大床" href="http://Upload.17u.cn/hotel/large/2009/7/6/05e28931851644ddb6ca550576f66771.jpg"
+                                rel="lightbox_group" jquery1300263300681="20">
+                                <img src="http://Upload.17u.cn/hotel/large/2009/7/6/05e28931851644ddb6ca550576f66771.jpg">
+                            </a><a title="大床" href="http://Upload.17u.cn/hotel/large/2009/7/6/05e28931851644ddb6ca550576f66771.jpg">
+                                大床 </a></li>
+                            <li jquery1300263300681="23"><a title="上海格林豪泰酒店（南站店）标准间" href="http://Upload.17u.cn/hotel/large/2009/7/6/3ff7ca0f89e9406986b072a8ff509a51.jpg"
+                                rel="lightbox_group" jquery1300263300681="22">
+                                <img src="http://Upload.17u.cn/hotel/large/2009/7/6/3ff7ca0f89e9406986b072a8ff509a51.jpg">
+                            </a><a title="标准间" href="http://Upload.17u.cn/hotel/large/2009/7/6/3ff7ca0f89e9406986b072a8ff509a51.jpg">
+                                标准间 </a></li>
+                            <li jquery1300263300681="25"><a title="上海格林豪泰酒店（南站店）走廊[由ぺ冭孓→爺Й提供]" href="http://Upload.17u.cn/hotel/large/2010/10/24/eba1abe8517d4ac1b8885d4b1e5ea793.jpg"
+                                rel="lightbox_group" jquery1300263300681="24">
+                                <img src="http://Upload.17u.cn/hotel/large/2010/10/24/eba1abe8517d4ac1b8885d4b1e5ea793.jpg">
+                            </a><a title="走廊[由ぺ冭孓→爺Й提供]" href="http://Upload.17u.cn/hotel/large/2010/10/24/eba1abe8517d4ac1b8885d4b1e5ea793.jpg">
+                                走廊[由ぺ冭孓→爺Й提供] </a></li>
+                            <li jquery1300263300681="27"><a title="上海格林豪泰酒店（南站店）客房/床[由18757tqxehm提供]" href="http://Upload.17u.cn/hotel/large/2010/12/16/7fdad69fcf7b46c68c4c679b0d190938.jpg"
+                                rel="lightbox_group" jquery1300263300681="26">
+                                <img src="http://Upload.17u.cn/hotel/large/2010/12/16/7fdad69fcf7b46c68c4c679b0d190938.jpg">
+                            </a><a title="客房/床[由18757tqxehm提供]" href="http://Upload.17u.cn/hotel/large/2010/12/16/7fdad69fcf7b46c68c4c679b0d190938.jpg">
+                                客房/床[由18757tqxehm提供] </a></li>
+                            <li jquery1300263300681="29"><a title="上海格林豪泰酒店（南站店）客房/房内设施[由18757tqxehm提供]" href="http://Upload.17u.cn/hotel/large/2010/12/16/ce27f662e27040ab94e37b223bce8d97.jpg"
+                                rel="lightbox_group" jquery1300263300681="28">
+                                <img src="http://Upload.17u.cn/hotel/large/2010/12/16/ce27f662e27040ab94e37b223bce8d97.jpg">
+                            </a><a title="客房/房内设施[由18757tqxehm提供]" href="http://Upload.17u.cn/hotel/large/2010/12/16/ce27f662e27040ab94e37b223bce8d97.jpg"
+                                rel="lightbox_group" jquery1300263300681="30">客房/房内设施[由18757tqxehm提供] </a></li>
+                            <li jquery1300263300681="32"><a title="上海格林豪泰酒店（南站店）客房/房内设施[由Earson提供]" href="http://Upload.17u.cn/hotel/large/2010/12/29/ab1971e7a3f44243b1badea7673318ff.jpg"
+                                rel="lightbox_group" jquery1300263300681="31">
+                                <img src="http://Upload.17u.cn/hotel/large/2010/12/29/ab1971e7a3f44243b1badea7673318ff.jpg">
+                            </a><a title="客房/房内设施[由Earson提供]" href="http://Upload.17u.cn/hotel/large/2010/12/29/ab1971e7a3f44243b1badea7673318ff.jpg">
+                                客房/房内设施[由Earson提供] </a></li>
+                            <li><a title="上海格林豪泰酒店（南站店）客房/床[由Earson提供]" href="http://Upload.17u.cn/hotel/large/2010/12/29/7833383d283144cbb0586142161e83ce.jpg">
+                                <img src="http://Upload.17u.cn/hotel/large/2010/12/29/7833383d283144cbb0586142161e83ce.jpg">
+                            </a><a title="客房/床[由Earson提供]" href="http://Upload.17u.cn/hotel/large/2010/12/29/7833383d283144cbb0586142161e83ce.jpg">
+                                客房/床[由Earson提供] </a></li>
+                        </ul>
+                        
+                    </div>
+                   
+                    
+                </div>
+            </div>
+            <div class="main_right">
+                <div class="blank05">
+                </div>
+                <div class="table03">
+                    <div class="table03_title">
+                        <p>
+                            地理位置</p>
+                    </div>
+                    <div class="table03_body">
+                        <iframe id="mapFrm" height="210" src="http://cate.17u.com/MapBar.aspx?MapId=121.48795,31.23444&amp;MapWidth=229&amp;MapHeight=210&amp;Name=渝信川菜（华盛店）"
+                            frameborder="0" width="248" scrolling="no"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="clear">
+            </div>
+            <!--主体 结束-->
+        </div>
+        <!--尾开始-->
+        <div class="footer">
+            <div class="copyright">
+                <p>
+                    <a href="http://www.becod.com/about/about.html" rel="nofollow">关于我们</a>|<a href="http://www.becod.com/about/cooperation.html"
+                        rel="nofollow"><span class="text_f60">店家服务</span></a>|<a href="http://www.becod.com/site_city.html">住宿索引</a>|<a
+                            href="http://www.becod.com/about/zhaopin.html" rel="nofollow">诚聘英才</a>|<a href="http://www.becod.com/link.html">友情链接</a>|<a
+                                href="http://www.becod.com/about/falv.html" rel="nofollow">法律声明</a>|<a href="http://www.becod.com/sitemap.html">网站地图</a>|<a
+                                    href="http://www.becod.com/about/lianxi.html" rel="nofollow">联系百酷</a></p>
+                <p class="gray_text">
+                    <span>Copyright© 2005-2010, <a href="http://www.becod.com/" rel="nofollow">百酷酒店预订网becod.com</a>
+                        . All rights reserved. ICP证：<a href="http://www.miibeian.gov.cn/" rel="nofollow">浙B2-20090179</a>
+                        | <a href="http://www.becod.com/company.html" rel="nofollow">营业执照</a><a href="http://122.224.75.236/wzba/login.do?method=hdurl&amp;doamin=http://www.becod.com&amp;id=330185000023162&amp;SHID=1223.0AFF_NAME=com.rouger.gs.main.UserInfoAff&amp;AFF_ACTION=qyhzdetail&amp;PAGE_URL=ShowDetail"
+                            rel="nofollow" target="_blank"><img style="margin-bottom: 2px" border="0" align="absMiddle"
+                                src="http://www.becod.com/images/ico_com.gif" height="23"></a></p>
+            </div>
+            <div id="friendlink">
+                <a class="gray" href="javascript:void(0);" target="_self">友情链接:</a><a href="http://www.laidingba.com/">酒店预订</a><a
+                    href="http://www.4006777711.com/">酒店之星</a><a href="http://www.uuyoyo.com/">悠游网</a><a
+                        href="http://www.keyunzhan.com/">汽车时刻表</a><a href="http://www.ganji.com/piao/">火车票查询</a><a
+                            href="http://www.auyou.cn">遨游搜</a><a href="http://www.edajia.com">大家旅游网</a><a href="http://www.kuailv.com">快旅网</a><a
+                                href="http://www.17u.net/">同程网</a><a href="http://www.51booking.cn">商务订房网</a><a href="http://www.uhenan.com/">河南旅游网</a><a
+                                    href="http://tour.sdchina.com/">山东旅游网</a><a href="http://www.88gogo.com">掌门人网</a><a
+                                        href="http://www.nettvl.com/">旅游互联网</a><a href="http://www.utourworld.com/">众信旅游网</a><a
+                                            href="http://www.hostelcn.com/">中国经济型酒店网</a><a href="http://www.uc999.com/">游戏999</a><a
+                                                href="http://www.huoche.net/">列车时刻表</a><a href="http://www.byecity.com">佰程旅行网</a><a
+                                                    href="http://www.niulv.com/">牛驴旅游网</a><a href="http://www.bbcmart.com">比比西同业平台</a><a
+                                                        href="http://www.yiqiyou.com">一起游旅行网</a><a href="http://www.lvmama.com/">驴妈妈旅游网</a><a
+                                                            href="http://www.easytour.cn/">易游天下旅行网</a><a href="http://www.topzj.com/">团购网站大全</a><a
+                                                                class="gray" href="javascript:void(0);" target="_self">链接与合作QQ：25096330</a></div>
+        </div>
+    </div>
+    <!--尾结束-->
+</body>
+</html>
