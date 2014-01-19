@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://nant.sf.net/nightly/2008-06-02-0.86/nant.xsd" name="Test" default="run" basedir="./">
+  <property name="MSBuilder" value="C:\WINDOWS\Microsoft.NET\Framework\v3.5\MSBuild.exe"/>
+  <property name="root.dir" value=".\"/>
+  <property name="Release.Path" value=".\"/>
+
+  <target name="run">
+    <call target="clean"/>
+    <call target="msbuild"/>
+    <call target="copyto"/>
+  </target>
+  
+  <!--VS2008编译-->
+  <target name="msbuild">
+    <echo message="VS2008 工程编译"/>
+    <exec program="${MSBuilder}">
+      <arg line="${root.dir}dx177.sln"/>
+      <arg line="/t:Build"/>
+      <arg line="/p:Configuration=Release"/>
+    </exec>
+  </target>
+
+  <target name="copyto" >
+    <mkdir dir="${Release.Path}\published"/>
+    <copy todir ="${Release.Path}published"  >            
+      <fileset  basedir="${root.dir}dx177.WebUI\">
+        <include name ="**"/>
+        <exclude name="**.cs"/>
+        <exclude name="**.csproj"/>
+        <exclude name="**.user"/>
+      </fileset>      
+    </copy>
+  </target>
+
+  <target name ="clean" >
+    <delete dir="${Release.Path}published" />
+  </target>
+  
+</project>
