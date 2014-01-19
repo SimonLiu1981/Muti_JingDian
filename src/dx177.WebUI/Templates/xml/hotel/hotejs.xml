@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<PageHtmlMod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <DataHtmlMods>
+    <DataHtmlMod>
+      <TableCode>
+        <![CDATA[{0}]]>
+      </TableCode>
+      <TrCode>
+        <![CDATA[{0}]]>
+      </TrCode>
+      <TdCode>
+        <![CDATA[    
+ document.writeln("  <div class=\"zn_room_row\">");
+document.writeln("                            <div class=\"zn_row\">");
+document.writeln("                                ");
+document.writeln("                                <div class=\"zn_row1\">");
+document.writeln("                                    <del><font style='color:#f60;'> |MARKETPRICE|</font></del>元</div>");
+document.writeln("                                <div class=\"zn_row2\">");
+document.writeln("                                   <font style='color:#f60;'>  |PRICE1|</font>元</div>");
+document.writeln("                                <div class=\"zn_row3\"  >");
+document.writeln("                                    <a href=\"javascript:void(0)\">|PRICE2|元</a></div>");
+document.writeln("                                <div class=\"zn_row6\">");
+document.writeln("                                    待定</div>");
+document.writeln("                                <div class=\"zn_row7\">");
+document.writeln("                                    <input class=\"zn_btn_yd\" onclick=\"window.location.href=\'/web/hotelorder/NewOrder.aspx?roomid=|SEQNO|\';\" type=\"button\"");
+document.writeln("                                        value=\"预订\" /></div>");
+document.writeln("                            </div>");
+document.writeln("                            <a class=\"zn_room_name\"   >");
+document.writeln("                                |ROOMTITLE|</a></div>");
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>10</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>房间</HasKey>
+      <ReplaceCode>房间</ReplaceCode>
+    </DataHtmlMod>
+
+  </DataHtmlMods>
+  <HashDataMods>
+    <HashDataMod>
+      <Sql>select * from  Room where pguid='|GUID|'</Sql>
+      <HashKey>房间</HashKey>
+    </HashDataMod>
+  </HashDataMods>
+  <MainPageHtml>|房间|</MainPageHtml>
+  <SavePath>hotejs/|SEQNO|.js</SavePath>
+</PageHtmlMod>

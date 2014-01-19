@@ -1,0 +1,154 @@
+﻿<?xml version="1.0"?>
+<CallMethodArrMod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <callmethodmods>
+    <CallMethodMod>
+      <ParaValue />
+      <Type>PAGE</Type>
+      <Sql>select   '|CREATEBY|' as    createby ,(select  '/'+JingQuCode +'/'  from  Resuser  WHERE USERNAME= '|CREATEBY|' ) as JQRP_CODE  ,(select '/'+JingQuCode+'/'   from  Resuser  WHERE USERNAME= '|CREATEBY|' ) as JQCOD_PATH </Sql>
+      <CycleSql />
+      <xmlPath>~\Templates\xml\hotel\index.xml</xmlPath>
+      <Name>首页</Name>
+      <RunType />
+    </CallMethodMod>
+
+
+
+
+
+    <CallMethodMod>
+      <ParaValue />
+      <Type>PAGES</Type>
+      <Sql>
+        <![CDATA[
+        select *, isnull(priceinfo,'还没有定义景区门票!<br/>请与管理员联系.') as priceinfo1, jingqucode as   JQCODE  ,jingqucode as   JINGQUCODE  ,jingquname as 景区名字 ,  '/'+matchdomain +'/'  as JQRP_CODE   ,  '/'+matchdomain +'/' as  JQCOD_PATH  from   JingQus
+        ]]>
+      </Sql>
+      <CycleSql />
+      <xmlPath>~\Templates\xml\hotel\jingdiancode.xml</xmlPath>
+      <Name>景区首页</Name>
+      <RunType />
+    </CallMethodMod>
+
+
+
+
+
+    <CallMethodMod>
+      <ParaValue />
+      <Type>PAGES</Type>
+      <Sql>
+        select s.*  , '/'+ b.MatchDomain+'/'  as  JQRP_CODE  ,'/'+b.MatchDomain+'/' AS JQCOD_PATH from Sites s, JingQus b where s.JingQuCode = b.JingQuCode
+      </Sql>
+      <CycleSql />
+      <xmlPath>~\Templates\xml\hotel\site.xml</xmlPath>
+      <Name>景点信息</Name>
+      <RunType />
+    </CallMethodMod>
+
+
+
+    <CallMethodMod>
+      <ParaValue />
+      <Type>PAGES</Type>
+      <Sql>
+        select a.*, '/'+b.MatchDomain+'/' AS JQCOD_PATH, b.Jingquname    from Questions a, JingQus b where a.JingQuCode= b.JingQuCode
+      </Sql>
+      <CycleSql />
+      <xmlPath>~\Templates\xml\hotel\Question.xml</xmlPath>
+      <Name>问题信息</Name>
+      <RunType />
+    </CallMethodMod>
+
+
+
+
+    <CallMethodMod>
+      <ParaValue />
+      <Type>PAGES</Type>
+      <Sql>
+        SELECT  a.* , '/'+ a.JingQuCode+'/'  as  JQRP_CODE , '/'+ b.MatchDomain+'/' AS JQCOD_PATH  FROM HireCar  a, JingQus b
+        where a.JingQuCode= b.JingQuCode
+
+      </Sql>
+      <CycleSql />
+      <xmlPath>~\Templates\xml\hotel\hirecar.xml</xmlPath>
+      <Name>租车信息</Name>
+      <RunType></RunType>
+    </CallMethodMod>
+
+
+
+    <CallMethodMod>
+      <ParaValue />
+      <Type>PAGES</Type>
+      <Sql>
+        select b.* ,convert(char(10),b.CREATE_DATE,20) as create_date1, '/'+ b.JingQuCode+'/'  as  JQRP_CODE , '/'+b1.MatchDomain+'/' AS JQCOD_PATH ,( select title  from  NewsType as a where a.guid=b.tguid ) as TYPENAME,(select code  from  NewsType as a where a.guid=b.tguid ) as TYPECODE
+        from news as b, JingQus b1 where b.JingQuCode=b1.JingQuCode
+      </Sql>
+      <CycleSql />
+      <xmlPath>~\Templates\xml\hotel\新闻具体页.xml</xmlPath>
+      <Name>新闻具体页</Name>
+      <RunType />
+    </CallMethodMod>
+
+
+
+
+
+
+
+
+
+
+
+    <CallMethodMod>
+      <ParaValue />
+      <Type>PAGES</Type>
+      <Sql>
+        <![CDATA[
+      select a.* , '/'+ b.MatchDomain+'/'  as  JQRP_CODE , '/'+b.MatchDomain+'/' AS JQCOD_PATH , ( select top 1 AreaName from JingQu_Area ja where ja.JingQuAreaId=a.area and ja.JinqQuCode=a.JingQuCode) as areaname ,  
+
+(select top 1 tag_name  from  Base_Dict_Tag where enum_type_name='HotelType' and enum_value=a.hoteltype) as TYPENAME
+   from Hotel as a  , JingQus b where a.JingQuCode=b.JingQuCode
+
+      ]]>
+      </Sql>
+      <CycleSql />
+      <xmlPath>~\Templates\xml\hotel\hotelinfo.xml</xmlPath>
+      <Name>酒店信息</Name>
+      <RunType></RunType>
+    </CallMethodMod>
+
+
+
+
+    <CallMethodMod>
+      <ParaValue />
+      <Type>PAGES</Type>
+      <Sql>
+        select  '/'+ jq.MatchDomain+'/'  as  JQRP_CODE , '/'+jq.MatchDomain+'/' AS JQCOD_PATH ,a.*,b.title as typename ,b.tag as type from products as a left join  ProductsType as b on b.guid=a.ptype , JingQus jq
+        where a.JingQuCode = jq.JingQuCode
+      </Sql>
+      <CycleSql />
+      <xmlPath>~\Templates\xml\hotel\productinfo.xml</xmlPath>
+      <Name>产品信息</Name>
+      <RunType></RunType>
+    </CallMethodMod>
+
+
+
+    <CallMethodMod>
+      <ParaValue />
+      <Type>PAGES</Type>
+      <Sql>select * , '/'+ JingQuCode+'/'  as  JQRP_CODE , '/'+JingQuCode+'/' AS JQCOD_PATH  from Bus_Issue_Info  </Sql>
+      <CycleSql />
+      <xmlPath>~\Templates\xml\hotel\文章.xml</xmlPath>
+      <Name>文章页</Name>
+      <RunType>ISSUE</RunType>
+    </CallMethodMod>
+
+
+
+  </callmethodmods>
+  <CurrentEncoding>utf8</CurrentEncoding>
+</CallMethodArrMod>

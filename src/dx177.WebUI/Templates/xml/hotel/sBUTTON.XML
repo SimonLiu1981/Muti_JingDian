@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<PageButtonHtmlMod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonLink>
+    <![CDATA[ <a href="|LINK||BUTTONLINK|" title="尾页">|BUTTONLINK|</a>]]>
+  </ButtonLink>
+  <LastPage>
+   <![CDATA[ <a href="|LINK||LASTPAGE|" title="尾页">>></a>]]>
+  </LastPage>
+  <FirstPage>
+    <![CDATA[ <a href="|LINK||FIRSTPAGE|" title="第一页"><<</a>]]>
+  </FirstPage>
+  <PrePage></PrePage>
+  <NextPage></NextPage>
+  <CurrentPageHtml>
+ <![CDATA[ <strong>|CURRENTPAGEHTML|</strong> ]]>
+</CurrentPageHtml>
+</PageButtonHtmlMod>

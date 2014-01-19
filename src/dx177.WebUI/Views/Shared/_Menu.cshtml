@@ -1,0 +1,30 @@
+﻿ @{
+  if (ViewBag.JQ != null)
+  {
+    <text>
+                <li><a href="/">首 页</a></li>
+                <li><a href="/JQ_@ViewBag.JQ">景区首页</a></li>
+                <li><a href="/JQ_@ViewBag.JQ/hotel">酒店预订</a></li>
+                <li><a href="/JQ_@ViewBag.JQ/news?typeCode=lygl">旅游攻略</a></li>           
+                <li><a href="/JQ_@ViewBag.JQ/news?typeCode=jtxx">交通信息</a></li>
+				<li><a href="/JQ_@ViewBag.JQ/questions">问题解答</a></li>                
+				<li><a href="/JQ_@ViewBag.JQ/sites">景点风景</a></li>   
+    </text>
+    }  
+    else
+    {
+        <text>
+                <li><a href="/">首 页</a></li>
+                <li><a href="/hotel">酒店预订</a></li>
+                <li><a href="/news?typeCode=lygl">旅游攻略</a></li>           
+                <li><a href="/news?typeCode=jtxx">交通信息</a></li>
+				<li><a href="/questions">问题解答</a></li>
+                <li><a href="/questions?type=zs">酒店问答</a></li>         
+                <li><a href="/product?typeCode=jtxx">旅游特产</a></li>
+				<li><a href="/sites">景点风景</a></li>
+                <li><a href="#">景区动态</a></li>
+                <li><a href="#">联系我们</a></li>
+                <li><a href="#">帮助中心</a></li>
+         </text>
+    }
+}

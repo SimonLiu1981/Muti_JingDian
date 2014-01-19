@@ -1,0 +1,638 @@
+﻿<?xml version="1.0"?>
+<PageHtmlMod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ChildHtmls>
+    <ChildHtmlMod>
+      <RepalceCode>头部</RepalceCode>
+      <HtmlPath>~\Templates\xml\hotel\s头部.html</HtmlPath>
+    </ChildHtmlMod>
+    <ChildHtmlMod>
+      <RepalceCode>底部</RepalceCode>
+      <HtmlPath>~\Templates\xml\hotel\底部.html</HtmlPath>
+    </ChildHtmlMod>
+  </ChildHtmls>
+  <DataHtmlMods>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站标题|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>公司信息</HasKey>
+      <ReplaceCode>网站标题</ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站内容|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>公司信息</HasKey>
+      <ReplaceCode>网站内容</ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站关键字|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>公司信息</HasKey>
+      <ReplaceCode>网站关键字</ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>
+        <![CDATA[
+        <li>
+          <a href="/JQ_|JQRP_CODE|/Sites/|SEQNO|">
+            |TITLE|
+          </a>
+        </li>
+        ]]>
+      </TdCode>
+      <RowCount>10</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>景点欣赏</HasKey>
+      <ReplaceCode>景点欣赏</ReplaceCode>
+    </DataHtmlMod>
+
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>
+        <![CDATA[
+        <li title='|NAME|'>
+      <span>|MINPRICE|元</span>
+      <a href='/jq_|JQRP_CODE|/hotel/|SEQNO|'  >|NAME|</a>
+    </li>
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>10</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>推荐酒店</HasKey>
+      <ReplaceCode>推荐酒店</ReplaceCode>
+    </DataHtmlMod>
+
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>
+        <![CDATA[
+        <dl>
+          <dt>
+           |CREATOR| 于|CREATE_DATE1| 的回复
+          </dt>       
+          <dd>|CONTENT|</dd>      
+          <div style="height:20px">          
+          <A class="bad_1"  href='javascript:void(0);' style="float:right; display:block" id="div_c|SEQNO|"><span oppose_add_guid='|GUID|' tagID='div_c|SEQNO|'>0</span> 人不推荐 </A>
+          <A class="good_1"  href='javascript:void(0);' style="float:right; display:block" id="div_d|SEQNO|"><span support_add_guid='|GUID|' tagID='div_d|SEQNO|'>0</span> 人推荐 </A>
+          </div>    
+      </dl>      
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>10</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>回复列表</HasKey>
+      <ReplaceCode>回复列表</ReplaceCode>
+    </DataHtmlMod>
+
+    
+
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>
+        <![CDATA[
+         <div class="list_top">
+            <h2>
+              <span>最佳答案</span>
+              <small></small>
+            </h2>
+            <div id="list_filter">
+              |CONTENT|
+            </div>
+            <div style="height:20px">                
+                <A class="bad_1" href='javascript:void(0);' style="float:right; display:block" id="div_c|SEQNO|"><span oppose_add_guid='|GUID|' tagID='div_c|SEQNO|'>0</span> 人不推荐 </A>
+                <A class="good_1" href='javascript:void(0);' style="float:right; display:block" id="div_d|SEQNO|"><span support_add_guid='|GUID|' tagID='div_d|SEQNO|'>0</span> 人推荐 </A>
+            </div>    
+          </div>
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>最佳答案</HasKey>
+      <ReplaceCode>最佳答案</ReplaceCode>
+    </DataHtmlMod>
+
+    <DataHtmlMod>
+      <TableCode>        <![CDATA[{0}]]>      </TableCode>
+      <TrCode>        <![CDATA[ {0} ]]>      </TrCode>
+      <TdCode>
+        <![CDATA[       
+        <li><span>|CREATE_DATE1|</span>
+		<a href="/JQ_|JINGQUCODE|/questions?type=|SORTCODE|">[|SORTNAME|]</a>&nbsp;<a href="/JQ_|JINGQUCODE|/questions/|SEQNO|">|TITLE|</a>
+		</li>
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>15</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>相关问题</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+
+
+    <DataHtmlMod>
+      <TableCode>        <![CDATA[{0}]]>      </TableCode>
+      <TrCode>        <![CDATA[ {0} ]]>      </TrCode>
+      <TdCode>      <![CDATA[                <li><span>|CREATE_DATE1|</span>		  <a href="/JQ_|JINGQUCODE|/questions/|SEQNO|">|TITLE|</a>		</li> ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>15</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>娱乐问题</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+
+    <DataHtmlMod>
+      <TableCode>        <![CDATA[{0}]]>      </TableCode>
+      <TrCode>        <![CDATA[ {0} ]]>      </TrCode>
+      <TdCode>
+        <![CDATA[            
+        <li><span>|CREATE_DATE1|</span>		  <a href="/JQ_|JINGQUCODE|/questions/|SEQNO|">|TITLE|</a>		</li> ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>15</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>门票问题</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>        <![CDATA[{0}]]>      </TableCode>
+      <TrCode>        <![CDATA[ {0} ]]>      </TrCode>
+      <TdCode>
+        <![CDATA[            
+        <li><span>|CREATE_DATE1|</span>		  <a href="/JQ_|JINGQUCODE|/questions/|SEQNO|">|TITLE|</a>		</li> ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>15</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>体验问题</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>        <![CDATA[{0}]]>      </TableCode>
+      <TrCode>        <![CDATA[ {0} ]]>      </TrCode>
+      <TdCode>
+        <![CDATA[            
+        <li><span>|CREATE_DATE1|</span>		  <a href="/JQ_|JINGQUCODE|/questions/|SEQNO|">|TITLE|</a>		</li> ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>15</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>其他问题</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>        <![CDATA[{0}]]>      </TableCode>
+      <TrCode>        <![CDATA[ {0} ]]>      </TrCode>
+      <TdCode>
+        <![CDATA[            
+        <li><span>|CREATE_DATE1|</span>		  <a href="/JQ_|JINGQUCODE|/questions/|SEQNO|">|TITLE|</a>		</li> ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>15</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>交通问题</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>        <![CDATA[{0}]]>      </TableCode>
+      <TrCode>        <![CDATA[ {0} ]]>      </TrCode>
+      <TdCode>
+        <![CDATA[            
+        <li><span>|CREATE_DATE1|</span>		  <a href="/JQ_|JINGQUCODE|/questions/|SEQNO|">|TITLE|</a>		</li> ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>15</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>饮食问题</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>        <![CDATA[{0}]]>      </TableCode>
+      <TrCode>        <![CDATA[ {0} ]]>      </TrCode>
+      <TdCode>
+        <![CDATA[            
+        <li><span>|CREATE_DATE1|</span>		  <a href="/JQ_|JINGQUCODE|/questions/|SEQNO|">|TITLE|</a>		</li> ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>15</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>景点问题</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>        <![CDATA[{0}]]>      </TableCode>
+      <TrCode>        <![CDATA[ {0} ]]>      </TrCode>
+      <TdCode>
+        <![CDATA[            
+        <li><span>|CREATE_DATE1|</span>		  <a href="/JQ_|JINGQUCODE|/questions/|SEQNO|">|TITLE|</a>		</li> ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>15</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>路线问题</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>        <![CDATA[{0}]]>      </TableCode>
+      <TrCode>        <![CDATA[ {0} ]]>      </TrCode>
+      <TdCode>
+        <![CDATA[            
+        <li><span>|CREATE_DATE1|</span>		  <a href="/JQ_|JINGQUCODE|/questions/|SEQNO|">|TITLE|</a>		</li> ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>15</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>住宿问题</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+
+    <DataHtmlMod>
+      <TableCode>        <![CDATA[{0}]]>      </TableCode>
+      <TrCode>        <![CDATA[ {0} ]]>      </TrCode>
+      <TdCode>
+        <![CDATA[    
+         <li>
+      <a href="/JQ_|JINGQUCODE|"   title="|JINGQUNAME|">|JINGQUNAME|</a>
+    </li>
+         ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>15</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>景区链接</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>
+        <![CDATA[
+        <li>
+          <a href="/JQ_|JINGQUCODE|/questions/|SEQNO|">
+            |TITLE|
+          </a>
+        </li>
+        ]]>
+      </TdCode>
+      <RowCount>15</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>随机问题</HasKey>
+      <ReplaceCode>随机问题</ReplaceCode>
+    </DataHtmlMod>
+   
+    
+    
+  </DataHtmlMods>
+  <HashDataMods>
+    <HashDataMod>
+      <Sql>select   '|TITLE|' as 网站标题,'|TITLE|' as 网站内容,'|TITLE|' as 网站关键字  </Sql>
+      <HashKey>公司信息</HashKey>
+    </HashDataMod>
+    <HashDataMod>
+      <Sql>SELECT *  ,  (select top 1  matchdomain from JingQus as jq  where  jq.jingqucode=s.JingQuCode)   as  JQRP_CODE FROM Sites s where s.JingQuCode='|JINGQUCODE|'  order by ViewTimes desc </Sql>
+      <HashKey>景点欣赏</HashKey>
+    </HashDataMod>
+
+    <HashDataMod>
+      <Sql>
+        <![CDATA[ select top 10 h.* , (select top 1  matchdomain from JingQus as jq  where  jq.jingqucode=h.JingQuCode)  as  JQRP_CODE  from Hotel h,Module m where h.guid = m.pguid and h.status=1 and modulecode='recommend' and h.JingQuCode='|JINGQUCODE|'   order by m.showidx desc ]]>
+      </Sql>
+      <HashKey>推荐酒店</HashKey>
+    </HashDataMod>
+
+    <HashDataMod>
+      <Sql>
+        <![CDATA[select *,convert(char(10), CREATE_DATE,20) as create_date1   from    ReplyQuestion where  pguid='|GUID|'  and  isright<>1 ]]>
+      </Sql>
+      <HashKey>回复列表</HashKey>
+    </HashDataMod>
+
+
+    <HashDataMod>
+      <Sql>
+        <![CDATA[select *  from   ReplyQuestion where  pguid='|GUID|'  and  isright=1 ]]>
+      </Sql>
+      <HashKey>最佳答案</HashKey>
+    </HashDataMod>
+
+    <HashDataMod>
+      <Sql>
+        <![CDATA[
+        select *,convert(char(10),CREATE_DATE,20) as create_date1,  (  select title from  Qsttype as qt where qt.guid =qtype  ) as SORTNAME ,
+                        (  select code from  Qsttype as qt where qt.guid =qtype  ) as SORTCODE
+                        from questions where guid  in (select t.RalateQuestionGUIDB as QuestionGUID  from QuestionRalations t 
+                        where t.RalateQuestionGUIDA = '|GUID|' and t.RalateQuestionGUIDB !='|GUID|'
+                        union
+                        select t.RalateQuestionGUIDA  from QuestionRalations t 
+                        where t.RalateQuestionGUIDB = '|GUID|' and t.RalateQuestionGUIDA !='|GUID|') 
+                        and GUID != '|GUID|'
+        ]]>
+      </Sql>
+      <HashKey>相关问题</HashKey>
+    </HashDataMod>
+    <HashDataMod>
+      <Sql>
+        <![CDATA[
+         select *,convert(char(10),CREATE_DATE,20) as create_date1  from questions where QType in (select Guid from dbo.QstType where Code='ly' )      and JingQuCode = '|JINGQUCODE|'
+        ]]>
+      </Sql>
+      <HashKey>娱乐问题</HashKey>
+    </HashDataMod>
+    <HashDataMod>
+      <Sql>
+        <![CDATA[
+         select *,convert(char(10),CREATE_DATE,20) as create_date1  from questions where QType in (select Guid from dbo.QstType where Code='mp' )      and JingQuCode = '|JINGQUCODE|'
+        ]]>
+      </Sql>
+      <HashKey>门票问题</HashKey>
+    </HashDataMod>
+
+    <HashDataMod>
+      <Sql>
+        <![CDATA[
+         select *,convert(char(10),CREATE_DATE,20) as create_date1  from questions where QType in (select Guid from dbo.QstType where Code='ty' )      and JingQuCode = '|JINGQUCODE|'
+        ]]>
+      </Sql>
+      <HashKey>体验问题</HashKey>
+    </HashDataMod>
+    <HashDataMod>
+      <Sql>
+        <![CDATA[
+         select *,convert(char(10),CREATE_DATE,20) as create_date1  from questions where QType in (select Guid from dbo.QstType where Code='qt' )      and JingQuCode = '|JINGQUCODE|'
+        ]]>
+      </Sql>
+      <HashKey>其他问题</HashKey>
+    </HashDataMod>
+    <HashDataMod>
+      <Sql>
+        <![CDATA[
+         select *,convert(char(10),CREATE_DATE,20) as create_date1  from questions where QType in (select Guid from dbo.QstType where Code='jt' )      and JingQuCode = '|JINGQUCODE|'
+        ]]>
+      </Sql>
+      <HashKey>交通问题</HashKey>
+    </HashDataMod>
+    <HashDataMod>
+      <Sql>
+        <![CDATA[
+         select *,convert(char(10),CREATE_DATE,20) as create_date1 from questions where QType in (select Guid from dbo.QstType where Code='zs' )      and JingQuCode = '|JINGQUCODE|'
+        ]]>
+      </Sql>
+      <HashKey>住宿问题</HashKey>
+    </HashDataMod>
+    <HashDataMod>
+      <Sql>
+        <![CDATA[
+         select *,convert(char(10),CREATE_DATE,20) as create_date1  from questions where QType in (select Guid from dbo.QstType where Code='ys' )      and JingQuCode = '|JINGQUCODE|'
+        ]]>
+      </Sql>
+      <HashKey>饮食问题</HashKey>
+    </HashDataMod>
+    <HashDataMod>
+      <Sql>
+        <![CDATA[
+         select *,convert(char(10),CREATE_DATE,20) as create_date1 from questions where QType in (select Guid from dbo.QstType where Code='jd' )      and JingQuCode = '|JINGQUCODE|'
+        ]]>
+      </Sql>
+      <HashKey>景点问题</HashKey>
+    </HashDataMod>
+     
+    <HashDataMod>
+      <Sql>
+        <![CDATA[
+         select *,convert(char(10),CREATE_DATE,20) as create_date1 from questions where QType in (select Guid from dbo.QstType where Code='lx' )      and JingQuCode = '|JINGQUCODE|'
+        ]]>
+      </Sql>
+      <HashKey>路线问题</HashKey>
+    </HashDataMod>
+    <HashDataMod>
+      <Sql>
+        <![CDATA[
+         select *,convert(char(10),CREATE_DATE,20) as create_date1 from questions where QType in (select Guid from dbo.QstType where Code='bs' )      and JingQuCode = '|JINGQUCODE|'
+        ]]>
+      </Sql>
+      <HashKey>办事问题</HashKey>
+    </HashDataMod>
+
+    <HashDataMod>
+      <Sql>
+        <![CDATA[
+        select top 15 jingqucode,JINGQUNAME  from JingQus   order by newid()
+        ]]>
+      </Sql>
+      <HashKey>景区链接</HashKey>
+    </HashDataMod>
+
+    <HashDataMod>
+      <Sql>
+        <![CDATA[
+       select top 15 * from questions  where seqno>(|SEQNO|-10) AND seqno<(|SEQNO|+10)
+        ]]>
+      </Sql>
+      <HashKey>随机问题</HashKey>
+    </HashDataMod>
+   
+
+
+  </HashDataMods>
+  <MainPageHtml>
+<![CDATA[    |头部|
+
+  
+  <script src="/Plugin/dingcai/dingcai.js"       type="text/javascript"></script>    
+  <link href="/css/room.gbk.css" rel="stylesheet" type="text/css" />
+        <div id="nav_son">
+            <span> <a href="/web/hotelorder/orderlist.aspx" class="cxdd">查询我的订单状态</a></span>当前位置：<a href="/index.html">首页</a>
+            &gt;&nbsp;|TITLE|</div>
+        <div id="mainContent">
+            <div id="side">
+                <div class="sidebox">
+                    <h4>
+                        推荐酒店</h4>
+                    <div class="sbox_con">
+                        <ul>
+                             |推荐酒店|
+                        </ul>
+                    </div>
+                </div>
+                <div class="sidebox">
+                    <h4>
+                        <span><a href="/JQ_|JINGQUCODE|/sites" target="_blank">更多</a></span>景点欣赏</h4>
+                    <div class="sbox_con">
+                        <ul>
+                             |景点欣赏|
+                        </ul>
+                    </div>
+                </div>
+                
+                
+                <div class="sidebox">
+                    <h4>
+                        <span><a href="/jingdialst"  >更多</a></span>各地景区</h4>
+                    <div class="site_button">
+                        <ul>
+                             |景区链接|
+                        </ul>
+                    </div>
+                </div>
+                
+                  <div class="sidebox">
+                    <h4>
+                        <span><a href="/JQ_|JINGQUCODE|/questions"  >更多</a></span>问题</h4>
+                    <div class="sbox_con">
+                        <ul>
+                             |随机问题|
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="main">
+                <div id="list">
+                    <div class="asklist_tab">
+                        <ul>
+                            <li>|TITLE|</li>                                  
+                        </ul>
+                    </div>
+                    <div class="list_con">
+                        <div class="list_box div0">
+                           |CONTENT|
+                        </div>
+                    </div>
+                </div>
+               |最佳答案|
+                <div class="info_box">
+                    <h2>
+                        其他回复</h2>
+                    <div class="ib_con">
+                         |回复列表|
+                        <table border="0" cellspacing="0" cellpadding="4" width="100%">
+                           
+                            <tr>
+                                <td style="font-size: 14px;">
+                                    <strong>我要回复：</strong>
+                                </td>
+                            </tr>
+                             
+                            <tr>
+                                <td width="464" valign="top">
+                                    <textarea name="txtComments" id="txtComments" style="width: 98%; height: 120px;"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="color: #666;">
+                                    正常工作日9:00－18:00，您的提问会得到及时回答；其它时段可能需等待较长时间
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                     <input name="button" id="button" type="button" class="btn05"  onclick="return SumitComment();"  value="提交问题" />
+                                </td>
+                            </tr>
+                           
+                        </table>
+                    </div>
+                </div>
+                
+                <script type="text/javascript" src="/web/js/jquery.tools.min.js"></script>
+                <script type="text/javascript">
+                    $(function() {
+                        // setup ul.tabs to work as tabs for each div directly under div.panes
+                        $("#uQus1.tabs").tabs("div#tabDiv > ul", { event: 'mouseover' });
+                    });
+                </script>
+                <div class="info_box">
+                    <h2>
+                        <div>
+                            相关问题</div>                        
+                    </h2>       
+                    <div class="zx_list">
+                        <ul>
+                        |相关问题|
+                        </ul>
+                    </div>              
+                </div>
+                <div class="info_box1">
+                    <h2>
+                        <ul id="uQus1" class="tabs">                            
+                            <li><a href="/JQ_|JINGQUCODE|/questions?type=mp"><span>|JINGQUNAME|:门票</span></a></li>
+                            <li><a href="/JQ_|JINGQUCODE|/questions?type=jt"><span>|JINGQUNAME|:交通</span></a></li>
+                            <li><a href="/JQ_|JINGQUCODE|/questions?type=zx"><span>|JINGQUNAME|:住宿</span></a></li>
+                            <li><a href="/JQ_|JINGQUCODE|/questions?type=jd"><span>|JINGQUNAME|:景点</span></a></li>
+                            <li><a href="/JQ_|JINGQUCODE|/questions?type=xl"><span>|JINGQUNAME|:路线</span></a></li>                            
+                            <li><a href="/JQ_|JINGQUCODE|/questions?type=ys"><span>|JINGQUNAME|:饮食</span></a></li>
+                            <li><a href="/JQ_|JINGQUCODE|/questions?type=ly"><span>|JINGQUNAME|:娱乐</span></a></li>
+                        </ul>
+                    </h2>
+                    <div id="tabDiv" class="zx_list">						
+                        <ul>|门票问题|</ul>
+						            <ul>|交通问题|</ul>
+						            <ul>|住宿问题|</ul>
+						            <ul>|景点问题|</ul>
+						            <ul>|路线问题|</ul>
+						            <ul>|饮食问题|</ul>						
+                        <ul>|娱乐问题|</ul>
+                    </div>
+                </div>                
+            </div>
+        </div>
+        <div class="clearfloat">
+        </div>
+        
+        
+                              
+    <script type="text/javascript" language="javascript">
+      
+
+        function SumitComment() {
+           
+            var MyAnswer = $('#txtComments').val();
+             
+            var Pguid = '|GUID|';
+            if (MyAnswer == '') {
+                alert("请填写评论内容！");
+                return false;
+            }
+            
+                      
+	        $.post("/Wapper/ajaxHandler.aspx?MethodName=SubmitQuestion&randID=" + escape(new Date()),
+		           {Pguid: Pguid,MyAnswer:MyAnswer  },
+		          function(json) {	       
+			          callbackSubmitComment(json);
+	          });		
+            
+        }
+        function callbackSubmitComment(res) {
+            alert("已经提交，待管理员审核后，生效！");
+            location.href = location.href;
+        }
+                                            
+    </script>
+    
+    
+    
+ |底部|
+]]>
+</MainPageHtml>
+  <SavePath>~/html|JQCOD_PATH|question_|SEQNO|.html</SavePath>
+</PageHtmlMod>

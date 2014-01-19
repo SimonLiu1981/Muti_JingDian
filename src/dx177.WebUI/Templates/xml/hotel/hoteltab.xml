@@ -1,0 +1,81 @@
+﻿<?xml version="1.0"?>
+<XmlTableMod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TableCode>{0}</TableCode>
+  <TrCode>{0}</TrCode>
+  <TdCode> 
+ <![CDATA[
+
+    <div class="list_box div0">
+            <div class="lb_pic">
+              <dl>
+                <dt><a href="/html|JQRP_CODE|hotel_|SEQNO|.html"><img src="|LOGO|" width="100" height="80" /></a> <a href="/html|JQRP_CODE|hotel_|SEQNO|.html?#pic">更多图片</a></dt>
+                <dd><a href="/html|JQRP_CODE|hotel_list_type|HOTELTYPE|_1.html"> |SORTNAME|</a><br />
+                  点评：<span>|COMMENTCOUNT|条</span><br />
+                 
+                  
+                   <a href="/html|JQRP_CODE|hotel_|SEQNO|.html?#comment" target="_blank">
+                                            <img src="/img/but_03.gif" width="74" height="19" /></a>  </dd>
+                  
+              </dl>
+            </div>
+            <div class="lb_con">
+              <h2> <a href="/html|JQRP_CODE|hotel_|SEQNO|.html">|NAME|</a></h2>
+              <dl>
+                <dt>地址：</dt>
+                <dd style=" height:20px; overflow:hidden;">|ADDRESS|　　 </dd>
+              </dl>
+              <dl>
+                <dt>简介：</dt>
+                <dd>|BIZ|</dd>
+              </dl>
+                <dl>
+                                    <dt>位于：</dt>
+                                    <dd>
+                                         
+                                        <a href="/html|JQRP_CODE|hotel_list_area|AREASEQNO|_1.html">
+                                            |AREANAME|</a>
+                                           价格范围：  <font style='color:#f60;'> |MINPRICE|元-|MAXPRICE|元</font>
+                                    </dd>
+                                </dl>
+              
+              <div class="list_room">
+              
+               <div class="room_tit">
+                        <strong>房型与价格</strong> 
+                    </div>
+                    <div class="room_con">
+                        <div class="zn_room_title">
+                                   <div class="zn_row">
+                                
+                                <div class="zn_row1">
+                                    门市价</div>
+                                <div class="zn_row2">
+                                   平时</div>
+                                <div class="zn_row3">
+                                    周末</div>
+                                <div class="zn_row6">
+                                    节日</div>
+                                <div class="zn_row7">
+                                    预订</div>
+                            </div>
+                            房型名称</div>
+                         
+                         
+                  <script type="text/javascript" src="/hotejs/|SEQNO|.js"></script>
+                  </div>
+              </div>
+            </div>
+            <div class="clearfloat"></div>
+          </div>
+ ]]>
+
+</TdCode>
+  <RowCount>10</RowCount>
+  <ColCount>1</ColCount>
+  <SpecialTdColCount>0</SpecialTdColCount>
+  <SpecialTdCode />
+  <EmptyTdCode></EmptyTdCode>
+  <SpecifyColName />
+  <SpecifyColValue />
+  <SpecifyColcode />
+</XmlTableMod>

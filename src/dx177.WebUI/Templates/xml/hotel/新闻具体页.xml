@@ -1,0 +1,190 @@
+﻿<?xml version="1.0"?>
+<PageHtmlMod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ChildHtmls>
+    <ChildHtmlMod>
+      <RepalceCode>头部</RepalceCode>
+      <HtmlPath>~\Templates\xml\hotel\s头部.html</HtmlPath>
+    </ChildHtmlMod>
+    <ChildHtmlMod>
+      <RepalceCode>底部</RepalceCode>
+      <HtmlPath>~\Templates\xml\hotel\底部.html</HtmlPath>
+    </ChildHtmlMod>
+  </ChildHtmls>
+  <DataHtmlMods>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站标题|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>公司信息</HasKey>
+      <ReplaceCode>网站标题</ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站内容|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>公司信息</HasKey>
+      <ReplaceCode>网站内容</ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站关键字|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>公司信息</HasKey>
+      <ReplaceCode>网站关键字</ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>
+        <![CDATA[
+        <li>
+          <a href="/JQ_|JQRP_CODE|/Sites/|SEQNO|">
+            |TITLE|
+          </a>
+        </li>
+        ]]>
+      </TdCode>
+      <RowCount>4</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>景点欣赏</HasKey>
+      <ReplaceCode>景点欣赏</ReplaceCode>
+    </DataHtmlMod>
+
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>
+        <![CDATA[
+        <li title='|NAME|'>
+      <span>|MINPRICE|元</span>
+      <a href='/jq_|JQRP_CODE|/hotel/|SEQNO|'  >|NAME|</a>
+    </li>
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>10</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>推荐酒店</HasKey>
+      <ReplaceCode>推荐酒店</ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>        <![CDATA[{0}]]>      </TableCode>
+      <TrCode>        <![CDATA[ {0} ]]>      </TrCode>
+      <TdCode>
+        <![CDATA[    
+         <li>
+      <a href="/JQ_|JINGQUCODE|"   title="|JINGQUNAME|">|JINGQUNAME|</a>
+    </li>
+         ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>15</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>景区链接</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+  </DataHtmlMods>
+  <HashDataMods>
+    <HashDataMod>
+      <Sql>select   '|TITLE|' as 网站标题,'|TITLE|' as 网站内容,'|TITLE|' as 网站关键字  </Sql>
+      <HashKey>公司信息</HashKey>
+    </HashDataMod>
+    <HashDataMod>
+      <Sql>SELECT * ,  (select top 1  matchdomain from JingQus as jq  where  jq.jingqucode=sites.JingQuCode)  as  JQRP_CODE    FROM Sites where sites.JingQuCode='|JINGQUCODE|'  order by ViewTimes desc </Sql>
+      <HashKey>景点欣赏</HashKey>
+    </HashDataMod>
+
+    <HashDataMod>
+      <Sql>
+        <![CDATA[ select top 10 h.* , (select top 1  matchdomain from JingQus as jq  where  jq.jingqucode=h.JingQuCode)  as  JQRP_CODE    from Hotel h,Module m where h.guid = m.pguid and h.status=1 and modulecode='recommend' and h.JingQuCode='|JINGQUCODE|'   order by m.showidx desc ]]>
+      </Sql>
+      <HashKey>推荐酒店</HashKey>
+    </HashDataMod>
+
+    <HashDataMod>
+      <Sql>
+        <![CDATA[
+        select top 15 jingqucode,JINGQUNAME  from JingQus   order by newid()
+        ]]>
+      </Sql>
+      <HashKey>景区链接</HashKey>
+    </HashDataMod>
+    
+  </HashDataMods>
+  <MainPageHtml>
+<![CDATA[    |头部|
+ <script src="/Plugin/ViewTimes_0_1/ViewTimes_0_1.js" type="text/javascript"></script> 
+    <div id="nav_son">
+      <span>
+         <a href="/web/hotelorder/orderlist.aspx" class="cxdd">查询我的订单状态</a>
+      </span>当前位置：<a href="/">首页</a> &gt;&nbsp;<a href="/JQ_|JINGQUCODE|/news?typeCode=|TYPECODE|">|TYPENAME|</a> &gt;&nbsp;|TITLE|
+    </div>
+
+    <div id="mainContent">
+      <div id="main">
+        <div class="list_top">
+          <div class="zx_info">
+            <h1>|TITLE|</h1>
+            <h6>所属栏目：【|TYPENAME|】　来源：自助旅游网　日期：|CREATE_DATE1|　浏览量：<span viewtimes_add_guid = '|GUID|'></span> </h6>
+            <div class="zx_info_con">
+              |CONTENT|
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div id="side">
+
+
+        <div class="sidebox">
+          <h4>推荐酒店</h4>
+          <div class="sbox_con">
+            <ul>
+              |推荐酒店|
+            </ul>
+          </div>
+        </div>
+        <div class="sidebox">
+
+          <h4>
+            <span>
+              <a href="/JQ_|JINGQUCODE|/sites" target="_blank">更多</a>
+            </span>景点欣赏
+          </h4>
+          <div class="sbox_con">
+            <ul>
+              |景点欣赏|
+            </ul>
+          </div>
+        </div>
+
+
+ <div class="sidebox">
+                    <h4>
+                        <span><a href="/jingdialst"  >更多</a></span>各地景区</h4>
+                    <div class="site_button">
+                        <ul>
+                             |景区链接|
+                        </ul>
+                    </div>
+                </div>
+                
+                
+      </div>
+      <div class="clearfloat"></div>
+    </div>
+ |底部|
+]]>
+</MainPageHtml>
+  <SavePath>~/html|JQCOD_PATH|News_|SEQNO|.html</SavePath>
+</PageHtmlMod>

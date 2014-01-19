@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<PageHtmlMod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ChildHtmls>
+    <ChildHtmlMod>
+      <RepalceCode>头部</RepalceCode>
+      <HtmlPath>~\Templates\xml\pbx\头部.html</HtmlPath>
+    </ChildHtmlMod>
+    <ChildHtmlMod>
+      <RepalceCode>底部</RepalceCode>
+      <HtmlPath>~\Templates\xml\pbx\底部.html</HtmlPath>
+    </ChildHtmlMod>
+  </ChildHtmls>
+  <DataHtmlMods>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>&lt;tr&gt;
+                &lt;td&gt;&lt;img src="images/leftmenu_ico2.gif"&gt;&amp;nbsp;&lt;a href="P_|CODE|.htmL"&gt;|TITLE|&lt;/a&gt;&lt;/td&gt;
+              &lt;/tr&gt;</TdCode>
+      <RowCount>50</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>产品类型</HasKey>
+      <ReplaceCode>产品类型</ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站标题|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>公司信息</HasKey>
+      <ReplaceCode>网站标题</ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站内容|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>公司信息</HasKey>
+      <ReplaceCode>网站内容</ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站关键字|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>公司信息</HasKey>
+      <ReplaceCode>网站关键字</ReplaceCode>
+    </DataHtmlMod>
+  </DataHtmlMods>
+  <HashDataMods>
+    <HashDataMod>
+      <Sql>select t.* from products t where t.createby='|CREATEBY|'  </Sql>
+      <HashKey>产品类型</HashKey>
+    </HashDataMod>
+    <HashDataMod>
+      <Sql>select *, TITLE as 网站标题,Description as 网站内容,Key_Word as 网站关键字 from CompanyInfo where createby='|CREATEBY|'</Sql>
+      <HashKey>公司信息</HashKey>
+    </HashDataMod>
+  </HashDataMods>
+  <MainPageHtml>  |头部|
+  
+
+&lt;div id='content' style='width:990px;height:502px;background:none transparent scroll repeat 0% 0%;margin:3px auto'&gt;
+
+
+&lt;!-- 产品分类（列表） --&gt;
+
+&lt;div id='pdv_11910' class='pdv_class'  title='产品分类' style='width:244px;height:263px;top:0px;left:1px; z-index:8'&gt;
+&lt;div id='spdv_11910' class='pdv_content' style='overflow:visible;width:100%;'&gt;
+&lt;div class="pdv_border" style="border:0px;height:100%;padding:0;margin:0;background:#f0f0f0 url(/Templates/R/dianzicp3/img/bg.gif) repeat-y;"&gt;
+&lt;div style="height:100%;background:url(/Templates/R/dianzicp3/img/bg.gif) right repeat-y;"&gt;
+&lt;div style="height:38px;border:0px;padding:0;margin:0;background:url(/Templates/R/dianzicp3/img/top.gif) 0px 0px no-repeat;"&gt;
+&lt;div style="float:left;width:100px;height:32px;font:12px/34px Arial, Helvetica, sans-serif;color:#fff;margin-left:30px;padding-top:5px;letter-spacing:2px;"&gt;产品分类
+	&lt;/div&gt;
+	&lt;div style="float:right;width:60px;height:32px;background:url(/Templates/R/dianzicp3/img/top.gif) -930px 0px no-repeat;"&gt;
+	  &lt;a href="-1" style="font:12px/43px simsun;color:#ffffff;margin-left:17px;padding-top:3px;display:none"&gt;&lt;img src="/Templates/R/dianzicp3/img/more.gif" border="0" /&gt;&lt;/a&gt;	
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="margin:0px;padding:0px;"&gt;
+
+&lt;link href="/Templates/R/dianzicp3/css/productclass_dolphin.css" rel="stylesheet" type="text/css" /&gt;
+&lt;div class="productclass_dolphin"&gt;
+
+ |产品类型|
+ 
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="margin-top:-7px;height:7px;line-height:7px;background:url(/Templates/R/dianzicp3/img/top.gif) 0px -244px no-repeat"&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div style="float:right;margin-top:-7px;width:15px;height:7px;line-height:7px;background:url(/Templates/R/dianzicp3/img/top.gif) -975px -244px no-repeat"&gt;&amp;nbsp;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+  &lt;!-- 全站留言表单 --&gt;
+
+&lt;div id='pdv_11921' class='pdv_class'  title='产品订购' style='width:735px;height:500px;top:0px;left:254px; z-index:11'&gt;
+&lt;div id='spdv_11921' class='pdv_content' style='overflow:hidden;width:100%;height:100%'&gt;
+&lt;div class="pdv_border" style="border:0px;height:100%;padding:0;margin:0;background:#fff url(/Templates/R/dianzicp3/img/bg65.gif) repeat-y;"&gt;
+&lt;div style="height:100%;background:url(/Templates/R/dianzicp3/img/bg65.gif) right repeat-y;"&gt;
+&lt;div style="height:32px;border:0px;padding:0;margin:0;background:url(/Templates/R/dianzicp3/img/top12.gif) 0px 0px no-repeat;"&gt;
+&lt;div style="float:left;width:100px;height:32px;font:bold 14px/30px Arial, Helvetica, sans-serif;color:#dd1e01;margin-left:40px;padding-top:5px;"&gt;客户留言
+	&lt;/div&gt;
+	&lt;div style="float:right;width:60px;height:32px;background:url(/Templates/R/dianzicp3/img/top12.gif) -930px 0px no-repeat;"&gt;
+	  &lt;a href="-1" style="font:12px/43px simsun;color:#ffffff;margin-left:17px;padding-top:3px;display:none"&gt;&lt;img src="/Templates/R/dianzicp3/img/more4.gif" border="0" /&gt;&lt;/a&gt;	
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="margin:0px;padding:10px;"&gt;
+
+&lt;link href="/Templates/R/dianzicp3/css/feedbackform.css" rel="stylesheet" type="text/css" /&gt;
+&lt;script language="javascript" src="/Templates/R/dianzicp3/js/feedback.js"&gt;&lt;/script&gt;
+&lt;div  id="notice" class="noticediv"&gt;&lt;/div&gt;
+  &lt;form id="messform" onsubmit="javascript:return check_mess_info(this);" method="post"
+                                    name="messform" action="index.php"&gt;
+                             &lt;script src="/jjs/jquery-1.3.2.min.js" type="text/javascript"&gt;&lt;/script&gt;
+                                    &lt;script src="/js/common.js" type="text/javascript"&gt;&lt;/script&gt;
+		
+                                    &lt;!--验证输入脚本库--&gt;
+
+                                    &lt;script type="text/javascript"&gt;
+                                        $(document).ready(function() {
+                                            $('#btnSubmitMsg').click(LeaveMessageSubmit);
+                                        });
+                                        function LeaveMessageSubmit() {
+                                            if ($('#mess_username').val() == '') {
+                                                alert('请输入称呢！');
+                                                $('#mess_username').focus();
+                                                return false;
+                                            }
+                                            if ($('#mess_email').val() == '') {
+                                                alert('请输入邮箱地址！');
+                                                $('#mess_email').focus();
+                                                return false;
+                                            }
+                                            else {
+                                                if (!isEmail($('#mess_email').val(), "邮箱格式不正确!")) {
+                                                    $('#mess_email').focus();
+                                                    return false;
+                                                }
+                                            }
+                                            if ($('#mess_tel').val() == '') {
+                                                alert('请输入联系电话！');
+                                                $('#mess_tel').focus();
+                                                return false;
+                                            }
+                                            if ($('#mess_message').val() == '') {
+                                                alert('请输入内容！');
+                                                $('#mess_message').focus();
+                                                return false;
+                                            }
+                                            $.getJSON("/ajaxHandler.aspx?MethodName=SubmitLeaveMessage&amp;jsoncallback=?",
+									            { mess_username: encodeURIComponent($('#mess_username').val()),
+									                mess_tel: encodeURIComponent($('#mess_tel').val()),
+									                mess_email: encodeURIComponent($('#mess_email').val()),
+									                mess_message: encodeURIComponent($('#mess_message').val())
+									            },
+									            function(json) {
+									                alert("提交成功！");
+									                window.location.href = window.location.href;
+									            });
+                                        }
+                                    &lt;/script&gt;
+
+                                    &lt;!--mess_main end--&gt;
+
+
+
+&lt;table width="100%" border="0" cellspacing="0" cellpadding="3" &gt;
+
+&lt;tr&gt; 
+      &lt;td width="80" align="right"&gt;昵称：&lt;/td&gt;
+      &lt;td&gt; 
+       &lt;input id="send_to" value="test1" type="hidden" name="send_to"&gt;
+        &lt;input id="mess_username" size=50 type="text"&gt; 
+        &lt;font style='color:red'&gt;*&lt;/font&gt; &lt;div style="padding-top:3px;color:#666"&gt;&lt;/div&gt;  &lt;/td&gt;
+    &lt;/tr&gt;
+
+	&lt;tr&gt; 
+      &lt;td width="80" align="right"&gt;电子邮件：&lt;/td&gt;
+      &lt;td&gt; 
+       &lt;input id="mess_email" size=50  type="text"&gt;
+        &lt;font style='color:red'&gt;*&lt;/font&gt; &lt;div style="padding-top:3px;color:#666"&gt;&lt;/div&gt;  &lt;/td&gt;
+    &lt;/tr&gt;
+
+	&lt;tr&gt; 
+      &lt;td width="80" align="right"&gt;联系电话：&lt;/td&gt;
+      &lt;td&gt; 
+      &lt;input id="mess_tel" size=50  type="text"&gt;
+        &lt;font style='color:red'&gt;*&lt;/font&gt; &lt;div style="padding-top:3px;color:#666"&gt;&lt;/div&gt;  &lt;/td&gt;
+    &lt;/tr&gt;
+  
+    &lt;tr&gt; 
+      &lt;td width="80" align="right"&gt;留言内容：&lt;/td&gt;
+      &lt;td&gt; 
+          &lt;textarea id="mess_message" size=50 rows="12" cols="50"&gt;&lt;/textarea&gt;
+        &lt;font style='color:red'&gt;*&lt;/font&gt; 
+        &lt;div style="padding-top:3px;color:#666"&gt;&lt;/div&gt;  &lt;/td&gt;
+    &lt;/tr&gt;
+
+
+  
+	&lt;tr&gt; 
+      &lt;td width="80" align="right"&gt;&lt;/td&gt;
+      &lt;td&gt;
+	  &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt; 
+      &lt;td width="80" align="right"&gt;&amp;nbsp;&lt;/td&gt;
+      &lt;td height="30"&gt;
+       
+		&lt;input value="提交" type="button" class="submit" id="btnSubmitMsg"&gt;
+        &lt;input type='hidden' name='act' value='formsend'&gt;
+        &lt;input name='groupid' type='hidden' id="groupid" value='1'&gt;
+		
+	  &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/form&gt;
+
+
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style="margin-top:-7px;height:7px;line-height:7px;background:url(/Templates/R/dianzicp3/img/top12.gif) 0px -434px no-repeat"&gt;&amp;nbsp;&lt;/div&gt;
+&lt;div style="float:right;margin-top:-7px;width:15px;height:7px;line-height:7px;background:url(/Templates/R/dianzicp3/img/top12.gif) -975px -434px no-repeat"&gt;&amp;nbsp;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id='bottom' style='width:990px;height:131px;background:none transparent scroll repeat 0% 0%'&gt;
+
+
+&lt;!-- 图片/FLASH --&gt;
+
+&lt;div id='pdv_11918' class='pdv_class'  title='' style='width:990px;height:38px;top:0px;left:0px; z-index:1'&gt;
+&lt;div id='spdv_11918' class='pdv_bottom' style='overflow:hidden;width:100%;height:100%'&gt;
+&lt;div class="pdv_border" style="margin:0;padding:0;height:100%;border:0px  solid;background:;"&gt;
+	&lt;div style="height:25px;margin:1px;display:none;background:;"&gt;
+		&lt;div style="float:left;margin-left:12px;line-height:25px;font-weight:bold;color:"&gt;
+		
+		&lt;/div&gt;
+		&lt;div style="float:right;margin-right:10px;display:none"&gt;
+		&lt;a href="-1" style="line-height:25px;color:"&gt;更多&lt;/a&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;div style="padding:0px"&gt;
+
+
+&lt;img src="/Templates/R/dianzicp3/img/1267497850.png" border="0" width="100%" /&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+       |底部|</MainPageHtml>
+  <SavePath>facebook.html</SavePath>
+</PageHtmlMod>

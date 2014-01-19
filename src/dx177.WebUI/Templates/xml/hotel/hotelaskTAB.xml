@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<XmlTableMod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TableCode>{0}</TableCode>
+  <TrCode>{0}</TrCode>
+  <TdCode>
+<![CDATA[
+
+  <dl>
+ <dt>|CREATOR|于 |CREATE_DATE| 向<a href="/html|JQRP_CODE|hotel_|SEQNO|.html">|HOTELNAME|</a>提问：</dt>
+ <dd class="info_ask_row">|CONTENT|</dd>
+ <dd>回答：|REPLYCONTENT|</dd></dl>
+                                
+]]>
+
+
+</TdCode>
+  <RowCount>15</RowCount>
+  <ColCount>1</ColCount>
+  <SpecialTdColCount>0</SpecialTdColCount>
+  <SpecialTdCode />
+  <EmptyTdCode />
+  <SpecifyColName />
+  <SpecifyColValue />
+  <SpecifyColcode />
+</XmlTableMod>

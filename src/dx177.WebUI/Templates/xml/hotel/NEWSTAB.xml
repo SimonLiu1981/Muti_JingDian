@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<XmlTableMod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TableCode>{0}</TableCode>
+  <TrCode>{0}</TrCode>
+  <TdCode>
+<![CDATA[
+
+<li><span>|LASTE_UPDATE_DATE|</span>
+
+<a href="/html|JQRP_CODE|NewsType|TYPESEQNO|_1.html">[|SORTNAME|]</a>&nbsp;<a href="/html|JQRP_CODE|News_|SEQNO|.html">|TITLE|</a>
+
+</li>
+]]>
+
+
+</TdCode>
+  <RowCount>15</RowCount>
+  <ColCount>1</ColCount>
+  <SpecialTdColCount>0</SpecialTdColCount>
+  <SpecialTdCode />
+  <EmptyTdCode />
+  <SpecifyColName />
+  <SpecifyColValue />
+  <SpecifyColcode />
+</XmlTableMod>

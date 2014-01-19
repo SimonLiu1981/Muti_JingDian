@@ -1,0 +1,455 @@
+﻿<?xml version="1.0"?>
+<PageHtmlMod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ChildHtmls>
+    <ChildHtmlMod>
+      <RepalceCode>头部</RepalceCode>
+      <HtmlPath>~\Templates\xml\hotel\s头部.html</HtmlPath>
+    </ChildHtmlMod>
+    <ChildHtmlMod>
+      <RepalceCode>底部</RepalceCode>
+      <HtmlPath>~\Templates\xml\hotel\底部.html</HtmlPath>
+    </ChildHtmlMod>
+  </ChildHtmls>
+  <DataHtmlMods>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站标题|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>公司信息</HasKey>
+      <ReplaceCode>网站标题</ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站内容|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>公司信息</HasKey>
+      <ReplaceCode>网站内容</ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站关键字|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>公司信息</HasKey>
+      <ReplaceCode>网站关键字</ReplaceCode>
+    </DataHtmlMod>
+
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>
+        <![CDATA[
+    <li>
+      <a href='/html|JQRP_CODE|HireCar_|SEQNO|.html' target='_blank'>
+         |TITLE| 
+      </a>
+    </li>
+        ]]>
+      </TdCode>
+      <RowCount>10</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>旅游租车</HasKey>
+      <ReplaceCode>旅游租车</ReplaceCode>
+    </DataHtmlMod>
+
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>
+        <![CDATA[
+        <li title='|NAME|'>
+      <span>|MINPRICE|元</span>
+      <a href='/jq_|JQRP_CODE|/hotel/|SEQNO|'  >|NAME|</a>
+    </li>
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>10</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>推荐酒店</HasKey>
+      <ReplaceCode>推荐酒店</ReplaceCode>
+    </DataHtmlMod>
+
+
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>
+        <![CDATA[
+           <div class="zn_room_row">
+                            <div class="zn_row">
+                                
+                                <div class="zn_row1">
+                                    <del>|MARKETPRICE|</del>元</div>
+                                <div class="zn_row2">
+                                    |PRICE1|元</div>
+                                <div class="zn_row3"  >
+                                    <a href="javascript:void(0)">|PRICE2|元</a></div>
+                                <div class="zn_row6">
+                                    待定</div>
+                              <!-- <div class="zn_row7">
+                                    <input class="zn_btn_yd" onclick="window.location.href='/web/hotelorder/NewOrder.aspx?roomid=|SEQNO|';" type="button"
+                                        value="预订" /></div>--> 
+                            </div>
+                            <a class="zn_room_name"   >
+                                |ROOMTITLE|</a></div>
+        ]]>
+      </TdCode>
+      <RowCount>10</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>房间列表</HasKey>
+      <ReplaceCode>房间列表</ReplaceCode>
+    </DataHtmlMod>
+
+
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>
+        <![CDATA[
+        <li><a href='|BIGIMGFILE|' target="_blank"  title='|TITLE|' rel="gal">
+                                <img width="160" height="120"  alt="|TITLE|" src='|SMALLIMGFILE|' border='0' />
+                                |TITLE| </a></li>
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>20</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>酒店图片</HasKey>
+      <ReplaceCode>酒店图片</ReplaceCode>
+    </DataHtmlMod>
+    
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>
+        <![CDATA[
+       <dl>
+      <dt>|CREATOR|于|CREATE_DATE| 评价说：</dt>
+      <dd class="info_ask_row">|CONTENT|</dd>
+      <dd>回答：|REPLYCONTENT|</dd>
+      </dl>
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>10</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>评论</HasKey>
+      <ReplaceCode>评论</ReplaceCode>
+    </DataHtmlMod>
+    
+  </DataHtmlMods>
+  <HashDataMods>
+    
+    <HashDataMod>
+      <Sql>select   '|NAME|--旅游问答_旅游攻略_游酷网' as 网站标题,'酒店最全的网站' as 网站内容,'住宿,宾馆,丹霞酒店,订房' as 网站关键字  </Sql>
+      <HashKey>公司信息</HashKey>
+    </HashDataMod>
+    <HashDataMod>
+      <Sql>
+        <![CDATA[ select top 10     (select top 1  matchdomain from JingQus as jq  where  jq.jingqucode=h.JingQuCode)   as  JQRP_CODE ,h.*  from Hotel h,Module m where h.guid = m.pguid and h.status=1 and modulecode='recommend' and h.JingQuCode='|JINGQUCODE|'  order by m.showidx desc ]]>
+      </Sql>
+      <HashKey>推荐酒店</HashKey>
+    </HashDataMod>
+    <HashDataMod>
+      <Sql>
+        <![CDATA[select top 10 * , '/'+ (select top 1  matchdomain from JingQus as jq  where  jq.jingqucode=HireCar.JingQuCode) +'/' as  JQRP_CODE from HireCar where HireCar.JingQuCode='|JINGQUCODE|' order by seqno ]]>
+      </Sql>
+      <HashKey>旅游租车</HashKey>
+    </HashDataMod>
+
+    <HashDataMod>
+      <Sql>
+        <![CDATA[select * from room where pguid='|GUID|']]>
+      </Sql>
+      <HashKey>房间列表</HashKey>
+    </HashDataMod>
+
+
+    <HashDataMod>
+      <Sql>
+        <![CDATA[ select * from PictureList where pguid='|GUID|'   order by showidx]]>
+      </Sql>
+      <HashKey>酒店图片</HashKey>
+    </HashDataMod>
+    <HashDataMod>
+      <Sql>
+        <![CDATA[ select top 5 * from  Comment where pguid ='|GUID|'  order by seqno desc  ]]>
+      </Sql>
+      <HashKey>评论</HashKey>
+    </HashDataMod>
+
+
+  </HashDataMods>
+  <MainPageHtml>
+    <![CDATA[
+|头部|
+    <link href="/css/room.gbk.css" rel="stylesheet" type="text/css" />
+     <script type="text/javascript" src="/js/My97DatePicker/WdatePicker.js"></script>      
+    <link rel="stylesheet" type="text/css" href="/plugin/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+    <script type="text/javascript" src="/plugin/fancybox/jquery.fancybox-1.3.4.pack.js"></script> 
+ <script src="/Plugin/ViewTimes_0_1/ViewTimes_0_1.js" type="text/javascript"></script>
+ <link href="/css/room.gbk.css" rel="stylesheet" type="text/css" />
+ <script src="/js/room.gbk.js" type="text/javascript"></script>
+ <script src="/js/jquery.cookie.js" type="text/javascript"></script> 
+ <div id="nav_son">
+            <span><a href="/web/hotelorder/orderlist.aspx" class="cxdd">查询我的订单状态</a></span>当前位置：<a href="/index.html">首页</a>
+            
+            &gt;&nbsp;<a href="/JQ_|JINGQUCODE|/hotel?HotelType=|HOTELTYPE|">|TYPENAME|</a>&gt;&nbsp;|NAME|</div>
+        <div id="mainContent">
+            <div id="main">
+                <div class="info_top">
+                    <h1>
+                        |NAME| &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;</h1>
+                    <div id="info_top_pic">
+                        <div style="width: 280px; height: 210px;" class="Container">
+                            <ul id="Slider" class="Slider">
+                                <li>
+                                    <img alt="|NAME|" src='|LOGO|' width="280" height="210" border='0' /></li>
+                              
+                            </ul>
+                           
+                        </div>
+                    </div>
+                    <div id="info_top_con">
+                        <ul>
+                            <li>酒店类型：
+                                <a href="/JQ_|JINGQUCODE|/hotel?HotelType=|HOTELTYPE|">|TYPENAME|</a>&nbsp;&nbsp; <a href="#"><strong> <font  style="color:Red " >订房须知</font> </strong></a>  &nbsp;&nbsp; <a href="#"><strong> <font  style="color:Red " >联系本站</font> </strong></a>  </li>
+                            <li>房价范围：|MINPRICE|-|MAXPRICE|</li>
+                            <li>商业区域：<a href="/JQ_|JINGQUCODE|/hotel?area=|AREA|">|AREANAME|</a></li>
+                            <li>酒店电话：|PHONE|</li>
+                            <li>酒店地址：|ADDRESS|</li>
+                            <li>浏览量：<span viewtimes_add_guid = '|GUID|'></span> </li>
+                            
+                            <li style="padding: 8px 0 0 0;"><a href="#">
+                                <img src="/img/btn_pic.gif" width="85" height="26" /></a> <a href="#">
+                                    <img src="/img/btn_map.gif" width="85" height="26" /></a>
+                                <img src="/img/btn_fav.gif" width="85" height="26" style="cursor: pointer;"   /></li>
+                        </ul>
+                    </div>
+                    <div class="clearfloat">
+                    </div>
+                </div>
+                <div class="info_room">
+                    <div class="room_tit">
+                        <strong>房型与价格</strong> 
+                        <div style="float:right">
+                        
+                         <span style="float:left">入住日期：</span>                 
+                        <input onFocus="var tm2=$dp.$('tm2');WdatePicker({onpicked:function(){tm2.focus();}})" name="tm1" type="text" id="tm1" style="height:12px;  line-height:12px; margin-top:5px; width:80px;float:left " value='<%=tm1 %>' />
+                        <span style="float:left; margin-left:5px; margin-right:3px">至</span>
+                        <input onFocus="WdatePicker({minDate:'#F{$dp.$D(\'tm1\')}',onpicked:changeTheOtherDate})" name="tm2" type="text" id="tm2" style="height:12px;  line-height:12px; margin-top:5px; width:80px;float:left " value='<%=tm2 %>' />
+                        
+                        </div>
+                    </div>
+                    <div class="room_con" id='h|REFHOTELID|' hid='|REFHOTELID|' seqno='|SEQNO|' jq='|JINGQUCODE|'>
+                    </div>
+                </div>
+                <div class="info_box">
+                    <div class="list_tab">
+                        <ul>
+                            <li><a id="info_current">酒店介绍</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="info_jj">
+                        <p>
+                            |DESCR|<br />
+                        </p>
+                    </div>
+                </div>
+                <div class="info_box">
+                    <h2>
+                        <span> </span>酒店图片</h2>
+                    <div class="info_pic showbox">
+                        <ul>
+                           |酒店图片|
+                        </ul>
+                    </div>
+                </div>
+                <div class="info_box">
+                    <h2>
+                        <span><a class='more' href="/html|JQRP_CODE|hotelcoment_|SEQNO|.html">更多</a></span>客人提问</h2>
+                    <div class="ib_con">
+                        |评论|
+                        
+                        <table border="0" cellspacing="0" cellpadding="4" width="100%">
+                            
+                            <tr>
+                                <td style="font-size: 14px;">
+                                    <strong>我要向酒店提问：</strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="color: #999">
+                                    例如：这家酒店有宽带吗？ 要收费吗？
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="464" valign="top">
+                                    <textarea name="txtComments" id="txtComments" style="width: 98%; height: 120px;"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="color: #666;">
+                                    正常工作日9:00－18:00，您的提问会得到及时回答；其它时段可能需等待较长时间
+                                </td>
+                            </tr>
+                            <tr>
+                               
+                                <td>
+                                  <input name="button" id="button" type="button" class="btn05"  onclick="return SumitComment()"  value="提交问题" />
+                                </td>
+                            </tr>
+                           
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="side">
+                <div class="sidebox">
+                    <h4>
+                        推荐酒店</h4>
+                    <div class="sbox_con">
+                        <ul>|推荐酒店|</ul>
+                    </div>
+                </div>
+                <div class="sidebox">
+                    <h4>
+                        <span><a href="/html|JQRP_CODE|HireCar_list_1.html" target="_blank">更多</a></span>旅游租车</h4>
+                    <div class="sbox_con">
+                        <ul>
+                            |旅游租车|
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfloat">
+            </div>
+        </div>
+        
+     
+    <script type="text/javascript" language="javascript">
+
+function SumitComment() {
+	var content = $('#txtComments').val();
+	var pguid = '|GUID|';
+	if ($('#txtComments').val() == '') {
+		alert("请填写评论内容！");
+		return false;
+	}
+   
+	$.post("/Wapper/ajaxHandler.aspx?MethodName=SubmitComment&randID=" + escape(new Date()),
+		   {pguid: pguid, content: content, score1:5, score2:5, score3:5, score4:5, creator:"匿名"},
+		  function(json) {	       
+			  callbackSubmitComment(json);
+	  });			
+}
+
+function callbackSubmitComment(res) {
+	alert("已经提交，待管理员审核后，生效！");
+	location.href = location.href;
+}          
+                                            
+$(document).ready(function() {
+$("a[rel=gal]").fancybox({
+        'transitionIn': 'none',
+        'transitionOut': 'none',
+        'titlePosition': 'over',
+        'titleFormat': function(title, currentArray, currentIndex, currentOpts) {
+            return '<span id="fancybox-title-over">图像： ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+        }
+    });    
+    loadPriceforhotel();
+});
+
+
+function loadPriceforhotel() {
+
+    _hid = '';   
+    if (getUrlParam('tm1') == null) {
+       if ($.cookie('tm1') != null){
+          $('#tm1').val($.cookie('tm1'));
+       }
+       else {
+          $('#tm1').val(new Date().Format("yyyy-MM-dd"));
+       }       
+    }
+    else {
+        $('#tm1').val(getUrlParam('tm1'));
+    }
+    if (getUrlParam('tm2') == null) {        
+       if ($.cookie('tm2') != null){
+          $('#tm2').val($.cookie('tm2'));
+       }
+       else {
+          $('#tm2').val(new Date().Format("yyyy-MM-dd"));
+       }       
+    }
+    else {
+        $('#tm2').val(getUrlParam('tm2'));
+    }
+
+
+    _tm1 = $('#tm1').val(); //'2013-09-12';
+    _tm2 = $('#tm2').val(); //'2013-09-13';
+
+    $(".room_con[hid]").each(function() {
+        if (_hid != '') {
+            _hid += ',';
+        }
+        _hid += $(this).attr("hid");
+    });
+    loadPrice();
+}
+function changeTheOtherDate() {
+    var url = document.URL;
+  
+    if (url.indexOf('?') != -1) {
+        url = url.substring(0, url.indexOf('?'));
+    }
+    url += "?tm1=" + $('#tm1').val();
+    url += "&tm2=" + $('#tm2').val();
+    window.location = url;
+}
+        
+
+Date.prototype.Format = function(fmt) { //author: meizz 
+    var o = {
+        "M+": this.getMonth() + 1, //月份 
+        "d+": this.getDate(), //日 
+        "h+": this.getHours(), //小时 
+        "m+": this.getMinutes(), //分 
+        "s+": this.getSeconds(), //秒 
+        "q+": Math.floor((this.getMonth() + 3) / 3), //季度 
+        "S": this.getMilliseconds() //毫秒 
+    };
+    if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+    for (var k in o)
+        if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+    return fmt;
+}
+
+function getUrlParam(name) {
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+      var r = window.location.search.substr(1).match(reg);
+      if (r != null) return unescape(r[2]); return null;
+}
+    </script>
+    
+    
+        |底部|
+ ]]>
+</MainPageHtml>
+  <SavePath>~/html|JQCOD_PATH|hotel_|SEQNO|.html</SavePath>
+</PageHtmlMod>

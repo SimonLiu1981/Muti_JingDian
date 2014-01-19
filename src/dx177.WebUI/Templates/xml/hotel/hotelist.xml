@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<SearchPageSettingMod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ChildHtmls>
+    <ChildHtmlMod>
+      <RepalceCode>头部</RepalceCode>
+      <HtmlPath>~\Templates\xml\hotel\头部.html</HtmlPath>
+    </ChildHtmlMod>
+    <ChildHtmlMod>
+      <RepalceCode>底部</RepalceCode>
+      <HtmlPath>~\Templates\xml\hotel\底部.html</HtmlPath>
+    </ChildHtmlMod>
+  </ChildHtmls>
+  <MainPageHtml>
+    <![CDATA[
+  |头部|
+    <link href="/css/room.gbk.css" rel="stylesheet" type="text/css" />
+    <div id="nav_son">
+            <span> <a href="/web/hotelorder/orderlist.aspx" class="cxdd">查询我的订单状态</a></span>当前位置：<a href="/index.html">首页</a>
+            
+            &gt;&nbsp;酒店预订</div>
+        
+        <div id="mainContent">
+            <div id="side">
+                <div class="sidebox">
+                    <h4>
+                        景点欣赏</h4>
+                    <div class="sbox_con">
+                        <ul>
+                         |景点欣赏|
+                         </ul>
+                    </div>
+                </div>
+                <div class="sidebox">
+                    <h4>
+                        <span><a href="#" target="_blank">更多</a></span>旅游租车</h4>
+                    <div class="sbox_con">
+                        <ul>
+                            |旅游租车|
+                        </ul>
+                    </div>
+                </div>
+             
+ 
+               
+                 
+                
+            </div>
+            <div id="main">
+                <div class="list_top">
+                    <h2>
+                        <span>免费预订 酒店前台付款</span><strong><a href="/hotel_list_1.html">酒店预订</a></strong><small> </small>
+                    </h2>
+                    <div id="list_filter">
+                        <dl>
+                            <dt>价格范围</dt>
+                            <dd>
+                                <a href="/web/hotel/hotelsearch.aspx?price=0" class="sx_curr">全部</a> <a href="/web/hotel/hotelsearch.aspx?price=100">
+                                    100元以下</a><a href="/web/hotel/hotelsearch.aspx?price=200">100元-200元</a><a href="/web/hotel/hotelsearch.aspx?price=300"> 200元- 300元</a><a
+                                        href="/web/hotel/hotelsearch.aspx?price=400"> 300元- 400元</a><a href="/web/hotel/hotelsearch.aspx?price=401"> 400元以上</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>酒店地区</dt>
+                            <dd>
+                                <a href="/web/hotel/hotelsearch.aspx?area=" class="sx_curr">全部</a> |酒店地区|
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>酒店类型</dt>
+                            <dd>
+                                <a href="/web/hotel/hotelsearch.aspx?HotelType=" class="sx_curr">全部</a> |酒店类型|
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                
+                <div id="list">
+                    <div class="list_tab">
+                        <ul>
+                        </ul>
+                    </div>
+                    <div class="list_con">
+                        <!--list begin-->
+                    
+                       |酒店列表|
+                        
+                        
+                        
+                        <div class="list_box1">
+                        </div>
+                    </div>
+                    <div id="pages">
+                         |BUTTON|
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="clearfloat">
+    </div>
+        |底部|
+  ]]>
+</MainPageHtml>
+  <DataHtmlMods>
+ 
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站标题|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>公司信息</HasKey>
+      <ReplaceCode>网站标题</ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站内容|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>公司信息</HasKey>
+      <ReplaceCode>网站内容</ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站关键字|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>公司信息</HasKey>
+      <ReplaceCode>网站关键字</ReplaceCode>
+    </DataHtmlMod>
+
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>
+        <![CDATA[
+        <li>
+          <a href="/html|JQRP_CODE|Sites_|SEQNO|.html">
+            |TITLE|
+          </a>
+        </li>
+        ]]>
+      </TdCode>
+      <RowCount>10</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>景点欣赏</HasKey>
+      <ReplaceCode>景点欣赏</ReplaceCode>
+    </DataHtmlMod>
+    
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>
+        <![CDATA[
+    <li>
+      <a href='/html|JQRP_CODE|HireCar_|SEQNO|.html' target='_blank'>
+       |TITLE| 
+      </a>
+    </li>
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>10</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>旅游租车</HasKey>
+      <ReplaceCode>旅游租车</ReplaceCode>
+    </DataHtmlMod>
+
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>
+        <![CDATA[
+    <a  href="/web/hotel/hotelsearch.aspx?area=|ENUM_VALUE|">|TAG_NAME|</a>
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>10</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>酒店地区</HasKey>
+      <ReplaceCode>酒店地区</ReplaceCode>
+    </DataHtmlMod>
+
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>
+        <![CDATA[
+    <a  href="/web/hotel/hotelsearch.aspx?HotelType=|ENUM_VALUE|">|TAG_NAME|</a>
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>10</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>酒店类型</HasKey>
+      <ReplaceCode>酒店类型</ReplaceCode>
+    </DataHtmlMod>
+  </DataHtmlMods>
+  <HashDataMods>
+   
+    <HashDataMod>
+      <Sql>select   '酒店预订_住宿_客栈_客栈--游酷网' as 网站标题, '酒店预订,住宿,宾馆,客栈' as 网站关键字,'为游客提供宾馆、酒店、客栈的预订' as 网站内容</Sql>
+      <HashKey>公司信息</HashKey>
+    </HashDataMod>
+
+    <HashDataMod>
+      <Sql>SELECT * , '/'+JingQuCode +'/' as  JQRP_CODE FROM Sites   order by ViewTimes desc </Sql>
+      <HashKey>景点欣赏</HashKey>
+    </HashDataMod>
+
+    <HashDataMod>
+      <Sql>  select * from Base_Dict_Tag where enum_type_name='HotelType' </Sql>
+      <HashKey>酒店类型</HashKey>
+    </HashDataMod>
+
+    <HashDataMod>
+      <Sql>  select * from Base_Dict_Tag where enum_type_name='area' </Sql>
+      <HashKey>酒店地区</HashKey>
+    </HashDataMod>
+    
+    <HashDataMod>
+      <Sql>
+        <![CDATA[select top 10 *, '/'+JingQuCode +'/' as  JQRP_CODE  from HireCar order by seqno ]]>
+      </Sql>
+      <HashKey>旅游租车</HashKey>
+    </HashDataMod>
+  </HashDataMods>
+  <PageButtonXmlPath>~\Templates\xml\hotel\BUTTON.XML</PageButtonXmlPath>
+  <PageButtonCode>|BUTTON|</PageButtonCode>
+  <TableListPath>~\Templates\xml\hotel\hoteltab.xml</TableListPath>
+  <TableListReplaceCode>|酒店列表|</TableListReplaceCode>
+  <SavePatch>/html|JQCOD_PATH|hotel_list_|TYPENAME|_{0}.HTML</SavePatch>
+</SearchPageSettingMod>

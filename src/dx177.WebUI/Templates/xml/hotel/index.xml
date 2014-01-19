@@ -1,0 +1,814 @@
+﻿<?xml version="1.0"?>
+<PageHtmlMod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ChildHtmls>
+    <ChildHtmlMod>
+      <RepalceCode>头部</RepalceCode>
+      <HtmlPath>~\Templates\xml\hotel\头部.html</HtmlPath>
+    </ChildHtmlMod>
+    <ChildHtmlMod>
+      <RepalceCode>底部</RepalceCode>
+      <HtmlPath>~\Templates\xml\hotel\底部.html</HtmlPath>
+    </ChildHtmlMod>
+  </ChildHtmls>
+  <DataHtmlMods>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站标题|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>首页关键字</HasKey>
+      <ReplaceCode>网站标题</ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站内容|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>首页关键字</HasKey>
+      <ReplaceCode>网站内容</ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站关键字|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>首页关键字</HasKey>
+      <ReplaceCode>网站关键字</ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>
+        <![CDATA[<div class="tj_pic"><ul>{0}</ul></div>]]>
+      </TrCode>
+      <TdCode>
+        <![CDATA[
+         <li><a href='/JQ_|JQCOD_PATH|/hotel/|SEQNO|' title='|NAME|'><img src='|LOGO|' width='120' height='90' />|HOTELNAME|</a></li> 
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>5</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>丹霞山推荐酒店</HasKey>
+      <ReplaceCode>丹霞山推荐酒店</ReplaceCode>
+    </DataHtmlMod>
+
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>
+        <![CDATA[<div class="tj_pic"><ul>{0}</ul></div>]]>
+      </TrCode>
+      <TdCode>
+        <![CDATA[
+         <li><a href='/JQ_|JQCOD_PATH|/hotel/|SEQNO|' title='|NAME|'><img src='|LOGO|' width='120' height='90' />|HOTELNAME|</a></li> 
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>5</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>张家界推荐酒店</HasKey>
+      <ReplaceCode>张家界推荐酒店</ReplaceCode>
+    </DataHtmlMod>
+
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>
+        <![CDATA[
+        <div class="tj_box"><h3>经济型酒店  
+   </h3>
+         <ul>
+           {0}
+         </ul>
+        </div> 
+        ]]>
+      </TrCode>
+      <TdCode>
+        <![CDATA[       
+          
+          <li><span   class="pr">￥|MINPRICE|</span><span class="area">位于:<a href="/JQ_|JINGQUCODE|/hotel?area=|AREA|"
+                                                                                        title="|AREANAME|" target="_blank">|AREANAME|</a></span><a href='/JQ_|JQCOD_PATH|/hotel/|SEQNO|'
+                                                                                            title='|NAME|&#10;最低价格：|MINPRICE|元起订 &#10;位于：|AREANAME|'>|NAME|</a></li>
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>6</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>丹霞山经济型酒店</HasKey>
+      <ReplaceCode>丹霞山经济型酒店</ReplaceCode>
+    </DataHtmlMod>
+
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>
+        <![CDATA[
+        <div class="tj_box"><h3>经济型酒店  
+   </h3>
+         <ul>
+           {0}
+         </ul>
+        </div> 
+        ]]>
+      </TrCode>
+      <TdCode>
+        <![CDATA[       
+          <li><span   class="pr">￥|MINPRICE|</span><span class="area">位于:<a href="/JQ_|JINGQUCODE|/hotel?area=|AREA|"
+                                                                                        title="|AREANAME|" target="_blank">|AREANAME|</a></span><a href='/JQ_|JQCOD_PATH|/hotel/|SEQNO|'
+                                                                                            title='|NAME|&#10;最低价格：|MINPRICE|元起订 &#10;位于：|AREANAME|'>|NAME|</a></li>
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>6</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>张家界经济型酒店</HasKey>
+      <ReplaceCode>张家界经济型酒店</ReplaceCode>
+    </DataHtmlMod>
+
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>
+        <![CDATA[
+        <div class="tj_box"><h3>星级酒店</h3>
+         <ul>
+           {0}
+         </ul>
+        </div> 
+        ]]>
+      </TrCode>
+      <TdCode>
+        <![CDATA[       
+          <li><span   class="pr">￥|MINPRICE|</span><span class="area">位于:<a href="/JQ_|JINGQUCODE|/hotel?area=|AREA|"
+                                                                                        title="|AREANAME|" target="_blank">|AREANAME|</a></span><a href='/JQ_|JQCOD_PATH|/hotel/|SEQNO|'
+                                                                                            title='|NAME|&#10;最低价格：|MINPRICE|元起订 &#10;位于：|AREANAME|'>|NAME|</a></li>
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>6</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>丹霞山星级酒店</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>
+        <![CDATA[
+        <div class="tj_box"><h3>星级酒店</h3>
+         <ul>
+           {0}
+         </ul>
+        </div> 
+        ]]>
+      </TrCode>
+      <TdCode>
+        <![CDATA[       
+          <li><span   class="pr">￥|MINPRICE|</span><span class="area">位于:<a href="/JQ_|JINGQUCODE|/hotel?area=|AREA|"
+                                                                                        title="|AREANAME|" target="_blank">|AREANAME|</a></span><a href='/JQ_|JQCOD_PATH|/hotel/|SEQNO|'
+                                                                                            title='|NAME|&#10;最低价格：|MINPRICE|元起订 &#10;位于：|AREANAME|'>|NAME|</a></li>
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>6</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>张家界星级酒店</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+
+    <DataHtmlMod>
+      <TableCode>
+        <![CDATA[{0}]]>
+      </TableCode>
+      <TrCode>
+        <![CDATA[<ul>{0}</ul>]]>
+      </TrCode>
+      <TdCode>
+        <![CDATA[<li><a href="/JQ_|JQCOD_PATH|/Sites/|SEQNO|" target="_blank" title="|TITLE|">
+                                <img border="0" src="|LOGO|" alt="|TITLE|" width="160" height="120" />|TITLE|</a></li>]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>4</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>丹霞山景点欣赏</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+
+
+    <DataHtmlMod>
+      <TableCode>
+        <![CDATA[{0}]]>
+      </TableCode>
+      <TrCode>
+        <![CDATA[<ul>{0}</ul>]]>
+      </TrCode>
+      <TdCode>
+        <![CDATA[<li><a href="/JQ_|JQCOD_PATH|/Sites/|SEQNO|" target="_blank" title="|TITLE|">
+                                <img border="0" src="|LOGO|" alt="|TITLE|" width="160" height="120" />|TITLE|</a></li>]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>4</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>南华寺景点欣赏</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+
+
+    <DataHtmlMod>
+      <TableCode>
+        <![CDATA[{0}]]>
+      </TableCode>
+      <TrCode>
+        <![CDATA[<ul>  {0}   
+		</ul>]]>
+      </TrCode>
+      <TdCode>
+        <![CDATA[            
+        <li><span>|CREATE_DATE1|</span>
+		<a href="/questions?type=|QTYOECODE|&jingqucode=|JINGQUCODE|">[|SORTNAME|]</a>&nbsp;<a href="/JQ_|JQCOD_PATH|/questions/|SEQNO|">|TITLE|</a>
+		</li> ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>15</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>最新问答</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+
+    
+    
+    
+    <DataHtmlMod>
+      <TableCode>
+        <![CDATA[{0}]]>
+      </TableCode>
+      <TrCode>
+        <![CDATA[<ul>  {0}   
+		</ul>]]>
+      </TrCode>
+      <TdCode>
+        <![CDATA[            
+        <li><span>|CREATE_DATE1|</span>
+		<a href="/questions?type=|QTYOECODE|&jingqucode=|JINGQUCODE|">[|SORTNAME|]</a>&nbsp;<a href="/JQ_|JQCOD_PATH|/questions/|SEQNO|">|TITLE|</a>
+		</li> ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>15</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>丹霞山问答</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+
+
+    <DataHtmlMod>
+      <TableCode>
+        <![CDATA[{0}]]>
+      </TableCode>
+      <TrCode>
+        <![CDATA[<ul>  {0}   
+		</ul>]]>
+      </TrCode>
+      <TdCode>
+        <![CDATA[            
+        <li><span>|CREATE_DATE1|</span>
+		<a href="/questions?type=|QTYOECODE|&jingqucode=|JINGQUCODE|">[|SORTNAME|]</a>&nbsp;<a href="/JQ_|JQCOD_PATH|/questions/|SEQNO|">|TITLE|</a>
+		</li> ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>15</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>张家界问答</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+
+    <DataHtmlMod>
+      <TableCode>
+        <![CDATA[{0}]]>
+      </TableCode>
+      <TrCode>
+        <![CDATA[<ul>  {0}   
+		</ul>]]>
+      </TrCode>
+      <TdCode>
+        <![CDATA[            
+        <li><span>|CREATE_DATE1|</span>
+		<a href="/questions?type=|QTYOECODE|&jingqucode=|JINGQUCODE|">[|SORTNAME|]</a>&nbsp;<a href="/JQ_|JQCOD_PATH|/questions/|SEQNO|">|TITLE|</a>
+		</li> ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>15</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>大梅沙问答</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+
+
+
+
+
+
+    <DataHtmlMod>
+      <TableCode>
+        <![CDATA[{0}]]>
+      </TableCode>
+      <TrCode>
+        <![CDATA[{0}]]>
+      </TrCode>
+      <TdCode>
+        <![CDATA[    
+       <li><a href="/jq_|JQCOD_PATH|/News/|SEQNO|" target="_blank" title="|TITLE|">
+                           |TITLE|</a></li>
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>15</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>旅游攻略</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+
+
+
+    <DataHtmlMod>
+      <TableCode>
+        <![CDATA[{0}]]>
+      </TableCode>
+      <TrCode>
+        <![CDATA[{0}]]>
+      </TrCode>
+      <TdCode>
+        <![CDATA[    
+    <li>
+       
+      <a  href='/JQ_|JQCOD_PATH|/questions/|SEQNO|' title='|TITLE|'>|TITLE|</a>
+    </li>
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>10</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>疑难问答</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+
+
+    <DataHtmlMod>
+      <TableCode>
+        <![CDATA[{0}]]>
+      </TableCode>
+      <TrCode>
+        <![CDATA[{0}]]>
+      </TrCode>
+      <TdCode>
+        <![CDATA[<li><a  href='/JQ_|JQCOD_PATH|/news/|SEQNO|' title='|TITLE|'>|TITLE|</a></li>]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>10</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>最近更新</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+
+
+    <DataHtmlMod>
+      <TableCode>
+        <![CDATA[{0}]]>
+      </TableCode>
+      <TrCode>
+        <![CDATA[{0}]]>
+      </TrCode>
+      <TdCode>
+        <![CDATA[    
+        <li>
+      <a href="|LINK|" target="_blank" title="|TITLE|">|TITLE|</a>
+    </li>
+
+        ]]>
+      </TdCode>
+      <RowCount>5</RowCount>
+      <ColCount>10</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>友情链接</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+
+    <DataHtmlMod>
+      <TableCode>
+        <![CDATA[{0}]]>
+      </TableCode>
+      <TrCode>
+        <![CDATA[{0}]]>
+      </TrCode>
+      <TdCode>
+        <![CDATA[    
+        <li>
+       <a href="|LINK|" target="_blank" title="|TITLE|">|TITLE|</a>
+      </li>
+
+        ]]>
+      </TdCode>
+      <RowCount>15</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>实用信息</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+
+    <DataHtmlMod>
+      <TableCode>
+        <![CDATA[{0}]]>
+      </TableCode>
+      <TrCode>
+        <![CDATA[{0}]]>
+      </TrCode>
+      <TdCode>
+        <![CDATA[    
+      <li>
+          <a title="|JINGQUNAME|" href="/JQ_|MATCHDOMAIN|">
+          <img alt="|JINGQUNAME|" tooltip='|PRICEINFO1|' src="|LOGO|" width="100" height="80">|JINGQUNAME|</a>
+      </li>
+
+        ]]>
+      </TdCode>
+      <RowCount>12</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>景区导航</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+
+
+    <DataHtmlMod>
+      <TableCode>
+        <![CDATA[  <div class="tuijian_con"> <div class="tj_box"><h3>其他景点</h3> <ul>{0}</ul></div> </div> ]]>
+      </TableCode>
+      <TrCode>
+        <![CDATA[<li>{0}</li>]]>
+      </TrCode>
+      <TdCode>
+        <![CDATA[    
+       
+     
+       <span class="area"> <a itle="|JINGQUNAME|" href="/JQ_|MATCHDOMAIN|"target="_blank">|JINGQUNAME|</a></span>
+      
+     
+
+        ]]>
+      </TdCode>
+      <RowCount>15</RowCount>
+      <ColCount>4</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>其他景区导航</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+
+
+    <DataHtmlMod>
+      <TableCode>        <![CDATA[{0}]]>      </TableCode>
+      <TrCode>        <![CDATA[ {0} ]]>      </TrCode>
+      <TdCode>
+        <![CDATA[    
+         <li>
+      <a href="/questions?type=|CODE|"   title="|TITLE|">|TITLE|</a>
+    </li>
+         ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>15</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>问题类型</HasKey>
+      <ReplaceCode></ReplaceCode>
+    </DataHtmlMod>
+
+
+
+
+  </DataHtmlMods>
+  <HashDataMods>
+    <HashDataMod>
+      <Sql>select   '景点旅游攻略_交通_酒店_门票预订网：游酷网' as 网站标题,'景点旅游攻略/交通/门票/旅游订房信息最全的网站，和全国各地酒店、宾馆、餐饮合作，为您提供最好、性价比最高的服务！' as 网站内容,'旅游攻略，交通，门票,酒店预订' as 网站关键字  </Sql>
+      <HashKey>首页关键字</HashKey>
+    </HashDataMod>
+
+    <HashDataMod>
+      <Sql>
+        <![CDATA[ select    (select top 1  matchdomain from JingQus as jq  where  jq.jingqucode=h.JingQuCode)  AS JQCOD_PATH , h.* ,( select top 1 AreaName from JingQu_Area where JinqQuCode=h.area) as areaname ,m.showidx  
+,  h.name  as hotelname  from Hotel h,Module m where h.guid = m.pguid and h.status=1 and modulecode='recommend' and h.JingQuCode='dxs' order by m.showidx desc  ]]>
+      </Sql>
+      <HashKey>丹霞山推荐酒店</HashKey>
+    </HashDataMod>
+    <HashDataMod>
+      <Sql>
+        <![CDATA[ select    (select top 1  matchdomain from JingQus as jq  where  jq.jingqucode=h.JingQuCode)  AS JQCOD_PATH , h.* ,( select top 1 AreaName from JingQu_Area where JinqQuCode=h.area) as areaname ,m.showidx  
+,  h.name  as hotelname  from Hotel h,Module m where h.guid = m.pguid and h.status=1 and modulecode='recommend' and h.JingQuCode='zjj' order by m.showidx desc  
+      ]]>
+      </Sql>
+      <HashKey>张家界推荐酒店</HashKey>
+    </HashDataMod>
+
+    <HashDataMod>
+      <Sql>
+        <![CDATA[ select top 6  h.* ,  (select top 1  matchdomain from JingQus as jq  where  jq.jingqucode=h.JingQuCode)  AS JQCOD_PATH , ( select top 1 AreaName from JingQu_Area ja where ja.JinqQuCode=h.JingQuCode and ja.JingQuAreaId = h.Area ) as areaname   from Hotel h  where  h.status=1 and h.minprice <100  and h.JingQuCode='dxs' and guid not in  (select pguid from Module )  order by h.minprice asc  ]]>
+      </Sql>
+      <HashKey>丹霞山经济型酒店</HashKey>
+    </HashDataMod>
+    <HashDataMod>
+      <Sql>
+        <![CDATA[select top 6  h.* ,  (select top 1  matchdomain from JingQus as jq  where  jq.jingqucode=h.JingQuCode) AS JQCOD_PATH , ( select top 1 AreaName from JingQu_Area ja where ja.JinqQuCode=h.JingQuCode and ja.JingQuAreaId = h.Area ) as areaname  from Hotel h  where  h.status=1 and h.minprice <100  and h.JingQuCode='zjj'  and guid not in  (select pguid from Module )  order by h.minprice asc  ]]>
+      </Sql>
+      <HashKey>张家界经济型酒店</HashKey>
+    </HashDataMod>
+    <HashDataMod>
+      <Sql>
+        <![CDATA[ select top 6  h.*  , (select top 1  matchdomain from JingQus as jq  where  jq.jingqucode=h.JingQuCode)  AS JQCOD_PATH , ( select top 1 AreaName from JingQu_Area ja where ja.JinqQuCode=h.JingQuCode and ja.JingQuAreaId = h.Area ) as areaname from Hotel h  where  h.status=1 and h.minprice >90  and  h.maxprice>120  and h.JingQuCode='dxs'  order by h.minprice desc  
+      ]]>
+      </Sql>
+      <HashKey>丹霞山星级酒店</HashKey>
+    </HashDataMod>
+    <HashDataMod>
+      <Sql>
+        <![CDATA[ select top 6  h.*  ,  (select top 1  matchdomain from JingQus as jq  where  jq.jingqucode=h.JingQuCode)  AS JQCOD_PATH , ( select top 1 AreaName from JingQu_Area ja where ja.JinqQuCode=h.JingQuCode and ja.JingQuAreaId = h.Area ) as areaname from Hotel h  where  h.status=1 and h.minprice >90  and  h.maxprice>120  and h.JingQuCode='zjj'  order by h.minprice desc  
+      ]]>
+      </Sql>
+      <HashKey>张家界星级酒店</HashKey>
+    </HashDataMod>
+
+
+    <HashDataMod>
+      <Sql>
+        <![CDATA[ select top 8 * ,   (select top 1  matchdomain from JingQus as jq  where  jq.jingqucode=Sites.JingQuCode) AS JQCOD_PATH    from Sites  where jingqucode='dxs'  order by seqno desc  ]]>
+      </Sql>
+      <HashKey>丹霞山景点欣赏</HashKey>
+    </HashDataMod>
+    <HashDataMod>
+      <Sql>
+        <![CDATA[ select top 8 * ,   (select top 1  matchdomain from JingQus as jq  where  jq.jingqucode=Sites.JingQuCode) AS JQCOD_PATH    from Sites  where jingqucode='nhs'  order by seqno desc  ]]>
+      </Sql>
+      <HashKey>南华寺景点欣赏</HashKey>
+    </HashDataMod>
+    <HashDataMod>
+      <Sql>
+        <![CDATA[ select top 15  *  ,convert(char(10),CREATE_DATE,20) as create_date1, (  select code from  Qsttype as qt where qt.guid =qtype  ) as QTYOECODE, (  select title from  Qsttype as qt where qt.guid =qtype  ) as SORTNAME ,  (select top 1  matchdomain from JingQus as jq  where  jq.jingqucode=Questions.JingQuCode) AS JQCOD_PATH   from Questions    order by seqno desc  ]]>
+      </Sql>
+      <HashKey>最新问答</HashKey>
+    </HashDataMod>
+
+    <HashDataMod>
+      <Sql>
+        <![CDATA[ select top 15  *  ,convert(char(10),CREATE_DATE,20) as create_date1, (  select code from  Qsttype as qt where qt.guid =qtype  ) as QTYOECODE, (  select title from  Qsttype as qt where qt.guid =qtype  ) as SORTNAME ,   (select top 1  matchdomain from JingQus as jq  where  jq.jingqucode=Questions.JingQuCode)  AS JQCOD_PATH   from Questions   where jingqucode='danxia'  order by seqno desc  ]]>
+      </Sql>
+      <HashKey>丹霞山问答</HashKey>
+    </HashDataMod>
+    <HashDataMod>
+      <Sql>
+        <![CDATA[ select top 15  *  ,convert(char(10),CREATE_DATE,20) as create_date1, (  select code from  Qsttype as qt where qt.guid =qtype  ) as QTYOECODE, (  select title from  Qsttype as qt where qt.guid =qtype  ) as SORTNAME ,   (select top 1  matchdomain from JingQus as jq  where  jq.jingqucode=Questions.JingQuCode)  AS JQCOD_PATH   from Questions   where jingqucode='zjj'  order by seqno desc  ]]>
+      </Sql>
+      <HashKey>张家界问答</HashKey>
+    </HashDataMod>
+
+    <HashDataMod>
+      <Sql>
+        <![CDATA[ select top 15  *  ,convert(char(10),CREATE_DATE,20) as create_date1, (  select code from  Qsttype as qt where qt.guid =qtype  ) as QTYOECODE, (  select title from  Qsttype as qt where qt.guid =qtype  ) as SORTNAME ,   (select top 1  matchdomain from JingQus as jq  where  jq.jingqucode=Questions.JingQuCode)  AS JQCOD_PATH   from Questions   where jingqucode='dameisha'  order by seqno desc  ]]>
+      </Sql>
+      <HashKey>大梅沙问答</HashKey>
+    </HashDataMod>
+
+    <HashDataMod>
+      <Sql>
+        <![CDATA[ select top  15  * ,   (select top 1  matchdomain from JingQus as jq  where  jq.jingqucode=news.JingQuCode)  AS JQCOD_PATH  from  news  where TGUID in ( select guid from newstype where code='LYGL')  order by seqno desc 
+   ]]>
+      </Sql>
+      <HashKey>旅游攻略</HashKey>
+    </HashDataMod>
+
+    <HashDataMod>
+      <Sql>
+        <![CDATA[   select  top 10  * ,   (select top 1  matchdomain from JingQus as jq  where  jq.jingqucode=a.JingQuCode)   AS JQCOD_PATH  from  Questions  as a order by seqno desc  
+   ]]>
+      </Sql>
+      <HashKey>疑难问答</HashKey>
+    </HashDataMod>
+
+    <HashDataMod>
+      <Sql>
+        <![CDATA[select top 10  *  ,  (select top 1  matchdomain from JingQus as jq  where  jq.jingqucode=News.JingQuCode) AS JQCOD_PATH  from News order by seqno desc 
+   ]]>
+      </Sql>
+      <HashKey>最近更新</HashKey>
+    </HashDataMod>
+
+    <HashDataMod>
+      <Sql><![CDATA[  select  * from  FriendLink  where type='FriendLink']]></Sql>
+      <HashKey>友情链接</HashKey>
+    </HashDataMod>
+
+    <HashDataMod>
+      <Sql><![CDATA[  select  * from  FriendLink  where type='First']]></Sql>
+      <HashKey>实用信息</HashKey>
+    </HashDataMod>
+
+    <HashDataMod>
+      <Sql><![CDATA[  select top 12 *, isnull(priceinfo,'还没有定义景区门票!<br/>请与管理员联系.') as priceinfo1 from JingQus order by showidx ]]></Sql>
+      <HashKey>景区导航</HashKey>
+    </HashDataMod>
+
+
+    <HashDataMod>
+      <Sql><![CDATA[  select * from JingQus where JingQu_ID not in (select top 12 JingQu_ID from JingQus order by showidx ) order by showidx  ]]></Sql>
+      <HashKey>其他景区导航</HashKey>
+    </HashDataMod>
+
+    <HashDataMod>
+      <Sql><![CDATA[ select * from QstType  ]]></Sql>
+      <HashKey>问题类型</HashKey>
+    </HashDataMod>
+    
+  </HashDataMods>
+  <MainPageHtml>
+    <![CDATA[|头部|
+ <link href="/css/tipsy.css" rel="stylesheet" type="text/css" />
+ <script type='text/javascript'>
+    $(function() {
+        $('img[tooltip]').tipsy({ title: 'tooltip', fade: true, html: true, opacity: 0.7 });
+    });
+  </script>	 
+   <div id="nav_son">
+            <span><a href="/web/hotelorder/orderlist.aspx" class="cxdd">查询我的订单状态</a></span>
+ 旅游问答_旅游攻略_游酷网：旅游问答，旅游攻略，旅游订房专家！&nbsp;&nbsp; 
+
+ 
+
+ 
+
+
+</div>
+        <div class="nav_son">
+            
+        </div>
+        
+    <div id="mainContent">
+      <div id="imain">
+         <div class="info_box rollchain">
+              <div class="box_tit">
+                  <strong>景区导航</strong>
+                  <span><a class='more' href="/jingdialst">更多</a></span>
+              </div>
+              <div class="jq_list">
+                  
+                  <ul>                            
+                  |景区导航|                        
+                  </ul>
+                  
+              </div>
+                
+              |其他景区导航|
+          </div>
+        <div class="info_box" id="ajaxbox">
+          <div class="box_tit">
+            <strong>推荐酒店</strong>
+            <ul id="uHotel" class="tabs">
+              <li><a href="/JQ_danxia/hotel"><span>丹霞山</span></a></li>
+              <li><a href="/JQ_zjj/hotel"><span>张家界</span></a></li>
+            </ul>
+          </div>
+          <div id="ajaxboxinfo">
+            <div class="tuijian_con">
+              |丹霞山推荐酒店|
+              |丹霞山经济型酒店|
+              |丹霞山星级酒店|
+            </div>         
+            <div class="tuijian_con">
+              |张家界推荐酒店|
+              |张家界经济型酒店|
+              |张家界星级酒店|
+            </div>            
+          </div>         
+        </div>
+
+      
+        <div class="info_box">
+            <h2>
+                <div>
+                    风景欣赏</div>
+                <ul id="uSite" class="tabs">
+                    <li><a href="/JQ_danxia/sites"><span>丹霞山</span></a></li>
+                    <li><a href="/JQ_nhs/sites"><span>南华寺</span></a></li>
+                </ul>
+            </h2>
+            <div class="info_pic">                
+                |丹霞山景点欣赏|
+                |南华寺景点欣赏|
+            </div>
+        </div>
+		
+
+          <script type="text/javascript" src="/web/js/jquery.tools.min.js"></script>
+          <script type="text/javascript" src="/js/jquery.tipsy.js"></script>
+          <!-- the tabs -->
+
+          <script type="text/javascript">
+              $(function() {
+                  // setup ul.tabs to work as tabs for each div directly under div.panes
+                  $("#uQus.tabs").tabs("div.zx_list > ul", { event: 'mouseover' });
+              });
+              $(function() {
+                  // setup ul.tabs to work as tabs for each div directly under div.panes
+                  $("#uSite.tabs").tabs("div.info_pic > ul", { event: 'mouseover' });
+              });
+              $(function() {
+                  // setup ul.tabs to work as tabs for each div directly under div.panes
+                  $("#uHotel.tabs").tabs("div#ajaxboxinfo > div.tuijian_con", { event: 'mouseover' });
+              });                    
+          </script>
+
+          <div class="info_box">
+              <h2>
+                  <div>
+                      旅游问答</div>
+                  <ul id="uQus" class="tabs">
+                     	<li><a href="/questions"><span>最新问答</span></a></li>
+                     	<li><a href="/JQ_danxia/questions"><span>丹霞山</span></a></li>
+		                  <li><a href="/JQ_zjj/questions"><span>张家界</span></a></li>    
+                      <li><a href="/JQ_dameisha/questions"><span>大梅沙</span></a></li>     
+                  </ul>
+              </h2>
+              <div class="zx_list">    
+                 |最新问答|
+		           |丹霞山问答|
+		           |张家界问答|
+               |大梅沙问答|
+              </div>
+          </div>            
+      </div>
+      <div id="iside">
+        <div class="sidebox">
+          <h4>
+            <span>
+              
+            </span>实用信息
+          </h4>
+          <div class="sbox_con">
+            <ul>
+              |实用信息|
+            </ul>
+          </div>
+        </div>
+
+       <div class="sidebox">
+                    <h4>
+                        <span><a href="/questions"  >更多</a></span>问题类型</h4>
+                    <div class="site_button">
+                        <ul>
+                             |问题类型|
+                        </ul>
+                    </div>
+                </div>
+                
+                
+        <div class="side_zx">
+          <h4>
+            <span>
+              <a href="/news?typeCode=lygl">更多</a>
+            </span>旅游攻略
+          </h4>
+          <ul>
+            |旅游攻略|
+          </ul>
+        </div>
+
+        <div class="sidebox">
+          <h4>
+            <span>
+             
+            </span>最近更新
+          </h4>
+          <div class="sbox_con">
+            <ul>
+ 		|最近更新|
+              |疑难问答|
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="clearfloat">
+      </div>
+    </div>
+    <div class="sidebox">
+      <h4>
+        友情链接
+      </h4>
+      <div class="friend_link">
+        <ul>
+        </ul>
+        <ul>
+          |友情链接|
+        </ul>
+      </div>
+    </div>
+
+|底部|]]>
+  </MainPageHtml>
+  <SavePath>index.html</SavePath>
+</PageHtmlMod>

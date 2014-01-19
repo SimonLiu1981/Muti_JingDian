@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<SearchPageSettingMod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ChildHtmls>
+    <ChildHtmlMod>
+      <RepalceCode>头部</RepalceCode>
+      <HtmlPath>~\Templates\xml\hotel\头部.html</HtmlPath>
+    </ChildHtmlMod>
+    <ChildHtmlMod>
+      <RepalceCode>底部</RepalceCode>
+      <HtmlPath>~\Templates\xml\hotel\底部.html</HtmlPath>
+    </ChildHtmlMod>
+  </ChildHtmls>
+  <MainPageHtml>
+    <![CDATA[
+    |头部|
+    <script src="/Plugin/Jquery.tools/jquery.tools.min.js" type="text/javascript"></script>
+ 
+    <script type="text/javascript" src="/ajaxpro/prototype.ashx"></script>
+
+    <script type="text/javascript" src="/ajaxpro/core.ashx"></script>
+
+    <script type="text/javascript" src="/ajaxpro/converter.ashx"></script>
+
+    <script type="text/javascript" src="/ajaxpro/dx177.WebUI.web.restaurant.comments,dx177.WebUI.ashx?id=1"></script>
+    
+ <div id="nav_son">
+            <span> <a href="/web/hotelorder/orderlist.aspx" class="cxdd">查询我的订单状态</a></span>当前位置：<a href="/index.html">首页</a>
+            &gt;&nbsp;<a href='/html|JQRP_CODE|product_listall_1.html">产品列表</a>
+        </div>
+        <div id="mainContent">
+            <div id="main">
+               
+                <div class="info_box">
+                    <h2>
+                        风景</h2>
+                    <div class="info_pic">
+                        |SITESTAB|
+                    </div>
+                    
+                    <div id=pages> |BUTTON|</div>
+                </div>
+               
+            </div>
+            <div id="side">
+                
+                    <div class="sidebox">
+                    <h4>
+                        推荐酒店</h4>
+                    <div class="sbox_con">
+                        <ul>
+                             |推荐酒店|
+                        </ul>
+                    </div>
+                </div>
+          
+             <div class="sidebox">
+                    <h4>
+                        推荐酒店</h4>
+                    <div class="sbox_con">
+                        <ul>
+                            |推荐酒店|
+                        </ul>
+                    </div>
+                </div>
+                 
+            </div>
+            <div class="clearfloat">
+            </div>
+        </div>
+|底部|
+]]>
+        </MainPageHtml>
+  <DataHtmlMods>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站标题|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>公司信息</HasKey>
+      <ReplaceCode>网站标题</ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站内容|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>公司信息</HasKey>
+      <ReplaceCode>网站内容</ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站关键字|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>公司信息</HasKey>
+      <ReplaceCode>网站关键字</ReplaceCode>
+    </DataHtmlMod>
+
+ 
+
+    
+    
+    
+     
+
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>
+        <![CDATA[
+        <li title='|NAME|'>
+      <span>|MINPRICE|元</span>
+      <a href='/html|JQRP_CODE|hotel_|SEQNO|.html'  >|NAME|</a>
+    </li>
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>10</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>推荐酒店</HasKey>
+      <ReplaceCode>推荐酒店</ReplaceCode>
+    </DataHtmlMod>
+  
+ 
+  </DataHtmlMods>
+  <HashDataMods>
+    <HashDataMod>
+      <Sql>select   '风景_阳元石_阴元石_巴寨--游酷网' as 网站标题,'风景,阳元石,阴元石,巴寨风景' as 网站内容,'风景,阳元石,阴元石,巴寨风景' as 网站关键字  </Sql>
+      <HashKey>公司信息</HashKey>
+    </HashDataMod>
+   
+    <HashDataMod>
+      <Sql>
+        <![CDATA[ select top 10 h.* ,'/'+h.JingQuCode +'/' as  JQRP_CODE from Hotel h,Module m where h.guid = m.pguid and h.status=1 and modulecode='recommend'  order by m.showidx desc ]]> </Sql>
+      <HashKey>推荐酒店</HashKey>
+    </HashDataMod>
+    <HashDataMod>
+      <Sql>
+        <![CDATA[select top 10 *,'/'+JingQuCode +'/' as  JQRP_CODE  from HireCar order by seqno ]]>
+      </Sql>
+      <HashKey>旅游租车</HashKey>
+    </HashDataMod>
+
+  </HashDataMods>
+  <PageButtonXmlPath>~\Templates\xml\hotel\BUTTON.XML</PageButtonXmlPath>
+  <PageButtonCode>|BUTTON|</PageButtonCode>
+  <TableListPath>~\Templates\xml\hotel\sitesTAB.xml</TableListPath>
+  <TableListReplaceCode>|SITESTAB|</TableListReplaceCode>
+  <SavePatch>/html|JQCOD_PATH|sites_listall_{0}.html</SavePatch>
+</SearchPageSettingMod>

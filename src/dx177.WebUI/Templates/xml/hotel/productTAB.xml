@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<XmlTableMod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TableCode>{0}</TableCode>
+  <TrCode>
+    <![CDATA[
+    <UL>{0}</UL>
+    ]]>
+    </TrCode>
+  <TdCode>
+<![CDATA[
+  <li><a href='/html|JQRP_CODE|product_|SEQNO|.html" target="_blank" title="|TITLE|">
+                                <img border="0" src="|LOGO|" alt="|TITLE|" width="160" height="120" />|TITLE|</a></li>
+]]>
+</TdCode>
+  <RowCount>4</RowCount>
+  <ColCount>4</ColCount>
+  <SpecialTdColCount>0</SpecialTdColCount>
+  <SpecialTdCode />
+  <EmptyTdCode />
+  <SpecifyColName />
+  <SpecifyColValue />
+  <SpecifyColcode />
+</XmlTableMod>

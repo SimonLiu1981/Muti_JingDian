@@ -1,0 +1,222 @@
+﻿<?xml version="1.0"?>
+<SearchPageSettingMod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ChildHtmls>
+    <ChildHtmlMod>
+      <RepalceCode>头部</RepalceCode>
+      <HtmlPath>~\Templates\xml\hotel\头部.html</HtmlPath>
+    </ChildHtmlMod>
+    <ChildHtmlMod>
+      <RepalceCode>底部</RepalceCode>
+      <HtmlPath>~\Templates\xml\hotel\底部.html</HtmlPath>
+    </ChildHtmlMod>
+  </ChildHtmls>
+  <MainPageHtml>
+    <![CDATA[
+    |头部|
+
+    <div id="nav_son">
+    <span>
+      <a href="/web/hotelorder/orderlist.aspx" class="cxdd">查询我的订单状态</a>
+    </span>当前位置：<a href="/index.html">首页</a> &gt;&nbsp; |类型|
+  </div>
+
+  <div id="mainContent">
+    <div id="main">
+      <div class="list_top">
+        <h2>
+          
+          <strong>问题类型</strong>
+        </h2>
+        <div class="zx_city_list">
+          <ul>
+            |问题类型|
+          </ul>
+        </div>
+      </div>
+      
+      <div class="info_box">
+        <h2>问题解答</h2>
+        <div class="zx_list">
+          <ul>
+            |NEWSTAB|
+          </ul>
+
+        </div>
+          |BUTTON|
+      </div>
+    </div>
+    <div id="side">
+
+
+      <div class="sidebox">
+        <h4>推荐酒店</h4>
+        <div class="sbox_con">
+          <ul>
+            |推荐酒店|
+
+          </ul>
+        </div>
+      </div>
+      <div class="sidebox">
+
+        <h4>
+          <span>
+            <a href="#" target="_blank">更多</a>
+          </span>旅游租车
+        </h4>
+
+        <div class="sbox_con">
+          <ul>
+            |旅游租车|
+          </ul>
+        </div>
+      
+      </div>
+
+
+    </div>
+    <div class="clearfloat"></div>
+  </div>
+|底部|
+]]>
+        </MainPageHtml>
+  <DataHtmlMods>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站标题|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>公司信息</HasKey>
+      <ReplaceCode>网站标题</ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站内容|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>公司信息</HasKey>
+      <ReplaceCode>网站内容</ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站关键字|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>公司信息</HasKey>
+      <ReplaceCode>网站关键字</ReplaceCode>
+    </DataHtmlMod>
+   
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>
+        <![CDATA[
+         <li>
+      <a href="/html|JQRP_CODE|questionlist|ENUM_VALUE|_1.html" title="|TAG_NAME|">[|TAG_NAME|]</a>
+    </li>
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>10</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>问题类型</HasKey>
+      <ReplaceCode>问题类型</ReplaceCode>
+    </DataHtmlMod>
+
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>
+        <![CDATA[
+        <li title='|NAME|'>
+      <span>|MINPRICE|元</span>
+      <a href='/html|JQRP_CODE|hotel_|SEQNO|.html'  >|NAME|</a>
+    </li>
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>10</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>推荐酒店</HasKey>
+      <ReplaceCode>推荐酒店</ReplaceCode>
+    </DataHtmlMod>
+
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>
+        <![CDATA[
+    <li>
+      <a href='/html|JQRP_CODE|HireCar_|SEQNO|.html' >
+         |TITLE| 
+      </a>
+    </li>
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>6</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>旅游租车</HasKey>
+      <ReplaceCode>旅游租车</ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>
+        <![CDATA[
+        <a href="/html|JQRP_CODE|questionlist|QTYPE|_1.html">|SORTNAME|</a>
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>类型</HasKey>
+      <ReplaceCode>类型</ReplaceCode>
+    </DataHtmlMod>
+
+
+
+  </DataHtmlMods>
+  <HashDataMods>
+    <HashDataMod>
+      <Sql>select   '|网站关键字|' as 网站标题,'|网站关键字|' as 网站内容,'|网站关键字|' as 网站关键字  </Sql>
+      <HashKey>公司信息</HashKey>
+    </HashDataMod>
+    
+    <HashDataMod>
+      <Sql> select * from Base_Dict_Tag where enum_type_name='QuestionType'</Sql>
+      <HashKey>问题类型</HashKey>
+    </HashDataMod>
+
+    <HashDataMod>
+      <Sql>
+        <![CDATA[ select top 10 h.* ,'/'+h.JingQuCode +'/' as  JQRP_CODE from Hotel h,Module m where h.guid = m.pguid and h.status=1 and modulecode='recommend'  order by m.showidx desc ]]> </Sql>
+      <HashKey>推荐酒店</HashKey>
+    </HashDataMod>
+    <HashDataMod>
+      <Sql>
+        <![CDATA[select top 10 * ,'/'+JingQuCode +'/' as  JQRP_CODE from HireCar order by seqno ]]>
+      </Sql>
+      <HashKey>旅游租车</HashKey>
+    </HashDataMod>
+
+    <HashDataMod>
+      <Sql>
+        <![CDATA[select  '|QTYPE|' as QTYPE ,'|SORTNAME|' as SORTNAME   ]]>
+      </Sql>
+      <HashKey>类型</HashKey>
+    </HashDataMod>
+
+  </HashDataMods>
+  <PageButtonXmlPath>~\Templates\xml\hotel\BUTTON.XML</PageButtonXmlPath>
+  <PageButtonCode>|BUTTON|</PageButtonCode>
+  <TableListPath>~\Templates\xml\hotel\QuestionTAB.xml</TableListPath>
+  <TableListReplaceCode>|NEWSTAB|</TableListReplaceCode>
+  <SavePatch>/html|JQCOD_PATH|questionlist|TYPENAME|_{0}.html</SavePatch>
+</SearchPageSettingMod>

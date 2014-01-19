@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title> @ViewBag.Title 旅游攻略_交通_门票_酒店订房</title>
+    <meta name="description" content="游酷网：旅游攻略_交通_门票_酒店订信息最全的网站，和@ViewBag.Title景区多加酒店、宾馆、餐饮合作，为您提供最好、性价比最高的服务！" />
+    <meta name="keywords" content="@ViewBag.Title 游攻略,旅游交通,景点门票，旅游路线,旅游饮食,旅游酒店" />
+    <link href="/css/layout.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="/js/jquery-1.3.2.min.js"></script>
+
+</head>
+<body>
+    <div id="top">
+        <div id="top_con">
+            <span><a style="cursor: pointer;" href="/login/default.aspx">[登录]</a> | <a style="cursor: pointer;" href="/register/default.aspx">[注册]</a>
+                <a href="#" target="_blank">[旅游论坛]</a>
+                <a href="http://www.177dx.com" target="_blank">丹霞山旅游</a>
+                | <a href="#">游酷旅游网</a></span>旅游酒店预订|旅游住宿|旅游宾馆
+            | 自助旅游？请选-游酷旅游网！<em>
+
+                <a href="http://wpa.qq.com/msgrd?V=1&amp;Uin=1939539&amp;Site=QQ咨询&amp;Menu=yes"
+                    target="_blank">
+                    <img style="vertical-align: middle" border="0" alt="QQ" src=" http://wpa.qq.com/pa?p=1:1939539:4">在线客户</a>
+
+                @ViewBag.Title 
+            </em>
+        </div>
+    </div>
+    <div id="container">
+        <div id="header">
+            <div id="logo">
+                <a href="/index.html">
+                    <img alt="游酷旅游网" src="/img/logo.gif" /></a>
+            </div>
+            <div id="header_ad">
+                <div class="">
+                    <a href="#" title="酒店广告">
+                        <img width="658" height="60" src="/img/top_ad.gif" border="0" alt="游酷旅游广告" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="clearfloat">
+        </div>
+        <div id="nav">
+            <ul>
+                @Html.Partial("_Menu")
+            </ul>
+        </div>
+        @RenderBody()
+        <div class="sidebox">
+            <h4>友情链接
+            </h4>
+            <div class="friend_link">
+                <ul>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="http://www.177dx.com" target="_blank" title="丹霞山旅游网">丹霞山旅游网</a>
+                    </li>
+                    <li>
+                        <a href="http://www.0752hotel.com/" target="_blank" title="惠州酒店网">惠州酒店网</a>
+                    </li>
+                </ul>
+            </div>
+        </div> 
+        <div id="footer"> 
+            <p>
+                版权：游酷旅游网 Copyright 20011-2012 Corporation, All Rights Reserved
+                <br>
+                本站为广大旅游解决疑难问题，为广大游客出行带来信息的便利！
+                  <br>
+                欢迎旅游团队与本网站合作！<a href="/iss_support.html" target="_blank"><strong>技术支持</strong></a>
+                <wb:follow-button uid="1796226787" type="gray_1" width="67" height="24"></wb:follow-button>
+            </p>
+
+        </div>
+
+    </div>
+</body>
+</html>
+<script language="javascript" type="text/javascript" src="http://js.users.51.la/14940869.js"></script>
+<noscript><a href="http://www.51.la/?14940869" target="_blank">
+    <img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/14940869.asp" style="border: none" /></a></noscript>
+
+

@@ -1,0 +1,342 @@
+<?xml version="1.0"?>
+<PageHtmlMod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ChildHtmls>
+     <ChildHtmlMod>
+       <RepalceCode>头部</RepalceCode>
+       <HtmlPath>~\Templates\xml\hotel\s头部.html</HtmlPath>
+     </ChildHtmlMod>
+     <ChildHtmlMod>
+       <RepalceCode>底部</RepalceCode>
+       <HtmlPath>~\Templates\xml\hotel\底部.html</HtmlPath>
+     </ChildHtmlMod>
+  </ChildHtmls>
+	<DataHtmlMods>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站标题|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>公司信息</HasKey>
+      <ReplaceCode>网站标题</ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站内容|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>公司信息</HasKey>
+      <ReplaceCode>网站内容</ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站关键字|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>公司信息</HasKey>
+      <ReplaceCode>网站关键字</ReplaceCode>
+    </DataHtmlMod>
+    
+		<DataHtmlMod>
+			<TableCode> <![CDATA[ {0}]]> </TableCode>
+			<TrCode>{0}</TrCode>
+			<TdCode>
+				<![CDATA[ 
+                       <div id="divrow|PRODUCTID|"  class="zn_room_row">
+                            <div class="zn_row">
+                                <div class="zn_row1">
+                                  <span id="pr|PRODUCTID|">|PRICE|</span> 元</div>
+                                <div class="zn_row8">
+                                    <input style="width: 50px" id="txt|PRODUCTID|" value="|COUNT|" type="text" />
+                                  <a href="#" onclick="ModifyProducts(|PRODUCTID|);" >  <img src="/img/refresh.jpg" /></a>
+                                </div>
+                                <div class="zn_row3">
+                                    <a  > <span id="total|PRODUCTID|">|TOTAL|</span> 元</a></div>
+                                <div class="zn_row7">
+                                    <a href="#"  onclick="remove('|PRODUCTID|');" >
+                                        <img src="/img/delete.gif" />
+                                    </a>
+                                </div>
+                            </div>
+                            <a class="zn_room_name">|NAME|</a></div>
+                           
+		  ]]>
+			</TdCode>
+			<RowCount>30</RowCount>
+			<ColCount>1</ColCount>
+			<SpecialTdColCount>0</SpecialTdColCount>
+			<SpecialTdCode></SpecialTdCode>
+			<EmptyTdCode></EmptyTdCode>
+			<HasKey>SHOPCARLIST</HasKey>
+		</DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>
+        <![CDATA[
+    <li>
+      <a href='/HireCar_|SEQNO|.html' target='_blank'>
+         |TITLE| 
+      </a>
+    </li>
+        ]]>
+      </TdCode>
+      <RowCount>10</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>旅游租车</HasKey>
+      <ReplaceCode>旅游租车</ReplaceCode>
+    </DataHtmlMod>
+
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>
+        <![CDATA[
+        <li title='|NAME|'>
+      <span>|MINPRICE|元</span>
+      <a href='/hotel_|SEQNO|.html'  >|NAME|</a>
+    </li>
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>10</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>推荐酒店</HasKey>
+      <ReplaceCode>推荐酒店</ReplaceCode>
+    </DataHtmlMod>
+
+	</DataHtmlMods>
+	<HashDataMods>
+    <HashDataMod>
+      <Sql>select   '旅游购物_土特产' as 网站标题,'旅游购物,土特产' as 网站内容,' 购物,土特产' as 网站关键字  </Sql>
+      <HashKey>公司信息</HashKey>
+    </HashDataMod>
+    <HashDataMod>
+      <Sql>
+        <![CDATA[ select top 10 h.*,'/'+h.JingQuCode +'/' as  JQRP_CODE  from Hotel h,Module m where h.guid = m.pguid and h.status=1 and modulecode='recommend'  order by m.showidx desc ]]>
+      </Sql>
+      <HashKey>推荐酒店</HashKey>
+    </HashDataMod>
+    <HashDataMod>
+      <Sql>
+        <![CDATA[select top 10 * ,'/'+JingQuCode +'/' as  JQRP_CODE from HireCar order by seqno ]]>
+      </Sql>
+      <HashKey>旅游租车</HashKey>
+    </HashDataMod>
+	</HashDataMods>
+
+	<MainPageHtml>
+		<![CDATA[
+|头部|
+ <script src="/Plugin/Jquery.tools/jquery.tools.min.js" type="text/javascript"></script>
+ <script type="text/javascript" src="/ajaxpro/prototype.ashx"></script>
+<script type="text/javascript" src="/ajaxpro/core.ashx"></script>
+<script type="text/javascript" src="/ajaxpro/converter.ashx"></script>
+<script type="text/javascript" src="/ajaxpro/dx177.WebUI.web.Ajax.ajax,dx177.WebUI.ashx"></script>
+ 
+ 
+<script>
+         function ModifyProducts(prid)
+         {
+                  val= $('#txt'+prid).val();
+                   $('#total'+prid).html(parseInt(val)*parseFloat($('#pr'+prid).html()));
+                 var obj= dx177.WebUI.web.Ajax.ajax.ModifyProducts(''+prid,val);
+                 $('#total').html(obj.value.totalamout);
+        }
+                
+        function remove(prid)
+        {
+           var rid="divrow"+prid  ;
+           $('#'+rid).hide();
+          dx177.WebUI.web.Ajax.ajax.RemoveProducts(''+prid);
+
+        }
+        
+        function submitOrder() 
+        {
+              if ($('#ReceiveName').val() == '') 
+              {
+                  alert("请填写收货人！");
+                  $('#ReceiveName').focus();
+                  return false;
+              }
+              if ($('#ReceivePhone').val() == '' && $('#ReceiveTel').val()=='' ) 
+              {
+                  alert("请填写电话或手机！");
+                  $('#ReceivePhone').focus();
+                  return false;
+              }
+             
+              var param = {};
+              param.ReceiveName = $('#ReceiveName').val();
+              param.ReceivePhone =  $('#ReceivePhone').val();
+              param.ReceiveTel =  $('#ReceiveTel').val();
+              param.ReceiveEmail =  $('#ReceiveEmail').val();
+              param.ReceiveAddress =  $('#ReceiveAddress').val();
+              param.Remark =  $('#Remark').val();
+             $('#submit_button1').attr('disable','disable');
+              var obj=   dx177.WebUI.web.Ajax.ajax.SubmitOrder( param,SubmitHotelOrderCallBack);
+        }
+        function SubmitHotelOrderCallBack(res) {                       
+               alert('提交成功，我们的客服人员将会尽快联系您');
+                location.href = '/index.html';
+         
+            
+        }
+ 
+        
+</script>
+        <link href="/css/room.gbk.css" rel="stylesheet" type="text/css" />
+        <div id="nav_son">
+            <span> <a href="/web/hotelorder/orderlist.aspx" class="cxdd">查询我的订单状态</a></span>当前位置：<a href="/index.html">首页</a>
+           &gt;&nbsp;我的购物车</div>
+        <div id="mainContent">
+            <div id="main">
+                <div class="info_room">
+                    <div class="room_tit">
+                        <strong>我的购物车</strong>
+                    </div>
+                    <div class="room_con">
+                        <div class="zn_room_title">
+                            <div class="zn_row">
+                                <div class="zn_row3">
+                                    价格</div>
+                                <div class="zn_row8">
+                                    数量</div>
+                                <div class="zn_row3">
+                                    金额</div>
+                                <div class="zn_row7">
+                                    预订</div>
+                            </div>
+                            产品名</div>
+                      |SHOPCARLIST|
+                      
+                      <table width=100%>
+                      <tr>
+                      <td>&nbsp;
+                      </td>
+                      </tr>
+                           <tr>
+                           <td>
+                          
+                         
+                           </td>
+                           
+                            <td  width=100 >
+                         
+                           
+                             总金额：<font style="color:Red;"> <span id=total>|TOTAL|</span>元</font>
+                          
+                           </td>
+                           
+                           </tr>
+                           
+                           </table>
+                    </div>
+                </div>
+                
+                
+                 <div class="info_box">
+        <h2>收货地址</h2>
+        <div class="zx_list">
+          <ul>
+            <table width=100%>
+                       <tr>
+                       <td>收获人:
+                       </td>
+                         <td> <input id="ReceiveName"  name="ReceiveName" type="text" />
+                       </td>
+                       </tr>
+                       <tr>
+                       <td>收获地址:
+                       </td>
+                         <td> <input id="ReceiveAddress"  name="ReceiveAddress" type="text" /> 如景区酒店：和景酒店
+                       </td>
+                       </tr>
+                       
+                          <tr>
+                       <td>联系电话:
+                       </td>
+                         <td><input id="ReceiveTel" name="ReceiveTel" type="text" />
+                       </td>
+                       
+                       
+                       </tr>
+                       
+                       <tr>
+                       <td>手机:
+                       </td>
+                         <td>  <input id="ReceivePhone"  name="ReceivePhone" type="text" />
+                       </td>
+                       
+                       
+                       </tr>
+                       
+                          <tr>
+                       <td>电子邮件:
+                       </td>
+                         <td> <input id="ReceiveEmail" name="ReceiveEmail"  type="text" />
+                       </td>
+                       </tr>
+                       
+                          <tr>
+                       <td>备注:
+                       </td>
+                         <td> <textarea name="Remark" id="Remark" style="width: 98%; height: 120px;"></textarea>  
+                       </td>
+                       </tr>
+                       
+                       
+                        <tr>
+                        <td>  
+                       </td>
+                         <td    >  
+                           <input class="zn_btn_yd" onclick="submitOrder();"  id="submit_button1" name="submit_button1" type="button"
+                                        value="提交" />
+  
+                       </td>
+                       </tr>
+                       
+                       </table>
+          </ul>
+
+        </div>
+         
+      </div>
+            </div>
+            <div id="side">
+                <div class="sidebox">
+                    <h4>
+                        收获地址</h4>
+                    <div class="sbox_con">
+                        <ul>
+                        |推荐酒店|
+                        </ul>
+                    </div>
+                </div>
+                <div class="sidebox">
+                    <h4>
+                        <span><a href="/html|JQRP_CODE|HireCar_list_1.html" target="_blank">更多</a></span>旅游租车</h4>
+                    <div class="sbox_con">
+                        <ul>
+                           |旅游租车|
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfloat">
+            </div>
+        </div>
+      
+|底部|
+		]]>
+	</MainPageHtml>
+ 
+	<SavePath></SavePath>
+</PageHtmlMod>

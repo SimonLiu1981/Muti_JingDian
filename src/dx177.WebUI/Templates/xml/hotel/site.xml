@@ -1,0 +1,258 @@
+<?xml version="1.0"?>
+<PageHtmlMod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ChildHtmls>
+    <ChildHtmlMod>
+      <RepalceCode>头部</RepalceCode>
+      <HtmlPath>~\Templates\xml\hotel\s头部.html</HtmlPath>
+    </ChildHtmlMod>
+    <ChildHtmlMod>
+      <RepalceCode>底部</RepalceCode>
+      <HtmlPath>~\Templates\xml\hotel\底部.html</HtmlPath>
+    </ChildHtmlMod>
+  </ChildHtmls>
+  <DataHtmlMods>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站标题|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>公司信息</HasKey>
+      <ReplaceCode>网站标题</ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站内容|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>公司信息</HasKey>
+      <ReplaceCode>网站内容</ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>|网站关键字|</TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>公司信息</HasKey>
+      <ReplaceCode>网站关键字</ReplaceCode>
+    </DataHtmlMod>
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>
+        <![CDATA[
+        <li>
+          <a href="/JQ_|JQRP_CODE|/Sites/|SEQNO|">
+            |TITLE|
+          </a>
+        </li>
+        ]]>
+      </TdCode>
+      <RowCount>4</RowCount>
+      <ColCount>1</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>景点欣赏</HasKey>
+      <ReplaceCode>景点欣赏</ReplaceCode>
+    </DataHtmlMod>
+
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>
+        <![CDATA[
+        <li title='|NAME|'>
+      <span>|MINPRICE|元</span>
+      <a href='/jq_|JQRP_CODE|/hotel/|SEQNO|'  >|NAME|</a>
+    </li>
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>10</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>推荐酒店</HasKey>
+      <ReplaceCode>推荐酒店</ReplaceCode>
+    </DataHtmlMod>
+
+
+    <DataHtmlMod>
+      <TableCode>{0}</TableCode>
+      <TrCode>{0}</TrCode>
+      <TdCode>
+        <![CDATA[
+       <dl>
+      <dt>|CREATOR|于|CREATE_DATE| 评价说：</dt>
+      <dd class="info_ask_row">|CONTENT|</dd>
+      <dd>回答：|REPLYCONTENT|</dd>
+      </dl>
+        ]]>
+      </TdCode>
+      <RowCount>1</RowCount>
+      <ColCount>10</ColCount>
+      <SpecialTdColCount>0</SpecialTdColCount>
+      <HasKey>评论</HasKey>
+      <ReplaceCode>评论</ReplaceCode>
+    </DataHtmlMod>
+    
+  </DataHtmlMods>
+  <HashDataMods>
+    <HashDataMod>
+      <Sql>select   '|TITLE|' as 网站标题,'|TITLE|' as 网站内容,'|TITLE|' as 网站关键字  </Sql>
+      <HashKey>公司信息</HashKey>
+    </HashDataMod>
+    <HashDataMod>
+      <Sql>SELECT * , +(select top 1  matchdomain from JingQus as jq  where  jq.jingqucode=sites.JingQuCode)   as  JQRP_CODE FROM Sites where  sites.JingQuCode='|JINGQUCODE|'  order by ViewTimes desc </Sql>
+      <HashKey>景点欣赏</HashKey>
+    </HashDataMod>
+
+    <HashDataMod>
+      <Sql>
+        <![CDATA[ select top 10 h.* , (select top 1  matchdomain from JingQus as jq  where  jq.jingqucode=h.JingQuCode)   as  JQRP_CODE from Hotel h,Module m where h.guid = m.pguid and h.status=1 and modulecode='recommend' and  h.JingQuCode='|JINGQUCODE|'  order by m.showidx desc ]]>
+      </Sql>
+      <HashKey>推荐酒店</HashKey>
+    </HashDataMod>
+
+
+    <HashDataMod>
+      <Sql>
+        <![CDATA[ select * from  Comment where pguid ='|GUID|' ]]>
+      </Sql>
+      <HashKey>评论</HashKey>
+    </HashDataMod>
+
+    
+  </HashDataMods>
+  <MainPageHtml>
+<![CDATA[    |头部|
+
+ <script src="/Plugin/ViewTimes_0_1/ViewTimes_0_1.js" type="text/javascript"></script>   
+
+
+    <div id="nav_son">
+      <span>
+        <a href="/web/hotelorder/orderlist.aspx" class="cxdd">查询我的订单状态</a>
+      </span>当前位置：<a href="/">首页</a> &gt;&nbsp; |TITLE|
+    </div>
+
+    <div id="mainContent">
+      <div id="main">
+        <div class="list_top">
+          <div class="zx_info">
+            <h1>|TITLE|</h1>
+            <h6> 　发布者：管理员　日期：|CREATE_DATE|　浏览量：<span viewtimes_add_guid = '|GUID|'></span></h6>
+            <div class="zx_info_con">
+              |CONTENT|
+            </div>
+          </div>
+        </div>
+
+
+
+<div class="info_box">
+                    <h2>
+                        <span><a href="#">更多</a></span>评论</h2>
+                    <div class="ib_con">
+                        |评论|
+                        
+                        <table border="0" cellspacing="0" cellpadding="4" width="100%">
+                           
+                            <tr>
+                                <td style="color: #999">
+                                    例如：这产品怎么样呀？
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="464" valign="top">
+                                    <textarea name="txtComments" id="txtComments" style="width: 98%; height: 120px;"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="color: #666;">
+                                    正常工作日9:00－18:00，您的提问会得到及时回答；其它时段可能需等待较长时间
+                                </td>
+                            </tr>
+                            <tr>
+                               
+                                <td>
+                                
+ 
+                                    <input name="button" id="button" type="button" class="btn05"  onclick="return SumitComment()"  value="提交问题" />
+                                </td>
+                            </tr>
+                            
+                        </table>
+                        
+                        
+    <script type="text/javascript" language="javascript">
+      
+
+
+function SumitComment() {
+	var content = $('#txtComments').val();
+	var pguid = '|GUID|';
+	if ($('#txtComments').val() == '') {
+		alert("请填写评论内容！");
+		return false;
+	}
+   
+	$.post("/Wapper/ajaxHandler.aspx?MethodName=SubmitComment&randID=" + escape(new Date()),
+		   {pguid: pguid, content: content, score1:5, score2:5, score3:5, score4:5, creator:"匿名"},
+		  function(json) {	       
+			  callbackSubmitComment(json);
+	  });			
+}
+
+function callbackSubmitComment(res) {
+	alert("已经提交，待管理员审核后，生效！");
+	location.href = location.href;
+}          
+                                            
+    </script>
+    
+    
+    
+    
+                    </div>
+                </div>
+                
+                
+                
+                
+      </div>
+      <div id="side">
+
+
+        <div class="sidebox">
+          <h4>推荐酒店</h4>
+          <div class="sbox_con">
+            <ul>
+              |推荐酒店|
+            </ul>
+          </div>
+        </div>
+        <div class="sidebox">
+
+          <h4>
+            <span>
+              <a href="/html|JQRP_CODE|Sites_listall_1.html" target="_blank">更多</a>
+            </span>景点欣赏
+          </h4>
+          <div class="sbox_con">
+            <ul>
+              |景点欣赏|
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <div class="clearfloat"></div>
+    </div>
+ |底部|
+]]>
+</MainPageHtml>
+  <SavePath>~/html|JQCOD_PATH|sites_|SEQNO|.html</SavePath>
+</PageHtmlMod>
