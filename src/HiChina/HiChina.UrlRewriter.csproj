@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{7DA8B9D2-C58B-4E49-9764-6B10FF3A6682}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>HiChina.UrlRewriter</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Web" />
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HiChina.UrlRewriter.Actions\AddHeaderAction.cs" />
+    <Compile Include="HiChina.UrlRewriter.Actions\ConditionalAction.cs" />
+    <Compile Include="HiChina.UrlRewriter.Actions\ForbiddenAction.cs" />
+    <Compile Include="HiChina.UrlRewriter.Actions\GoneAction.cs" />
+    <Compile Include="HiChina.UrlRewriter.Actions\MethodNotAllowedAction.cs" />
+    <Compile Include="HiChina.UrlRewriter.Actions\NotFoundAction.cs" />
+    <Compile Include="HiChina.UrlRewriter.Actions\NotImplementedAction.cs" />
+    <Compile Include="HiChina.UrlRewriter.Actions\RedirectAction.cs" />
+    <Compile Include="HiChina.UrlRewriter.Actions\RewriteAction.cs" />
+    <Compile Include="HiChina.UrlRewriter.Actions\SetCookieAction.cs" />
+    <Compile Include="HiChina.UrlRewriter.Actions\SetLocationAction.cs" />
+    <Compile Include="HiChina.UrlRewriter.Actions\SetPropertyAction.cs" />
+    <Compile Include="HiChina.UrlRewriter.Actions\SetStatusAction.cs" />
+    <Compile Include="HiChina.UrlRewriter.Conditions\AddressCondition.cs" />
+    <Compile Include="HiChina.UrlRewriter.Conditions\ExistsCondition.cs" />
+    <Compile Include="HiChina.UrlRewriter.Conditions\MatchCondition.cs" />
+    <Compile Include="HiChina.UrlRewriter.Conditions\MethodCondition.cs" />
+    <Compile Include="HiChina.UrlRewriter.Conditions\NegativeCondition.cs" />
+    <Compile Include="HiChina.UrlRewriter.Conditions\PropertyMatchCondition.cs" />
+    <Compile Include="HiChina.UrlRewriter.Conditions\UrlMatchCondition.cs" />
+    <Compile Include="HiChina.UrlRewriter.Configuration\ActionParserFactory.cs" />
+    <Compile Include="HiChina.UrlRewriter.Configuration\ConditionParserPipeline.cs" />
+    <Compile Include="HiChina.UrlRewriter.Configuration\RewriterConfiguration.cs" />
+    <Compile Include="HiChina.UrlRewriter.Configuration\RewriterConfigurationReader.cs" />
+    <Compile Include="HiChina.UrlRewriter.Configuration\RewriterConfigurationSectionHandler.cs" />
+    <Compile Include="HiChina.UrlRewriter.Configuration\TransformFactory.cs" />
+    <Compile Include="HiChina.UrlRewriter.Errors\DefaultErrorHandler.cs" />
+    <Compile Include="HiChina.UrlRewriter.Logging\DebugLogger.cs" />
+    <Compile Include="HiChina.UrlRewriter.Logging\IRewriteLogger.cs" />
+    <Compile Include="HiChina.UrlRewriter.Logging\NullLogger.cs" />
+    <Compile Include="HiChina.UrlRewriter.Parsers\AddHeaderActionParser.cs" />
+    <Compile Include="HiChina.UrlRewriter.Parsers\AddressConditionParser.cs" />
+    <Compile Include="HiChina.UrlRewriter.Parsers\ExistsConditionParser.cs" />
+    <Compile Include="HiChina.UrlRewriter.Parsers\ForbiddenActionParser.cs" />
+    <Compile Include="HiChina.UrlRewriter.Parsers\GoneActionParser.cs" />
+    <Compile Include="HiChina.UrlRewriter.Parsers\HeaderMatchConditionParser.cs" />
+    <Compile Include="HiChina.UrlRewriter.Parsers\IfConditionActionParser.cs" />
+    <Compile Include="HiChina.UrlRewriter.Parsers\MethodConditionParser.cs" />
+    <Compile Include="HiChina.UrlRewriter.Parsers\NotAllowedActionParser.cs" />
+    <Compile Include="HiChina.UrlRewriter.Parsers\NotFoundActionParser.cs" />
+    <Compile Include="HiChina.UrlRewriter.Parsers\NotImplementedActionParser.cs" />
+    <Compile Include="HiChina.UrlRewriter.Parsers\PropertyMatchConditionParser.cs" />
+    <Compile Include="HiChina.UrlRewriter.Parsers\RedirectActionParser.cs" />
+    <Compile Include="HiChina.UrlRewriter.Parsers\RewriteActionParser.cs" />
+    <Compile Include="HiChina.UrlRewriter.Parsers\RewriteActionParserBase.cs" />
+    <Compile Include="HiChina.UrlRewriter.Parsers\SetCookieActionParser.cs" />
+    <Compile Include="HiChina.UrlRewriter.Parsers\SetPropertyActionParser.cs" />
+    <Compile Include="HiChina.UrlRewriter.Parsers\SetStatusActionParser.cs" />
+    <Compile Include="HiChina.UrlRewriter.Parsers\UnlessConditionActionParser.cs" />
+    <Compile Include="HiChina.UrlRewriter.Parsers\UrlMatchConditionParser.cs" />
+    <Compile Include="HiChina.UrlRewriter.Transforms\Base64DecodeTransform.cs" />
+    <Compile Include="HiChina.UrlRewriter.Transforms\Base64Transform.cs" />
+    <Compile Include="HiChina.UrlRewriter.Transforms\DecodeTransform.cs" />
+    <Compile Include="HiChina.UrlRewriter.Transforms\EncodeTransform.cs" />
+    <Compile Include="HiChina.UrlRewriter.Transforms\LowerTransform.cs" />
+    <Compile Include="HiChina.UrlRewriter.Transforms\StaticMappingTransform.cs" />
+    <Compile Include="HiChina.UrlRewriter.Transforms\UpperTransform.cs" />
+    <Compile Include="HiChina.UrlRewriter.Utilities\Constants.cs" />
+    <Compile Include="HiChina.UrlRewriter.Utilities\HttpContextFacade.cs" />
+    <Compile Include="HiChina.UrlRewriter.Utilities\IContextFacade.cs" />
+    <Compile Include="HiChina.UrlRewriter.Utilities\IPRange.cs" />
+    <Compile Include="HiChina.UrlRewriter.Utilities\MapPath.cs" />
+    <Compile Include="HiChina.UrlRewriter.Utilities\Message.cs" />
+    <Compile Include="HiChina.UrlRewriter.Utilities\MessageProvider.cs" />
+    <Compile Include="HiChina.UrlRewriter.Utilities\TypeHelper.cs" />
+    <Compile Include="HiChina.UrlRewriter\Form.cs" />
+    <Compile Include="HiChina.UrlRewriter\FormRewriterControlAdapter.cs" />
+    <Compile Include="HiChina.UrlRewriter\IRewriteAction.cs" />
+    <Compile Include="HiChina.UrlRewriter\IRewriteActionParser.cs" />
+    <Compile Include="HiChina.UrlRewriter\IRewriteCondition.cs" />
+    <Compile Include="HiChina.UrlRewriter\IRewriteConditionParser.cs" />
+    <Compile Include="HiChina.UrlRewriter\IRewriteErrorHandler.cs" />
+    <Compile Include="HiChina.UrlRewriter\IRewriteTransform.cs" />
+    <Compile Include="HiChina.UrlRewriter\RewriteContext.cs" />
+    <Compile Include="HiChina.UrlRewriter\RewriteFormHtmlTextWriter.cs" />
+    <Compile Include="HiChina.UrlRewriter\RewriteProcessing.cs" />
+    <Compile Include="HiChina.UrlRewriter\RewriterEngine.cs" />
+    <Compile Include="HiChina.UrlRewriter\RewriterHttpModule.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HiChina.UrlRewriter\Messages.resources" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
