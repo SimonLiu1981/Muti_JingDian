@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ajaxSubmit.aspx.cs" Inherits="dx177.WebUI.admin.ajaxSubmit" %>

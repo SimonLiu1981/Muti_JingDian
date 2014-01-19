@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<NavMenu>
+	<TopMenu  Text="系统管理" ID="1"  Defualt="true"  BackGroupClass="nw" NavigateUrl="~/admin/Frame/leftmenu.aspx">
+    <Menus Text="评论管理" ID="16">
+      <MenuItem CID="1" Text="评论列表"   NavigateUrl="~/admin/CommentMgnt/sumarylist.aspx"/>
+    </Menus>
+    <Menus Text="图片管理" ID="0">
+			<MenuItem  CID="1" Text="图片列表"  NavigateUrl="~/admin/ImgMgnt/List.aspx"  />
+		</Menus>
+		<Menus Text="饭店管理" ID="1">
+			<MenuItem  CID="1" Text="饭店列表"  NavigateUrl="~/admin/RestaurantMgnt/List.aspx"  />
+		</Menus>
+
+		<Menus Text="酒店管理" ID="2">
+			<MenuItem  CID="1" Text="酒店列表"  NavigateUrl="~/admin/HotelMgnt/HotelList.aspx"  />
+		</Menus>
+		<Menus Text="租车管理" ID="3">
+			<MenuItem  CID="1" Text="租车列表"  NavigateUrl="~/admin/HireCarMgnt/List.aspx"  />
+		</Menus>
+
+		<Menus Text="店铺管理" ID="4">
+			<MenuItem  CID="1" Text="店铺列表"  NavigateUrl="~/admin/ShopMgnt/ShopList.aspx"  />
+		</Menus>
+
+		<Menus Text="产品管理" ID="7">
+			<MenuItem  CID="1" Text="产品列表"  NavigateUrl="~/admin/productMgnt/Productlist.aspx"  />
+			<MenuItem  CID="2" Text="产品类型"  NavigateUrl="~/admin/productMgnt/productType.aspx"  />
+		</Menus> 
+		<Menus Text="模块管理" ID="5">
+			<MenuItem  CID="2" Text="模块类型管理"  NavigateUrl="~/admin/ModuleMgnt/ModuleTypeList.aspx"  />
+			<MenuItem  CID="1" Text="模块管理"  NavigateUrl="~/admin/ModuleMgnt/ModuleList.aspx"  />
+		</Menus>
+
+
+		<Menus Text="用户管理" ID="6">
+			<MenuItem  CID="1" Text="用户管理"  NavigateUrl="~/admin/UserMgnt/WapUserList.aspx"  />
+		</Menus>
+
+		<Menus Text="邮件设置" ID="8">
+			<MenuItem  CID="1" Text="邮件设置"  NavigateUrl="~/admin/SendMail/SettingSendmail.aspx"  />
+		</Menus>
+		<Menus Text="公告设置" ID="10">
+			<MenuItem  CID="1" Text="邮件设置"  NavigateUrl="~/admin/sys/notesPage.aspx"  />
+		</Menus>
+		<Menus Text="系统设置" ID="11">
+			<MenuItem  CID="1" Text="系统设置"  NavigateUrl="~/admin/sys/sysMapcodeList.aspx"  />
+			<MenuItem  CID="2" Text="景区区域"  NavigateUrl="~/admin/JingQuMgnt/AreaList.aspx"  />
+			<MenuItem  CID="3" Text="修改密码"  NavigateUrl="~/admin/UserMgnt/PassWordManager.aspx"  />
+		</Menus>
+	</TopMenu>
+
+
+	<TopMenu Text="内容管理" ID="2"  BackGroupClass="cen" AdminType="0" NavigateUrl="~/admin/Frame/leftmenu.aspx">
+		<Menus Text="问题管理" ID="0">
+			<MenuItem CID="0" Text="问题列表"   NavigateUrl="~/admin/QuestionMgnt/list.aspx"/>
+		</Menus>
+
+		
+		<Menus Text="内容管理" ID="3">
+			
+			<MenuItem CID="0" Text="内容列表"   NavigateUrl="~/admin/NewsMgnt/NewsList.aspx"/>
+		</Menus>
+		<Menus Text="文章管理" ID="4">
+			<MenuItem CID="2" Text="文章类型"   NavigateUrl="~/admin/NewsMgnt/BusIssueTypeList.aspx"/>
+			<MenuItem CID="1" Text="文章列表"   NavigateUrl="~/admin/NewsMgnt/BusIssueInfoList.aspx"/>
+		</Menus>
+		<Menus Text="景点管理" ID="5">
+			<MenuItem CID="1" Text="景点列表"   NavigateUrl="~/admin/SiteMgnt/SiteList.aspx"/>
+			<MenuItem CID="2" Text="景点类型"   NavigateUrl="~/admin/SiteMgnt/SiteTypeTree.aspx"/>
+		</Menus>
+		<Menus Text="链接管理" ID="6">
+			<MenuItem CID="1" Text="链接类型"   NavigateUrl="~/admin/sys/sysMapcodeList.aspx?type=Friendlink"/>
+			<MenuItem CID="2" Text="链接列表"   NavigateUrl="~/admin/FriendLinkMgnt/FriendLinkList.aspx"/>
+		</Menus>
+	</TopMenu>
+
+	<TopMenu Text="酒店订单" ID="6"  BackGroupClass="ne" AdminType="0" NavigateUrl="~/admin/Frame/leftmenu.aspx">
+		<Menus Text="订单管理" ID="0">
+			<MenuItem CID="0" Text="订单列表"   NavigateUrl="~/admin/HotelMgnt/orderList.aspx"/>
+		</Menus>
+		<Menus Text="产品订单" ID="1">
+			<MenuItem CID="1" Text="订单列表"   NavigateUrl="~/admin/Order/orderlist.aspx"/>
+		</Menus>
+
+
+		<Menus Text="页面生成" ID="3">
+			<MenuItem CID="3" Text="页面生成"   NavigateUrl="~/admin/BuildMgnt/BuildPage.aspx"/>
+		</Menus>
+	</TopMenu>
+
+</NavMenu>
+

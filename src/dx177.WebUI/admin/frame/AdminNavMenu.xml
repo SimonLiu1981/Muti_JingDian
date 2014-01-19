@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<NavMenu>
+	<TopMenu  Text="系统管理" ID="1"  Defualt="true"  BackGroupClass="nw" NavigateUrl="~/admin/Frame/leftmenu.aspx">
+		<Menus Text="系统管理" ID="0">
+			<MenuItem CID="5" Text="问题类型"   NavigateUrl="~/admin/QuestionMgnt/QsttypeTree.aspx"/>
+      <MenuItem CID="6" Text="内容类型"   NavigateUrl="~/admin/NewsMgnt/NewsTypeTree.aspx"/>
+      <MenuItem CID="7" Text="景区导航模板"   NavigateUrl="~/admin/SystemDefinitionSetting.aspx?bc=JingQuNavigation"/>
+			<MenuItem  CID="1" Text="系统管理员"  NavigateUrl="~/admin/UserMgnt/JingQuManagerList.aspx"  />
+			<MenuItem  CID="2" Text="景区设置"  NavigateUrl="~/admin/JingQuMgnt/List.aspx"  />
+			<MenuItem  CID="3" Text="修改密码"  NavigateUrl="~/admin/UserMgnt/PassWordManager.aspx"  />
+			<MenuItem CID="4" Text="页面生成"   NavigateUrl="~/admin/BuildMgnt/BuildPage.aspx"/>
+		</Menus>
+	</TopMenu>
+
+</NavMenu>
+
