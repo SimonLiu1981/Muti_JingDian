@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{023B5D4A-9B4F-4BCE-B1A5-80215CEE2D20}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>dx177.DataAccess</RootNamespace>
+    <AssemblyName>dx177.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Access\Bus\AdministratorDao.cs" />
+    <Compile Include="Access\Bus\BaseDictTagDao.cs" />
+    <Compile Include="Access\Bus\BaseDictTypeDao.cs" />
+    <Compile Include="Access\Bus\BusIssueInfoDao.cs" />
+    <Compile Include="Access\Bus\BusIssueTypeDao.cs" />
+    <Compile Include="Access\Bus\CommentDao.cs" />
+    <Compile Include="Access\Bus\CommonAreaDao.cs" />
+    <Compile Include="Access\Bus\CookbookDao.cs" />
+    <Compile Include="Access\Bus\DiggDao.cs" />
+    <Compile Include="Access\Bus\FriendlinkDao.cs" />
+    <Compile Include="Access\Bus\HirecarDao.cs" />
+    <Compile Include="Access\Bus\HotelDao.cs" />
+    <Compile Include="Access\Bus\HotelorderDao.cs" />
+    <Compile Include="Access\Bus\JingquAreaDao.cs" />
+    <Compile Include="Access\Bus\JingqusDao.cs" />
+    <Compile Include="Access\Bus\JqingqumanagerDao.cs" />
+    <Compile Include="Access\Bus\LeavemessageDao.cs" />
+    <Compile Include="Access\Bus\ModuleDao.cs" />
+    <Compile Include="Access\Bus\ModuletypeDao.cs" />
+    <Compile Include="Access\Bus\MyhotellistDao.cs" />
+    <Compile Include="Access\Bus\NewsDao.cs" />
+    <Compile Include="Access\Bus\NewstypeDao.cs" />
+    <Compile Include="Access\Bus\OrderApplyDao.cs" />
+    <Compile Include="Access\Bus\OrderApplyItemDao.cs" />
+    <Compile Include="Access\Bus\PicturelistDao.cs" />
+    <Compile Include="Access\Bus\ProductsDao.cs" />
+    <Compile Include="Access\Bus\ProductstypeDao.cs" />
+    <Compile Include="Access\Bus\QsttypeDao.cs" />
+    <Compile Include="Access\Bus\QuestionralationsDao.cs" />
+    <Compile Include="Access\Bus\QuestionsDao.cs" />
+    <Compile Include="Access\Bus\ReplyquestionDao.cs" />
+    <Compile Include="Access\Bus\RestaurantDao.cs" />
+    <Compile Include="Access\Bus\ResuserDao.cs" />
+    <Compile Include="Access\Bus\RoomDao.cs" />
+    <Compile Include="Access\Bus\RoompriceDao.cs" />
+    <Compile Include="Access\Bus\ShopDao.cs" />
+    <Compile Include="Access\Bus\SitesDao.cs" />
+    <Compile Include="Access\Bus\SitetypeDao.cs" />
+    <Compile Include="Access\Bus\SumarycommentDao.cs" />
+    <Compile Include="Access\Bus\SyscodemapDao.cs" />
+    <Compile Include="Access\Bus\UseraddressinfoDao.cs" />
+    <Compile Include="Access\Bus\UsersDao.cs" />
+    <Compile Include="Access\Bus\WeibotalkDao.cs" />
+    <Compile Include="Access\Bus\WeibotalkrelationsDao.cs" />
+    <Compile Include="Access\OleDbHelper.cs" />
+    <Compile Include="Access\DBTool.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dx177.Model\dx177.Model.csproj">
+      <Project>{5D6F9B06-FDA4-4F87-8328-BA82FB3C52DB}</Project>
+      <Name>dx177.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

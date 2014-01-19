@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5D6F9B06-FDA4-4F87-8328-BA82FB3C52DB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>dx177.Model</RootNamespace>
+    <AssemblyName>dx177.Model</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppContext.cs" />
+    <Compile Include="BaseModel.cs" />
+    <Compile Include="Bus\Administrator.cs" />
+    <Compile Include="Bus\BaseDictTag.cs" />
+    <Compile Include="Bus\BaseDictType.cs" />
+    <Compile Include="Bus\BusIssueInfo.cs" />
+    <Compile Include="Bus\Comment.cs" />
+    <Compile Include="Bus\Cookbook.cs" />
+    <Compile Include="Bus\Digg.cs" />
+    <Compile Include="Bus\Friendlink.cs" />
+    <Compile Include="Bus\Hirecar.cs" />
+    <Compile Include="Bus\Hotel.cs" />
+    <Compile Include="Bus\Hotelorder.cs" />
+    <Compile Include="Bus\Leavemessage.cs" />
+    <Compile Include="Bus\MailSetting.cs" />
+    <Compile Include="Bus\Module.cs" />
+    <Compile Include="Bus\Moduletype.cs" />
+    <Compile Include="Bus\Myhotellist.cs" />
+    <Compile Include="Bus\News.cs" />
+    <Compile Include="Bus\Newstype.cs" />
+    <Compile Include="Bus\notes.cs" />
+    <Compile Include="Bus\OrderApply.cs" />
+    <Compile Include="Bus\OrderApplyItem.cs" />
+    <Compile Include="Bus\PageKeyWord.cs" />
+    <Compile Include="Bus\Picturelist.cs" />
+    <Compile Include="Bus\Products.cs" />
+    <Compile Include="Bus\Productstype.cs" />
+    <Compile Include="Bus\QueryO\CommentQuery.cs" />
+    <Compile Include="Bus\QueryO\CommentQuery1.cs" />
+    <Compile Include="Bus\QueryO\HireCarQuery.cs" />
+    <Compile Include="Bus\QueryO\HotelOrderQuery.cs" />
+    <Compile Include="Bus\QueryO\HotelQuery.cs" />
+    <Compile Include="Bus\QueryO\ModuleQuery.cs" />
+    <Compile Include="Bus\QueryO\PicturelistQuery.cs" />
+    <Compile Include="Bus\QueryO\QuestionsQuery.cs" />
+    <Compile Include="Bus\QueryO\RestaurantQuery.cs" />
+    <Compile Include="Bus\QueryO\RoomQuery.cs" />
+    <Compile Include="Bus\QueryO\ShopQuery.cs" />
+    <Compile Include="Bus\Questions.cs" />
+    <Compile Include="Bus\Replyquestion.cs" />
+    <Compile Include="Bus\Restaurant.cs" />
+    <Compile Include="Bus\Resuser.cs" />
+    <Compile Include="Bus\Room.cs" />
+    <Compile Include="Bus\SendMailhotelorder.cs" />
+    <Compile Include="Bus\Shop.cs" />
+    <Compile Include="Bus\ShoppingCarEntriy.cs" />
+    <Compile Include="Bus\Sites.cs" />
+    <Compile Include="Bus\Sitetype.cs" />
+    <Compile Include="Bus\Sumarycomment.cs" />
+    <Compile Include="Bus\Syscodemap.cs" />
+    <Compile Include="Bus\Useraddressinfo.cs" />
+    <Compile Include="Bus\Users.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dx177.FrameWork\dx177.FrameWork.csproj">
+      <Project>{A7A558BC-56B0-40C2-9496-95ECBF099E40}</Project>
+      <Name>dx177.FrameWork</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bus\BusIssueType.cs" />
+    <Compile Include="Bus\CommonArea.cs" />
+    <Compile Include="Bus\JingquArea.cs" />
+    <Compile Include="Bus\Jingqus.cs" />
+    <Compile Include="Bus\Jqingqumanager.cs" />
+    <Compile Include="Bus\Qsttype.cs" />
+    <Compile Include="Bus\Questionralations.cs" />
+    <Compile Include="Bus\Roomprice.cs" />
+    <Compile Include="Bus\SystemDefinition.cs" />
+    <Compile Include="Bus\Weibotalk.cs" />
+    <Compile Include="Bus\Weibotalkrelations.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="hds0040800_db" Class="DBContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=hds-004.hichina.com;Initial Catalog=hds0040800_db;Persist Security Info=False;User ID=hds0040800" SettingsObjectName="dx177.Business.Properties.Settings" SettingsPropertyName="DataAccessQuickStart" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Questions" Member="Questions1">
+    <Type Name="Questions1">
+      <Column Name="Seqno" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GUID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="QType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Content" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CREATOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ShowIdx" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ViewTimes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Owner" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Siteid" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Cityid" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="JingQuCode" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QstType" Member="QstType1">
+    <Type Name="QstType1">
+      <Column Name="Seqno" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GUID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PGUID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ShortContent" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Content" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CREATOR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Laste_update_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Laste_update_By" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="JingQuCode" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

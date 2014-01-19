@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C3216604-8DDF-43DF-B508-168FADE5F8AA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>dx177.Business</RootNamespace>
+    <AssemblyName>dx177.Business</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MutiPictureUpload, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External-Bin\MutiPictureUpload.dll</HintPath>
+    </Reference>
+    <Reference Include="SupportOppose.WebUI, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External-Bin\SupportOppose.WebUI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseBLL.cs" />
+    <Compile Include="Bus\AdministratorBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bus\BaseDictTagBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bus\BaseDictTypeBLL.cs" />
+    <Compile Include="Bus\BuildPageBLL.cs" />
+    <Compile Include="Bus\BusIssueInfoBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bus\CommentBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bus\CommonAreaBLL.cs" />
+    <Compile Include="Bus\CommonBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bus\CookbookBLL.cs" />
+    <Compile Include="Bus\JingquBLL.cs" />
+    <Compile Include="Bus\HotelorderBLL.cs" />
+    <Compile Include="Bus\JingquAreaBLL.cs" />
+    <Compile Include="Bus\LeavemessageBLL.cs" />
+    <Compile Include="Bus\ModuleBLL.cs" />
+    <Compile Include="Bus\ModuletypeBLL.cs" />
+    <Compile Include="Bus\MyhotellistBLL.cs" />
+    <Compile Include="Bus\NewsBLL.cs" />
+    <Compile Include="Bus\NewstypeBLL.cs" />
+    <Compile Include="Bus\OrderApplyBLL.cs" />
+    <Compile Include="Bus\OrderApplyItemBLL.cs" />
+    <Compile Include="Bus\ProductsBLL.cs" />
+    <Compile Include="Bus\ProductstypeBLL.cs" />
+    <Compile Include="Bus\QsttypeBLL.cs" />
+    <Compile Include="Bus\QuestionralationsBLL.cs" />
+    <Compile Include="Bus\QuestionsBLL.cs" />
+    <Compile Include="Bus\ReplyquestionBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bus\RestaurantBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bus\ResuserBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bus\RoomBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bus\RoompriceBLL.cs" />
+    <Compile Include="Bus\SendMailBLL.cs" />
+    <Compile Include="Bus\SerialNumberBLL.cs" />
+    <Compile Include="Bus\ShopBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bus\DiggBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bus\FriendlinkBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bus\HirecarBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bus\HotelBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bus\PicturelistBLL.cs" />
+    <Compile Include="Bus\SitesBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bus\SitetypeBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bus\SumarycommentBLL.cs" />
+    <Compile Include="Bus\SystemDefinitionBLL.cs" />
+    <Compile Include="Bus\UploadPicturesBLL.cs" />
+    <Compile Include="Bus\UsersBLL.cs" />
+    <Compile Include="Bus\BusIssueTypeBLL.cs" />
+    <Compile Include="Bus\JqingqumanagerBLL.cs" />
+    <Compile Include="DBContext.cs">
+      <DependentUpon>DBContext.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DBContext.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBContext.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DictBus\CacheData.cs" />
+    <Compile Include="DictBus\Dictionary.cs" />
+    <Compile Include="DictBus\SyscodemapBLL.cs" />
+    <Compile Include="DictBus\Tag.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dx177.DataAccess\dx177.DataAccess.csproj">
+      <Project>{023B5D4A-9B4F-4BCE-B1A5-80215CEE2D20}</Project>
+      <Name>dx177.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\dx177.FrameWork\dx177.FrameWork.csproj">
+      <Project>{A7A558BC-56B0-40C2-9496-95ECBF099E40}</Project>
+      <Name>dx177.FrameWork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\dx177.Model\dx177.Model.csproj">
+      <Project>{5D6F9B06-FDA4-4F87-8328-BA82FB3C52DB}</Project>
+      <Name>dx177.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\dx177_building\dx177_building.csproj">
+      <Project>{BDCCDD74-59BD-405F-A3ED-7842DA92C42E}</Project>
+      <Name>dx177_building</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DBContext.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DBContext.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DBContext.dbml.layout">
+      <DependentUpon>DBContext.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
