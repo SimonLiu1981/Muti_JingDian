@@ -1,0 +1,10 @@
+
+create table Temp_import_question(
+	Seqno int not null identity,
+	Title nvarchar(4000) not null,
+	pContent text,
+	BestReply text,
+	Reply1 text,
+	Reply2 text
+)
+go
