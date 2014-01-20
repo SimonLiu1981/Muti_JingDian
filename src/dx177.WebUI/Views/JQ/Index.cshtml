@@ -342,7 +342,7 @@
             </div>
         </div>
 
-        @if(ViewBag.Hotels.Count > 0)
+@*        @if(ViewBag.Hotels.Count > 0)
         {
         <div class="info_box" id="ajaxbox">
             <div class="box_tit">
@@ -365,7 +365,7 @@
             </div>
         </div>
         }
- 
+ *@
 
 
         <script type="text/javascript" src="/web/js/jquery.tools.min.js"></script>
@@ -435,10 +435,10 @@
                 {                    
                 <div class="list_box1 " style="border-bottom:1px dotted #ccc;">
                     <div class="lb_pic">
-                        <img border="0" src="http://www.youcod.com@item.Logo" alt="@item.Title" width="100" height="80">
+                        <img border="0" src="@(item.Logo)" alt="@item.Title" width="100" height="80">
                     </div>
                     <div class="lb_con">
-                        <h3><a href="/JQ_xqs/Sites/324">@(item.Title)简介</a></h3>
+                        <h3><a href="/JQ_@(ViewBag.JQ)/Sites/@(item.Seqno)">@(item.Title)简介</a></h3>
                         <dl>
                             @Html.Raw(item.Shortcontent)
                         </dl>
@@ -496,7 +496,7 @@
         </div>
         }
 
-        <div class="sidebox">
+      @*  <div class="sidebox">
             <h4>
                 <span></span>实用信息
             </h4>
@@ -510,34 +510,44 @@
 
                 </ul>
             </div>
-        </div>
-
+        </div>*@
+        @if(ViewBag.LYGL.Count > 0)
+        {
         <div class="side_zx">
             <h4>
                 <span>
-                    <a href="/JQ_nxml/news?typeCode=lygl">更多</a>
-                </span>南雄梅岭旅游攻略
+                    <a href="/JQ_@(ViewBag.JQ)/news?typeCode=lygl">更多</a>
+                </span>@(ViewBag.Title)旅游攻略
             </h4>
             <ul>
+                 @foreach (var item in ViewBag.LYGL)
+                 {
+                      <li>
+                        <a href='/JQ_@item.JingQuCode/news/@item.Seqno' title='@item.Title'>@item.Title</a>
+                    </li>
+                 }
             </ul>
         </div>
-
+        }
+            
+        @if(ViewBag.LatestNews.Count > 0)
+        {
         <div class="sidebox">
             <h4>
-                <span></span>南雄梅岭最近更新
+                <span></span>@(ViewBag.Title)最近更新
             </h4>
             <div class="sbox_con">
-                <ul>
-
-
+                <ul> 
+                    @foreach (var item in ViewBag.LatestNews)
+                    {
                     <li>
-
-                        <a href='/JQ_nxml/questions/320' title='珠玑古巷怎么去梅岭？'>珠玑古巷怎么去梅岭？</a>
+                        <a href='/JQ_@item.JingQuCode/news/@item.Seqno' title='@item.Title'>@item.Title</a>
                     </li>
-
+                    }
                 </ul>
             </div>
         </div>
+        }
     </div>
     <div class="clearfloat">
     </div>

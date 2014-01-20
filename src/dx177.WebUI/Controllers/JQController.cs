@@ -35,6 +35,7 @@ namespace dx177.WebUI.Controllers
             ViewBag.Questions = (from t in db.QstType1
                                  join ccc in db.Questions1 on t.GUID equals ccc.QType
                                  orderby ccc.Seqno descending
+                                 where ccc.JingQuCode.Equals(jingqucode)
                                  select new QuestionWithTypeName
                                  {
                                      Seqno = ccc.Seqno,
@@ -43,6 +44,19 @@ namespace dx177.WebUI.Controllers
                                      Title = ccc.Title,
                                      CreateDate = ccc.CREATE_DATE.Value
                                  }).Take(10).ToList();
+
+
+            ViewBag.LatestNews = (from o in db.News1
+                                  orderby o.Seqno descending
+                                  where o.JingQuCode.Equals(jingqucode)
+                                  select o).Take(6).ToList();
+
+            ViewBag.LYGL = (from o in db.News1
+                            orderby o.Seqno descending
+                            join t in db.NewsType1 on o.TGUID equals t.GUID
+                            where o.JingQuCode.Equals(jingqucode) && t.Code.Equals("LYGL")
+                            select o).Take(6).ToList();
+
             return View();
         }
 

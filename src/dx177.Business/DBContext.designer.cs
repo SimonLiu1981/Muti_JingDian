@@ -77,6 +77,22 @@ namespace dx177.Business
 				return this.GetTable<QstType1>();
 			}
 		}
+		
+		public System.Data.Linq.Table<News1> News1
+		{
+			get
+			{
+				return this.GetTable<News1>();
+			}
+		}
+		
+		public System.Data.Linq.Table<NewsType1> NewsType1
+		{
+			get
+			{
+				return this.GetTable<NewsType1>();
+			}
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Questions")]
@@ -369,6 +385,600 @@ namespace dx177.Business
 		private string _JingQuCode;
 		
 		public QstType1()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Seqno", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
+		public int Seqno
+		{
+			get
+			{
+				return this._Seqno;
+			}
+			set
+			{
+				if ((this._Seqno != value))
+				{
+					this._Seqno = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GUID", DbType="NVarChar(50)")]
+		public string GUID
+		{
+			get
+			{
+				return this._GUID;
+			}
+			set
+			{
+				if ((this._GUID != value))
+				{
+					this._GUID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PGUID", DbType="NVarChar(50)")]
+		public string PGUID
+		{
+			get
+			{
+				return this._PGUID;
+			}
+			set
+			{
+				if ((this._PGUID != value))
+				{
+					this._PGUID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(255)")]
+		public string Title
+		{
+			get
+			{
+				return this._Title;
+			}
+			set
+			{
+				if ((this._Title != value))
+				{
+					this._Title = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Code", DbType="NVarChar(50)")]
+		public string Code
+		{
+			get
+			{
+				return this._Code;
+			}
+			set
+			{
+				if ((this._Code != value))
+				{
+					this._Code = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ShortContent", DbType="NVarChar(50)")]
+		public string ShortContent
+		{
+			get
+			{
+				return this._ShortContent;
+			}
+			set
+			{
+				if ((this._ShortContent != value))
+				{
+					this._ShortContent = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Content", DbType="Text", UpdateCheck=UpdateCheck.Never)]
+		public string Content
+		{
+			get
+			{
+				return this._Content;
+			}
+			set
+			{
+				if ((this._Content != value))
+				{
+					this._Content = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CREATOR", DbType="NVarChar(50)")]
+		public string CREATOR
+		{
+			get
+			{
+				return this._CREATOR;
+			}
+			set
+			{
+				if ((this._CREATOR != value))
+				{
+					this._CREATOR = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CREATE_DATE", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CREATE_DATE
+		{
+			get
+			{
+				return this._CREATE_DATE;
+			}
+			set
+			{
+				if ((this._CREATE_DATE != value))
+				{
+					this._CREATE_DATE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Laste_update_date", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Laste_update_date
+		{
+			get
+			{
+				return this._Laste_update_date;
+			}
+			set
+			{
+				if ((this._Laste_update_date != value))
+				{
+					this._Laste_update_date = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Laste_update_By", DbType="NVarChar(50)")]
+		public string Laste_update_By
+		{
+			get
+			{
+				return this._Laste_update_By;
+			}
+			set
+			{
+				if ((this._Laste_update_By != value))
+				{
+					this._Laste_update_By = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JingQuCode", DbType="NVarChar(20)")]
+		public string JingQuCode
+		{
+			get
+			{
+				return this._JingQuCode;
+			}
+			set
+			{
+				if ((this._JingQuCode != value))
+				{
+					this._JingQuCode = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.News")]
+	public partial class News1
+	{
+		
+		private int _Seqno;
+		
+		private string _GUID;
+		
+		private string _TGUID;
+		
+		private string _Title;
+		
+		private string _ShortContent;
+		
+		private string _Code;
+		
+		private string _Content;
+		
+		private System.Nullable<int> _ViewTimes;
+		
+		private System.Nullable<System.DateTime> _Laste_update_date;
+		
+		private string _Laste_update_By;
+		
+		private System.Nullable<int> _IsFirst;
+		
+		private System.Nullable<int> _IsHot;
+		
+		private System.Nullable<int> _IsComment;
+		
+		private string _Logo;
+		
+		private string _CREATOR;
+		
+		private System.Nullable<System.DateTime> _CREATE_DATE;
+		
+		private System.Nullable<int> _Good;
+		
+		private System.Nullable<int> _Bad;
+		
+		private System.Nullable<int> _ShowPr;
+		
+		private string _JingQuCode;
+		
+		public News1()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Seqno", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
+		public int Seqno
+		{
+			get
+			{
+				return this._Seqno;
+			}
+			set
+			{
+				if ((this._Seqno != value))
+				{
+					this._Seqno = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GUID", DbType="NVarChar(50)")]
+		public string GUID
+		{
+			get
+			{
+				return this._GUID;
+			}
+			set
+			{
+				if ((this._GUID != value))
+				{
+					this._GUID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TGUID", DbType="NVarChar(50)")]
+		public string TGUID
+		{
+			get
+			{
+				return this._TGUID;
+			}
+			set
+			{
+				if ((this._TGUID != value))
+				{
+					this._TGUID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(255)")]
+		public string Title
+		{
+			get
+			{
+				return this._Title;
+			}
+			set
+			{
+				if ((this._Title != value))
+				{
+					this._Title = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ShortContent", DbType="NVarChar(1050)")]
+		public string ShortContent
+		{
+			get
+			{
+				return this._ShortContent;
+			}
+			set
+			{
+				if ((this._ShortContent != value))
+				{
+					this._ShortContent = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Code", DbType="NVarChar(50)")]
+		public string Code
+		{
+			get
+			{
+				return this._Code;
+			}
+			set
+			{
+				if ((this._Code != value))
+				{
+					this._Code = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Content", DbType="Text", UpdateCheck=UpdateCheck.Never)]
+		public string Content
+		{
+			get
+			{
+				return this._Content;
+			}
+			set
+			{
+				if ((this._Content != value))
+				{
+					this._Content = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ViewTimes", DbType="Int")]
+		public System.Nullable<int> ViewTimes
+		{
+			get
+			{
+				return this._ViewTimes;
+			}
+			set
+			{
+				if ((this._ViewTimes != value))
+				{
+					this._ViewTimes = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Laste_update_date", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Laste_update_date
+		{
+			get
+			{
+				return this._Laste_update_date;
+			}
+			set
+			{
+				if ((this._Laste_update_date != value))
+				{
+					this._Laste_update_date = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Laste_update_By", DbType="NVarChar(50)")]
+		public string Laste_update_By
+		{
+			get
+			{
+				return this._Laste_update_By;
+			}
+			set
+			{
+				if ((this._Laste_update_By != value))
+				{
+					this._Laste_update_By = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsFirst", DbType="Int")]
+		public System.Nullable<int> IsFirst
+		{
+			get
+			{
+				return this._IsFirst;
+			}
+			set
+			{
+				if ((this._IsFirst != value))
+				{
+					this._IsFirst = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsHot", DbType="Int")]
+		public System.Nullable<int> IsHot
+		{
+			get
+			{
+				return this._IsHot;
+			}
+			set
+			{
+				if ((this._IsHot != value))
+				{
+					this._IsHot = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsComment", DbType="Int")]
+		public System.Nullable<int> IsComment
+		{
+			get
+			{
+				return this._IsComment;
+			}
+			set
+			{
+				if ((this._IsComment != value))
+				{
+					this._IsComment = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Logo", DbType="NVarChar(255)")]
+		public string Logo
+		{
+			get
+			{
+				return this._Logo;
+			}
+			set
+			{
+				if ((this._Logo != value))
+				{
+					this._Logo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CREATOR", DbType="NVarChar(50)")]
+		public string CREATOR
+		{
+			get
+			{
+				return this._CREATOR;
+			}
+			set
+			{
+				if ((this._CREATOR != value))
+				{
+					this._CREATOR = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CREATE_DATE", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CREATE_DATE
+		{
+			get
+			{
+				return this._CREATE_DATE;
+			}
+			set
+			{
+				if ((this._CREATE_DATE != value))
+				{
+					this._CREATE_DATE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Good", DbType="Int")]
+		public System.Nullable<int> Good
+		{
+			get
+			{
+				return this._Good;
+			}
+			set
+			{
+				if ((this._Good != value))
+				{
+					this._Good = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Bad", DbType="Int")]
+		public System.Nullable<int> Bad
+		{
+			get
+			{
+				return this._Bad;
+			}
+			set
+			{
+				if ((this._Bad != value))
+				{
+					this._Bad = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ShowPr", DbType="Int")]
+		public System.Nullable<int> ShowPr
+		{
+			get
+			{
+				return this._ShowPr;
+			}
+			set
+			{
+				if ((this._ShowPr != value))
+				{
+					this._ShowPr = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JingQuCode", DbType="NVarChar(20)")]
+		public string JingQuCode
+		{
+			get
+			{
+				return this._JingQuCode;
+			}
+			set
+			{
+				if ((this._JingQuCode != value))
+				{
+					this._JingQuCode = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.NewsType")]
+	public partial class NewsType1
+	{
+		
+		private int _Seqno;
+		
+		private string _GUID;
+		
+		private string _PGUID;
+		
+		private string _Title;
+		
+		private string _Code;
+		
+		private string _ShortContent;
+		
+		private string _Content;
+		
+		private string _CREATOR;
+		
+		private System.Nullable<System.DateTime> _CREATE_DATE;
+		
+		private System.Nullable<System.DateTime> _Laste_update_date;
+		
+		private string _Laste_update_By;
+		
+		private string _JingQuCode;
+		
+		public NewsType1()
 		{
 		}
 		
