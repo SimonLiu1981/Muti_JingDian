@@ -650,6 +650,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\JQController.cs" />
+    <Compile Include="Controllers\WeiBoTalkController.cs" />
     <Compile Include="Control\lyCar.ascx.cs">
       <DependentUpon>lyCar.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1599,6 +1600,9 @@
     <Content Include="web.config">
       <SubType>Designer</SubType>
     </Content>
+    <None Include="XSDs\WeiboTalk.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\frame\FrameTop.aspx" />

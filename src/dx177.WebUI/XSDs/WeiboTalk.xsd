@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="WeiboTalk">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element name="Items">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="JingQuCode" type="xs:string"/>
+							<xs:element name="CreateTime" type="xs:string"/>
+							<xs:element name="Guid" type="xs:string"/>
+							<xs:element name="Talk" type="xs:string"/>
+							<xs:element name="Keyval" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
