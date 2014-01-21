@@ -16,7 +16,7 @@ namespace dx177.WebUI.Controllers
             
         }
 
-        // GET api/weibotalk/5
+        // GET api/weibotalk/5        
         public string Get(int id)
         {
             return "value";
@@ -32,7 +32,7 @@ namespace dx177.WebUI.Controllers
         {
         }
 
-        // DELETE api/weibotalk/5
+        
         public void Delete(int id)
         {
         }
