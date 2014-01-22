@@ -37,7 +37,9 @@ namespace dx177.WebUI.Controllers
                 ent.talk = item.Talk;
                 ent.JinqQuCode = item.JingQuCode;
                 ent.CreateDate = item.CreateTime;
+                ent.Keyval = item.Keyval;
                 listForDB.Add(ent);
+
             }
 
             db.WeiBoTalkDBEntities.InsertAllOnSubmit(listForDB);

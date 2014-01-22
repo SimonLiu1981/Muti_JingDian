@@ -28,6 +28,8 @@
         <exclude name="**.cs"/>
         <exclude name="**.csproj"/>
         <exclude name="**.user"/>
+		<exclude name="bin\**.xml"/>
+		<exclude name="bin\**.pdb"/>		
       </fileset>      
     </copy>
   </target>
