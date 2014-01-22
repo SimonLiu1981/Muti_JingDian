@@ -36,7 +36,7 @@ namespace dx177.Business
     #endregion
 		
 		public DBContextDataContext() : 
-				base(global::dx177.Business.Properties.Settings.Default.DB_MultiAreaConnectionString, mappingSource)
+				base(global::dx177.Business.Properties.Settings.Default.DataAccessQuickStart, mappingSource)
 		{
 			OnCreated();
 		}
