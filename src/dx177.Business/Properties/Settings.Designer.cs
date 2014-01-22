@@ -33,5 +33,15 @@ namespace dx177.Business.Properties {
                 return ((string)(this["DataAccessQuickStart"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=DB_MultiArea;Integrated Security=True")]
+        public string DB_MultiAreaConnectionString {
+            get {
+                return ((string)(this["DB_MultiAreaConnectionString"]));
+            }
+        }
     }
 }

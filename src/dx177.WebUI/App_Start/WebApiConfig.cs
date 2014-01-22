@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Net.Http.Formatting;
 
 namespace dx177.WebUI
 {
@@ -14,6 +15,10 @@ namespace dx177.WebUI
                 routeTemplate: "api/{controller}/{action}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+
+            config.Formatters.JsonFormatter.AddUriPathExtensionMapping("json", "application/json");
+            config.Formatters.XmlFormatter.AddUriPathExtensionMapping("xml", "text/xml");
         }
     }
 }

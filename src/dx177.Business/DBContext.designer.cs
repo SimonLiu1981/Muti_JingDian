@@ -22,7 +22,7 @@ namespace dx177.Business
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="hds0040800_db")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="DB_MultiArea")]
 	public partial class DBContextDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -30,10 +30,13 @@ namespace dx177.Business
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
+    partial void InsertWeiBoTalkDBEntity(WeiBoTalkDBEntity instance);
+    partial void UpdateWeiBoTalkDBEntity(WeiBoTalkDBEntity instance);
+    partial void DeleteWeiBoTalkDBEntity(WeiBoTalkDBEntity instance);
     #endregion
 		
 		public DBContextDataContext() : 
-				base(global::dx177.Business.Properties.Settings.Default.DataAccessQuickStart, mappingSource)
+				base(global::dx177.Business.Properties.Settings.Default.DB_MultiAreaConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -91,6 +94,14 @@ namespace dx177.Business
 			get
 			{
 				return this.GetTable<NewsType1>();
+			}
+		}
+		
+		public System.Data.Linq.Table<WeiBoTalkDBEntity> WeiBoTalkDBEntities
+		{
+			get
+			{
+				return this.GetTable<WeiBoTalkDBEntity>();
 			}
 		}
 	}
@@ -1171,6 +1182,188 @@ namespace dx177.Business
 				{
 					this._JingQuCode = value;
 				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.WeiBoTalk")]
+	public partial class WeiBoTalkDBEntity : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _seqno;
+		
+		private string _guid;
+		
+		private string _JinqQuCode;
+		
+		private string _talk;
+		
+		private string _Keyval;
+		
+		private System.Nullable<System.DateTime> _CreateDate;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnseqnoChanging(int value);
+    partial void OnseqnoChanged();
+    partial void OnguidChanging(string value);
+    partial void OnguidChanged();
+    partial void OnJinqQuCodeChanging(string value);
+    partial void OnJinqQuCodeChanged();
+    partial void OntalkChanging(string value);
+    partial void OntalkChanged();
+    partial void OnKeyvalChanging(string value);
+    partial void OnKeyvalChanged();
+    partial void OnCreateDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreateDateChanged();
+    #endregion
+		
+		public WeiBoTalkDBEntity()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_seqno", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int seqno
+		{
+			get
+			{
+				return this._seqno;
+			}
+			set
+			{
+				if ((this._seqno != value))
+				{
+					this.OnseqnoChanging(value);
+					this.SendPropertyChanging();
+					this._seqno = value;
+					this.SendPropertyChanged("seqno");
+					this.OnseqnoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_guid", DbType="NVarChar(50)")]
+		public string guid
+		{
+			get
+			{
+				return this._guid;
+			}
+			set
+			{
+				if ((this._guid != value))
+				{
+					this.OnguidChanging(value);
+					this.SendPropertyChanging();
+					this._guid = value;
+					this.SendPropertyChanged("guid");
+					this.OnguidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JinqQuCode", DbType="NVarChar(50)")]
+		public string JinqQuCode
+		{
+			get
+			{
+				return this._JinqQuCode;
+			}
+			set
+			{
+				if ((this._JinqQuCode != value))
+				{
+					this.OnJinqQuCodeChanging(value);
+					this.SendPropertyChanging();
+					this._JinqQuCode = value;
+					this.SendPropertyChanged("JinqQuCode");
+					this.OnJinqQuCodeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_talk", DbType="NVarChar(1000)")]
+		public string talk
+		{
+			get
+			{
+				return this._talk;
+			}
+			set
+			{
+				if ((this._talk != value))
+				{
+					this.OntalkChanging(value);
+					this.SendPropertyChanging();
+					this._talk = value;
+					this.SendPropertyChanged("talk");
+					this.OntalkChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Keyval", DbType="NVarChar(100)")]
+		public string Keyval
+		{
+			get
+			{
+				return this._Keyval;
+			}
+			set
+			{
+				if ((this._Keyval != value))
+				{
+					this.OnKeyvalChanging(value);
+					this.SendPropertyChanging();
+					this._Keyval = value;
+					this.SendPropertyChanged("Keyval");
+					this.OnKeyvalChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreateDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CreateDate
+		{
+			get
+			{
+				return this._CreateDate;
+			}
+			set
+			{
+				if ((this._CreateDate != value))
+				{
+					this.OnCreateDateChanging(value);
+					this.SendPropertyChanging();
+					this._CreateDate = value;
+					this.SendPropertyChanged("CreateDate");
+					this.OnCreateDateChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}

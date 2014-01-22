@@ -1,46 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web;
+using System.Xml.Serialization;
+using dx177.Model;
+using dx177.Business;
+using dx177.Model.WeiboTalk;
 
 namespace dx177.WebUI.Controllers
 {
     public class WeiBoTalkController : ApiController
     {
-        // GET api/weibotalk
-        public A Get()
+        public WeiBoTalkDBEntity Get()
         {
-            return new A { MyProperty="111" };
-            
+            return new WeiBoTalkDBEntity { guid = "11", CreateDate = DateTime.Now, seqno = 1 };
         }
 
-        // GET api/weibotalk/5        
-        public string Get(int id)
-        {
-            return "value";
-        }
+        [HttpPost]
+        public void Create()
+        {            
+            HttpContextBase context = (HttpContextBase)Request.Properties["MS_HttpContext"];
+            HttpRequestBase request = context.Request;
+            XmlSerializer xs = new XmlSerializer(typeof(WeiboTalkRQ));
+            WeiboTalkRQ rq = xs.Deserialize(request.InputStream) as WeiboTalkRQ;
 
-        // POST api/weibotalk
-        public void Post([FromBody]string value)
-        {
-        }
+            DBContextDataContext db = new DBContextDataContext();
+            List<WeiBoTalkDBEntity> listForDB = new List<WeiBoTalkDBEntity>();
+            foreach (Item item in rq.Items.ItemCollection)
+            {
+                WeiBoTalkDBEntity ent = new WeiBoTalkDBEntity();
+                ent.guid = new Guid().ToString();
+                ent.talk = item.Talk;
+                ent.JinqQuCode = item.JingQuCode;
+                ent.CreateDate = item.CreateTime;
+                listForDB.Add(ent);
+            }
 
-        // PUT api/weibotalk/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
+            db.WeiBoTalkDBEntities.InsertAllOnSubmit(listForDB);
+            db.SubmitChanges(); 
 
-        
-        public void Delete(int id)
-        {
-        }
-    }
-
-    [Serializable]
-    public class A
-    {
-        public string MyProperty { get; set; }
-    }
+        } 
+    }      
 }
