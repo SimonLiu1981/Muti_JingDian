@@ -25,10 +25,9 @@ namespace dx177.WebUI.Controllers
             ViewBag.Pics = PicturelistBLL.GetInstance().GetPicsByGuid(entity.Guid);
             ViewBag.Hotels = Hotel.Dt2Objs(HotelBLL.GetInstance().RecommendHotel(jingqucode));
             ViewBag.JQList = Jingqus.Dt2Objs(JingqusBLL.GetInstance().SearchByConditions(string.Empty,entity.Areaid.ToString()));
-            DBContextDataContext db = new DBContextDataContext();
-           
+            DBContextDataContext db = new DBContextDataContext();            
 
-            ViewBag.QuestionTyps = Qsttype.Dt2Objs(DBTool.ExecuteDataTable(string.Format(@"SELECT *  FROM [dbo].[QstType] t
+            ViewBag.QuestionTyps = Qsttype.Dt2Objs(DBTool.ExecuteDataTable(string.Format(@"SELECT *  FROM QstType t
                                                   where exists (select 1 from Questions q where q.QType = t.[GUID] and q.JingQuCode='{0}')", jingqucode))) ;
 
 
