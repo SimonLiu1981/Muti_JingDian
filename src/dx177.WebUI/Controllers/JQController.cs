@@ -28,7 +28,7 @@ namespace dx177.WebUI.Controllers
             DBContextDataContext db = new DBContextDataContext();
            
 
-            ViewBag.QuestionTyps = Qsttype.Dt2Objs(DBTool.ExecuteDataTable(string.Format(@"SELECT *  FROM [hds0040800_db].[dbo].[QstType] t
+            ViewBag.QuestionTyps = Qsttype.Dt2Objs(DBTool.ExecuteDataTable(string.Format(@"SELECT *  FROM [dbo].[QstType] t
                                                   where exists (select 1 from Questions q where q.QType = t.[GUID] and q.JingQuCode='{0}')", jingqucode))) ;
 
 

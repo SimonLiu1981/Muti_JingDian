@@ -433,7 +433,7 @@
                     <div class="lb_con">
                         <h3><a href="/JQ_@(ViewBag.JQ)/Sites/@(item.Seqno)">@(item.Title)简介</a></h3>
                         <dl>
-                            @dx177.FrameWork.HtmlHelpers.Truncate(dx177.FrameWork.HtmlHelpers.RevmoeHtmlTag(item.Content), 160)
+                            @Html.Raw(dx177.FrameWork.HtmlHelpers.Truncate(dx177.FrameWork.HtmlHelpers.RevmoeHtmlTag(item.Content), 160))
                         </dl>
                     </div>
                 </div>

@@ -1604,9 +1604,6 @@
     <Content Include="web.config">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="XSDs\WeiboTalk.xsd">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\frame\FrameTop.aspx" />
