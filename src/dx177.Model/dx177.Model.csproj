@@ -105,6 +105,7 @@
     <Compile Include="Bus\Useraddressinfo.cs" />
     <Compile Include="Bus\Users.cs" />
     <Compile Include="Contracts\dx177.Model.WeiboTalk.cs" />
+    <Compile Include="ResponseBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\dx177.FrameWork\dx177.FrameWork.csproj">
