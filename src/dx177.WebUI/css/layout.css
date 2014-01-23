@@ -404,6 +404,17 @@ a:hover { color:#f00;}
 .zx_list { padding:0px 18px 12px 18px; border:1px solid #aacbee; border-top:none;}
 .zx_list ul li { height:36px; line-height:36px; border-bottom:1px dotted #ccc; padding-left:18px; background:url(../img/icon4.gif) 3px 16px no-repeat; overflow:hidden; }
 .zx_list ul li span { float:right; color:#f60; padding-right:5px;}
+
+.zx_listweibo { padding:0px 18px 12px 18px; border:1px solid #aacbee; border-top:none;}
+.zx_listweibo ul li {   border-bottom:1px dotted #ccc; padding-left:18px; background:url(../img/icon4.gif) 3px 16px no-repeat; overflow:hidden; }
+.zx_listweibo ul li span { float:right; color:#f60; padding-right:5px;}
+
+
+
+
+
+
+
 .zx_list1 { padding:0px 18px 12px 18px; border:1px solid #aacbee; border-top:none;}
 .zx_list1 ul li { height:28px; line-height:28px; border-bottom:1px dotted #ccc; padding-left:18px; background:url(../img/icon4.gif) 3px 12px no-repeat; overflow:hidden; }
 .zx_list1 ul li span { float:right; color:#f60; padding-right:5px;}
