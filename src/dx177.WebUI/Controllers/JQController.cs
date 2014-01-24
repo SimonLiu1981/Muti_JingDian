@@ -56,6 +56,12 @@ namespace dx177.WebUI.Controllers
                             where o.JingQuCode.Equals(jingqucode) && t.Code.Equals("LYGL")
                             select o).Take(6).ToList();
 
+
+            ViewBag.WeiBo = (from o in db.WeiBoTalkDBEntities
+                             where o.JinqQuCode == jingqucode
+                             orderby o.seqno descending
+                             select o).Take(6).ToList();
+
             return View();
         }
 
