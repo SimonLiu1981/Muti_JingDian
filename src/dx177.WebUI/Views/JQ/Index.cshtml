@@ -441,17 +441,16 @@
             </div>
         </div> 
 
-        @if (ViewBag.WeiBo.Count > 0)
+        @if (ViewBag.WeiBo.Count > 0)  
         {
         <div class="info_box">
             <h2>
-                <span style="float: left;font-size: 14px;font-weight: bold;">西樵山旅游话题</span>
-                <span style="float:right"><a href="/JQ_xqs/questions">更多</a></span>                                                 
+                <span style="float: left;font-size: 14px;font-weight: bold;">@(ViewBag.Title)旅游话题</span>
+                @*<span style="float:right"><a href="/JQ_@(ViewBag.JQ)/weibo">更多</a></span>*@
             </h2>
-            <div class="zx_listweibo">
- 
+            <div class="zx_listweibo"> 
                 <ul>
-                    @foreach (var item in ViewBag.JQList)
+                    @foreach (var item in ViewBag.WeiBo)
                     {
                     <li>@item.talk</li>
                     }

@@ -18,6 +18,16 @@ namespace dx177.WebUI
                url: "{controller}/{action}/{id}",
                defaults: new {action = "Index", id = UrlParameter.Optional }
            );
+
+            routes.MapRoute(
+               name: "JQRouter",
+               url: "jq_{jingqucode}/{controller}/{action}",
+               defaults: new { action = "Index" }
+           );
+
+
+
+
         }
     }
 }
