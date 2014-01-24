@@ -1,0 +1,34 @@
+/****** Object:  Table [dbo].[景点评论明细]    Script Date: 01/23/2014 11:13:32 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[景点评论明细](
+	[PageUrl] [nvarchar](450) NOT NULL,
+	[评论] [text] NULL,
+	[MID] [nvarchar](50) NULL,
+	[Need] [bit] NULL,
+	[同步] [bit] NULL,
+	[Jinqqucode] [nvarchar](20) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+
+/****** Object:  Table [dbo].[景点评论分页]    Script Date: 01/23/2014 11:13:39 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[景点评论分页](
+	[PageUrl] [nvarchar](450) NULL,
+	[标题] [nvarchar](150) NULL,
+	[景点Code] [nvarchar](50) NULL
+) ON [PRIMARY]
+
+GO
+

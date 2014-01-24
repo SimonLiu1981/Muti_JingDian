@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<ConfigurationEntity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceDBConnectionString>H:\编程工具\网页抓取工具\LocoySpider_V7.7_Build20130410.Free\Data\LocoySpider\101\SpiderResult.mdb</SourceDBConnectionString>
+  <TargetDBConnectionString>User ID=sa;pwd=;Initial Catalog=Zhuna_DB; Data Source=.</TargetDBConnectionString>
+  <TargetTableName>景区同步</TargetTableName>
+  <SourceTableName>Content</SourceTableName>
+  <BreakDownColumns>内容;MID</BreakDownColumns>
+  <SplitString>\|\|\|</SplitString>
+  <InstertPrimaryTableTemplate>insert into 景点评论分页 (PageUrl,标题,景点Code) values(@PageUrl,@标题,'dxs')</InstertPrimaryTableTemplate>
+  <InstertSubTableTemplate>insert into 景点评论明细 (PageUrl,景点评论,MID,同步,景区code) values(@PageUrl,@内容,@MID,false,'dxs')</InstertSubTableTemplate>
+  <CheckRowInstertPrimaryTable>false</CheckRowInstertPrimaryTable>
+  <CheckRowInstertSubTable>false</CheckRowInstertSubTable>
+</ConfigurationEntity>
