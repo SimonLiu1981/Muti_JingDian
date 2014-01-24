@@ -29,10 +29,10 @@ namespace AnalyzeCatchTool
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
                 cur++;
-                if (string.IsNullOrWhiteSpace(ce.CheckRowInstertPrimaryTable) || !CheckDuplicate(ce.CheckRowInstertPrimaryTable, dr, ds.Tables[0].Columns, sqlDB))
+                if (string.IsNullOrEmpty(ce.CheckRowInstertPrimaryTable) || !CheckDuplicate(ce.CheckRowInstertPrimaryTable, dr, ds.Tables[0].Columns, sqlDB))
                 {
                     string[] HandlerColumns = null;
-                    if (!string.IsNullOrWhiteSpace(ce.BreakDownColumns))
+                    if (!string.IsNullOrEmpty(ce.BreakDownColumns))
                     {
                         HandlerColumns = ce.BreakDownColumns.Split(';');
                     }
@@ -55,7 +55,7 @@ namespace AnalyzeCatchTool
                     {
                         foreach (string col in HandlerColumns)
                         {
-                            if (!string.IsNullOrWhiteSpace(col) && ds.Tables[0].Columns.Contains(col))
+                            if (!string.IsNullOrEmpty(col) && ds.Tables[0].Columns.Contains(col))
                             {
                                 List<string> lst = new List<string>();
                                 string[] values = Regex.Split(dr[col].ToString(), ce.SplitString);
@@ -81,7 +81,7 @@ namespace AnalyzeCatchTool
                             {
                                 if (insertsql.IndexOf("@" + key) != -1)
                                 {
-                                    if (string.IsNullOrWhiteSpace(gathers[key][ii]))
+                                    if (string.IsNullOrEmpty(gathers[key][ii]))
                                     {
                                         hasValue = false;
                                         break;
@@ -103,7 +103,7 @@ namespace AnalyzeCatchTool
                                 PandingParams(insertsql, dr, ds.Tables[0].Columns, listparam);
                                 PandingParams(ce.CheckRowInstertSubTable, dr, ds.Tables[0].Columns, checkSubDupliateParm);
 
-                                if (!string.IsNullOrWhiteSpace(ce.CheckRowInstertSubTable))
+                                if (!string.IsNullOrEmpty(ce.CheckRowInstertSubTable))
                                 {
                                     if (sqlDB.GetDataSet(ce.CheckRowInstertSubTable, checkSubDupliateParm).Tables[0].Rows.Count > 0)
                                     {

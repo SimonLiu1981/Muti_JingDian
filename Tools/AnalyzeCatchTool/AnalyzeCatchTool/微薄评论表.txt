@@ -1,4 +1,4 @@
-/****** Object:  Table [dbo].[景点评论明细]    Script Date: 01/23/2014 11:13:32 ******/
+/****** Object:  Table [dbo].[景点评论明细]    Script Date: 01/24/2014 21:59:17 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -11,10 +11,13 @@ CREATE TABLE [dbo].[景点评论明细](
 	[MID] [nvarchar](50) NULL,
 	[Need] [bit] NULL,
 	[同步] [bit] NULL,
-	[Jinqqucode] [nvarchar](20) NULL
+	[Jinqqucode] [nvarchar](20) NULL,
+	[KeyVal] [nvarchar](200) NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
 GO
+
+
 
 
 /****** Object:  Table [dbo].[景点评论分页]    Script Date: 01/23/2014 11:13:39 ******/

@@ -19,7 +19,7 @@ namespace AnalyzeCatchTool
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "F:\Dropbox\临时开发\AnalyzeCatchTool\AnalyzeCatchTool\微薄评论接口模板.tt"
+    #line 1 "F:\WorkSpace\GitHub\多景点系统Git\Tools\AnalyzeCatchTool\AnalyzeCatchTool\微薄评论接口模板.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "11.0.0.0")]
     public partial class 微薄评论接口模板 : 微薄评论接口模板Base
     {
@@ -33,34 +33,40 @@ namespace AnalyzeCatchTool
                     "k WeiboTalk.xsd\" xmlns=\"WeiboTalk\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-i" +
                     "nstance\">\r\n\t<Items>\r\n\t\t<Item>\r\n\t\t\t<JingQuCode>");
             
-            #line 11 "F:\Dropbox\临时开发\AnalyzeCatchTool\AnalyzeCatchTool\微薄评论接口模板.tt"
+            #line 11 "F:\WorkSpace\GitHub\多景点系统Git\Tools\AnalyzeCatchTool\AnalyzeCatchTool\微薄评论接口模板.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Data["Jinqqucode"]));
             
             #line default
             #line hidden
             this.Write("</JingQuCode>\r\n\t\t\t<CreateTime>");
             
-            #line 12 "F:\Dropbox\临时开发\AnalyzeCatchTool\AnalyzeCatchTool\微薄评论接口模板.tt"
+            #line 12 "F:\WorkSpace\GitHub\多景点系统Git\Tools\AnalyzeCatchTool\AnalyzeCatchTool\微薄评论接口模板.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ssZ")));
             
             #line default
             #line hidden
             this.Write("</CreateTime>\r\n\t\t\t<Guid>");
             
-            #line 13 "F:\Dropbox\临时开发\AnalyzeCatchTool\AnalyzeCatchTool\微薄评论接口模板.tt"
+            #line 13 "F:\WorkSpace\GitHub\多景点系统Git\Tools\AnalyzeCatchTool\AnalyzeCatchTool\微薄评论接口模板.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Data["MID"]));
             
             #line default
             #line hidden
             this.Write("</Guid>\r\n\t\t\t<Talk><![CDATA[");
             
-            #line 14 "F:\Dropbox\临时开发\AnalyzeCatchTool\AnalyzeCatchTool\微薄评论接口模板.tt"
+            #line 14 "F:\WorkSpace\GitHub\多景点系统Git\Tools\AnalyzeCatchTool\AnalyzeCatchTool\微薄评论接口模板.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(Data["评论"]));
             
             #line default
             #line hidden
-            this.Write("]]></Talk>\r\n\t\t\t<Keyval></Keyval>\r\n\t\t</Item>                \r\n\t</Items>\r\n</WeiboTa" +
-                    "lkRQ>\r\n");
+            this.Write("]]></Talk>\r\n\t\t\t<Keyval><![CDATA[");
+            
+            #line 15 "F:\WorkSpace\GitHub\多景点系统Git\Tools\AnalyzeCatchTool\AnalyzeCatchTool\微薄评论接口模板.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(Data["KeyVal"]));
+            
+            #line default
+            #line hidden
+            this.Write("]]></Keyval>\r\n\t\t</Item>                \r\n\t</Items>\r\n</WeiboTalkRQ>\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }
