@@ -1,0 +1,82 @@
+﻿@model PagedList.IPagedList<dx177.Business.WeiBoTalkDBEntity>
+@using PagedList.Mvc;
+@{    
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="nav_son">
+  当前位置：<a href="/jq_@(ViewBag.JQ)">@(ViewBag.Title)首页</a> &gt;&nbsp;@(ViewBag.Title)点评</div>
+<div id="mainContent">
+    <div id="side">
+         @if (ViewBag.Sites.Count > 0)
+         {      
+        <div class="sidebox">
+            <h4>
+                景点欣赏</h4>
+            <div class="sbox_con">
+                <ul>
+                     @foreach (var item in ViewBag.Sites)
+                     {
+                    <li>
+                       <a href="/JQ_@(ViewBag.JQ)/Sites/@(item.Seqno)">@(item.Title)</a>
+                    </li>
+                     }
+                </ul>
+            </div>
+        </div>
+         }
+         @if (ViewBag.Questions.Count > 0)
+        {
+        <div class="sidebox">
+            <h4>
+                <span><a href="/JQ_@(ViewBag.JQ)/questions">更多</a></span>问题</h4>
+            <div class="sbox_con">
+                <ul>
+                    @foreach (var item in ViewBag.Questions)
+                    {
+                        
+                    <li><a href="/JQ_@ViewBag.JQ/questions/@item.Seqno" title="@item.Title">@dx177.FrameWork.HtmlHelpers.Truncate(item.Title, 20)</a></li>                     
+                    }
+               
+
+                </ul>
+            </div>
+        </div>
+        }
+    </div>
+    <div id="main">
+        <div class="info_box">
+            <h2>
+                @(ViewBag.Title)点评</h2>
+            <div class="ib_con">
+                @foreach (var item in Model)
+                {
+                <dl>
+                    <dt style="font-weight:normal; ">@item.talk</dt>                                         
+                </dl>               
+                }
+            </div>            
+        </div>
+       
+        @if (Model.PageCount > 1)
+        {
+        <div id="pages">
+            <span class="pages">
+            @for (int i = 1; i <= Model.PageCount; i++)
+            {
+                if (i == Model.PageNumber)
+                { 
+                    <strong>@i</strong>
+                }
+                else
+                {
+                    @Html.RouteLink(i.ToString(), "JQRouter", new { controller = "weibo", p = i, jingqucode = @ViewBag.JQ }, new { title = "第" + i + "页" });
+                }
+            }
+            </span>                
+        </div>
+        }
+    </div>
+
+</div>
+ <div class="clearfloat">
+</div>

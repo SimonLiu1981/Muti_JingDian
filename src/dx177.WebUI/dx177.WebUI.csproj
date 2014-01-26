@@ -665,6 +665,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\JQController.cs" />
+    <Compile Include="Controllers\WeibolistController.cs" />
     <Compile Include="Controllers\WeiBoTalkController.cs" />
     <Compile Include="Control\lyCar.ascx.cs">
       <DependentUpon>lyCar.ascx</DependentUpon>
@@ -2091,6 +2092,7 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\JQ\Index.cshtml" />
     <Content Include="Views\Shared\_Menu.cshtml" />
+    <Content Include="Views\Weibolist\Index.cshtml" />
     <None Include="web\admin\img\p" />
     <Content Include="admin\FriendLinkMgnt\FriendLinkList.aspx" />
     <Content Include="admin\FriendLinkMgnt\FriendLinkPage.aspx" />
