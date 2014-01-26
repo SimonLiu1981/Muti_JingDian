@@ -15,8 +15,7 @@ namespace dx177.WebUI.Controllers
 
         [OutputCache(CacheProfile = "MyProfile", VaryByParam = "jingqucode")]
         public ActionResult Index(string jingqucode)
-        {
-            
+        {            
             var entity = JingqusBLL.GetInstance().GetEntityByJingqucode(jingqucode);
             ViewBag.Entity = entity;
             ViewBag.JQ = entity.Jingqucode;
