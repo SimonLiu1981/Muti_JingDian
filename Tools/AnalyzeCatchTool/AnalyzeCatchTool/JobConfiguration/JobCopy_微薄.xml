@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LocomotiveAcquisitionCopyConfiguration xsi:schemaLocation="火车头采集复制配制 file:///D:/Personal_files/GitHub/Youcod.com/XSDGerenrate/%e7%81%ab%e8%bd%a6%e5%a4%b4%e9%87%87%e9%9b%86%e5%a4%8d%e5%88%b6%e9%85%8d%e5%88%b6.xsd" xmlns="火车头采集复制配制" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Root>D:\网页抓取工具\LocoySpider_V7.7_Build20130410.Free</Root>
+	<NeedToCopyJobID>102</NeedToCopyJobID>
+	<ReplaceList>
+		<ReplaceItem>
+			<Key>JobName</Key>
+			<Value>String</Value>
+		</ReplaceItem>
+		<ReplaceItem>
+			<Key>KeyWords</Key>
+			<Value>丹霞山 阳元山</Value>
+			<UrlEnCode>true</UrlEnCode>
+		</ReplaceItem>
+    <ReplaceItem>
+      <Key>Cookie</Key>
+      <Value>Cookie</Value>
+      <UrlEnCode>true</UrlEnCode>
+    </ReplaceItem>
+    <Template>
+      <![CDATA[ {{KeyWords}} {{JobName}} {{Cookie}} ]]>      
+    </Template>
+	</ReplaceList>
+</LocomotiveAcquisitionCopyConfiguration>

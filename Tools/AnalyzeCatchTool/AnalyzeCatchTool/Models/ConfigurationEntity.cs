@@ -25,8 +25,8 @@ namespace AnalyzeCatchTool.Models
         public string InstertSubTableTemplate { get; set; }
 
         public string CheckRowInstertPrimaryTable { get; set; }
-        public string CheckRowInstertSubTable { get; set; }        
+        public string CheckRowInstertSubTable { get; set; }
 
-
+        public string SQLitePath { get; set; }       
     }
 }

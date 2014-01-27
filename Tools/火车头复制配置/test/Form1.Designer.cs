@@ -82,6 +82,7 @@
             this.bntSave.TabIndex = 5;
             this.bntSave.Text = "保存";
             this.bntSave.UseVisualStyleBackColor = true;
+            this.bntSave.Click += new System.EventHandler(this.bntSave_Click);
             // 
             // bntdel
             // 

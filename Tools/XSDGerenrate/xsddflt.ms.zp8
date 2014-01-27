@@ -1,0 +1,50 @@
+<!-- Copyright (C) 2001-2009 OSS Nokalva, Inc.  All rights reserved. -->
+<!-- -->
+<!-- THIS FILE IS PROPRIETARY MATERIAL OF OSS NOKALVA, INC. -->
+<!-- AND MAY BE USED ONLY BY DIRECT LICENSEES OF OSS NOKALVA, INC. -->
+<!-- THIS FILE MAY NOT BE DISTRIBUTED. -->
+<!-- -->
+<!-- This config file was created for use in the following environment: -->
+<!-- -->
+<!-- Operating system: Windows NT/Windows 9x -->
+<!-- Machine type: Intel x86 -->
+<!-- Mandatory C or C++ compiler options: -Zp8 (Microsoft) -->
+<!-- -->
+<ossconfig xmlns="http://www.oss.com/XSD"
+    ALIGNMENT="1,2,4,4,8,4,4,8,1,1,4,4,4,1,1,2,4,4,8,4,4,8,1,1,4,4,4,8"
+    MAXSIZET="2147483647"
+    CHARSIZE="1"
+    SHORTSIZE="2"
+    INTSIZE="4"
+    LONGSIZE="4"
+    LONGLONGSIZE="8"
+    CHARENUMSIZE="4"
+    UCHARENUMSIZE="4"
+    SHORTENUMSIZE="4"
+    USHORTENUMSIZE="4"
+    LONGENUMSIZE="4"
+    GENERICENUMSIZE="4"
+    POINTERSIZE="4"
+    FLOATSIZE="4"
+    DOUBLESIZE="8"
+    SHORTMAX="32767"
+    INTMAX="2147483647"
+    LONGMAX="2147483647"
+    LONGLONGMAX="9223372036854775807"
+    USHORTMAX="65535"
+    UINTMAX="4294967295"
+    ULONGMAX="4294967295"
+    ULONGLONGMAX="18446744073709551615"
+    SHORTMIN="-32768"
+    INTMIN="-2147483648"
+    LONGMIN="-2147483648"
+    LONGLONGMIN="-9223372036854775808"
+    LLONGSUFFIX="&quot;i64&quot;"
+    ULLONGSUFFIX="&quot;ui64&quot;"
+    UALIGN="0"
+    TARGET="NT"
+    MANDATORYOPTIONS="&quot;-Zp8 (Microsoft)&quot;"
+    OPERATINGSYSTEM="&quot;Windows NT/Windows 9x&quot;"
+    MACHINETYPE="&quot;Intel x86&quot;"
+    RUNTIMEVERSION="&quot;3.1.0&quot;"
+/>

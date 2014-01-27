@@ -1,0 +1,100 @@
+<xs:simpleType name="StatusType">
+		<xs:annotation>
+			<xs:documentation>This type is used to apply a filter to the change history status types returned.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ICPChangeHistoryTypeInvalid"/>
+			<xs:enumeration value="ColumnUpdate"/>
+			<xs:enumeration value="ARIDuplicate"/>
+			<xs:enumeration value="ARIOutOfOrder"/>
+			<xs:enumeration value="Failure"/>
+			<xs:enumeration value="Booking"/>
+			<xs:enumeration value="Cancel"/>
+			<xs:enumeration value="Change"/>
+			<xs:enumeration value="ARIActivation"/>
+			<xs:enumeration value="OccExceedsMax"/>
+			<xs:enumeration value="StopSellOutsideY"/>
+			<xs:enumeration value="InvDecDisallowed"/>
+			<xs:enumeration value="RateIncDisallowed"/>
+			<xs:enumeration value="InvReductionCappedForBA"/>
+			<xs:enumeration value="AttemptToCloseLastRP"/>
+			<xs:enumeration value="AttemptToDeleteLastRPCP"/>
+			<xs:enumeration value="MinNightGreaterThanMaxNight"/>
+			<xs:enumeration value="BASetInsideY"/>
+			<xs:enumeration value="CombinedAvailabilityExceedsMax"/>
+			<xs:enumeration value="RateViolation"/>
+			<xs:enumeration value="SuccessViaLinkage"/>
+			<xs:enumeration value="SkippedDueToLinkage"/>
+			<xs:enumeration value="AttemptToIncreaseCutoff"/>
+			<xs:enumeration value="SellRateViolation"/>
+			<!--
+				ColumnUpdate,
+				ARIDuplicate,
+				ARIOutOfOrder,
+				Failure,
+				Booking,	// = 5
+				Cancel,
+				Change,
+				ARIActivation,
+				OccExceedsMax,
+				StopSellOutsideY, 	// = 10
+				InvDecDisallowed,
+				RateIncDisallowed,
+				InvReductionCappedForBA,
+				AttemptToCloseLastRP,
+				AttemptToDeleteLastRPCP,	// = 15
+				MinNightGreaterThanMaxNight,
+				BASetInsideY,
+				CombinedAvailabilityExceedsMax,
+				RateViolation,
+				SuccessViaLinkage,		// = 20
+				SkippedDueToLinkage,	
+				AttemptToIncreaseCutoff,
+				SellRateViolation
+				-->
+		</xs:restriction>
+	</xs:simpleType>
+	
+	
+	
+	
+	<xs:simpleType name="ICPRequestorTypeType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="None"/>
+			<xs:enumeration value="ARI"/>
+			<xs:enumeration value="XNet"/>
+			<xs:enumeration value="HIMS"/>
+			<xs:enumeration value="ARISyncCheck"/>
+			<xs:enumeration value="MigrationBot"/>
+			<xs:enumeration value="ECL"/>
+			<xs:enumeration value="BulkXNet "/>
+			<xs:enumeration value="BulkHIMS"/>
+			<xs:enumeration value="InvGridXNet"/>
+			<xs:enumeration value="InvGridHIMS"/>
+			<xs:enumeration value="RatePlanLinkXnet"/>
+			<xs:enumeration value="RatePlanLinkHIMS"/>
+			<xs:enumeration value="EQC"/>
+			<xs:enumeration value="SCOREOnboarding"/>
+			<xs:enumeration value="BusinessModelConversion"/>
+			<xs:enumeration value="InvGridEPC"/>
+			<!--
+				None                         0
+             	ARI                          1
+				XNet                         2
+				HIMS                         3
+				ARISyncCheck                 4
+				MigrationBot                 5
+				ECL                          6
+				XNet                     7
+				BulkHIMS                     8
+				InvGridXNet                  9
+				InvGridHIMS                 10
+				RatePlanLinkXnet            11
+				RatePlanLinkHIMS            12
+				EQC                         13
+				SCOREOnboarding             14
+				BusinessModelConversion     15
+				 InvGridEPC                  16	-->
+		</xs:restriction>
+	</xs:simpleType>

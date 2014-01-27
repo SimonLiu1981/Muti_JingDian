@@ -128,8 +128,46 @@ namespace test
                         connection.Close();
                     }
                 }
+            }           
+        }
+
+        public static void Update(string XmlData, string JobName, int jobId)
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(strcon))
+            {
+
+                try
+                {
+
+                    SQLiteParameter p;
+                    string sqlCommand = " update  MAIN.[Job] set XmlData=@XmlData,JobName=@JobName where JobId=@JobId";
+                    using (SQLiteCommand cmd = new SQLiteCommand(sqlCommand, connection))
+                    {
+                        connection.Open();
+
+                        p = new SQLiteParameter("@XmlData", DbType.String);
+                        p.Value = XmlData;
+                        cmd.Parameters.Add(p);                        
+                        p = new SQLiteParameter("@JobName", DbType.String);
+                        p.Value = JobName;
+                        cmd.Parameters.Add(p);                        
+
+                        p = new SQLiteParameter("@JobId", DbType.Int32);
+                        p.Value = jobId;                        
+                        cmd.Parameters.Add(p);                         
+                        cmd.ExecuteNonQuery();
+
+
+                    }
+                }
+                catch
+                {
+                    if (connection.State == ConnectionState.Open)
+                    {
+                        connection.Close();
+                    }
+                }
             }
-           
         }
     }
 }

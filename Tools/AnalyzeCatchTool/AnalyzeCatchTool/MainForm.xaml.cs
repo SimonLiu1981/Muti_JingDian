@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using AnalyzeCatchTool.Models;
 using Microsoft.Win32;
+using AnalyzeCatchTool.WeiBo;
 
 namespace AnalyzeCatchTool
 {
@@ -117,6 +118,12 @@ namespace AnalyzeCatchTool
             微薄景区评论 pl = new 微薄景区评论();
             pl.ShowDialog();
             
+        }
+
+        private void MenuItem_CopyWeiBo_Click(object sender, RoutedEventArgs e)
+        {
+            CopyWeiBoPingLun cwb = new CopyWeiBoPingLun();
+            cwb.ShowDialog();
         }
  
 

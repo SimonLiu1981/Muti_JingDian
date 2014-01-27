@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by TeaM DJiNN (TeaM DJiNN) -->
+<xs:schema xmlns="WeiboTalk" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="WeiboTalk" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="WeiboTalkRQ">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence maxOccurs="1">
+				<xs:element name="Items">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Item" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="JingQuCode" type="xs:string"/>
+										<xs:element name="CreateTime" type="xs:dateTime"/>
+										<xs:element name="Guid" type="xs:string"/>
+										<xs:element name="Talk" type="xs:string"/>
+										<xs:element name="Keyval" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

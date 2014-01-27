@@ -17,7 +17,7 @@ namespace test
 
 
             Loaddata();
-      
+
         }
 
         private void Loaddata()
@@ -25,7 +25,7 @@ namespace test
             DataSet ds = DataBase.ExecuteDataSet("Select  *   From MAIN.[Job] ");
 
             dataGridView1.DataSource = ds.Tables[0];
-        
+
         }
 
         private void dataGridView1_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
@@ -39,7 +39,7 @@ namespace test
 
         }
 
-        
+
 
         private void bntDelete_Click(object sender, EventArgs e)
         {
@@ -54,9 +54,18 @@ namespace test
 
         private void bntdel_Click(object sender, EventArgs e)
         {
-             if (dataGridView1.CurrentRow != null && dataGridView1.CurrentRow.Cells.Count > 0)
+            if (dataGridView1.CurrentRow != null && dataGridView1.CurrentRow.Cells.Count > 0)
             {
-                DataBase.delete (int.Parse (dataGridView1.CurrentRow.Cells[0].Value.ToString()));
+                DataBase.delete(int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()));
+                Loaddata();
+            }
+        }
+
+        private void bntSave_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow != null && dataGridView1.CurrentRow.Cells.Count > 0)
+            {
+                DataBase.Update(richTextBox1.Text, txtKeyVal.Text, int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()));
                 Loaddata();
             }
         }
