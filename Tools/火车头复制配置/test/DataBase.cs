@@ -92,6 +92,38 @@ namespace test
            
         }
 
+        public static void Update(int id, string XmlData)
+        {
+
+            using (SQLiteConnection connection = new SQLiteConnection(strcon))
+            {
+                try
+                {
+                    SQLiteParameter p;
+                    string sqlCommand = string.Format("update    MAIN.[Job]   set XmlData=@XmlData   where jobid=@jobid", id);
+                    using (SQLiteCommand cmd = new SQLiteCommand(sqlCommand, connection))
+                    {
+                        connection.Open();
+                        p = new SQLiteParameter("@XmlData", DbType.String);
+                        p.Value = XmlData;
+                        cmd.Parameters.Add(p);
+                        p = new SQLiteParameter("@jobid", DbType.Int16 );
+                        p.Value = id;
+                        cmd.Parameters.Add(p);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                catch
+                {
+                    if (connection.State == ConnectionState.Open)
+                    {
+                        connection.Close();
+                    }
+                }
+            }
+
+        }
+
         public static void Insert(string XmlData, string CronXml, string JobName)
         {
              

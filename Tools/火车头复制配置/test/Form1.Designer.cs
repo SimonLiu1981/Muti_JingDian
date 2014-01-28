@@ -37,6 +37,8 @@
             this.bntRead = new System.Windows.Forms.Button();
             this.bntDelete = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,7 +78,7 @@
             // 
             // bntSave
             // 
-            this.bntSave.Location = new System.Drawing.Point(140, 420);
+            this.bntSave.Location = new System.Drawing.Point(139, 488);
             this.bntSave.Name = "bntSave";
             this.bntSave.Size = new System.Drawing.Size(73, 24);
             this.bntSave.TabIndex = 5;
@@ -86,7 +88,7 @@
             // 
             // bntdel
             // 
-            this.bntdel.Location = new System.Drawing.Point(228, 420);
+            this.bntdel.Location = new System.Drawing.Point(227, 488);
             this.bntdel.Name = "bntdel";
             this.bntdel.Size = new System.Drawing.Size(75, 23);
             this.bntdel.TabIndex = 6;
@@ -106,7 +108,7 @@
             // 
             // bntDelete
             // 
-            this.bntDelete.Location = new System.Drawing.Point(59, 420);
+            this.bntDelete.Location = new System.Drawing.Point(58, 488);
             this.bntDelete.Name = "bntDelete";
             this.bntDelete.Size = new System.Drawing.Size(75, 23);
             this.bntDelete.TabIndex = 8;
@@ -123,11 +125,30 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "配置文件";
             // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(59, 393);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(590, 67);
+            this.richTextBox2.TabIndex = 10;
+            this.richTextBox2.Text = "";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 410);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 12);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "cookies";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 459);
+            this.ClientSize = new System.Drawing.Size(826, 523);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.bntDelete);
             this.Controls.Add(this.bntRead);
@@ -155,6 +176,8 @@
         private System.Windows.Forms.Button bntRead;
         private System.Windows.Forms.Button bntDelete;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.Label label3;
     }
 }
 

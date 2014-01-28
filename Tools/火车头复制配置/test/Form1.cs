@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace test
 {
@@ -68,6 +69,28 @@ namespace test
                 DataBase.Update(richTextBox1.Text, txtKeyVal.Text, int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString()));
                 Loaddata();
             }
+        }
+
+        private void bntSave_Click(object sender, EventArgs e)
+        {
+            string cc = @"Cookie=""woaini""";
+            string content = "";
+            content = Regex.Replace(cc, @"(?<=Cookie="")(.*?)(?="")", "aaaa");
+
+            if (dataGridView1.SelectedRows != null && dataGridView1.SelectedRows.Count > 0)
+            {
+                for (int i = 0; i < dataGridView1.SelectedRows.Count; i++)
+                { 
+                
+               //
+
+                   string xmldata=   Regex.Replace(dataGridView1.SelectedRows[i].Cells[4].Value.ToString(), @"(?<=Cookie="")(.*?)(?="")", richTextBox2.Text );
+
+                   DataBase.Update(int.Parse(dataGridView1.SelectedRows[i].Cells[0].Value.ToString ()), xmldata);
+                }
+            
+            }
+            
         }
     }
 }
